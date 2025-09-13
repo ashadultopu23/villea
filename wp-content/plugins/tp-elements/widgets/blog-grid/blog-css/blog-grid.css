@@ -1,0 +1,340 @@
+:root {
+  --body-font: "Ubuntu", serif;
+  --primaryColor: #F14F44;
+  --secondaryColor: #242424;
+  --blackColor: #171717;
+  --whiteColor: #ffffff;
+  --titleColor: #ffffff;
+  --bodyColor: #C4C5C0;
+  --transition: all 0.5s ease-in-out;
+}
+
+/** Blog Style CSS --------------
+-----------------------------------*/
+.themephi-blog-grid .image-part.yes:hover img {
+  filter: grayscale(100%);
+}
+
+.themephi-blog-grid.blog--style1 .image-part .meta-cat-abs {
+  position: absolute;
+  left: 0;
+}
+
+.themephi-blog-grid.blog--style1 .blog-meta {
+  list-style: none;
+  margin: 0;
+  display: flex;
+}
+
+.themephi-blog-grid.blog--style1 .blog-meta li {
+  margin-right: 15px;
+}
+
+.themephi-blog-grid.blog--style1 .blog-item.themephi-blog-grid1 {
+  background: #fff;
+}
+
+.themephi-blog-grid.blog--style1 .blog-item .blog-content-main .title {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #E8E8E8;
+}
+
+.themephi-blog-grid.blog--style1 .btn-part a {
+  display: inline-block;
+  transition: all 0.4s linear 0s;
+}
+
+.themephi-blog-grid.blog--style1 .meta--divider {
+  color: #E1E1E1;
+}
+
+.themephi-blog-grid.blog--style1 .cat_list {
+  position: static;
+  display: inline-block;
+}
+
+.themephi-blog-grid.blog--style1 .cat_list a {
+  position: static !important;
+}
+
+.themephi-blog-grid.blog--style5 .image-part {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.themephi-blog-grid.blog--style5 ul,
+.themephi-blog-grid.blog--style5 li {
+  list-style: none;
+  margin: 0;
+}
+
+.themephi-blog-grid.blog--style5 .blog-badge {
+  position: absolute;
+  width: 70px;
+  height: 78px;
+  right: 0;
+  bottom: -26px;
+  text-align: center;
+}
+
+.themephi-blog-grid.blog--style5 .blog-badge .date-2 {
+  background: #ff6600;
+  color: #fff;
+  padding: 6px;
+}
+
+.themephi-blog-grid.blog--style5 .blog-badge .date {
+  font-size: 26px;
+  line-height: 26px;
+}
+
+.themephi-blog-grid.blog--style5 .blog-badge .month {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 12px;
+  display: block;
+}
+
+.themephi-blog-grid.blog--style5 .blog-badge .year {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 16px;
+  color: #fff;
+  background: #0C0A0A;
+  padding: 4px 0;
+}
+
+.themephi-blog-grid.blog--style5 .blog-item {
+  border: 1px solid #EDEFF3;
+  margin-bottom: 30px;
+}
+
+.themephi-blog-grid.blog--style5 .blog-content {
+  padding: 0 30px 30px;
+}
+
+.themephi-blog-grid.blog--style5 .blog-content .cat_list a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  color: #6E777D;
+  margin-top: -5px;
+  text-transform: capitalize;
+}
+
+.themephi-blog-grid.blog--style5 .blog-content .title {
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+
+.themephi-blog-grid.blog--style5 .blog-content .title a {
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.themephi-blog-grid.blog--style5 .blog-content .title a:hover {
+  color: #F14F44;
+}
+
+.themephi-blog-grid.blog--style4 .image-part {
+  overflow: visible !important;
+  position: relative;
+}
+
+.themephi-blog-grid.blog--style4 .image-part a img {
+  border-radius: 7px 7px 0 0 !important;
+  transition: 0.3s;
+}
+
+.themephi-blog-grid.blog--style4 .image-part a img:hover {
+  transform: scale(1.2);
+}
+
+.themephi-blog-grid.blog--style4 .image-part .meta-info {
+  background: #ffffff;
+  display: flex;
+  padding: 7px 30px;
+}
+
+.themephi-blog-grid.blog--style4 .image-part .meta-info ul {
+  margin: 0;
+}
+
+.themephi-blog-grid.blog--style4 .image-part .meta-info ul,
+.themephi-blog-grid.blog--style4 .image-part .meta-info li {
+  list-style: none;
+}
+
+.themephi-blog-grid.blog--style4 .image-part .meta-info .author-info {
+  margin-right: 25px;
+  color: #fff;
+}
+
+.themephi-blog-grid.blog--style4 .image-part .meta-info .author-info i {
+  padding-right: 8px;
+}
+
+.themephi-blog-grid.blog--style4 .image-part .date-full {
+  top: unset !important;
+  bottom: 20px;
+  background: #fff !important;
+  padding: 10px 20px !important;
+  text-align: center;
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.06);
+  z-index: 15;
+  position: absolute;
+  right: 0;
+  border-radius: 15px;
+  font-family: "Ubuntu", serif;
+}
+
+.themephi-blog-grid.blog--style4 .image-part .date-full .day {
+  color: #F14F44;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.themephi-blog-grid.blog--style4 .image-part .date-full .month {
+  color: #F14F44;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.themephi-blog-grid.blog--style4 .blog-meta i {
+  color: #fff;
+  margin-right: 7px;
+}
+
+.themephi-blog-grid.blog--style4 .blog-content {
+  padding: 30px !important;
+  padding-top: 30px !important;
+  border: 1px solid #EBEBEB;
+  border-top: 0px solid #000;
+  border-radius: 0 0 7px 7px;
+}
+
+.themephi-blog-grid.blog--style4 .blog-content:after,
+.themephi-blog-grid.blog--style4 .blog-content:before {
+  content: none !important;
+}
+
+.themephi-blog-grid.blog--style4 .blog-content .title {
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 0;
+}
+
+.themephi-blog-grid.blog--style4 .blog-content .title a {
+  color: #ffffff;
+}
+
+.themephi-blog-grid.blog--style4 .blog-content .title a:hover {
+  color: #F14F44;
+}
+
+.themephi-blog-grid.blog--style3 .blog-inner .image-part {
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 30px;
+  z-index: 2;
+}
+
+.themephi-blog-grid.blog--style3 .blog-inner .image-part img {
+  transition: 0.3s;
+}
+
+.themephi-blog-grid.blog--style3 .blog-inner .image-part img:hover {
+  transform: scale(1.1);
+}
+
+.themephi-blog-grid.blog--style3 .blog-inner .image-part.yes img:hover {
+  filter: grayscale(1);
+}
+
+.themephi-blog-grid.blog--style3 .blog-inner .image-part .cat_list {
+  list-style: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+}
+
+.themephi-blog-grid.blog--style3 .blog-inner .image-part .cat_list ul {
+  list-style: none;
+  margin: 0;
+}
+
+.themephi-blog-grid.blog--style3 .blog-inner .image-part .cat_list ul li a {
+  padding: 7px 24px;
+  display: inline-block;
+  background: #F14F44;
+}
+
+.themephi-blog-grid.blog--style3 .blog-content {
+  position: relative;
+  margin-top: -30px;
+  z-index: 1;
+}
+
+.themephi-blog-grid.blog--style3 .blog-content .blog-meta {
+  margin: 0;
+  background: #F6F6F6;
+  border-radius: 10px 10px 0 0;
+  padding: 50px 33px 20px 33px;
+  display: flex;
+  align-items: center;
+}
+
+.themephi-blog-grid.blog--style3 .blog-content .blog-meta li {
+  list-style: none;
+  margin-right: 20px;
+}
+
+.themephi-blog-grid.blog--style3 .blog-content .blog-meta li:last-child {
+  margin-right: 0;
+}
+
+.themephi-blog-grid.blog--style3 .blog-content .bottom-part {
+  padding: 30px 32px 32px 32px;
+  box-shadow: 0px 9px 18px rgba(24, 16, 16, 0.05);
+  border-radius: 0px 0px 10px 10px;
+}
+
+@media (max-width: 1199px) {
+  .themephi-blog-grid.blog--style1 .row .grid-item:nth-child(3n-2) {
+    padding-right: 12px !important;
+    padding-left: 12px !important;
+  }
+
+  .themephi-blog-grid.blog--style1 .row .grid-item:nth-child(3n-1) {
+    padding-right: 12px !important;
+    padding-left: 12px !important;
+    position: relative;
+  }
+
+  .themephi-blog-grid.blog--style1 .row .grid-item:nth-child(3n-1):before {
+    content: none !important;
+  }
+
+  .themephi-blog-grid.blog--style1 .row .grid-item:nth-child(3n-1):after {
+    content: none !important;
+  }
+
+  .themephi-blog-grid.blog--style1 .row .grid-item:nth-child(3n-0) {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+}
+
+@media (max-width: 880px) {
+  .themephi-blog-grid.blog--style4 .row .grid-item .blog-content {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+
+/*# sourceMappingURL=blog-grid.css.map */

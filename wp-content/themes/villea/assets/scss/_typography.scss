@@ -1,0 +1,350 @@
+/*--------------------------------------------------------------
+
+# Typography
+
+--------------------------------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+}
+
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+address {
+  margin: 0 0 1.5em;
+}
+
+pre {
+  // background: #f5f5f5;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+  border-radius: 8px;
+  scrollbar-width: thin;
+  color: #000;
+}
+
+.wp-block-pullquote {
+  border-radius: 8px;
+}
+
+code,
+kbd,
+tt,
+var {
+  font-size: 15px;
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+mark,
+ins {
+  text-decoration: none;
+}
+
+big {
+  font-size: 125%;
+}
+
+.display-one {
+  font-size: 120px;
+}
+
+.display-two {
+  font-size: 80px;
+}
+
+.display-three {
+  font-size: 72px;
+}
+
+.display-four {
+  font-size: 64px;
+}
+
+.display-five {
+  font-size: 56px;
+}
+
+.display-six {
+  font-size: 48px;
+}
+
+.fs-one,
+h1,
+h1 > a {
+  font-size: 48px;
+}
+
+.fs-two,
+h2,
+h2 > a {
+  font-size: 40px;
+}
+
+.fs-three,
+h3,
+h3 > a {
+  font-size: 32px;
+}
+
+.fs-four,
+h4,
+h4 > a {
+  font-size: 24px;
+}
+
+.fs-five,
+h5,
+h5 > a {
+  font-size: 20px;
+}
+
+.fs-six,
+h6,
+h6 > a {
+  font-size: 16px;
+}
+
+table thead tr th {
+  font-size: 18px;
+  line-height: 150%;
+}
+
+@media (max-width: 1199px) {
+  h1,
+  h1 > a {
+    font-size: 42px;
+  }
+  h2,
+  h2 > a {
+    font-size: 36px;
+  }
+  .preloader {
+    background-size: 30%;
+  }
+}
+
+.pt-120 {
+  padding-top: 120px;
+}
+
+.pb-120 {
+  padding-bottom: 120px;
+}
+
+@media (max-width: 1399px) {
+  .display-one {
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .display-one {
+    font-size: 96px;
+  }
+
+  .display-two {
+    font-size: 72px;
+  }
+
+  .display-three {
+    font-size: 64px;
+  }
+
+  .display-four {
+    font-size: 56px;
+  }
+
+  .display-five {
+    font-size: 48px;
+  }
+
+  .display-six {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 991px) {
+  // Normalize
+  .display-one {
+    font-size: 72px;
+  }
+
+  .display-two {
+    font-size: 64px;
+  }
+
+  .display-three {
+    font-size: 56px;
+  }
+
+  .display-four {
+    font-size: 48px;
+  }
+
+  .display-five {
+    font-size: 42px;
+  }
+
+  .display-six {
+    font-size: 32px;
+  }
+
+  .fs-one,
+  h1,
+  h1 > a {
+    font-size: 36px;
+  }
+
+  .fs-two,
+  h2,
+  h2 > a {
+    font-size: 32px;
+  }
+
+  .fs-three,
+  h3,
+  h3 > a {
+    font-size: 24px;
+  }
+
+  .fs-four,
+  h4,
+  h4 > a {
+    font-size: 20px;
+  }
+
+  .fs-five,
+  h5,
+  h5 > a {
+    font-size: 18px;
+  }
+
+  .fs-six,
+  h6,
+  h6 > a {
+    font-size: 16px;
+  }
+
+  table thead tr th {
+    font-size: 15px;
+  }
+
+  .pt-120 {
+    padding-top: 80px;
+  }
+  .pb-120 {
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 575px) {
+  .display-one {
+    font-size: 56px;
+  }
+
+  .display-two {
+    font-size: 48px;
+  }
+
+  .display-three {
+    font-size: 42px;
+  }
+
+  .display-four {
+    font-size: 32px;
+  }
+
+  .display-five {
+    font-size: 24px;
+  }
+
+  .display-six {
+    font-size: 32px;
+  }
+
+  .pt-120 {
+    padding-top: 60px;
+  }
+  .pb-120 {
+    padding-bottom: 60px;
+  }
+}
+
+.display-one,
+.display-two,
+.display-three,
+.display-four,
+.display-five,
+.display-six,
+.fs-one,
+.fs-two,
+.fs-three,
+.fs-four,
+.fs-five,
+.fs-six,
+h1,
+h1 > a,
+h1 > span,
+h2,
+h2 > a,
+h2 > span,
+h3,
+h3 > a,
+h3 > span,
+h4,
+h4 > a,
+h4 > span,
+h5,
+h5 > a,
+h5 > span,
+h6,
+h6 > a,
+h6 > span {
+  font-weight: 600;
+  color: var(--titleColor);
+  line-height: 120%;
+  font-family: var(--titleFont);
+}
+
+h5 > a,
+h5 > span,
+h6,
+h6 > a,
+h6 > span {
+  font-weight: 500;
+  line-height: 150%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--titleFont);
+  color: var(--titleColor);
+  margin: 0 0 15px;
+  font-weight: 600;
+  padding: 0;
+}

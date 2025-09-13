@@ -1,0 +1,48 @@
+.app-download-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.app-download-buttons.elementor-align-left {
+  justify-content: flex-start;
+}
+
+.app-download-buttons.elementor-align-right {
+  justify-content: flex-end;
+}
+
+.app-download-button {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 12px 24px;
+  transition: all 0.3s ease;
+}
+
+.button-gap {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.button-icon {
+  margin-right: 10px;
+}
+
+.button-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-title {
+  font-size: 12px;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.button-text {
+  font-size: 18px;
+  line-height: 1;
+  font-weight: bold;
+}/*# sourceMappingURL=download-button.css.map */

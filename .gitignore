@@ -1,0 +1,46 @@
+# Ignore everything
+*
+.github/
+.git/
+# Allow only the wp-content directory
+!.gitignore
+!wp-content/
+
+# Allow specific subdirectories inside wp-content
+!wp-content/themes/
+!wp-content/themes/villea/
+!wp-content/themes/villea/**
+!wp-content/themes/villea.zip
+!wp-content/themes/villea-child/
+!wp-content/themes/villea-child/**
+!wp-content/themes/villea-child.zip
+
+!wp-content/plugins/
+!wp-content/plugins/villea-core
+!wp-content/plugins/villea-core/**
+!wp-content/plugins/villea-core.zip
+
+!wp-content/plugins/tp-elements/
+!wp-content/plugins/tp-elements/**
+!wp-content/plugins/tp-elements.zip
+!wp-content/plugins/tp-framework
+!wp-content/plugins/tp-framework/**
+!wp-content/plugins/tp-framework.zip
+
+# allow uploads directory
+!wp-content/uploads/
+# Allow specific files in the root directory
+!wp-content/uploads/**
+
+!documentation/
+!documentation/**
+
+!landing/
+!landing/**
+
+!source/
+!source/**
+
+# allow sql file for database. if you want to use it.
+# database.sql
+!wp-content/villea.sql

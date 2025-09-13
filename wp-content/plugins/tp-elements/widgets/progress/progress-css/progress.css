@@ -1,0 +1,80 @@
+:root {
+  --bodyFont: "Jost", sans-serif;
+  --titleFont: "Jost", sans-serif;
+  --transition: all .3s ease;
+  --body_bg: #ffffff;
+  --globalColor: #F5F5F5;
+  --borderColor: #DFE0E4;
+  --bodyColor: #404A60;
+  --titleColor: #222E48;
+  --primaryColor: #2660B5;
+  --secondaryColor: #EB7A23;
+  --whiteColor: #ffffff;
+  --blackColor: #171717;
+  --linkColor: #2660B5;
+  --hoverColor: var(--secondaryColor);
+  --boxBorderRadius: 5px;
+  --imageBorderRadius: 4px;
+  --btnBorderRadius: 5px;
+  --btnBgColor: #2660B5;
+  --btnHoverBgColor: #EB7A23;
+  --btnColor: #ffffff;
+  --btnHoverColor: #ffffff;
+  --btnBgColor2: transparent;
+  --btnHoverBgColor2: #2660B5;
+  --btnColor2: #222E48;
+  --btnHoverColor2: #ffffff;
+}
+
+.rs-skill-bar .skillbar {
+  background: #eeeeee;
+  display: inline-block;
+  height: 6px;
+  position: relative;
+  width: 100%;
+}
+.rs-skill-bar .skillbar .skillbar-bar {
+  background: var(--hoverColor);
+  height: 8px;
+  width: 0;
+  margin-bottom: 0;
+}
+.rs-skill-bar .skillbar .skillbar-title,
+.rs-skill-bar .skillbar .skill-bar-percent {
+  position: absolute;
+}
+.rs-skill-bar .skillbar .skillbar-title {
+  color: #212121;
+  font-size: 20px;
+  font-weight: 600;
+}
+.rs-skill-bar .skillbar .skill-bar-percent {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--titleColor);
+}
+.rs-skill-bar.animation .skillbar .skillbar-bar, .rs-skill-bar.striped .skillbar .skillbar-bar {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 1rem 1rem;
+}
+.rs-skill-bar.animation .skillbar .skillbar-bar {
+  animation: rs-progress-pie-stripes 1s linear infinite;
+}
+.rs-skill-bar.style1 .skillbar .skillbar-title {
+  top: -20px;
+}
+.rs-skill-bar.style1 .skillbar .skill-bar-percent {
+  right: 0;
+  top: -20px;
+}
+.rs-skill-bar.style2 .skillbar .skillbar-title {
+  left: 0;
+  padding: 2px 20px 0;
+  top: 0;
+  width: 160px;
+  background: #83b614;
+}
+.rs-skill-bar.style2 .skillbar .skill-bar-percent {
+  right: 10px;
+  top: 0;
+}/*# sourceMappingURL=progress.css.map */

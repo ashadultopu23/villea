@@ -1,0 +1,53 @@
+:root {
+  --bodyFont: "Jost", sans-serif;
+  --titleFont: "Jost", sans-serif;
+  --transition: all .3s ease;
+  --body_bg: #ffffff;
+  --globalColor: #F5F5F5;
+  --borderColor: #DFE0E4;
+  --bodyColor: #404A60;
+  --titleColor: #222E48;
+  --primaryColor: #2660B5;
+  --secondaryColor: #EB7A23;
+  --whiteColor: #ffffff;
+  --blackColor: #171717;
+  --linkColor: #2660B5;
+  --hoverColor: var(--secondaryColor);
+  --boxBorderRadius: 5px;
+  --imageBorderRadius: 4px;
+  --btnBorderRadius: 5px;
+  --btnBgColor: #2660B5;
+  --btnHoverBgColor: #EB7A23;
+  --btnColor: #ffffff;
+  --btnHoverColor: #ffffff;
+  --btnBgColor2: transparent;
+  --btnHoverBgColor2: #2660B5;
+  --btnColor2: #222E48;
+  --btnHoverColor2: #ffffff;
+}
+
+/*Logo CSS-----------------
+--------------------------*/
+.tp-grid-figure .logo-img {
+  text-align: center;
+}
+.tp-grid-figure .logo-img a {
+  transition: all 0.5s;
+}
+.tp-grid-figure .logo-img img {
+  margin: 0 auto;
+  transition: all 0.5s;
+  border-radius: 15px;
+}
+.tp-grid-figure .logo-img:hover img {
+  opacity: 1;
+}
+.tp-grid-figure .logo-img:hover a.back {
+  display: block;
+}
+.tp-grid-figure .logo-img:hover a.back-exists {
+  display: none;
+}
+.tp-grid-figure .logo-img.logo-gray a:hover img {
+  opacity: 80%;
+}/*# sourceMappingURL=logo.css.map */

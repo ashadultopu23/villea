@@ -1,0 +1,127 @@
+.categories-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.categories-grid {
+  display: grid;
+  gap: 24px;
+  /* Default fallback */
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.category-card {
+  position: relative;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+  // overflow: hidden;
+  box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.04);
+  .category-icon {
+    margin-bottom: 15px;
+  }
+
+  .category-title {
+    margin: 0 0 10px;
+    font-weight: 600;
+  }
+
+  .category-count {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+
+  .category-thumbnail {
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+
+  .category-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondaryColor);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+    border-radius: 8px;
+    .category-icon {
+      color: #fff;
+      font-size: 24px;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: var(--primaryColor);
+      margin: auto;
+    }
+  }
+
+  &:hover .category-overlay {
+    opacity: 1;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* Slider styles */
+
+.tp-categories-navigation-wrapp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  position: absolute;
+  left: -40px;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+
+  .tp-category-nav-prev,
+  .tp-category-nav-next {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--whiteColor);
+    color: var(--primaryColor);
+    font-size: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.08);
+
+    &:hover {
+      background-color: var(--primaryColor);
+      color: var(--whiteColor);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .categories-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .categories-wrapper {
+    gap: 16px;
+    margin: 0;
+  }
+}

@@ -1,0 +1,91 @@
+:root {
+  --bodyFont: "Jost", sans-serif;
+  --titleFont: "Jost", sans-serif;
+  --transition: all .3s ease;
+  --body_bg: #ffffff;
+  --globalColor: #F5F5F5;
+  --borderColor: #DFE0E4;
+  --bodyColor: #404A60;
+  --titleColor: #222E48;
+  --primaryColor: #2660B5;
+  --secondaryColor: #EB7A23;
+  --whiteColor: #ffffff;
+  --blackColor: #171717;
+  --linkColor: #2660B5;
+  --hoverColor: var(--secondaryColor);
+  --boxBorderRadius: 5px;
+  --imageBorderRadius: 4px;
+  --btnBorderRadius: 5px;
+  --btnBgColor: #2660B5;
+  --btnHoverBgColor: #EB7A23;
+  --btnColor: #ffffff;
+  --btnHoverColor: #ffffff;
+  --btnBgColor2: transparent;
+  --btnHoverBgColor2: #2660B5;
+  --btnColor2: #222E48;
+  --btnHoverColor2: #ffffff;
+}
+
+/** video css --------------------------
+--------------------------------------*/
+@keyframes pulse-border {
+  0% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    opacity: 0;
+  }
+}
+.themephi-video-button .popup-video-button {
+  position: relative;
+  box-sizing: content-box;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  padding: 0;
+  z-index: 2;
+  background: var(--primaryColor);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.themephi-video-button .popup-video-button:after, .themephi-video-button .popup-video-button:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  transition: all 200ms;
+}
+.themephi-video-button .popup-video-button:before {
+  border: 1px solid #fff;
+  z-index: 0;
+}
+.themephi-video-button .popup-video-button:after {
+  border: 1px solid #fff;
+  z-index: 0;
+}
+.themephi-video-button .popup-video-button i {
+  color: #fff;
+}
+.themephi-video-button .popup-video-button.animation:before {
+  animation: pulse-border 1500ms ease-out infinite;
+}
+.themephi-video-button .popup-video-button.animation:after {
+  animation: pulse-border 2500ms ease-out infinite;
+}
+.themephi-video-button .video-desc {
+  z-index: 1;
+  font-size: 20px;
+  position: relative;
+}
+.themephi-video-button:hover .popup-video-button {
+  animation-duration: 0.8s;
+}/*# sourceMappingURL=video-button.css.map */

@@ -1,0 +1,196 @@
+@import "../../../scss/base";
+
+.tp-service-style-style1 {
+  .single-item {
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    .single-item-img {
+      position: relative;
+      z-index: 1;
+      transition: all 0.5s ease-in-out;
+      span.meta_fee {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 15px 20px;
+        background-color: #fff;
+        color: var(--primaryColor);
+        &::before {
+          position: absolute;
+          right: 100%;
+          top: 0;
+          width: 40px;
+          height: 100%;
+          content: "";
+          background-color: transparent;
+          border-top: 27.5px solid #fff;
+          border-left: 40px solid transparent;
+          border-bottom: 27.5px solid #fff;
+        }
+        span {
+          color: #282828;
+        }
+      }
+    }
+    .service-meta {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      margin-bottom: 10px;
+      li {
+        display: inline-block;
+        margin-right: 15px;
+        margin-bottom: 5px;
+        span {
+          color: #282828;
+          font-size: 16px;
+          font-weight: 600;
+          i {
+            display: inline-block;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+    .single-item-content {
+      .title {
+        font-size: 24px;
+        transition: all 0.5s ease-in-out;
+      }
+      p {
+        color: #282828;
+        font-size: 16px;
+        transition: all 0.5s ease-in-out;
+      }
+      .services-btn {
+        color: #090908;
+        &:hover {
+          color: var(--primaryColor);
+        }
+      }
+    }
+    .image-btn-wrapper {
+      .services-btn-part {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primaryColor);
+        border-radius: 50%;
+        transition: all 0.5s ease-in-out;
+        background-color: var(--whiteColor);
+        transform: scale(0);
+      }
+    }
+    &:hover {
+      .single-item-img {
+        transform: scale(0);
+      }
+      .image-btn-wrapper {
+        .services-btn-part {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
+
+.tp-service-style-style3 {
+  .service-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: rgba(9, 9, 8, 1);
+    transition: all 0.5s ease-in-out;
+  }
+  .btn-area {
+    .title-shape {
+      &::before {
+        background-color: var(--primaryColor);
+        left: 0;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+  }
+  .btn-area {
+    &:hover {
+      .title-shape {
+        &::before {
+          background-color: var(--primaryColor);
+          width: 60%;
+        }
+      }
+      span {
+        color: var(--primaryColor);
+      }
+    }
+  }
+}
+.tp-service-style-style4 {
+  .single-item-wrapper {
+    padding-bottom: 50px;
+    transition: all 0.5s linear 0s;
+    .single-item {
+      position: relative;
+      z-index: 1;
+      border: 1px solid #2e2e2e;
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: var(--secondaryColor);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        opacity: 0.2;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+    &:hover {
+      .single-item {
+        &::before {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+  .swiper-slide {
+    &:nth-child(even) {
+      .single-item-wrapper {
+        transform: translateY(50px);
+      }
+    }
+    &:hover {
+      &:nth-child(even) {
+        .single-item-wrapper {
+          transform: translateY(0px);
+        }
+      }
+    }
+  }
+  .text-item {
+    .meta_topic {
+      font-size: 16px;
+      color: #fff;
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+    .title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff;
+    }
+    p {
+      color: #fff;
+    }
+  }
+}
+.tp-service--slider {
+  .swiper-pagination-bullet {
+    opacity: 1 !important;
+    transition: all 0.5s ease-in-out;
+  }
+}

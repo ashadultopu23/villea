@@ -1,0 +1,574 @@
+:root {
+  --bodyFont: "Jost", sans-serif;
+  --titleFont: "Jost", sans-serif;
+  --transition: all .3s ease;
+  --body_bg: #ffffff;
+  --globalColor: #F5F5F5;
+  --borderColor: #DFE0E4;
+  --bodyColor: #404A60;
+  --titleColor: #222E48;
+  --primaryColor: #2660B5;
+  --secondaryColor: #EB7A23;
+  --whiteColor: #ffffff;
+  --blackColor: #171717;
+  --linkColor: #2660B5;
+  --hoverColor: var(--secondaryColor);
+  --boxBorderRadius: 5px;
+  --imageBorderRadius: 4px;
+  --btnBorderRadius: 5px;
+  --btnBgColor: #2660B5;
+  --btnHoverBgColor: #EB7A23;
+  --btnColor: #ffffff;
+  --btnHoverColor: #ffffff;
+  --btnBgColor2: transparent;
+  --btnHoverBgColor2: #2660B5;
+  --btnColor2: #222E48;
+  --btnHoverColor2: #ffffff;
+}
+
+.themephi-addon-services.services-style1 {
+  padding: 32px 24px;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease-in-out;
+}
+.themephi-addon-services.services-style1 .services-icon img {
+  filter: brightness(100%) invert(0);
+  transition: filter 0.3s ease;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.themephi-addon-services.services-style1 .services-icon i {
+  color: #000;
+  transition: 0.3s ease;
+}
+.themephi-addon-services.services-style1 .service-meta {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 10px;
+}
+.themephi-addon-services.services-style1 .service-meta li {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+.themephi-addon-services.services-style1 .service-meta li span,
+.themephi-addon-services.services-style1 .service-meta li a {
+  transition: 0.3s ease;
+}
+.themephi-addon-services.services-style1 .title {
+  font-size: 24px;
+}
+.themephi-addon-services.services-style1 .title a {
+  transition: 0.3s ease;
+}
+.themephi-addon-services.services-style1 .services-desc {
+  transition: 0.3s ease;
+}
+.themephi-addon-services.services-style1 .services-desc p {
+  margin-bottom: 0;
+}
+.themephi-addon-services.services-style1 .image-btn-wrapper .services-btn-part {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primaryColor);
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+  background-color: var(--whiteColor);
+  transform: scale(0);
+}
+.themephi-addon-services.services-style1 .image-btn-wrapper .single-item-img {
+  transition: all 0.5s ease-in-out;
+}
+.themephi-addon-services.services-style1:hover .single-item-img {
+  transform: scale(0);
+}
+.themephi-addon-services.services-style1:hover .image-btn-wrapper .services-btn-part {
+  transform: scale(1);
+}
+.themephi-addon-services.services-style1:hover {
+  background-color: var(--primaryColor);
+  border-color: transparent;
+}
+.themephi-addon-services.services-style1:hover .services-icon img {
+  filter: brightness(0%) invert(1);
+}
+.themephi-addon-services.services-style1:hover .service-meta li span,
+.themephi-addon-services.services-style1:hover .service-meta li a {
+  color: #fff;
+}
+.themephi-addon-services.services-style1:hover .title {
+  color: #fff;
+}
+.themephi-addon-services.services-style1:hover .services-desc {
+  color: #fff;
+}
+.themephi-addon-services.services-style2 {
+  height: 100%;
+}
+.themephi-addon-services.services-style2 .services-part {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100%;
+}
+@media (max-width: 575px) {
+  .themephi-addon-services.services-style2 .services-part {
+    flex-direction: column;
+  }
+}
+.themephi-addon-services.services-style2 .services-part .services-icon {
+  display: inline-flex;
+  flex: 1;
+  width: 50%;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .themephi-addon-services.services-style2 .services-part .services-icon {
+    width: 100%;
+    height: auto;
+  }
+}
+.themephi-addon-services.services-style2 .services-part .services-text {
+  background-color: #090908;
+  padding: 33px 35px;
+  width: 50%;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .themephi-addon-services.services-style2 .services-part .services-text {
+    width: 100%;
+    height: auto;
+  }
+}
+.themephi-addon-services.services-style2 .services-part .services-text .title {
+  font-size: 32px;
+}
+.themephi-addon-services.services-style2 .services-part .services-text .title a {
+  color: #fff;
+}
+.themephi-addon-services.services-style2 .services-part .services-text .services-desc {
+  color: #fff;
+}
+.themephi-addon-services.services-style2 .services-part .services-text .services-btn {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+.themephi-addon-services.services-style2 .services-part .services-text .post-counter {
+  text-align: start;
+  font-size: 220px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0.01) 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+@media (max-width: 1366px) {
+  .themephi-addon-services.services-style2 .services-part .services-text .post-counter {
+    font-size: 190px;
+  }
+}
+.themephi-addon-services.services-style3 .services-part {
+  display: flex;
+  background-color: #ece8e3;
+  padding: 20px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+.themephi-addon-services.services-style3 .services-part .services-icon {
+  display: inline-flex;
+  flex: 0 0 auto;
+  width: 45%;
+  max-width: 100%;
+}
+.themephi-addon-services.services-style3 .services-part .services-icon img {
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .themephi-addon-services.services-style3 .services-part .services-icon {
+    width: auto;
+  }
+}
+.themephi-addon-services.services-style3 .services-part .services-text {
+  padding: 0px 40px;
+}
+.themephi-addon-services.services-style3 .services-part .services-text .meta_cat {
+  background-color: #090908;
+  color: #fff;
+  padding: 3px 10px;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.themephi-addon-services.services-style3 .services-part .services-text .service-meta {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 15px;
+}
+.themephi-addon-services.services-style3 .services-part .services-text .service-meta li {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.themephi-addon-services.services-style3 .services-part .services-text .service-meta li span {
+  color: #282828;
+  margin-right: 15px;
+  display: inline-block;
+}
+.themephi-addon-services.services-style3 .services-part .services-text .service-meta li span i {
+  display: inline-block;
+  margin-right: 5px;
+}
+.themephi-addon-services.services-style3 .services-part .services-text .title {
+  margin-bottom: 10px;
+  font-size: 32px;
+  text-transform: uppercase;
+}
+.themephi-addon-services.services-style3 .services-part .services-text .title a {
+  color: #090908;
+}
+.themephi-addon-services.services-style3 .services-part .services-text .services-desc {
+  color: #282828;
+  margin-bottom: 0;
+}
+.themephi-addon-services.services-style3 .services-part .services-text .services-btn {
+  font-size: 16px;
+  text-transform: uppercase;
+  position: relative;
+  padding: 12px 25px;
+  border: 1px solid #282828;
+  color: #282828;
+  background-color: transparent;
+  display: inline-block;
+}
+.themephi-addon-services.services-style3 .services-part .services-text .services-btn:hover {
+  color: #fff;
+  background-color: #282828;
+}
+.themephi-addon-services.services-style4 .services-part {
+  margin-bottom: 30px;
+}
+.themephi-addon-services.services-style4 .services-part .services-icon {
+  margin-bottom: 25px;
+}
+.themephi-addon-services.services-style4 .services-part .services-text .service-meta {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 10px;
+}
+.themephi-addon-services.services-style4 .services-part .services-text .service-meta li {
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+.themephi-addon-services.services-style4 .services-part .services-text .service-meta li span {
+  display: inline-block;
+}
+.themephi-addon-services.services-style4 .services-part .services-text .service-meta li span i {
+  display: inline-block;
+  margin-right: 5px;
+}
+.themephi-addon-services.services-style4 .services-part .services-text .title {
+  font-size: 24px;
+}
+.themephi-addon-services.services-style4 .services-part .services-text .title a {
+  color: #090908;
+}
+.themephi-addon-services.services-style4 .services-part .services-text .title a:hover {
+  color: var(--primaryColor);
+}
+.themephi-addon-services.services-style4 .services-part .services-text .services-desc {
+  color: #282828;
+  margin-bottom: 0;
+}
+.themephi-addon-services.services-style4 .services-part .services-text .services-btn {
+  color: #282828;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.themephi-addon-services.services-style4 .services-part .services-text .services-btn:hover {
+  color: var(--primaryColor);
+}
+.themephi-addon-services.services-style5 .services-part {
+  position: relative;
+  z-index: 1;
+}
+.themephi-addon-services.services-style5 .services-part::before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(9, 9, 8) 60%);
+  z-index: 0;
+}
+.themephi-addon-services.services-style5 .services-part .services-text-part-wrapper-absolute {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 30px;
+}
+.themephi-addon-services.services-style5 .services-part .services-text .service-meta {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 5px;
+}
+.themephi-addon-services.services-style5 .services-part .services-text .service-meta li {
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+.themephi-addon-services.services-style5 .services-part .services-text .service-meta li span {
+  display: inline-block;
+  color: #fff;
+}
+.themephi-addon-services.services-style5 .services-part .services-text .service-meta li span i {
+  display: inline-block;
+  margin-right: 5px;
+}
+.themephi-addon-services.services-style5 .services-part .services-text .title {
+  font-size: 24px;
+}
+.themephi-addon-services.services-style5 .services-part .services-text .title a {
+  color: #fff;
+}
+.themephi-addon-services.services-style5 .services-part .services-text .title a:hover {
+  color: var(--primaryColor);
+}
+.themephi-addon-services.services-style5 .services-part .services-text .services-desc {
+  color: #fff;
+  margin-bottom: 0;
+}
+.themephi-addon-services.services-style5 .services-part .services-btn {
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.themephi-addon-services.services-style5 .services-part .services-btn:hover {
+  color: var(--primaryColor);
+}
+
+.tp-services-wrapper.services-wrapper-style2 .row.g-0 > div:nth-child(2) .services-text,
+.tp-services-wrapper.services-wrapper-style2 .row.g-0 > div:nth-child(3) .services-text,
+.tp-services-wrapper.services-wrapper-style2 .row.g-0 > div:nth-child(6) .services-text,
+.tp-services-wrapper.services-wrapper-style2 .row.g-0 > div:nth-child(8) .services-text,
+.tp-services-wrapper.services-wrapper-style2 .row.g-0 > div:nth-child(8) .services-text,
+.tp-services-wrapper.services-wrapper-style2 .row.g-0 > div:nth-child(12) .services-text {
+  background-color: var(--primaryColor);
+}
+.tp-services-wrapper.services-wrapper-style5 .row.g-0 > div:nth-child(even) .services-part {
+  transform: translateY(30px);
+}
+@media (max-width: 767px) {
+  .tp-services-wrapper.services-wrapper-style5 .row.g-0 > div:nth-child(even) .services-part {
+    transform: translateY(0px);
+  }
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.themephi-addon-services.elementor-postion-top .services-part {
+  display: block;
+  text-align: center;
+  flex-direction: unset;
+}
+.themephi-addon-services.elementor-postion-left .services-part {
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 767px) {
+  .themephi-addon-services.elementor-postion-left .services-part {
+    flex-wrap: wrap;
+  }
+}
+.themephi-addon-services.elementor-postion-left .services-part .services-icon {
+  display: inline-flex;
+  flex: 0 0 auto;
+}
+.themephi-addon-services.elementor-postion-left.elementor-vertical-align-top .services-part {
+  align-items: start;
+}
+.themephi-addon-services.elementor-postion-left.elementor-vertical-align-middle .services-part {
+  align-items: center;
+}
+.themephi-addon-services.elementor-postion-left.elementor-vertical-align-bottom .services-part {
+  align-items: end;
+}
+.themephi-addon-services.elementor-postion-right .services-part {
+  display: flex;
+  flex-direction: row-reverse;
+}
+@media (max-width: 767px) {
+  .themephi-addon-services.elementor-postion-right .services-part {
+    flex-wrap: wrap;
+  }
+}
+.themephi-addon-services.elementor-postion-right .services-part .services-icon {
+  display: inline-flex;
+  flex: 0 0 auto;
+}
+.themephi-addon-services.elementor-postion-right.elementor-vertical-align-top .services-part {
+  align-items: start;
+}
+.themephi-addon-services.elementor-postion-right.elementor-vertical-align-middle .services-part {
+  align-items: center;
+}
+.themephi-addon-services.elementor-postion-right.elementor-vertical-align-bottom .services-part {
+  align-items: end;
+}
+.themephi-addon-services.elementor-postion-bottom .services-part {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.services-text-part-wrapper.elementor-postion-top {
+  display: block;
+  flex-direction: unset;
+}
+.services-text-part-wrapper.elementor-postion-left {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.services-text-part-wrapper.elementor-postion-left .services-text {
+  width: -moz-max-content;
+  width: max-content;
+}
+.services-text-part-wrapper.elementor-postion-left .services-btn-part {
+  margin-right: 10px;
+}
+.services-text-part-wrapper.elementor-postion-left.elementor-vertical-align-top {
+  align-items: start;
+}
+.services-text-part-wrapper.elementor-postion-left.elementor-vertical-align-middle {
+  align-items: center;
+}
+.services-text-part-wrapper.elementor-postion-left.elementor-vertical-align-bottom {
+  align-items: end;
+}
+.services-text-part-wrapper.elementor-postion-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.services-text-part-wrapper.elementor-postion-right .services-text {
+  width: -moz-max-content;
+  width: max-content;
+}
+.services-text-part-wrapper.elementor-postion-right .services-btn-part {
+  margin-left: 10px;
+}
+.services-text-part-wrapper.elementor-postion-right.elementor-vertical-align-top {
+  align-items: start;
+}
+.services-text-part-wrapper.elementor-postion-right.elementor-vertical-align-middle {
+  align-items: center;
+}
+.services-text-part-wrapper.elementor-postion-right.elementor-vertical-align-bottom {
+  align-items: end;
+}
+.services-text-part-wrapper.elementor-postion-bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.tp-services-wrapper.services-wrapper-style2 ul.page-numbers {
+  margin-top: 30px;
+}
+.tp-services-wrapper.services-wrapper-style3 .elementor-postion-right .services-part .services-text {
+  padding-left: 20px;
+}
+.tp-services-wrapper.services-wrapper-style3 .row > div:nth-child(even) .services-part {
+  flex-direction: row-reverse;
+}
+.tp-services-wrapper.services-wrapper-style3 .row > div:nth-child(even) .services-part .services-text {
+  padding-left: 20px;
+}
+@media (max-width: 767px) {
+  .tp-services-wrapper.services-wrapper-style3 .row > div:nth-child(even) .services-part .services-text {
+    padding-left: 0px;
+  }
+}
+.tp-services-wrapper.services-wrapper-style3 .row > div:nth-child(even) .elementor-postion-right .services-part {
+  flex-direction: row;
+}
+.tp-services-wrapper.services-wrapper-style3 .row > div:nth-child(even) .elementor-postion-right .services-part .services-text {
+  padding-left: 40px;
+}
+.tp-services-wrapper.services-wrapper-style5 ul.page-numbers {
+  margin-top: 60px;
+}
+.tp-services-wrapper ul.page-numbers {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.tp-services-wrapper ul.page-numbers li {
+  display: inline-block;
+}
+.tp-services-wrapper ul.page-numbers li span.current {
+  background: var(--primaryColor);
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 1.3s;
+  text-align: center;
+  color: #fff;
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid var(--primaryColor);
+  font-weight: 700;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  margin: 0 2px;
+}
+.tp-services-wrapper ul.page-numbers li span,
+.tp-services-wrapper ul.page-numbers li a {
+  line-height: 50px;
+  color: #243757;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 1.3s;
+  text-align: center;
+  background: transparent;
+  opacity: 1;
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid var(--primaryColor);
+  font-weight: 700;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 2px;
+  cursor: pointer;
+}
+.tp-services-wrapper ul.page-numbers li a.next {
+  position: relative;
+}
+.tp-services-wrapper ul.page-numbers li a:hover {
+  background: var(--primaryColor);
+  color: #fff;
+}/*# sourceMappingURL=services-grid.css.map */

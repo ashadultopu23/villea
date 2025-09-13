@@ -1,0 +1,364 @@
+:root {
+  --bodyFont: "Jost", sans-serif;
+  --titleFont: "Jost", sans-serif;
+  --transition: all .3s ease;
+  --body_bg: #ffffff;
+  --globalColor: #F5F5F5;
+  --borderColor: #DFE0E4;
+  --bodyColor: #404A60;
+  --titleColor: #222E48;
+  --primaryColor: #2660B5;
+  --secondaryColor: #EB7A23;
+  --whiteColor: #ffffff;
+  --blackColor: #171717;
+  --linkColor: #2660B5;
+  --hoverColor: var(--secondaryColor);
+  --boxBorderRadius: 5px;
+  --imageBorderRadius: 4px;
+  --btnBorderRadius: 5px;
+  --btnBgColor: #2660B5;
+  --btnHoverBgColor: #EB7A23;
+  --btnColor: #ffffff;
+  --btnHoverColor: #ffffff;
+  --btnBgColor2: transparent;
+  --btnHoverBgColor2: #2660B5;
+  --btnColor2: #222E48;
+  --btnHoverColor2: #ffffff;
+}
+
+/********** Icon Style Start **********/
+.tp_elements-icon-widget .icon-item-link {
+  display: block;
+}
+
+.tp_elements-icon-widget .icon-item .icon-container {
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  display: inline-flex;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  position: relative;
+  width: 56px;
+  height: 56px;
+}
+
+.tp_elements-icon-widget .icon-item .icon-container img {
+  position: absolute;
+  display: block;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  transition: opacity 0.3s;
+}
+
+.tp_elements-icon-widget .icon-item .icon-container .icon,
+.tp_elements-icon-widget .icon-item .icon-container .background {
+  position: absolute;
+  display: block;
+  left: 50%;
+  right: auto;
+  top: 50%;
+  bottom: initial;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.tp_elements-icon-widget .icon-item .icon-container .icon svg,
+.tp_elements-icon-widget .icon-item .icon-container .background svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: fill 0.3s;
+}
+
+.tp_elements-icon-widget .icon-item .icon-container .icon {
+  z-index: 3;
+}
+
+.tp_elements-icon-widget .icon-item .icon-container i, .tp_elements-icon-widget .icon-item .icon-container span {
+  position: relative;
+  z-index: 3;
+  transition: color 0.3s, fill 0.3s;
+}
+
+/*  Decoration Style  */
+.tp-border-decoration-border-bottom-left {
+  position: absolute;
+  right: 100%;
+  bottom: 0;
+  border-top-right-radius: 0px;
+  background-color: transparent;
+  z-index: 3;
+  content: "";
+  width: 20px;
+  height: 40px;
+  border-bottom-right-radius: 20px;
+  --box-shadow-color: #7c2626;
+  --box-shadow-offset-y: 20px;
+  box-shadow: 0 var(--box-shadow-offset-y) 0 0 var(--box-shadow-color);
+}
+
+.tp-border-decoration-border-bottom-right {
+  position: absolute;
+  left: 100%;
+  bottom: 0;
+  border-top-right-radius: 0px;
+  background-color: transparent;
+  z-index: 3;
+  content: "";
+  width: 20px;
+  height: 40px;
+  border-bottom-left-radius: 20px;
+  --box-shadow-color: #7c2626;
+  --box-shadow-offset-y: 20px;
+  box-shadow: 0 var(--box-shadow-offset-y) 0 0 var(--box-shadow-color);
+}
+
+.tp-border-decoration-border-top-left {
+  position: absolute;
+  right: 100%;
+  top: 0;
+  border-top-right-radius: 0px;
+  background-color: transparent;
+  z-index: 3;
+  content: "";
+  width: 20px;
+  height: 40px;
+  border-bottom-left-radius: 20px;
+  --box-shadow-color: #7c2626;
+  --box-shadow-offset-y: 20px;
+  box-shadow: 0 var(--box-shadow-offset-y) 0 0 var(--box-shadow-color);
+  transform: rotate(180deg);
+}
+
+.tp-border-decoration-inside-decoration-border-top-left {
+  transform: rotate(-360deg);
+  left: 0;
+  top: auto;
+  bottom: 100%;
+  position: absolute;
+  right: 100%;
+  border-top-right-radius: 0px;
+  background-color: transparent;
+  z-index: 3;
+  content: "";
+  width: 20px;
+  height: 40px;
+  border-bottom-left-radius: 20px;
+  --box-shadow-color: #7c2626;
+  --box-shadow-offset-y: 20px;
+  box-shadow: 0 var(--box-shadow-offset-y) 0 0 var(--box-shadow-color);
+}
+
+.tp-border-decoration-inside-border-bottom-right {
+  position: absolute;
+  left: calc(100% - 20px);
+  bottom: auto;
+  border-top-right-radius: 0px;
+  background-color: transparent;
+  z-index: 3;
+  content: "";
+  width: 20px;
+  height: 40px;
+  border-bottom-left-radius: 20px;
+  --box-shadow-color: #7c2626;
+  --box-shadow-offset-y: 20px;
+  box-shadow: 0 var(--box-shadow-offset-y) 0 0 var(--box-shadow-color);
+  transform: rotate(-180deg);
+  top: 100%;
+}
+
+.tp-border-decoration-inside-border-bottom-left {
+  position: absolute;
+  border-top-right-radius: 0px;
+  background-color: transparent;
+  z-index: 3;
+  content: "";
+  width: 20px;
+  height: 40px;
+  border-bottom-right-radius: 20px;
+  --box-shadow-color: #7c2626;
+  --box-shadow-offset-y: 20px;
+  box-shadow: 0 var(--box-shadow-offset-y) 0 0 var(--box-shadow-color);
+  transform: rotate(180deg);
+  top: 100%;
+  left: auto;
+  right: calc(100% - 20px);
+}
+
+.tp-border-decoration-border-top-right {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  border-top-right-radius: 0px;
+  background-color: transparent;
+  z-index: 3;
+  content: "";
+  width: 20px;
+  height: 40px;
+  border-bottom-right-radius: 20px;
+  --box-shadow-color: #7c2626;
+  --box-shadow-offset-y: 20px;
+  box-shadow: 0 var(--box-shadow-offset-y) 0 0 var(--box-shadow-color);
+  transform: rotate(180deg);
+}
+
+.tp_elements-icon-widget {
+  position: relative;
+  z-index: 1;
+  line-height: 1;
+}
+
+.icon-container i, .icon-container svg, .icon-container span {
+  transition: 0.4s;
+  position: relative;
+}
+
+.icon-container:hover i, .icon-container:hover svg, .icon-container:hover span {
+  animation: tfLeftToRight 0.4s forwards;
+}
+
+.icon-container span {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  text-decoration: none;
+  color: transparent;
+}
+
+@keyframes tfLeftToRight {
+  49% {
+    transform: translateX(50%) translateY(-50%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(50%);
+  }
+  51% {
+    opacity: 1;
+  }
+}
+/********** Icon Style end **********/
+/********** Project Cards Start **********/
+.project-listing-wrapper.project-cards-listing .project-item-wrapper {
+  position: sticky;
+  top: 130px;
+}
+
+/********** Project Cards end **********/
+/********** Project Slider Content Start **********/
+.tp-portfolio-item-content {
+  padding: 20px 25px;
+  margin: 20px;
+  border-radius: 12px;
+  max-width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  transition: all 0.4s linear 0s;
+}
+
+.tp-portfolio-item-content-absolute {
+  position: absolute;
+  left: 0;
+  bottom: -90px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.tp-portfolio-title {
+  font-size: 26px;
+  font-weight: normal;
+  margin-bottom: 0px;
+}
+
+.tp-portfolio-title a {
+  color: #fff;
+}
+
+.tp-portfolio-title a:hover {
+  color: #D5313D;
+}
+
+.tp-portfolio-category {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.tp-portfolio-category:hover {
+  color: #D5313D;
+}
+
+.tp-portfolio-item:hover .tp-portfolio-item-content-absolute {
+  bottom: 0px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.tp-portfolio-thumb img {
+  width: 100%;
+  max-width: 100%;
+}
+
+/********** Project Slider Content End **********/
+/***************  Project Grid Content Start  ***************/
+.grid-item.layout2 .tp-portfolio-item-content.tp-portfolio-item-content-absolute {
+  bottom: 0;
+  opacity: 1;
+  visibility: visible;
+  margin: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+  background: #171717;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: none;
+  -webkit-backdrop-filter: blur(0px);
+          backdrop-filter: blur(0px);
+}
+.grid-item.layout2 .tp-portfolio-item-content.tp-portfolio-item-content-absolute .tp-portfolio-bottom-left-static {
+  background: #1F1F1F;
+  padding: 30px;
+  border-radius: 12px;
+  border-bottom-left-radius: 20px;
+  box-shadow: 0px 5px 0px rgba(36, 36, 36, 0.6);
+}
+.grid-item.layout2 .tp-portfolio-item-content.tp-portfolio-item-content-absolute .tp-portfolio-category-border-gradient {
+  background: linear-gradient(90deg, #DE4D4D, #3A6BB6);
+  padding: 1px;
+  border-radius: 100px;
+  display: inline-block;
+  margin-top: 15px;
+}
+.grid-item.layout2 .tp-portfolio-item-content.tp-portfolio-item-content-absolute .tp-portfolio-category-border-gradient .tp-portfolio-category-name {
+  padding: 12px 15px;
+  background-color: #1f1f1f;
+  border-radius: 100px;
+  transition: all 0.5s linear 0s;
+  line-height: 1;
+}
+.grid-item.layout2 .tp-portfolio-item-content.tp-portfolio-item-content-absolute .tp-portfolio-category-border-gradient:hover {
+  background: linear-gradient(90deg, #DE4D4D, #3A6BB6);
+}
+.grid-item.layout2 .tp-portfolio-item-content.tp-portfolio-item-content-absolute .tp-portfolio-category-border-gradient:hover .tp-portfolio-category-name {
+  background-color: transparent;
+  color: #fff;
+}
+
+/***************  Project Grid Content Start  ***************/
+.tp-portfolio-item-inner-wrapper {
+  display: flex;
+  gap: 50px;
+}/*# sourceMappingURL=portfolio-slider.css.map */

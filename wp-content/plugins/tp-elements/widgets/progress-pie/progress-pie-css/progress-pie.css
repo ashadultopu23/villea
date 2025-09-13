@@ -1,0 +1,63 @@
+:root {
+  --bodyFont: "Jost", sans-serif;
+  --titleFont: "Jost", sans-serif;
+  --transition: all .3s ease;
+  --body_bg: #ffffff;
+  --globalColor: #F5F5F5;
+  --borderColor: #DFE0E4;
+  --bodyColor: #404A60;
+  --titleColor: #222E48;
+  --primaryColor: #2660B5;
+  --secondaryColor: #EB7A23;
+  --whiteColor: #ffffff;
+  --blackColor: #171717;
+  --linkColor: #2660B5;
+  --hoverColor: var(--secondaryColor);
+  --boxBorderRadius: 5px;
+  --imageBorderRadius: 4px;
+  --btnBorderRadius: 5px;
+  --btnBgColor: #2660B5;
+  --btnHoverBgColor: #EB7A23;
+  --btnColor: #ffffff;
+  --btnHoverColor: #ffffff;
+  --btnBgColor2: transparent;
+  --btnHoverBgColor2: #2660B5;
+  --btnColor2: #222E48;
+  --btnHoverColor2: #ffffff;
+}
+
+/*------------------------------
+  Pie progress bar
+  -----------------------------*/
+.rs-pie-content {
+  display: flex;
+}
+.rs-pie-content.left {
+  flex-direction: row;
+}
+.rs-pie-content.right {
+  flex-direction: row-reverse;
+}
+.rs-pie-content.top {
+  flex-direction: column;
+}
+.rs-pie-content.bottom {
+  flex-direction: column-reverse;
+}
+.rs-pie-content .rspie-title-center {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+.rs-pie-content .rspie-value {
+  display: block;
+  position: absolute;
+  font-size: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.rs-pie-content .number {
+  display: block;
+  font-size: 20px;
+}/*# sourceMappingURL=progress-pie.css.map */

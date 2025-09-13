@@ -1,0 +1,365 @@
+@import "../../../scss/base";
+
+//button css
+.themephi-button {
+  &:not(.link_btn) {
+    a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: 500;
+      font-family: var(--titleFont);
+      // line-height: 16px;
+      text-align: center;
+      border-radius: 2px;
+      position: relative;
+      transition: all 0.9s ease-in-out;
+      z-index: 1;
+      overflow: hidden;
+      cursor: pointer;
+      white-space: nowrap;
+      color: var(--btnColor);
+      background: var(--btnBgColor);
+      border-radius: 50px;
+      &::before {
+        position: absolute;
+        content: "";
+        transform: translate(-50%, -50%);
+        top: var(--y);
+        left: var(--x);
+        width: 0px;
+        height: 0px;
+        transition: all 0.9s ease-in-out;
+        z-index: -1;
+        border-radius: inherit;
+      }
+      &:hover {
+        color: var(--btnTextColor);
+        &::before {
+          width: 400%;
+          height: 400%;
+        }
+      }
+      svg {
+        width: 20px;
+        position: relative;
+      }
+      i {
+        font-size: 20px;
+      }
+    }
+    &.primary_btn {
+      a {
+        color: var(--btnColor);
+        background: var(--btnBgColor);
+        &::before {
+          background: var(--btnHoverBgColor);
+        }
+        &:hover {
+          color: var(--btnHoverColor);
+        }
+      }
+    }
+    &.secondary_btn {
+      a {
+        background: var(--secondaryColor);
+        color: var(--whiteColor);
+        &:before {
+          background: var(--primaryColor);
+        }
+      }
+    }
+    &.outline_btn {
+      a {
+        background: transparent;
+        color: var(--btnColor2);
+        border: 1px solid var(--btnBgColor);
+        &:before {
+          background: var(--btnHoverBgColor2);
+        }
+        &:hover {
+          color: var(--btnHoverColor2);
+          border-color: var(--btnHoverBgColor2);
+        }
+      }
+    }
+    &.another_btn {
+      a {
+        background-color: var(--primaryColor);
+        border: 1px solid var(--borderColor);
+        border-radius: 100px;
+        // color: var(--secondaryColor);
+        transition: all 0.5s ease-in-out;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        z-index: 0;
+        text-align: center;
+        gap: 0;
+        transition: all 0.7s ease;
+
+        i {
+          color: var(--primaryColor);
+          font-weight: 600;
+          background-color: var(--secondaryColor);
+          width: 50px;
+          min-width: 50px;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          transition: all 0.5s ease-in-out;
+        }
+
+        &:hover {
+          border-color: var(--primaryColor);
+          color: var(--textColor);
+          i {
+            color: var(--secondaryColor);
+            transform: rotateY(-180deg);
+            background-color: var(--primaryColor);
+          }
+        }
+      }
+    }
+  }
+
+  &.link_btn {
+    a {
+      color: var(--btnTextColor);
+      padding: 0;
+      font-size: 16px;
+      font-weight: 500;
+      font-family: var(--bodyFont);
+      background: transparent;
+      position: relative;
+      transition: 0.3s;
+      z-index: 1;
+      overflow: hidden;
+      i {
+        color: var(--btnTextHoverColor);
+      }
+      &:hover {
+        color: var(--btnTextHoverColor);
+        i {
+          color: var(--btnTextColor);
+        }
+      }
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+// //Slider Button
+.slider-themephi-button {
+  display: inline-block;
+  color: var(--whiteColor);
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: var(--titleFont);
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: var(--primaryColor);
+  border-radius: 2px;
+  position: relative;
+  transition: 0.3s;
+  z-index: 1;
+  overflow: hidden;
+  cursor: pointer;
+  &:hover {
+    background: var(--titleColor);
+  }
+  svg {
+    width: 20px;
+    position: relative;
+  }
+  &::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: var(--titleColor);
+    transform: translateY(110%);
+    transition: 0.3s;
+    z-index: -1;
+  }
+  &:hover::after {
+    transform: translateY(0%);
+  }
+  &.style-2 {
+    &:hover {
+      background: var(--titleColor);
+      color: var(--whiteColor) !important;
+    }
+  }
+}
+
+//Slider Call Btn
+.slider-call-area {
+  display: flex;
+  align-items: flex-start;
+  .icon {
+    i {
+      width: 52px;
+      height: 52px;
+      background: var(--whiteColor);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primaryColor);
+      font-weight: 600;
+      margin-right: 15px;
+      margin-bottom: 20px;
+    }
+  }
+  .slider-detail {
+    span {
+      display: block;
+      text-transform: capitalize;
+      color: var(--bodyColor);
+      margin-bottom: 10px;
+    }
+    a {
+      font-weight: 700;
+      font-size: 24px;
+      color: var(--whiteColor);
+      line-height: 37px;
+      transition: 0.3s;
+      &:hover {
+        color: var(--primaryColor);
+      }
+    }
+  }
+}
+
+//Revolution Slider Tab Style
+#rev_slider_2_1_wrapper .zeus .tp-tab {
+  text-align: center;
+  .tp-tab-title {
+    display: inline-block;
+    background: transparent;
+    line-height: 8px;
+    position: relative;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+}
+.tp-tabs-inner-wrapper {
+  .tp-tab.selected {
+    .tp-tab-title {
+      position: relative;
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: var(--blackColor);
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+// Handyman Slider Button
+.slider-themephi-button.handyman_slider_btn.rs-layer {
+  padding: 15px 60px 15px 24px;
+  position: relative;
+  &:hover {
+    color: var(--whiteColor) !important;
+  }
+  &::before {
+    content: "\ea65";
+    font-family: "tp-icons";
+    display: inline-block;
+    background: var(--primaryColor);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: var(--whiteColor);
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+// Engineer Slider Button
+.slider-themephi-button.engineer.rs-layer {
+  background: transparent !important;
+  border: 1px solid var(--whiteColor) !important;
+  color: var(--whiteColor) !important;
+  display: flex;
+  align-items: center;
+  padding: 18px 30px 18px 30px;
+  &:hover {
+    border: 1px solid var(--primaryColor) !important;
+  }
+  &:hover::after {
+    background: var(--primaryColor) !important;
+  }
+}
+.slider-themephi-button.engineer.btn-1.rs-layer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 18px 70px 18px 30px !important;
+  &::before {
+    content: "\ea65";
+    font-family: "tp-icons";
+    display: inline-block;
+    background: var(--whiteColor);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: var(--primaryColor);
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+//Engineer Slider Nav
+.engineer_slider .tp-tabs-inner-wrapper .tp-tab-title {
+  color: var(--whiteColor);
+  background: transparent;
+  width: 67px !important;
+  height: 67px !important;
+  line-height: 67px !important;
+  text-align: center;
+  padding: 20px 10px !important;
+  border: 2px solid var(--whiteColor);
+  border-radius: 50px;
+}
+.engineer_slider .tp-tabs-inner-wrapper .tp-tab.selected .tp-tab-title::after {
+  content: "";
+  display: none;
+}
+.engineer_slider #rev_slider_6_1_wrapper .zeus .tp-tab.selected .tp-tab-title {
+  color: var(--primaryColor) !important;
+  background: var(--whiteColor);
+}
+
+//Metform Button
+button.metform-btn.metform-submit-btn.elevate_metform_btn svg {
+  background: var(--whiteColor);
+  width: 40px;
+  height: 40px;
+  padding: 13px;
+  margin-left: 14px;
+}

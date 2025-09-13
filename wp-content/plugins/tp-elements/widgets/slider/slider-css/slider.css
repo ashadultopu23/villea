@@ -1,0 +1,164 @@
+:root {
+  --bodyFont: "Jost", sans-serif;
+  --titleFont: "Jost", sans-serif;
+  --transition: all .3s ease;
+  --body_bg: #ffffff;
+  --globalColor: #F5F5F5;
+  --borderColor: #DFE0E4;
+  --bodyColor: #404A60;
+  --titleColor: #222E48;
+  --primaryColor: #2660B5;
+  --secondaryColor: #EB7A23;
+  --whiteColor: #ffffff;
+  --blackColor: #171717;
+  --linkColor: #2660B5;
+  --hoverColor: var(--secondaryColor);
+  --boxBorderRadius: 5px;
+  --imageBorderRadius: 4px;
+  --btnBorderRadius: 5px;
+  --btnBgColor: #2660B5;
+  --btnHoverBgColor: #EB7A23;
+  --btnColor: #ffffff;
+  --btnHoverColor: #ffffff;
+  --btnBgColor2: transparent;
+  --btnHoverBgColor2: #2660B5;
+  --btnColor2: #222E48;
+  --btnHoverColor2: #ffffff;
+}
+
+.slider-inner-wrapper .trasted-client {
+  position: absolute;
+  left: 60px;
+  top: 60px;
+  z-index: 2;
+  max-width: 300px;
+}
+.slider-inner-wrapper .trasted-client span {
+  margin-bottom: 44px;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 40px;
+  font-family: var(--titleFont);
+  text-transform: uppercase;
+  color: var(--titleColor);
+  background: var(--whiteColor);
+}
+.slider-inner-wrapper .tp--slider.slider-style1 .single--item {
+  position: relative;
+  padding: 24px;
+}
+.slider-inner-wrapper .tp--slider.slider-style1 .single--item .content--box {
+  display: flex;
+  align-items: center;
+}
+.slider-inner-wrapper .tp--slider.slider-style1 .single--item .content--box .slider-subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+.slider-inner-wrapper .tp--slider.slider-style1 .single--item .content--box .slider-title {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+.slider-inner-wrapper .tp--slider.slider-style1 .single--item .review-body .desc {
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+.slider-inner-wrapper .tp--slider.slider-style2 .single--item {
+  position: relative;
+  padding: 24px;
+}
+.slider-inner-wrapper .tp--slider.slider-style2 .single--item .content--box {
+  display: flex;
+  align-items: center;
+}
+.slider-inner-wrapper .tp--slider.slider-style2 .single--item .content--box .slider-subtitle {
+  font-size: 18px;
+  font-weight: 400;
+}
+.slider-inner-wrapper .tp--slider.slider-style2 .single--item .content--box .slider-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 4px;
+}
+.slider-inner-wrapper .tp--slider.slider-style2 .single--item .review-body .desc {
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+.slider-inner-wrapper .tp--slider.slider-style3 .single--item {
+  position: relative;
+  padding: 24px;
+  margin-bottom: 30px;
+}
+.slider-inner-wrapper .tp--slider.slider-style3 .single--item .content--box {
+  display: flex;
+  align-items: center;
+}
+.slider-inner-wrapper .tp--slider.slider-style3 .single--item .content--box .slider-subtitle {
+  font-size: 18px;
+  font-weight: 400;
+}
+.slider-inner-wrapper .tp--slider.slider-style3 .single--item .content--box .slider-title {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+.slider-inner-wrapper .tp--slider.slider-style3 .single--item .review-body .desc {
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+.slider-inner-wrapper .tp--slider.slider-style3 .single--item .banner-image {
+  position: absolute;
+  bottom: -30px;
+  left: 24px;
+}
+.slider-inner-wrapper .tp--slider.slider-style4 .single--item {
+  position: relative;
+  padding: 24px;
+}
+.slider-inner-wrapper .tp--slider.slider-style4 .single--item .quote-icon {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.slider-inner-wrapper .tp--slider.slider-style4 .single--item .tp-el-star {
+  justify-content: center;
+}
+.slider-inner-wrapper .tp--slider.slider-style4 .single--item .review-body .desc {
+  margin-top: 16px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+.slider-inner-wrapper .tp--slider.slider-style4 .single--item .content--box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider-inner-wrapper .tp--slider.slider-style4 .single--item .content--box .slider-subtitle {
+  font-size: 18px;
+  font-weight: 400;
+}
+.slider-inner-wrapper .tp--slider.slider-style4 .single--item .content--box .slider-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 4px;
+}
+
+.slider-navigation-style2 {
+  position: absolute;
+  right: 30px;
+  bottom: 27px;
+  z-index: 1;
+}
+
+.slider-navigation-style4 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  z-index: 1;
+}/*# sourceMappingURL=slider.css.map */

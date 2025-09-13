@@ -1,0 +1,192 @@
+
+/*----------------------------------------*/
+/*  18. PAYMENT CSS START
+/*----------------------------------------*/
+
+  .row-custom {
+    display: flex;
+    gap: 20px;
+  }
+  .col-custom {
+    min-height: 360px;
+    background-size: cover;
+    background: #171717;
+    border-radius: 12px;
+    padding: 20px 15px;
+    transition: 0.4s;
+    cursor: pointer;
+    align-items: end;
+    display: flex;
+    justify-content: center;
+  }
+  .col-custom.active {
+    /* flex: 1; */
+    width: 100%;
+  }
+  .tp-panel-item {
+    width: auto;
+  }
+  .col-custom.active .tp-panel-item {
+    display: none;
+  }
+  .col-custom.active .tp-panel-item-2 {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    transition-delay: 0.3s;
+    transition: 0.3s;
+    display: block;
+    justify-content: start;
+    width: 100%;
+  }
+  
+  .tp-panel-title {
+    width: auto;
+    font-weight: 500;
+    font-size: 22px;
+    color: var(--whiteColor);
+    margin-bottom: 0;
+    text-align: start;
+    writing-mode: sideways-lr;
+  }
+  .tp-panel-content {
+    /* text-align: center;
+    width: auto; */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  .tp-panel-content span {
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--whiteColor);
+    display: inline-block;
+  }
+  .tp-panel-content-2 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .tp-panel-content-2 span {
+    font-weight: 700;
+    color: var(--whiteColor);
+    display: inline-block;
+  }
+  .tp-panel-content-2 p {
+    font-weight: 400;
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0;
+  }
+  
+  .tp-panel-content-2 span {
+    visibility: hidden;
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(5px);
+    transition-delay: 0.5s;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+  }
+  
+  .tp-panel-title-2 {
+    transform: translateY(5px);
+    visibility: hidden;
+    opacity: 0;
+    transition-delay: 0.5s;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+  }
+  
+  .tp-panel-content-2 p {
+    transform: translateY(5px);
+    visibility: hidden;
+    opacity: 0;
+    transition-delay: 0.8s;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+  }
+  
+  .col-custom.active .tp-panel-content-2 span {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.4s;
+  }
+  
+  .col-custom.active .tp-panel-title-2 {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.5s;
+  }
+  
+  .col-custom.active .tp-panel-content-2 p {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.5s;
+  }
+  
+  .tp-panel-title-2 {
+    font-weight: 600;
+    font-size: 30px;
+    color: var(--whiteColor);
+  }
+  
+  .tp-panel-item-2 {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.7);
+    display: none;
+    height: 100%;
+  }
+  .icon-container {
+    text-align: center;
+  }
+
+  @media (max-width: 767px) {
+    .tp-panel-item-2 {
+      display: none;
+    }
+    .col-custom.active .tp-panel-item-2 {
+      display: block;
+      text-align: center;
+    }
+    .col-custom.active .tp-panel-item-2 .icon-container {
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+    .row-custom {
+      flex-direction: column;
+    }
+    .col-custom {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      align-items: center;
+    }
+
+    .tp-panel-title {
+      writing-mode: horizontal-tb;
+    }
+    .tp-panel-content {
+      text-align: start;
+      display: flex;
+    }
+    .icon-container {
+      margin: 0;
+      order: -1;
+    }
+  }

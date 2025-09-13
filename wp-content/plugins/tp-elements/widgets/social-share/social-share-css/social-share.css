@@ -1,0 +1,89 @@
+:root {
+  --bodyFont: "Jost", sans-serif;
+  --titleFont: "Jost", sans-serif;
+  --transition: all .3s ease;
+  --body_bg: #ffffff;
+  --globalColor: #F5F5F5;
+  --borderColor: #DFE0E4;
+  --bodyColor: #404A60;
+  --titleColor: #222E48;
+  --primaryColor: #2660B5;
+  --secondaryColor: #EB7A23;
+  --whiteColor: #ffffff;
+  --blackColor: #171717;
+  --linkColor: #2660B5;
+  --hoverColor: var(--secondaryColor);
+  --boxBorderRadius: 5px;
+  --imageBorderRadius: 4px;
+  --btnBorderRadius: 5px;
+  --btnBgColor: #2660B5;
+  --btnHoverBgColor: #EB7A23;
+  --btnColor: #ffffff;
+  --btnHoverColor: #ffffff;
+  --btnBgColor2: transparent;
+  --btnHoverBgColor2: #2660B5;
+  --btnColor2: #222E48;
+  --btnHoverColor2: #ffffff;
+}
+
+.social-share-container.inline {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.social-share-container.block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.social-share-title {
+  margin: 0 0 10px 0;
+  display: inline-block;
+}
+
+.social-share-items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.social-share-item {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-share-link {
+  display: flex;
+  align-items: center;
+}
+
+.social-share-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  border: 1px solid var(--primaryColor);
+  background-color: transparent;
+  color: var(--primaryColor);
+}
+.social-share-icon:hover {
+  border: 1px solid var(--primaryColor);
+  color: var(--whiteColor);
+  background-color: var(--primaryColor);
+}
+
+.social-share-icon i {
+  transition: all 0.3s ease;
+}
+
+.social-share-label {
+  margin-left: 8px;
+  font-size: 14px;
+}/*# sourceMappingURL=social-share.css.map */
