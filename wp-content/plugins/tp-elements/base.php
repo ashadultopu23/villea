@@ -237,6 +237,9 @@ final class TPelements_Elementor_Extension
 
 		// button
 		$enqueue_with_version('tpelements-video-button-css', 'widgets/video-button/video-button-css/video-button.css');
+
+		// image-tab-gallery
+		$enqueue_with_version('tpelements-image-tab-gallery-css', 'widgets/image-tab-gallery/image-tab-gallery-css/image-tab-gallery.css');
 	}
 
 	public function tpaddon_register_plugin_styles()
@@ -835,6 +838,10 @@ final class TPelements_Elementor_Extension
 		// category widget
 		require_once(__DIR__ . '/widgets/category/category.php');
 		\Elementor\Plugin::instance()->widgets_manager->register(new \Trading_Categories_Widget());
+
+		// image tab gallery 
+		require_once(__DIR__ . '/widgets/image-tab-gallery/image-tab-gallery.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \Themephi_Image_Tab_Gallery_Widget());
 
 
 		// Register widget				
