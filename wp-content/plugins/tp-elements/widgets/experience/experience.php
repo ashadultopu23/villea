@@ -129,6 +129,60 @@ class Themephi_Elementor_Experience_Widget extends \Elementor\Widget_Base
 		$this->end_controls_section();
 
 
+
+		$this->start_controls_section(
+			'experience_box_style',
+			[
+				'label' => esc_html__('Circle', 'tp-elements'),
+				'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->add_control(
+			'ex_text_background',
+			[
+				'label' => esc_html__('Background', 'tp-elements'),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .tp-el-text-wrapper' => 'background-color: {{VALUE}};',
+				],
+				'separator' => 'before',
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Border::get_type(),
+			[
+				'name' => 'ex_text_border',
+				'selector' => '{{WRAPPER}} .circle-text',
+			]
+		);
+
+		$this->add_responsive_control(
+			'outer_size',
+			[
+				'label' => esc_html__('Size', 'plugin-name'),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => ['px', '%'],
+				'range' => [
+					'px' => [
+						'min' => 1,
+						'max' => 200,
+						'step' => 1,
+					],
+					'%' => [
+						'min' => 1,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .tp-el-text-wrapper' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->end_controls_section();
+
 		$this->start_controls_section(
 			'experience_style',
 			[
@@ -148,19 +202,6 @@ class Themephi_Elementor_Experience_Widget extends \Elementor\Widget_Base
 				'separator' => 'before',
 			]
 		);
-
-		$this->add_control(
-			'ex_text_background',
-			[
-				'label' => esc_html__('Background', 'tp-elements'),
-				'type' => Controls_Manager::COLOR,
-				'selectors' => [
-					'{{WRAPPER}} .tp-el-text-wrapper' => 'background-color: {{VALUE}};',
-				],
-				'separator' => 'before',
-			]
-		);
-
 
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
@@ -195,37 +236,6 @@ class Themephi_Elementor_Experience_Widget extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_group_control(
-			Group_Control_Border::get_type(),
-			[
-				'name' => 'ex_text_border',
-				'selector' => '{{WRAPPER}} .tp-el-text',
-			]
-		);
-
-		$this->add_responsive_control(
-			'outer_size',
-			[
-				'label' => esc_html__('Size', 'plugin-name'),
-				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => ['px', '%'],
-				'range' => [
-					'px' => [
-						'min' => 1,
-						'max' => 200,
-						'step' => 1,
-					],
-					'%' => [
-						'min' => 1,
-						'max' => 100,
-					],
-				],
-				'selectors' => [
-					'{{WRAPPER}} .tp-el-text-wrapper' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
-				],
-			]
-		);
-
 		$this->add_responsive_control(
 			'rotate_degree',
 			[
@@ -234,6 +244,7 @@ class Themephi_Elementor_Experience_Widget extends \Elementor\Widget_Base
 				'return_value' => 'true',
 			]
 		);
+
 
 		$this->end_controls_section();
 
@@ -258,12 +269,24 @@ class Themephi_Elementor_Experience_Widget extends \Elementor\Widget_Base
 		);
 
 		$this->add_control(
-			'ex_number_background',
+			'ex_number_outer_background',
 			[
-				'label' => esc_html__('Background', 'tp-elements'),
+				'label' => esc_html__('Outer Background', 'tp-elements'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .tp-el-number-wrapper::before' => 'background-color: {{VALUE}};',
+					'{{WRAPPER}} .tp-el-number-wrapper' => 'background-color: {{VALUE}};',
+				],
+				'separator' => 'before',
+			]
+		);
+
+		$this->add_control(
+			'ex_number_inner_background',
+			[
+				'label' => esc_html__('Inner Background', 'tp-elements'),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .tp-el-number-wrapper .tp-el-number' => 'background-color: {{VALUE}};',
 				],
 				'separator' => 'before',
 			]
@@ -312,9 +335,9 @@ class Themephi_Elementor_Experience_Widget extends \Elementor\Widget_Base
 		);
 
 		$this->add_responsive_control(
-			'inner_size',
+			'inner_outer_size',
 			[
-				'label' => esc_html__('Size', 'plugin-name'),
+				'label' => esc_html__('Outer Size', 'plugin-name'),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => ['px', '%'],
 				'range' => [
@@ -330,6 +353,29 @@ class Themephi_Elementor_Experience_Widget extends \Elementor\Widget_Base
 				],
 				'selectors' => [
 					'{{WRAPPER}} .tp-el-number-wrapper' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'inner_inner_size',
+			[
+				'label' => esc_html__('Inner Size', 'plugin-name'),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => ['px', '%'],
+				'range' => [
+					'px' => [
+						'min' => 1,
+						'max' => 200,
+						'step' => 1,
+					],
+					'%' => [
+						'min' => 1,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .tp-el-number-wrapper .tp-el-number' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);

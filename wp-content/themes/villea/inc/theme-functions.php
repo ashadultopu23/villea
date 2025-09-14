@@ -56,7 +56,7 @@ function villea_studio_fonts_url()
     by chosen font(s), translate this to 'off'. Do not translate into your own language.
      */
   if ('off' !== _x('on', 'Google font: on or off', 'villea')) {
-    $font_url = 'https://fonts.googleapis.com/css2?' . urlencode('family=Jost:wght@300;400;500;600;700;800;900&display=swap');
+    $font_url = 'https://fonts.googleapis.com/css2?' . urlencode('family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
   }
   return $font_url;
 }

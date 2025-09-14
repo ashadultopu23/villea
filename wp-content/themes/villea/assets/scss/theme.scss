@@ -27,32 +27,32 @@
 -------------------------------------------------------- */
 
 :root {
-  --bodyFont: "Jost", sans-serif;
-  --titleFont: "Jost", sans-serif;
+  --bodyFont: "DM Sans", sans-serif;
+  --titleFont: "Poppins", sans-serif;
   --transition: all 0.3s ease;
   --body_bg: #ffffff;
   --globalColor: #f5f5f5;
   --borderColor: #dfe0e4;
   --bodyColor: #404a60;
   --titleColor: #222e48;
-  --primaryColor: #2660b5;
-  --secondaryColor: #eb7a23;
+  --primaryColor: #022e2d;
+  --secondaryColor: #b07e50;
   --whiteColor: #ffffff;
   --blackColor: #171717;
-  --linkColor: #2660b5;
+  --linkColor: #022e2d;
   --hoverColor: var(--secondaryColor);
   --boxBorderRadius: 5px;
   --imageBorderRadius: 4px;
   --btnBorderRadius: 5px;
   // btn1
-  --btnBgColor: #2660b5;
-  --btnHoverBgColor: #eb7a23;
+  --btnBgColor: #022e2d;
+  --btnHoverBgColor: #b07e50;
   --btnColor: #ffffff;
   --btnHoverColor: #ffffff;
   // btn2
   --btnBgColor2: transparent;
-  --btnHoverBgColor2: #2660b5;
-  --btnColor2: #2660b5;
+  --btnHoverBgColor2: #022e2d;
+  --btnColor2: #022e2d;
   --btnHoverColor2: #ffffff;
 }
 

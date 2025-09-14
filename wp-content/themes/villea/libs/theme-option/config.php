@@ -324,7 +324,6 @@ Redux::setSection(
                 'validate'  => 'color',
                 'required'         => array('enable_global', '=', '1'),
             ),
-
             array(
                 'id'        => 'titleColor',
                 'type'      => 'color',
@@ -334,24 +333,21 @@ Redux::setSection(
                 'validate'  => 'color',
                 'required'         => array('enable_global', '=', '1'),
             ),
-
             array(
                 'id'        => 'primaryColor',
                 'type'      => 'color',
                 'title'     => esc_html__('Primary Color', 'villea'),
                 'subtitle'  => esc_html__('Select Primary Color.', 'villea'),
-                'default'   => '#2660B5',
+                'default'   => '#103C3B',
                 'validate'  => 'color',
-                // 'output'      => array('.themephi-heading .title-inner .sub-text,  .menu-area .navbar ul li:hover a'),
                 'required'         => array('enable_global', '=', '1'),
             ),
-
             array(
                 'id'        => 'secondaryColor',
                 'type'      => 'color',
                 'title'     => esc_html__('Secondary Color', 'villea'),
                 'subtitle'  => esc_html__('Select Secondary Color.', 'villea'),
-                'default'   => '#EB7A23',
+                'default'   => '#B07E50',
                 'validate'  => 'color',
                 'required'         => array('enable_global', '=', '1'),
             ),
@@ -404,7 +400,7 @@ Redux::setSection(
                 'type'      => 'color',
                 'title'     => esc_html__('Link Color', 'villea'),
                 'subtitle'  => esc_html__('Pick Link color', 'villea'),
-                'default'   => '#2660B5',
+                'default'   => '#103C3B',
                 'validate'  => 'color',
                 'required'         => array('enable_global', '=', '1'),
             ),
@@ -414,7 +410,7 @@ Redux::setSection(
                 'type'      => 'color',
                 'title'     => esc_html__('Link Hover Color', 'villea'),
                 'subtitle'  => esc_html__('Pick link hover color', 'villea'),
-                'default'   => '#EB7A23',
+                'default'   => '#B07E50',
                 'validate'  => 'color',
                 'required'         => array('enable_global', '=', '1'),
             ),
@@ -495,7 +491,7 @@ Redux::setSection(
                 'type'      => 'color',
                 'title'     => esc_html__('Background Color', 'villea'),
                 'subtitle'  => esc_html__('Pick color', 'villea'),
-                'default'   => '#2660B5',
+                'default'   => '#103C3B',
                 'validate'  => 'color',
                 'output'    => array('background-color' => '.themephi-button a'),
                 'required'         => array('enable_global', '=', '1'),
@@ -506,7 +502,7 @@ Redux::setSection(
                 'type'      => 'color',
                 'title'     => esc_html__('Hover Background', 'villea'),
                 'subtitle'  => esc_html__('Pick color', 'villea'),
-                'default'   => '#EB7A23',
+                'default'   => '#B07E50',
                 'validate'  => 'color',
                 'output'    => array('background' => '.themephi-button a:hover::before'),
                 'required'         => array('enable_global', '=', '1'),
@@ -560,7 +556,7 @@ Redux::setSection(
                 'type'      => 'color',
                 'title'     => esc_html__('Hover Background', 'villea'),
                 'subtitle'  => esc_html__('Pick color', 'villea'),
-                'default'   => '#2660B5',
+                'default'   => '#103C3B',
                 'validate'  => 'color',
                 'output'    => array('background' => '.themephi-button.secondary_btn a:after'),
                 'required'         => array('enable_global', '=', '1'),
@@ -741,8 +737,6 @@ Redux::setSection(
                 'default'   => '#b5b5b5',
                 'required'         => array('enable_global', '=', '1'),
             ),
-
-
         )
     )
 );
@@ -764,7 +758,7 @@ Redux::setSection(
                 'google'   => true,
                 'font-style' => false,
                 'default'  => array(
-                    'font-family' => 'Jost',
+                    'font-family' => 'DM Sans',
                 ),
             ),
             array(
@@ -775,7 +769,7 @@ Redux::setSection(
                 'google'   => true,
                 'font-style' => false,
                 'default'  => array(
-                    'font-family' => 'Jost',
+                    'font-family' => 'Poppins',
                 ),
             ),
 
