@@ -11,7 +11,6 @@ Heading  css
   font-size: 16px;
   font-weight: 600;
   font-family: var(--titleFont);
-  text-transform: uppercase;
   line-height: 24px;
   letter-spacing: 0.1em;
   color: var(--primaryColor);
@@ -20,10 +19,10 @@ Heading  css
 .rs-dual-heading .sub-text {
   margin: 0 0 16px;
   display: block;
-  color: var(--textColor);
-  font-size: 16px;
+  color: var(--bodyColor);
+  font-size: 18px;
   line-height: 16px;
-  font-family: var(--titleFont);
+  font-family: var(--bodyFont);
   font-weight: 600;
   z-index: 1;
 }
@@ -544,4 +543,9 @@ Heading  css
   background: var(--primaryColor);
   border-radius: 50%;
   margin: 0 10px;
+}
+.themephi-heading.style16 .sub-text-has-icon,
+.rs-dual-heading.style16 .sub-text-has-icon {
+  display: inline-flex;
+  align-items: center;
 }/*# sourceMappingURL=heading.css.map */

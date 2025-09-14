@@ -131,7 +131,7 @@
 }
 .themephi-button:not(.link_btn).another_btn a:hover {
   border-color: var(--primaryColor);
-  color: var(--textColor);
+  color: var(--bodyColor);
 }
 .themephi-button:not(.link_btn).another_btn a:hover i {
   color: var(--secondaryColor);

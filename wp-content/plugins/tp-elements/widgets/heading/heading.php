@@ -114,7 +114,7 @@ class Themephi_Elementor_Heading_Widget extends \Elementor\Widget_Base
 					'style6'  => esc_html__('Border Top Left', 'tp-elements'),
 					'style7'  => esc_html__('Border Top Right', 'tp-elements'),
 					'style8'  => esc_html__('Border Left Vertical Style', 'tp-elements'),
-					'style9'  => esc_html__('Heading Image Style', 'tp-elements'),
+					'style9'  => esc_html__('Sub Heading Image Style', 'tp-elements'),
 					'style5'  => esc_html__('Heading Bracket Style', 'tp-elements'),
 					'style10' => esc_html__('Heading Left Rotate Style', 'tp-elements'),
 					'style11' => esc_html__('Heading Right Rotate Style', 'tp-elements'),
@@ -122,6 +122,7 @@ class Themephi_Elementor_Heading_Widget extends \Elementor\Widget_Base
 					'style13'  => esc_html__('Sub Heading Left Right Image', 'tp-elements'),
 					'style14'  => esc_html__('Heading with Button', 'tp-elements'),
 					'style15'  => esc_html__('Sub Heading with Dot', 'tp-elements'),
+					'style16'  => esc_html__('Sub Heading with Icon', 'tp-elements'),
 
 				],
 			]
@@ -406,6 +407,21 @@ class Themephi_Elementor_Heading_Widget extends \Elementor\Widget_Base
 							'value' => 'yes',
 						]
 					]
+				]
+			]
+		);
+
+		$this->add_control(
+			'sub_heading_icon',
+			[
+				'label' => esc_html__('Sub Heading Icon', 'tp-elements'),
+				'type' => Controls_Manager::ICONS,
+				'default' => [
+					'value' => 'fas fa-star',
+					'library' => 'fa-solid',
+				],
+				'condition' => [
+					'style' => 'style16',
 				]
 			]
 		);
@@ -990,7 +1006,6 @@ class Themephi_Elementor_Heading_Widget extends \Elementor\Widget_Base
 			'subtitle_highlight_color',
 			[
 				'label' => esc_html__('Subtitle Highlight Background', 'tp-elements'),
-				// 'desc' => esc_html__( 'Add span tag to apply background style', 'tp-elements' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .themephi-heading .sub-text span' => 'background: {{VALUE}};',
@@ -1006,6 +1021,39 @@ class Themephi_Elementor_Heading_Widget extends \Elementor\Widget_Base
 				'size_units' => ['px', 'em', '%'],
 				'selectors' => [
 					'{{WRAPPER}} .themephi-heading .sub-text' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'subtitle_padding',
+			[
+				'label' => esc_html__('Padding', 'plugin-name'),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => ['px', '%'],
+				'selectors' => [
+					'{{WRAPPER}} .themephi-heading .sub-text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_group_control(
+			\Elementor\Group_Control_Border::get_type(),
+			[
+				'name' => 'subtitle_border',
+				'label' => esc_html__('Border', 'plugin-name'),
+				'selector' => '{{WRAPPER}} .themephi-heading .sub-text',
+			]
+		);
+
+		$this->add_responsive_control(
+			'subtitle_border_radius',
+			[
+				'label' => esc_html__('Border Radius', 'plugin-name'),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => ['px', '%', 'em'],
+				'selectors' => [
+					'{{WRAPPER}} .themephi-heading .sub-text' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -1086,6 +1134,47 @@ class Themephi_Elementor_Heading_Widget extends \Elementor\Widget_Base
 				],
 				'condition' => [
 					'style' => 'style15',
+				]
+			]
+		);
+
+		$this->add_responsive_control(
+			'icon_size',
+			[
+				'label' => esc_html__('Icon Size', 'plugin-name'),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => ['px', '%'],
+				'range' => [
+					'px' => [
+						'min' => 1,
+						'max' => 100,
+						'step' => 1,
+					],
+					'%' => [
+						'min' => 1,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .sub-text.sub-text-has-icon .sub-text-icon' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}}; font-size: {{SIZE}}{{UNIT}};',
+				],
+				'condition' => [
+					'style' => 'style16',
+				]
+			]
+		);
+
+		$this->add_control(
+			'icon_color',
+			[
+				'label' => esc_html__('Icon Color', 'tp-elements'),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .sub-text.sub-text-has-icon .sub-text-icon' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .sub-text.sub-text-has-icon .sub-text-icon svg' => 'fill: {{VALUE}};',
+				],
+				'condition' => [
+					'style' => 'style16',
 				]
 			]
 		);
@@ -1192,7 +1281,6 @@ class Themephi_Elementor_Heading_Widget extends \Elementor\Widget_Base
 				],
 			]
 		);
-
 
 
 		$this->end_controls_section();
@@ -1521,25 +1609,29 @@ class Themephi_Elementor_Heading_Widget extends \Elementor\Widget_Base
 		$direction = '';
 		$selector = '';
 
+		// Gradient Style
 		if ($settings['enable_gradient'] === 'yes') {
 			$color_1 = !empty($settings['gradient_color_1']) ? $settings['gradient_color_1']  : '#ff7e5f';
 			$color_2 = !empty($settings['gradient_color_2']) ? $settings['gradient_color_2'] : '#feb47b';
 			$direction = isset($settings['gradient_direction']['size']) ? $settings['gradient_direction']['size'] : 90;
 			$selector = '.elementor-element-' . esc_attr($this->get_id()) . ' .title.title-stroke.title-gradient';
 		}
-?>
-		<style>
-			<?php echo $selector; ?> {
-				background: linear-gradient(<?php echo esc_attr($direction); ?>deg, <?php echo esc_attr($color_1); ?>, <?php echo esc_attr($color_2); ?>);
-				background-clip: text;
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-				-webkit-text-stroke-width: 2px;
-				-webkit-text-stroke-color: transparent !important;
-			}
-		</style>
 
+		// Only output style if gradient is enabled
+		if ($settings['enable_gradient'] === 'yes' && $settings['enable_stroke'] === 'yes') {
+?>
+			<style>
+				<?php echo $selector; ?> {
+					background: linear-gradient(<?php echo esc_attr($direction); ?>deg, <?php echo esc_attr($color_1); ?>, <?php echo esc_attr($color_2); ?>);
+					background-clip: text;
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+					-webkit-text-stroke-width: 2px;
+					-webkit-text-stroke-color: transparent !important;
+				}
+			</style>
 		<?php
+		}
 
 
 		$watermark_text = (($settings['show_watermark'] == 'yes') && $settings['watermark']) ? '<span class="watermark">' . ($settings['watermark']) . '</span>' : '';
@@ -1549,15 +1641,29 @@ class Themephi_Elementor_Heading_Widget extends \Elementor\Widget_Base
 
 		$main_title     = ($settings['title']) ? '<' . $settings['title_tag'] . ' class="title ' . $settings['title_pre_class'] . ' ' . $title_stroke . ' ' . $stroke_gradient . ' " ' . $animate . '>' . $settings['title'] . '</' . $settings['title_tag'] . '>' : '';
 
-		if ($settings['show_subtitle'] == 'yes' &&  "style4"    ==	$settings['style'] || "style4 Lite" == $settings['style'] || "style6" == $settings['style'] || "style6 Lite" == $settings['style'] || "style7" == $settings['style'] || "style7 Lite" == $settings['style']) {
-			$sub_text = ($settings['subtitle']) ? '<span class="sub-text" ' . $animate_sub . '>' . ($settings['subtitle']) . '</span>' : '';
+		if ($settings['show_subtitle'] == 'yes' && $settings['style'] == 'style15') {
+			$sub_text = ($settings['subtitle']) ?
+				'<span class="sub-text" ' . $animate_sub . '>' .
+				'<span class="sub-text-dot"></span> ' .
+				esc_html($settings['subtitle']) .
+				'</span>' : '';
+		} elseif ($settings['show_subtitle'] == 'yes' && "style4" == $settings['style'] || "style6" == $settings['style'] || "style7" == $settings['style']) {
+			$sub_text = ($settings['subtitle']) ?
+				'<span class="sub-text" ' . $animate_sub . '>' .
+				esc_html($settings['subtitle']) .
+				'</span>' : '';
 		} elseif ($settings['show_subtitle'] == 'yes' && "style5" == $settings['style']) {
-			$sub_text = ($settings['subtitle']) ? '<span class="sub-text title-upper" ' . $animate_sub . '>[ <span class="sub-text title-upper">' . ($settings['subtitle']) . '</span> ] </span>' : '';
-		} elseif (($settings['style'] == 'style15')) {
-			$sub_text = ($settings['subtitle']) ? '<span class="sub-text" ' . $animate_sub . '>' . ' <span class="sub-text-dot"></span> ' . ($settings['subtitle']) . '</span>' : '';
+			$sub_text = ($settings['subtitle']) ?
+				'<span class="sub-text title-upper" ' . $animate_sub . '>[ <span class="sub-text title-upper">' .
+				esc_html($settings['subtitle']) .
+				'</span> ] </span>' : '';
 		} else {
-			$sub_text  = ($settings['show_subtitle'] == 'yes' && $settings['subtitle'])  ? '<span class="sub-text" ' . $animate_sub . '>' . ($settings['subtitle']) . '</span>' : '';
+			$sub_text = ($settings['show_subtitle'] == 'yes' && $settings['subtitle']) ?
+				'<span class="sub-text" ' . $animate_sub . '>' .
+				esc_html($settings['subtitle']) .
+				'</span>' : '';
 		}
+
 		$titleimg    = $settings['image'] ? '<img src="' . $settings['image']['url'] . '" alt="title-image" />' : '';
 		$topimage    = $settings['image_position'] == 'top' ? '<div class="title-img top" ' . $animate_img . '> ' . $titleimg . '</div>' : "";
 		$bottomimage = $settings['image_position'] == 'bottom' ? '<div class="title-img bottom-img">' . $titleimg . '</div>' : "";
@@ -1565,7 +1671,6 @@ class Themephi_Elementor_Heading_Widget extends \Elementor\Widget_Base
 		if ("style9" == $settings['style']) {
 			$main_title     = ($settings['title']) ? '<' . $settings['title_tag'] . ' class="title ' . $settings['title_pre_class'] . '" ' . $animate . '>' . $watermark_text . '' . ($settings['title']) . '</' . $settings['title_tag'] . '>' : '';
 		}
-
 
 		if ("style13" == $settings['style']) {
 			$sub_left_image = $settings['image-left-sub']['url'] ? '<img  class = "line-1-img" src="' . $settings['image-left-sub']['url'] . '" alt="title-image" />' : '';
@@ -1582,7 +1687,20 @@ class Themephi_Elementor_Heading_Widget extends \Elementor\Widget_Base
 			if ($settings['image_position'] == 'top') {
 				echo wp_kses($topimage ?? '', wp_kses_allowed_html('post'));
 			}
-			echo wp_kses($sub_text ?? '', wp_kses_allowed_html('post'));
+
+			if ($settings['style'] == 'style16' && $settings['show_subtitle'] == 'yes' && $settings['subtitle']) {
+			?>
+				<span class="sub-text sub-text-has-icon" <?php echo $animate_sub; ?>>
+					<span class="sub-text-icon">
+						<?php \Elementor\Icons_Manager::render_icon($settings['sub_heading_icon'], ['aria-hidden' => 'true']); ?>
+					</span>
+					<?php echo esc_html($settings['subtitle']); ?>
+				</span>
+			<?php
+			} else {
+				// For all other styles, use wp_kses as normal
+				echo wp_kses($sub_text ?? '', wp_kses_allowed_html('post'));
+			}
 
 			echo wp_kses($main_title ?? '', wp_kses_allowed_html('post'));
 
@@ -1608,9 +1726,9 @@ class Themephi_Elementor_Heading_Widget extends \Elementor\Widget_Base
 					<?php $target = $settings['btn_link']['is_external'] ? 'target=_blank' : ''; ?>
 					<a class="readon themephi_button elementor-animation-<?php echo esc_html($settings['hover_animation']); ?>" href="<?php echo esc_url($settings['btn_link']['url']); ?>" <?php echo esc_attr($target); ?>>
 
-						<!-- <span <?php echo wp_kses($this->print_render_attribute_string('btn_text') ?? '', wp_kses_allowed_html('post')); ?>> -->
+						<span <?php echo wp_kses($this->print_render_attribute_string('btn_text') ?? '', wp_kses_allowed_html('post')); ?>>
 
-						<?php echo esc_html($settings['btn_text']); ?></span>
+							<?php echo esc_html($settings['btn_text']); ?></span>
 
 						<?php \Elementor\Icons_Manager::render_icon($settings['icon'], ['aria-hidden' => 'true']); ?>
 					</a>
@@ -1620,4 +1738,4 @@ class Themephi_Elementor_Heading_Widget extends \Elementor\Widget_Base
 		</div>
 <?php
 	}
-} ?>
+}
