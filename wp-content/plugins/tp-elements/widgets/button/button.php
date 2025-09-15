@@ -243,6 +243,7 @@ class Themephi_Button_Widget extends \Elementor\Widget_Base
 					'{{WRAPPER}} .themephi-button a svg' => 'margin-left: {{SIZE}}{{UNIT}};',
 				],
 				'condition' => [
+					'show_icon' => 'yes',
 					'icon_position' => 'after',
 				],
 			]
@@ -262,6 +263,7 @@ class Themephi_Button_Widget extends \Elementor\Widget_Base
 					'{{WRAPPER}} .themephi-button a svg' => 'margin-right: {{SIZE}}{{UNIT}};',
 				],
 				'condition' => [
+					'show_icon' => 'yes',
 					'icon_position' => 'before',
 				],
 			]
@@ -298,8 +300,10 @@ class Themephi_Button_Widget extends \Elementor\Widget_Base
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => ['px'],
 				'selectors' => [
-
 					'{{WRAPPER}} .themephi-button a svg' => 'height: {{SIZE}}{{UNIT}}; width: {{SIZE}}{{UNIT}};',
+				],
+				'condition' => [
+					'show_icon' => 'yes',
 				],
 			]
 		);
@@ -556,8 +560,9 @@ class Themephi_Button_Widget extends \Elementor\Widget_Base
 				'label' => esc_html__('Color', 'tp-elements'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .themephi-button a i' => 'color: {{VALUE}};',
-					'{{WRAPPER}} .themephi-button a svg' => 'fill: {{VALUE}};',
+					'{{WRAPPER}} .themephi-button a i' => 'color: {{VALUE}} !important;',
+					'{{WRAPPER}} .themephi-button a svg' => 'fill: {{VALUE}} !important;',
+					'{{WRAPPER}} .themephi-button a svg path' => 'fill: {{VALUE}} !important;',
 				],
 			]
 		);
@@ -568,8 +573,9 @@ class Themephi_Button_Widget extends \Elementor\Widget_Base
 				'label' => esc_html__('Hover Color', 'tp-elements'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .themephi-button a:hover i' => 'color: {{VALUE}};',
-					'{{WRAPPER}} .themephi-button a:hover svg' => 'fill: {{VALUE}};',
+					'{{WRAPPER}} .themephi-button a:hover i' => 'color: {{VALUE}} !important;',
+					'{{WRAPPER}} .themephi-button a:hover svg' => 'fill: {{VALUE}} !important;',
+					'{{WRAPPER}} .themephi-button a:hover svg path' => 'fill: {{VALUE}} !important;',
 				],
 			]
 		);
@@ -580,7 +586,10 @@ class Themephi_Button_Widget extends \Elementor\Widget_Base
 
 				'label' => esc_html__('Background', 'tp-elements'),
 				'type' => Controls_Manager::COLOR,
-				'selectors' => ['{{WRAPPER}} .themephi-button a i' => 'background: {{VALUE}};',],
+				'selectors' => [
+					'{{WRAPPER}} .themephi-button a i' => 'background: {{VALUE}} !important;',
+					'{{WRAPPER}} .themephi-button a svg' => 'background: {{VALUE}} !important;',
+				],
 			]
 		);
 
@@ -590,7 +599,37 @@ class Themephi_Button_Widget extends \Elementor\Widget_Base
 
 				'label' => esc_html__('Hover Background', 'tp-elements'),
 				'type' => Controls_Manager::COLOR,
-				'selectors' => ['{{WRAPPER}} .themephi-button a:hover i' => 'background: {{VALUE}};',],
+				'selectors' => [
+					'{{WRAPPER}} .themephi-button a:hover i' => 'background: {{VALUE}} !important;',
+					'{{WRAPPER}} .themephi-button a:hover svg' => 'background: {{VALUE}} !important;',
+				],
+			]
+		);
+
+
+		$this->add_control(
+			'icon_stroke_color',
+			[
+				'label' => esc_html__('Stroke Color', 'tp-elements'),
+				'description' => esc_html__('Only for SVG (when color not works) ', 'tp-elements'),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .themephi-button a svg' => 'stroke: {{VALUE}} !important;',
+					'{{WRAPPER}} .themephi-button a svg path' => 'stroke: {{VALUE}} !important;',
+				],
+			]
+		);
+
+		$this->add_control(
+			'icon_hover_stroke_color',
+			[
+				'label' => esc_html__('Hover Stroke Color', 'tp-elements'),
+				'description' => esc_html__('Only for SVG (when color not works) ', 'tp-elements'),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .themephi-button a:hover svg' => 'stroke: {{VALUE}} !important;',
+					'{{WRAPPER}} .themephi-button a:hover svg path' => 'stroke: {{VALUE}} !important;',
+				],
 			]
 		);
 

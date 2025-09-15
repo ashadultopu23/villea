@@ -11,7 +11,6 @@
       font-size: 16px;
       font-weight: 500;
       font-family: var(--titleFont);
-      // line-height: 16px;
       text-align: center;
       border-radius: 2px;
       position: relative;
@@ -33,7 +32,7 @@
         height: 0px;
         transition: all 0.9s ease-in-out;
         z-index: -1;
-        border-radius: inherit;
+        border-radius: 50%;
       }
       &:hover {
         color: var(--btnTextColor);
@@ -45,9 +44,14 @@
       svg {
         width: 20px;
         position: relative;
+        transition: all 0.9s ease-in-out;
+        path {
+          transition: all 0.9s ease-in-out;
+        }
       }
       i {
         font-size: 20px;
+        transition: all 0.9s ease-in-out;
       }
     }
     &.primary_btn {
@@ -90,7 +94,6 @@
         background-color: var(--primaryColor);
         border: 1px solid var(--borderColor);
         border-radius: 100px;
-        // color: var(--secondaryColor);
         transition: all 0.5s ease-in-out;
         display: inline-flex;
         justify-content: center;

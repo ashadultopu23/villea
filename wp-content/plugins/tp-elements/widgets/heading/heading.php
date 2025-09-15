@@ -412,6 +412,18 @@ class Themephi_Elementor_Heading_Widget extends \Elementor\Widget_Base
 		);
 
 		$this->add_control(
+			'sub_heading_icon_show',
+			[
+				'label' => esc_html__('Show Sub Heading Icon', 'plugin-name'),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__('Show', 'plugin-name'),
+				'label_off' => esc_html__('Hide', 'plugin-name'),
+				'return_value' => 'yes',
+				'default' => 'yes',
+			]
+		);
+
+		$this->add_control(
 			'sub_heading_icon',
 			[
 				'label' => esc_html__('Sub Heading Icon', 'tp-elements'),
@@ -421,6 +433,7 @@ class Themephi_Elementor_Heading_Widget extends \Elementor\Widget_Base
 					'library' => 'fa-solid',
 				],
 				'condition' => [
+					'sub_heading_icon_show' => 'yes',
 					'style' => 'style16',
 				]
 			]
@@ -1005,10 +1018,10 @@ class Themephi_Elementor_Heading_Widget extends \Elementor\Widget_Base
 		$this->add_control(
 			'subtitle_highlight_color',
 			[
-				'label' => esc_html__('Subtitle Highlight Background', 'tp-elements'),
+				'label' => esc_html__('Subtitle Background', 'tp-elements'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .themephi-heading .sub-text span' => 'background: {{VALUE}};',
+					'{{WRAPPER}} .themephi-heading .sub-text' => 'background: {{VALUE}};',
 				],
 			]
 		);
@@ -1691,9 +1704,11 @@ class Themephi_Elementor_Heading_Widget extends \Elementor\Widget_Base
 			if ($settings['style'] == 'style16' && $settings['show_subtitle'] == 'yes' && $settings['subtitle']) {
 			?>
 				<span class="sub-text sub-text-has-icon" <?php echo $animate_sub; ?>>
-					<span class="sub-text-icon">
-						<?php \Elementor\Icons_Manager::render_icon($settings['sub_heading_icon'], ['aria-hidden' => 'true']); ?>
-					</span>
+					<?php if ($settings['sub_heading_icon_show'] == 'yes'): ?>
+						<span class="sub-text-icon">
+							<?php \Elementor\Icons_Manager::render_icon($settings['sub_heading_icon'], ['aria-hidden' => 'true']); ?>
+						</span>
+					<?php endif; ?>
 					<?php echo esc_html($settings['subtitle']); ?>
 				</span>
 			<?php

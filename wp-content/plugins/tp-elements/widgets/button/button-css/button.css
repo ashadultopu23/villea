@@ -56,7 +56,7 @@
   height: 0px;
   transition: all 0.9s ease-in-out;
   z-index: -1;
-  border-radius: inherit;
+  border-radius: 50%;
 }
 .themephi-button:not(.link_btn) a:hover {
   color: var(--btnTextColor);
@@ -68,9 +68,14 @@
 .themephi-button:not(.link_btn) a svg {
   width: 20px;
   position: relative;
+  transition: all 0.9s ease-in-out;
+}
+.themephi-button:not(.link_btn) a svg path {
+  transition: all 0.9s ease-in-out;
 }
 .themephi-button:not(.link_btn) a i {
   font-size: 20px;
+  transition: all 0.9s ease-in-out;
 }
 .themephi-button:not(.link_btn).primary_btn a {
   color: var(--btnColor);
