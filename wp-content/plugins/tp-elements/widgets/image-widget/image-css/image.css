@@ -29,16 +29,12 @@
 .themephi-image {
   position: relative;
   width: 100%;
-  height: 100%;
 }
 .themephi-image.yes .veritcal {
   animation-name: veritcal;
   animation-timing-function: linear;
   animation-duration: 12s;
   animation-iteration-count: infinite;
-  position: absolute;
-  right: 0;
-  top: -150px;
 }
 @keyframes veritcal {
   0% {
@@ -49,23 +45,6 @@
   }
   100% {
     transform: translate3d(0, 0, 0);
-  }
-}
-.themephi-image.yes .veritcal_two {
-  animation-name: veritcal_two;
-  animation-timing-function: linear;
-  animation-duration: 12s;
-  animation-iteration-count: infinite;
-}
-@keyframes veritcal_two {
-  0% {
-    transform: translateY(100px);
-  }
-  50% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(100px);
   }
 }
 .themephi-image.yes .horizontal {
@@ -114,6 +93,7 @@
   position: relative;
   display: block;
   overflow: hidden;
+  height: inherit;
 }
 
 .reveal-item .reveal-animation {

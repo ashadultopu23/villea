@@ -3239,6 +3239,52 @@ html:has(.fixed-header) .themephi-breadcrumbs .breadcrumbs-inner {
   }
 }
 
+.popover-icon-blinking i {
+  position: relative;
+  display: inline-block;
+}
+.popover-icon-blinking i::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  border: 3px solid white;
+  animation: blinking 2s infinite 1s;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+.el-tab-button-wrap .e-n-tabs-heading {
+  background: #f4f3f1;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.el-tab-button-w-fit .e-n-tabs-heading {
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+}
+
+.el-tab-button-mx-auto .e-n-tabs-heading {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 /* ---------------------------
    06. Header Style 
 ------------------------------*/

@@ -420,6 +420,10 @@ class Themephi_Elementor_Heading_Widget extends \Elementor\Widget_Base
 				'label_off' => esc_html__('Hide', 'plugin-name'),
 				'return_value' => 'yes',
 				'default' => 'yes',
+				'condition' => [
+					'style' => 'style16',
+					'show_subtitle' => 'yes',
+				]
 			]
 		);
 
@@ -435,6 +439,7 @@ class Themephi_Elementor_Heading_Widget extends \Elementor\Widget_Base
 				'condition' => [
 					'sub_heading_icon_show' => 'yes',
 					'style' => 'style16',
+					'show_subtitle' => 'yes',
 				]
 			]
 		);
@@ -469,8 +474,6 @@ class Themephi_Elementor_Heading_Widget extends \Elementor\Widget_Base
 				]
 			]
 		);
-
-
 
 		$this->end_controls_section();
 

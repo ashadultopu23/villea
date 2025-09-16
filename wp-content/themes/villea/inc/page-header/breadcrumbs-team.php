@@ -10,80 +10,100 @@ if (!empty($container_class)) {
 }
 
 $post_meta_data = get_post_meta(get_the_ID(), 'banner_image', true);
+$post_meta_data2 = '';
+//theme option chekcing
+if ($post_meta_data == '') {
+    if (!empty($villea_option['team_banner_main']['url'])):
+        $post_meta_data = $villea_option['team_banner_main']['url'];
+    elseif (!empty($villea_option['page_banner_main']['url'])):
+        $post_meta_data = $villea_option['page_banner_main']['url'];
+
+    else: {
+            $team_banner_bg_color = !empty($villea_option['team_banner_bg_color']) ? $villea_option['team_banner_bg_color'] : '';
+            $breadcrumb_bg_color = !empty($villea_option['breadcrumb_bg_color']) ? $villea_option['breadcrumb_bg_color'] : '';
+
+            $post_meta_data2 = !empty($team_banner_bg_color) ? $team_banner_bg_color : $breadcrumb_bg_color;
+        }
+    endif;
+}
+
+$banner_hide = get_post_meta(get_the_ID(), 'banner_hide', true);
+if ('show' == $banner_hide ||  $banner_hide == '') {
+    $post_meta_data = $post_meta_data;
+    $post_meta_data2 = $post_meta_data2;
+} else {
+    $post_meta_data = '';
+    $post_meta_data2 = '';
+}
 $post_menu_type = get_post_meta(get_the_ID(), 'menu-type', true);
 $content_banner = get_post_meta(get_the_ID(), 'content_banner', true);
 $intro_content_banner = get_post_meta(get_the_ID(), 'intro_content_banner', true);
+$team_title = $villea_option['team_title'] ?? '';
+
+
+$page_title = '';
+
+if (is_home() || is_front_page()) {
+    // Blog page or homepage
+    $page_title = get_the_title(get_option('page_for_posts'));
+} elseif (is_singular('page')) {
+    // Single page
+    $page_title = get_the_title();
+} elseif (is_singular('post')) {
+    // Single post
+    $page_title = get_the_title();
+} elseif (is_archive()) {
+    // Regular archives (category, tag, author, date)
+    $page_title = strip_tags(get_the_archive_title());
+} elseif (is_search()) {
+    // Search results page
+    $page_title = sprintf(__('Search Results for: %s', 'villea'), get_search_query());
+} elseif (is_404()) {
+    // 404 page
+    $page_title = __('Page Not Found', 'villea');
+} else {
+    // Fallback
+    $page_title = get_the_title();
+}
+
+// Use custom banner content if provided
+$page_title = $content_banner ?: $page_title;
+
+
 ?>
-<div class="themephi-breadcrumbs team-breadcrumbs">
-    <?php if ($post_meta_data != '') { ?>
-        <div class="breadcrumbs-single" style="background:<?php echo esc_attr($villea_option['breadcrumb_bg_color']); ?>">
+
+<?php if ($post_meta_data != '') {
+    $team_banner_bg_color = !empty($villea_option['team_banner_bg_color']) ? $villea_option['team_banner_bg_color'] : '';
+    $breadcrumb_bg_color = !empty($villea_option['breadcrumb_bg_color']) ? $villea_option['breadcrumb_bg_color'] : '';
+
+    $post_meta_data2 = !empty($team_banner_bg_color) ? $team_banner_bg_color : $breadcrumb_bg_color;
+?>
+
+    <div class="themephi-breadcrumbs team-breadcrumbs with-bg">
+        <div class="breadcrumbs-single" style="background: <?php echo esc_attr($post_meta_data2); ?>">
             <img src="<?php echo esc_url($post_meta_data); ?>" alt="<?php echo esc_attr__('breadcrumb image', 'villea'); ?>">
-            <div class="<?php echo esc_attr($header_width); ?>">
-                <div class="row">
-
-                    <div class="breadcrumbs-inner bread-<?php echo esc_attr($post_menu_type); ?>">
-                        <div class="row gap-2">
-                            <div class="col-12">
-
-                                <?php
-                                $post_meta_title = get_post_meta(get_the_ID(), 'select-title', true); ?>
-                                <?php if ($post_meta_title != 'hide') {
-                                ?>
-                                    <?php if (!empty($villea_option['team_page_subtitle'])) : ?>
-                                        <span class="sub-title"><?php echo esc_html($villea_option['team_page_subtitle']); ?></span>
-                                    <?php endif; ?>
-                                    <h1 class="page-title">
-                                        <?php if (!empty($villea_option['team_page_title'])) {
-                                            echo esc_html($villea_option['team_page_title']);
-                                        } else {
-                                            echo esc_html('Team Details', 'villea');
-                                        }
-                                        ?>
-                                    </h1>
-                                <?php }
-
-                                ?>
-                            </div>
-                            <div class="col-12">
-                                <?php if (!empty($villea_option['off_breadcrumb'])) {
-                                    $rs_breadcrumbs = get_post_meta(get_the_ID(), 'select-bread', true);
-                                    if ($rs_breadcrumbs != 'hide'):
-                                        if (function_exists('bcn_display')) { ?>
-                                            <div class="breadcrumbs-title"> <?php bcn_display(); ?></div>
-                                <?php }
-                                    endif;
-                                } ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <?php } elseif (!empty($villea_option['team_single_image']['url'])) { ?>
-        <div class="breadcrumbs-single" style="background-image: url('<?php echo esc_url($villea_option['team_single_image']['url']); ?>')">
             <div class="<?php echo esc_attr($header_width); ?>">
                 <div class="breadcrumbs-inner bread-<?php echo esc_attr($post_menu_type); ?>">
                     <div class="row gap-2">
 
                         <div class="col-12">
-
-                            <?php
-                            $post_meta_title = get_post_meta(get_the_ID(), 'select-title', true); ?>
+                            <?php $post_meta_title = get_post_meta(get_the_ID(), 'select-title', true); ?>
                             <?php if ($post_meta_title != 'hide') {
-                            ?>
-                                <?php if (!empty($villea_option['team_page_subtitle'])) : ?>
-                                    <span class="sub-title"><?php echo esc_html($villea_option['team_page_subtitle']); ?></span>
+                                if (!empty($intro_content_banner)): ?>
+                                    <span class="sub-title"><?php echo esc_html($intro_content_banner); ?></span>
                                 <?php endif; ?>
+
                                 <h1 class="page-title">
-                                    <?php if (!empty($villea_option['team_page_title'])) {
-                                        echo esc_html($villea_option['team_page_title']);
+                                    <?php if ($team_title != '') {
+                                        echo esc_html($team_title);
+                                    } elseif ($page_title != '') {
+                                        echo esc_html($page_title);
                                     } else {
-                                        echo esc_html('Team Details', 'villea');
+                                        the_title();
                                     }
                                     ?>
                                 </h1>
                             <?php }
-
                             ?>
                         </div>
                         <div class="col-12">
@@ -100,33 +120,88 @@ $intro_content_banner = get_post_meta(get_the_ID(), 'intro_content_banner', true
                 </div>
             </div>
         </div>
-
-    <?php } else { ?>
-        <div class="breadcrumbs-single" style="background:<?php echo esc_attr($villea_option['breadcrumb_bg_color']); ?>">
+    </div>
+<?php } elseif ($post_meta_data2 != '') { ?>
+    <div class="themephi-breadcrumbs team-breadcrumbs no-bg">
+        <div class="breadcrumbs-single" style="background:<?php echo esc_attr($post_meta_data2); ?>">
             <div class="<?php echo esc_attr($header_width); ?>">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="breadcrumbs-inner bread-<?php echo esc_attr($post_menu_type); ?>">
-
-                            <?php
-                            $post_meta_title = get_post_meta(get_the_ID(), 'select-title', true); ?>
+                <div class="breadcrumbs-inner bread-<?php echo esc_attr($post_menu_type); ?>">
+                    <div class="row">
+                        <div class="col-12">
+                            <?php $post_meta_title = get_post_meta(get_the_ID(), 'select-title', true); ?>
                             <?php if ($post_meta_title != 'hide') {
-                            ?>
+                                if (!empty($intro_content_banner)): ?>
+                                    <span class="sub-title"><?php echo esc_html($intro_content_banner); ?></span>
+                                <?php endif; ?>
+
                                 <h1 class="page-title">
-                                    <?php if ($content_banner != '') {
-                                        echo esc_html($content_banner);
+                                    <?php if ($team_title != '') {
+                                        echo esc_html($team_title);
+                                    } elseif ($page_title != '') {
+                                        echo esc_html($page_title);
                                     } else {
-                                        echo esc_html('Team Details', 'villea');
+                                        the_title();
                                     }
                                     ?>
                                 </h1>
                             <?php }
-
                             ?>
+                        </div>
+                        <div class="col-12">
+                            <?php if (!empty($villea_option['off_breadcrumb'])) {
+                                $rs_breadcrumbs = get_post_meta(get_the_ID(), 'select-bread', true);
+                                if ($rs_breadcrumbs != 'hide'):
+                                    if (function_exists('bcn_display')) { ?>
+                                        <div class="breadcrumbs-title"> <?php bcn_display(); ?></div>
+                            <?php }
+                                endif;
+                            } ?>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    <?php } ?>
-</div>
+    </div>
+<?php
+
+} else {
+    $post_meta_bread = get_post_meta(get_the_ID(), 'select-bread', true); ?>
+    <?php if ($post_meta_bread == 'show' || $post_meta_bread == '') { ?>
+        <div class="themephi-breadcrumbs team-breadcrumbs">
+            <div class="themephi-breadcrumbs-inner bread-<?php echo esc_attr($post_menu_type); ?>">
+                <div class="<?php echo esc_attr($header_width); ?>">
+                    <div class="breadcrumbs-inner bread-<?php echo esc_attr($post_menu_type); ?>">
+                        <div class="row">
+
+                            <div class="col-12">
+                                <?php
+
+                                $post_meta_title = get_post_meta(get_the_ID(), 'select-title', true); ?>
+                                <?php if ($post_meta_title != 'hide') {
+                                    if (!empty($intro_content_banner)): ?>
+                                        <span class="sub-title"><?php echo esc_html($intro_content_banner); ?></span>
+                                    <?php endif; ?>
+                                    <h1 class="page-title">
+                                        <?php if ($team_title != '') {
+                                            echo esc_html($team_title);
+                                        } elseif ($page_title != '') {
+                                            echo esc_html($page_title);
+                                        } else {
+                                            the_title();
+                                        }
+                                        ?>
+                                    </h1>
+                                <?php }
+                                ?>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<?php
+    }
+}
+
+?>
