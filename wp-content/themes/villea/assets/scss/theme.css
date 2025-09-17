@@ -3191,10 +3191,10 @@ html:has(.fixed-header) .themephi-breadcrumbs .breadcrumbs-inner {
   direction: rtl;
 }
 
-.counter-suffix .elementor-counter-number-wrapper {
+.counter-suffix-end .elementor-counter-number-wrapper {
   align-items: end;
 }
-.counter-suffix .elementor-counter-number-wrapper .elementor-counter-number-suffix {
+.counter-suffix-end .elementor-counter-number-wrapper .elementor-counter-number-suffix {
   color: var(--secondaryColor) !important;
   font-size: 32px;
   margin-bottom: 10px;
@@ -8752,6 +8752,23 @@ div.wpcf7-acceptance-missing {
   color: #ffffff;
   transition: 0.3s;
   margin-bottom: 0;
+}
+
+.social-skills .social-area a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--primaryColor);
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: all 0.5s;
+  color: var(--primaryColor);
+}
+.social-skills .social-area a:hover {
+  background: var(--primaryColor);
+  color: var(--whiteColor);
 }
 
 .big-bg-porduct-details {

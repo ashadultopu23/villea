@@ -56,14 +56,15 @@
 }
 .swiper.team-slider-style1 .team-item .image-wrap .social-icons1 {
   position: absolute;
-  right: -50px;
-  bottom: 0;
-  width: 50px;
+  right: -100%;
+  left: 99%;
+  top: 40px;
   background: var(--primaryColor);
   padding: 12px 0;
-  opacity: 0;
-  visibility: hidden;
+  opacity: 1;
+  visibility: visible;
   transition: 0.8s;
+  display: flex;
 }
 .swiper.team-slider-style1 .team-item .image-wrap .social-icons1 a {
   padding: 0;
@@ -77,39 +78,41 @@
   background: transparent;
 }
 .swiper.team-slider-style1 .team-item :hover .image-wrap .social-icons1 {
+  left: unset;
   right: 0;
-  width: 50px;
   opacity: 1;
   visibility: visible;
 }
 .swiper.team-slider-style1 .team-item .team-content {
   text-align: left;
   margin: 0;
-  padding: 30px 30px 25px;
+  padding: 30px 30px;
   background: var(--primaryColor);
-  margin-bottom: 20px;
   position: unset;
   opacity: 1;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.04);
 }
-.swiper.team-slider-style1 .team-item .team-content h3.team-name {
+.swiper.team-slider-style1 .team-item .team-content .team-name {
   font-weight: 600;
   font-size: 24px;
   line-height: 30px;
   margin-bottom: 0px;
   text-transform: capitalize;
 }
-.swiper.team-slider-style1 .team-item .team-content h3.team-name a {
+.swiper.team-slider-style1 .team-item .team-content .team-name a {
   text-decoration: none;
   color: #ffffff;
 }
-.swiper.team-slider-style1 .team-item .team-content h3.team-name a:hover {
+.swiper.team-slider-style1 .team-item .team-content .team-name a:hover {
   color: #c4c4c4;
 }
 .swiper.team-slider-style1 .team-item .team-content p.team-title {
   text-transform: uppercase;
   font-size: 14px;
   color: var(--whiteColor);
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 0;
   margin-top: 5px;
 }
@@ -171,16 +174,16 @@
 }
 .team-slider-style2 .team-content .header {
   padding: 30px 82px 22px 82px;
-  border-bottom: 1px solid #F0F0F0;
+  border-bottom: 1px solid #f0f0f0;
 }
 .team-slider-style2 .team-content .header .team-name {
   margin-bottom: 3px;
 }
 .team-slider-style2 .team-content .header .team-name a {
-  color: #1C2539;
+  color: #1c2539;
 }
 .team-slider-style2 .team-content .header .team-title {
-  color: #F64A00;
+  color: #f64a00;
 }
 .team-slider-style2 .team-content .social-icons {
   padding: 27px 0 36px 0;
@@ -204,11 +207,11 @@
 }
 .team-slider-style2 .team-content .social-icons a i {
   font-size: 14px;
-  color: #1C2539;
+  color: #1c2539;
   transition: 0.3s;
 }
 .team-slider-style2 .team-content .social-icons a:hover {
-  background: #F64A00;
+  background: #f64a00;
 }
 .team-slider-style2 .team-content .social-icons a:hover i {
   color: #fff;
@@ -370,7 +373,7 @@
 }
 
 .swiper.team-slider-style5 .tps-team-one-start {
-  background: linear-gradient(180deg, #FFFFFF 0%, #F2F3F5 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f2f3f5 100%);
   padding: 30px;
   padding-bottom: 180px;
 }
@@ -412,7 +415,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #6E777D;
+  color: #6e777d;
 }
 .swiper.team-slider-style5 .tps-team-one-start .inner .info-wrapper {
   margin-top: 0px;
@@ -430,11 +433,11 @@
   padding: 12px 25px 12px 55px;
   border-radius: 100px;
   display: block;
-  background: #F2F3F5;
+  background: #f2f3f5;
   max-width: -moz-max-content;
   max-width: max-content;
   margin: auto;
-  color: #6E777D;
+  color: #6e777d;
 }
 .swiper.team-slider-style5 .tps-team-one-start .inner .info-wrapper .single a:hover {
   color: var(--primaryColor);
@@ -443,7 +446,7 @@
   position: absolute;
   width: 46px;
   height: 46px;
-  background: #FF6600;
+  background: #ff6600;
   border-radius: 100px;
   display: flex;
   align-items: center;
@@ -521,7 +524,7 @@
   left: 30px;
   height: 99%;
   width: 97%;
-  border: 1px solid #E1E1E1;
+  border: 1px solid #e1e1e1;
   z-index: -1;
 }
 .swiper.team-slider-style6 .single-team-three .content-area {
@@ -584,7 +587,7 @@
 }
 .team-slider-main-wrapper .tp-slider-navigation.team .testimonial-cat-next {
   font-size: 22px;
-  color: #0C0A0A;
+  color: #0c0a0a;
   display: flex;
   align-items: center;
   justify-content: center;

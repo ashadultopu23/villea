@@ -240,6 +240,12 @@ final class TPelements_Elementor_Extension
 
 		// image-tab-gallery
 		$enqueue_with_version('tpelements-image-tab-gallery-css', 'widgets/image-tab-gallery/image-tab-gallery-css/image-tab-gallery.css');
+
+		// team
+		$enqueue_with_version('tpelements-team-css', 'widgets/team-member-slider/team-slider-css/team-slider.css');
+
+		// image scroll gallery
+		$enqueue_with_version('tpelements-image-scroll-gallery-css', 'widgets/image-scroll-gallery/image-scroll-gallery-css/image-scroll-gallery.css');
 	}
 
 	public function tpaddon_register_plugin_styles()
@@ -842,6 +848,10 @@ final class TPelements_Elementor_Extension
 		// image tab gallery 
 		require_once(__DIR__ . '/widgets/image-tab-gallery/image-tab-gallery.php');
 		\Elementor\Plugin::instance()->widgets_manager->register(new \Themephi_Image_Tab_Gallery_Widget());
+
+		// image scroll gallery 
+		require_once(__DIR__ . '/widgets/image-scroll-gallery/image-scroll-gallery.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \Themephi_Image_Scroll_Gallery_Widget());
 
 
 		// Register widget				

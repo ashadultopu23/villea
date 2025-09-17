@@ -39,31 +39,36 @@ $group_field_values = get_post_meta(get_the_ID(), 'member_skill', true);
                     <p class="p1-color fw-bold mb-3 mb-md-6"><?php echo esc_html($designation); ?></p>
                 <?php endif; ?>
                 <div class="social-skills d-grid gap-5 gap-md-8 mb-40">
-                    <ul class="d-flex gap-3 social-area second">
-                        <li>
-                            <a href="<?php echo esc_url($facebook); ?>" aria-label="Facebook" class="d-center cus-border rounded-0 border b-fourth">
-                                <i class="tp tp-facebook-f"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo esc_url($twitter); ?>" aria-label="Twitter" class="d-center cus-border rounded-0 border b-fourth">
-                                <i class="tp tp-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo esc_url($instagram); ?>" aria-label="Instagram" class="d-center cus-border rounded-0 border b-fourth">
-                                <i class="tp tp-instagram"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo esc_url($linkedin); ?>" aria-label="dribbble" class="d-center cus-border rounded-0 border b-fourth">
-                                <i class="tp tp-linkedin-in"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="description d-grid gap-2 gap-md-3">
-                        <p class="s2-color"><?php echo esc_html($short_desc); ?></p>
-                    </div>
+                    <?php if (!empty($facebook) || !empty($twitter) || !empty($instagram) || !empty($linkedin)) : ?>
+                        <ul class="d-flex gap-3 social-area list-unstyled">
+                            <li>
+                                <a href="<?php echo esc_url($facebook); ?>" aria-label="Facebook">
+                                    <i class="tp tp-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?php echo esc_url($twitter); ?>" aria-label="Twitter">
+                                    <i class="tp tp-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?php echo esc_url($instagram); ?>" aria-label="Instagram">
+                                    <i class="tp tp-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?php echo esc_url($linkedin); ?>" aria-label="dribbble">
+                                    <i class="tp tp-linkedin-in"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    <?php endif; ?>
+
+                    <?php if (!empty($short_desc)): ?>
+                        <div class="description d-grid gap-2 gap-md-3">
+                            <p class="s2-color"><?php echo esc_html($short_desc); ?></p>
+                        </div>
+                    <?php endif; ?>
 
                     <?php if (!empty($group_field_values)) : ?>
                         <div class="d-grid gap-4 gap-md-6">

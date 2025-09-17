@@ -6,7 +6,7 @@ function themephi_team_register_post_type()
 	global $villea_option;
 	$team_slug = (!empty($villea_option['team_slug'])) ? $villea_option['team_slug'] : 'teams';
 	$labels = array(
-		'name'               => esc_html__($team_slug, 'tp-elements'),
+		'name'               => esc_html__('Teams', 'tp-elements'),
 		'singular_name'      => esc_html__($team_slug, 'tp-elements'),
 		'menu_name'          => esc_html__($team_slug, 'tp-elements'),
 		'add_new'            => esc_html_x('Add New ' . $team_slug, 'tp-elements'),
@@ -102,14 +102,17 @@ function themephi_pro_team_social_meta_link_callback($social_meta)
 	wp_nonce_field('member_social_metabox', 'member_social_metabox_nonce'); ?>
 	<!-- member social -->
 	<div class="wrap-meta-group">
-		<div class="tp-admin-input"><label for="facebook"><?php esc_html_e('Facebook', 'tp-elements') ?></label>
+		<div class="tp-admin-input">
+			<label for="facebook"><?php esc_html_e('Facebook', 'tp-elements') ?></label>
 			<?php $facebook = get_post_meta($social_meta->ID, 'facebook', true); ?>
 			<input type="text" name="facebook" id="facebook" class="facebook" value="<?php echo esc_html($facebook); ?>" />
 		</div>
-		<div class="tp-admin-input"><label for="twitter"><?php esc_html_e(
-																'Twitter',
-																'tp-elements'
-															) ?></label>
+		<div class="tp-admin-input">
+			<label for="twitter">
+				<?php esc_html_e(
+					'Twitter',
+					'tp-elements'
+				) ?></label>
 			<?php $twitter = get_post_meta($social_meta->ID, 'twitter', true); ?>
 			<input type="text" name="twitter" id="twitter" class="twitter" value="<?php echo esc_html($twitter); ?>" />
 		</div>
