@@ -2343,3 +2343,249 @@
 [2025-09-17 12:06:45 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
 [2025-09-17 12:06:45 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
 [2025-09-17 12:06:45 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:03:25 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:03:25 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:03:25 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:03:25 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:03:25 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:03:25 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:15:21 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:15:21 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:15:21 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:15:21 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:15:21 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:15:21 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:16:13 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:16:13 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:16:13 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:16:13 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:16:14 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:16:14 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:28:46 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:28:46 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:28:46 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:28:46 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:28:46 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:28:46 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:32:27 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:32:27 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:32:27 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:32:27 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:32:27 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:32:27 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:32:51 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:32:51 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:32:51 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:32:51 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:32:51 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:32:51 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:43:12 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:43:12 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:43:12 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:43:12 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:43:12 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:43:12 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:44:11 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:44:11 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:44:11 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:44:11 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:44:12 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:44:12 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:44:42 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:44:42 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:44:42 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:44:42 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:44:42 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:44:42 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:45:41 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:45:41 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:45:42 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:45:42 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:45:42 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:45:42 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:46:12 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:46:12 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:46:12 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:46:12 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:46:13 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:46:13 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:46:28 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:46:28 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:46:28 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:46:28 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 04:46:28 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 04:46:28 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 05:20:31 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 05:20:31 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 05:20:31 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 05:20:31 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 05:20:31 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 05:20:31 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 05:20:54 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 05:20:54 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 05:20:54 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 05:20:54 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 05:20:54 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 05:20:54 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 05:31:43 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 05:31:43 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 05:31:43 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 05:31:43 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 05:31:43 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 05:31:43 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 05:32:32 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 05:32:32 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 05:32:32 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 05:32:32 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 05:32:32 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 05:32:32 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 05:35:21 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 05:35:21 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 05:35:21 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 05:35:21 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 05:35:21 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 05:35:21 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 05:54:12 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 05:54:12 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 05:54:12 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 05:54:12 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 05:54:12 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 05:54:12 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 05:54:53 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 05:54:53 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 05:54:53 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 05:54:53 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 05:54:53 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 05:54:53 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 05:56:29 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 05:56:29 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 05:56:29 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 05:56:29 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 05:56:29 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 05:56:29 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 05:59:27 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 05:59:27 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 05:59:27 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 05:59:27 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 05:59:27 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 05:59:27 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:00:43 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:00:43 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:00:43 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:00:43 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:00:43 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:00:43 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:03:04 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:03:04 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:03:04 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:03:04 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:03:04 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:03:04 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:05:03 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:05:03 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:05:03 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:05:03 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:05:03 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:05:03 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:05:50 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:05:50 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:05:50 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:05:50 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:05:50 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:05:50 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:06:42 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:06:42 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:06:42 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:06:42 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:06:42 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:06:42 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:17:07 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:17:07 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:17:07 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:17:07 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:17:07 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:17:07 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:18:38 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:18:38 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:18:38 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:18:38 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:18:38 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:18:38 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:26:49 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:26:49 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:26:49 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:26:49 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:26:49 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:26:49 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:27:17 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:27:17 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:27:17 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:27:17 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:27:17 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:27:17 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:33:26 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:33:26 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:33:26 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:33:26 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:33:26 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:33:26 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:33:44 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:33:44 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:33:44 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:33:44 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:33:44 : INFO] - Cache for URL: http://localhost/wp/villea/test/ has been purged, triggered by action: save_post 
+[2025-09-20 06:33:44 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "test" has been purged, triggered by action: save_post 
+[2025-09-20 06:35:18 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:35:18 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:35:18 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:35:18 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:35:19 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:35:19 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:37:15 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:37:15 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:37:16 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:37:16 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:37:16 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:37:16 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:37:48 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:37:48 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:37:49 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:37:49 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:37:49 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:37:49 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:38:11 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:38:11 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:38:11 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:38:11 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:38:11 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:38:11 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:38:27 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:38:27 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:38:27 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:38:27 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:38:28 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:38:28 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:40:24 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:40:24 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:40:24 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:40:24 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:40:24 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:40:24 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:40:42 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:40:42 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:40:43 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:40:43 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:40:43 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:40:43 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:48:40 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:48:40 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:48:40 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:48:40 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:48:40 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:48:40 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:49:37 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:49:37 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:49:37 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:49:37 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:49:38 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:49:38 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
