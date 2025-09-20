@@ -41,10 +41,9 @@
   .themephi-blog {
     .blog-item {
       transition: all 0.5s ease 0s;
-      background: var(--whiteColor);
+      background: var(--globalColor);
       overflow: hidden;
       box-shadow: none;
-      // border: 1px solid var(--borderColor);
       border-radius: var(--boxBorderRadius);
       margin: 0;
 
@@ -1146,8 +1145,7 @@ body {
 
 .themephi-blog-details {
   .type-post {
-    // border: 1px solid var(--borderColor);
-    background-color: var(--whiteColor);
+    background-color: var(--globalColor);
     border-radius: var(--boxBorderRadius);
     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
     margin-bottom: 40px;
@@ -1804,8 +1802,7 @@ ol.comment-list .comment-respond .form-submit {
   border-radius: var(--boxBorderRadius);
   margin-bottom: 40px;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  // border: 1px solid var(--borderColor);
-  background-color: var(--whiteColor);
+  background-color: var(--globalColor);
 
   ol.children {
     padding: 0;
@@ -1816,10 +1813,11 @@ ol.comment-list .comment-respond .form-submit {
     padding: 0;
 
     li.comment {
-      padding: 0px;
-      margin: 20px 0 25px;
-      border-radius: 5px;
+      padding: 12px;
+      margin: 20px 0;
+      border-radius: 12px;
       list-style: none;
+      background: var(--body_bg);
 
       .comment-full {
         padding: 0;
@@ -1830,9 +1828,10 @@ ol.comment-list .comment-respond .form-submit {
       .comment-body {
         position: relative;
         padding-left: 98px;
-        padding-bottom: 30px;
-        margin-bottom: 25px;
-        border-bottom: 1px solid var(--borderColor);
+        padding-bottom: 24px;
+      }
+      .children {
+        border-top: 1px solid var(--borderColor);
       }
 
       #respond {
@@ -2140,6 +2139,8 @@ li.comment {
 .widget_tptheme_search_widget {
   input.search-field[type="search"] {
     width: calc(100% - 65px);
+    border: none;
+    background-color: var(--whiteColor);
   }
 
   button.search-submit {
@@ -2297,8 +2298,7 @@ li.comment {
     margin: 0;
     border-radius: var(--boxBorderRadius);
     padding: 24px 24px 24px;
-    background-color: var(--whiteColor);
-    // border: 1px solid var(--borderColor);
+    background-color: var(--globalColor);
     box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.04);
 
     &:hover {
@@ -2306,11 +2306,6 @@ li.comment {
         height: 70px;
       }
     }
-  }
-
-  .widget_media_image {
-    padding: 0;
-    background: none;
   }
 
   ul {
@@ -2351,14 +2346,16 @@ li.comment {
           color: var(--titleColor);
           font-weight: 500;
           transition: 0.3s;
-          padding: 15px 25px;
+          padding: 12px;
           display: inline-block;
           border-radius: 0;
-          // background: var(--globalColor);
+          background: var(--whiteColor);
+          border-radius: var(--btnBorderRadius);
           flex: 1;
 
           &:hover {
-            color: var(--primaryColor);
+            color: var(--whiteColor);
+            background: var(--primaryColor);
           }
         }
 
@@ -2514,7 +2511,7 @@ li.comment {
       padding-left: 20px;
       padding-right: 65px;
       border-radius: 0;
-      background: var(--globalColor);
+      background: var(--whiteColor);
       border: 1px solid var(--borderColor);
     }
 
@@ -2565,7 +2562,6 @@ li.comment {
       }
     }
   }
-  
 
   .widget_categories,
   .widget_recent_entries,
@@ -3375,7 +3371,6 @@ caption {
 
 .results-box {
   padding: 16px 24px;
-  background: var(--whiteColor);
-  // border: 1px solid var(--borderColor);
+  background: var(--globalColor);
   border-radius: var(--boxBorderRadius);
 }

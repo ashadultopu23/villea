@@ -51,6 +51,15 @@ if (
 <div class="themephi-blog-details">
     <div class="<?php echo esc_attr($header_width); ?>">
         <div class="row padding-<?php echo esc_attr($col_letf) ?>">
+
+            <!-- Sidebar Left -->
+            <?php
+            if (($page_layout == '2left')):
+                get_sidebar('single');
+            endif;
+            ?>
+
+            <!-- Content -->
             <div class="col-lg-<?php echo esc_attr($col_side); ?> <?php echo esc_attr($col_letf); ?> ">
                 <div class="blog-post-details-inner">
                     <?php
@@ -109,8 +118,10 @@ if (
                     ?>
                 </div>
             </div>
+
+            <!-- Sidebar Right -->
             <?php
-            if (($page_layout == '2left' || $page_layout == '2right')):
+            if (($page_layout == '2right')):
                 get_sidebar('single');
             endif;
             ?>

@@ -29,14 +29,6 @@ function add_sidebar_metabox()
         'portfolios',
         'side'
     );
-
-    add_meta_box(
-        'custom_sidebar',
-        esc_html__('Analysis Sidebar Setting', 'tp-framework'),
-        'custom_sidebar_callback',
-        'market-analysis',
-        'side'
-    );
     add_meta_box(
         'custom_sidebar',
         esc_html__('Service Sidebar Setting', 'tp-framework'),

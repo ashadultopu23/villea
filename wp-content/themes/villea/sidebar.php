@@ -43,13 +43,6 @@
                 } else {
                     dynamic_sidebar('sidebar-service');
                 }
-            } elseif (is_singular('market-analysis') || is_post_type_archive('market-analysis') || is_tax('market-analysis-category')) {
-                // Market Analysis Sidebar
-                if (! is_active_sidebar('sidebar-market-analysis')) {
-                    echo '<div class="alert alert-warning">Please add widgets to the <strong>Service Sidebar</strong>.</div>';
-                } else {
-                    dynamic_sidebar('sidebar-market-analysis');
-                }
             } else {
                 // Default Blog Sidebar
                 if (! is_active_sidebar('sidebar-1')) {

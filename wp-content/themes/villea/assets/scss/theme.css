@@ -29,7 +29,7 @@
   --titleFont: "Poppins", sans-serif;
   --transition: all 0.3s ease;
   --body_bg: #ffffff;
-  --globalColor: #f5f5f5;
+  --globalColor: #f4f3f1;
   --borderColor: #dfe0e4;
   --bodyColor: #404a60;
   --titleColor: #222e48;
@@ -39,7 +39,7 @@
   --blackColor: #171717;
   --linkColor: #022e2d;
   --hoverColor: var(--secondaryColor);
-  --boxBorderRadius: 5px;
+  --boxBorderRadius: 12px;
   --imageBorderRadius: 4px;
   --btnBorderRadius: 5px;
   --btnBgColor: #022e2d;
@@ -4003,7 +4003,7 @@ html:has(#themephi-header.tps-default-header) .site-title a {
 .blog .themephi-blog .blog-item,
 .archive .themephi-blog .blog-item {
   transition: all 0.5s ease 0s;
-  background: var(--whiteColor);
+  background: var(--globalColor);
   overflow: hidden;
   box-shadow: none;
   border-radius: var(--boxBorderRadius);
@@ -5074,7 +5074,7 @@ body .wp-block-pullquote p {
 }
 
 .themephi-blog-details .type-post {
-  background-color: var(--whiteColor);
+  background-color: var(--globalColor);
   border-radius: var(--boxBorderRadius);
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   margin-bottom: 40px;
@@ -5590,7 +5590,7 @@ ol.comment-list .comment-respond .form-submit {
   border-radius: var(--boxBorderRadius);
   margin-bottom: 40px;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  background-color: var(--whiteColor);
+  background-color: var(--globalColor);
 }
 .comments-area ol.children {
   padding: 0;
@@ -5600,10 +5600,11 @@ ol.comment-list .comment-respond .form-submit {
   padding: 0;
 }
 .comments-area .comment-list li.comment {
-  padding: 0px;
-  margin: 20px 0 25px;
-  border-radius: 5px;
+  padding: 12px;
+  margin: 20px 0;
+  border-radius: 12px;
   list-style: none;
+  background: var(--body_bg);
 }
 .comments-area .comment-list li.comment .comment-full {
   padding: 0;
@@ -5613,9 +5614,10 @@ ol.comment-list .comment-respond .form-submit {
 .comments-area .comment-list li.comment .comment-body {
   position: relative;
   padding-left: 98px;
-  padding-bottom: 30px;
-  margin-bottom: 25px;
-  border-bottom: 1px solid var(--borderColor);
+  padding-bottom: 24px;
+}
+.comments-area .comment-list li.comment .children {
+  border-top: 1px solid var(--borderColor);
 }
 .comments-area .comment-list li.comment #respond {
   padding-left: 98px;
@@ -5870,6 +5872,8 @@ li.comment #respond {
 ---------------------------------------*/
 .widget_tptheme_search_widget input.search-field[type=search] {
   width: calc(100% - 65px);
+  border: none;
+  background-color: var(--whiteColor);
 }
 .widget_tptheme_search_widget button.search-submit {
   padding-left: 0;
@@ -5986,15 +5990,11 @@ li.comment #respond {
   margin: 0;
   border-radius: var(--boxBorderRadius);
   padding: 24px 24px 24px;
-  background-color: var(--whiteColor);
+  background-color: var(--globalColor);
   box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.04);
 }
 .themephi-sideabr .widget:hover:after {
   height: 70px;
-}
-.themephi-sideabr .widget_media_image {
-  padding: 0;
-  background: none;
 }
 .themephi-sideabr ul {
   margin: 0;
@@ -6036,9 +6036,11 @@ li.comment #respond {
   color: var(--titleColor);
   font-weight: 500;
   transition: 0.3s;
-  padding: 15px 25px;
+  padding: 12px;
   display: inline-block;
   border-radius: 0;
+  background: var(--whiteColor);
+  border-radius: var(--btnBorderRadius);
   flex: 1;
 }
 .themephi-sideabr .widget_categories ul li a:hover,
@@ -6048,7 +6050,8 @@ li.comment #respond {
 .themephi-sideabr .widget_recent_entries ul li a:hover,
 .themephi-sideabr .widget_nav_menu ul li a:hover,
 .themephi-sideabr .widget_block ul li a:hover {
-  color: var(--primaryColor);
+  color: var(--whiteColor);
+  background: var(--primaryColor);
 }
 .themephi-sideabr .widget_categories ul li span,
 .themephi-sideabr .widget_archive ul li span,
@@ -6177,7 +6180,7 @@ li.comment #respond {
   padding-left: 20px;
   padding-right: 65px;
   border-radius: 0;
-  background: var(--globalColor);
+  background: var(--whiteColor);
   border: 1px solid var(--borderColor);
 }
 .themephi-sideabr .widget_search button,
@@ -6909,7 +6912,7 @@ caption {
 
 .results-box {
   padding: 16px 24px;
-  background: var(--whiteColor);
+  background: var(--globalColor);
   border-radius: var(--boxBorderRadius);
 }
 
@@ -7759,12 +7762,6 @@ input[type=tel]:focus {
   outline: none;
   height: 57px;
   color: var(--titleColor);
-}
-
-.search-field {
-  border-radius: 0;
-  border: none;
-  background: var(--globalColor);
 }
 
 .wp-block-search__inside-wrapper {
@@ -8928,11 +8925,11 @@ div.wpcf7-acceptance-missing {
 
 .themephi-tag-wrapper a {
   color: rgb(58, 56, 54);
-  background-color: #f5f5f5;
-  padding: 5px 10px;
+  background-color: var(--whiteColor);
+  padding: 4px 8px;
   display: inline-block;
-  margin: 0 3px 7px 0;
-  border-radius: 5px;
+  margin: 0 4px 8px 0;
+  border-radius: var(--btnBorderRadius);
   font-size: 14px;
 }
 

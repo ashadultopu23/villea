@@ -2589,3 +2589,498 @@
 [2025-09-20 06:49:37 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
 [2025-09-20 06:49:38 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
 [2025-09-20 06:49:38 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:57:03 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:57:03 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:57:03 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:57:03 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:57:03 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:57:03 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:57:11 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:57:11 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:57:11 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:57:11 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:57:11 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 06:57:11 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 06:59:13 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/13/hello-world/ has been purged, triggered by action: wp_trash_post 
+[2025-09-20 06:59:13 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 07:06:31 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 07:06:32 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 07:06:32 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 07:06:32 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 07:16:17 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 07:16:17 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 07:16:17 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 07:16:17 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 07:16:18 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 07:16:18 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 07:16:18 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 07:16:18 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 07:16:27 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 07:16:27 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 07:16:27 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 07:16:27 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 07:16:28 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 07:16:28 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 07:16:28 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 07:16:28 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 07:16:55 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 07:16:55 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 07:16:55 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 07:16:55 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 07:16:56 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 07:16:56 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 07:16:56 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 07:16:56 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 08:07:24 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 08:07:25 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 08:07:25 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 08:07:25 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 08:07:26 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 08:07:26 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 08:07:26 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 08:07:26 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 08:11:45 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 08:11:45 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 08:11:45 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 08:11:45 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 08:11:46 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 08:11:46 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 08:11:46 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 08:11:46 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 08:12:18 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 08:12:18 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 08:12:18 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 08:12:18 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 08:12:19 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 08:12:19 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 08:12:19 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 08:12:19 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 08:17:50 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 08:17:50 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 08:17:50 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 08:17:50 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 08:17:51 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 08:17:51 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 08:17:51 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 08:17:51 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 08:18:13 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 08:18:13 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 08:18:13 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 08:18:13 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 08:18:14 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 08:18:14 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 08:18:14 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 08:18:14 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 08:20:39 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 08:20:39 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 08:20:39 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 08:20:39 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 08:20:40 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 08:20:40 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 08:20:40 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 08:20:40 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 08:21:49 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 08:21:49 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 08:21:49 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 08:21:49 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 08:21:50 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 08:21:50 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 08:21:50 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 08:21:50 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 08:22:22 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 08:22:22 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 08:22:22 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 08:22:22 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 08:22:23 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 08:22:23 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 08:22:23 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 08:22:23 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 08:23:49 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 08:23:49 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 08:23:49 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 08:23:49 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 08:23:50 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 08:23:50 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 08:23:50 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 08:23:50 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 08:23:53 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 08:23:53 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 08:23:53 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 08:23:53 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 08:23:54 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 08:23:54 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 08:23:54 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 08:23:54 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 08:24:25 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 08:24:25 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 08:24:25 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 08:24:25 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 08:24:26 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 08:24:26 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 08:24:26 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 08:24:26 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 08:26:07 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 08:26:07 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 08:26:07 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 08:26:07 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 08:26:08 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 08:26:08 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 08:26:08 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 08:26:08 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 08:34:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 08:34:00 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 08:34:00 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 08:34:00 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 08:34:01 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 08:34:01 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 08:34:01 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 08:34:01 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 08:35:19 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 08:35:19 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 08:35:19 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 08:35:19 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 08:35:19 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 08:35:20 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 08:35:20 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 08:35:20 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 08:35:20 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 09:51:14 : INFO] - Cache for URL: http://localhost/wp/villea/contact/ has been purged, triggered by action: save_post 
+[2025-09-20 09:51:14 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "contact" has been purged, triggered by action: save_post 
+[2025-09-20 09:53:03 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 09:53:03 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 09:53:03 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 09:53:03 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 09:53:04 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 09:53:04 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 09:53:04 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 09:53:04 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 09:53:17 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 09:53:17 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 09:53:17 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 09:53:17 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 09:53:27 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 09:53:29 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 09:53:29 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 09:53:29 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 09:53:29 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:01:59 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:01:59 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:01:59 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/top-interior-design-trends-for-modern-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 10:01:59 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/) adjacent to post with id: 1507 has been purged, triggered by action: save_post 
+[2025-09-20 10:01:59 : INFO] - Cache for all archives page associated with post_type: post and Title: "Top Interior Design Trends for Modern Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 10:01:59 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Top Interior Design Trends for Modern Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 10:03:16 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:03:16 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/top-interior-design-trends-for-modern-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 10:03:16 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/) adjacent to post with id: 1507 has been purged, triggered by action: save_post 
+[2025-09-20 10:03:16 : INFO] - Cache for all archives page associated with post_type: post and Title: "Top Interior Design Trends for Modern Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 10:03:16 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Top Interior Design Trends for Modern Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 10:03:16 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:03:16 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:03:17 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:03:17 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/top-interior-design-trends-for-modern-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 10:03:17 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/) adjacent to post with id: 1507 has been purged, triggered by action: save_post 
+[2025-09-20 10:03:17 : INFO] - Cache for all archives page associated with post_type: post and Title: "Top Interior Design Trends for Modern Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 10:03:17 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Top Interior Design Trends for Modern Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 10:28:59 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:28:59 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:28:59 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 10:28:59 : INFO] - Cache for next post (with URL: http://localhost/wp/villea/2025/09/20/top-interior-design-trends-for-modern-apartments/) adjacent to post with id: 1481 has been purged, triggered by action: save_post 
+[2025-09-20 10:28:59 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 10:28:59 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 10:29:58 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:29:58 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/top-interior-design-trends-for-modern-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 10:29:58 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/) adjacent to post with id: 1507 has been purged, triggered by action: save_post 
+[2025-09-20 10:29:58 : INFO] - Cache for all archives page associated with post_type: post and Title: "Top Interior Design Trends for Modern Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 10:29:58 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Top Interior Design Trends for Modern Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 10:29:59 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:29:59 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/top-interior-design-trends-for-modern-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 10:29:59 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/) adjacent to post with id: 1507 has been purged, triggered by action: save_post 
+[2025-09-20 10:29:59 : INFO] - Cache for all archives page associated with post_type: post and Title: "Top Interior Design Trends for Modern Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 10:29:59 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Top Interior Design Trends for Modern Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 10:31:33 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:31:33 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/top-interior-design-trends-for-modern-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 10:31:33 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/) adjacent to post with id: 1507 has been purged, triggered by action: save_post 
+[2025-09-20 10:31:33 : INFO] - Cache for all archives page associated with post_type: post and Title: "Top Interior Design Trends for Modern Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 10:31:33 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Top Interior Design Trends for Modern Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 10:31:34 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:31:34 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/top-interior-design-trends-for-modern-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 10:31:34 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/) adjacent to post with id: 1507 has been purged, triggered by action: save_post 
+[2025-09-20 10:31:34 : INFO] - Cache for all archives page associated with post_type: post and Title: "Top Interior Design Trends for Modern Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 10:31:34 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Top Interior Design Trends for Modern Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 10:31:51 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:31:51 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 10:31:51 : INFO] - Cache for next post (with URL: http://localhost/wp/villea/2025/09/20/top-interior-design-trends-for-modern-apartments/) adjacent to post with id: 1481 has been purged, triggered by action: save_post 
+[2025-09-20 10:31:51 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 10:31:51 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 10:31:52 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:31:52 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 10:31:52 : INFO] - Cache for next post (with URL: http://localhost/wp/villea/2025/09/20/top-interior-design-trends-for-modern-apartments/) adjacent to post with id: 1481 has been purged, triggered by action: save_post 
+[2025-09-20 10:31:52 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 10:31:52 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 10:32:09 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:32:09 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 10:32:09 : INFO] - Cache for next post (with URL: http://localhost/wp/villea/2025/09/20/top-interior-design-trends-for-modern-apartments/) adjacent to post with id: 1481 has been purged, triggered by action: save_post 
+[2025-09-20 10:32:09 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 10:32:09 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 10:32:10 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:32:10 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 10:32:10 : INFO] - Cache for next post (with URL: http://localhost/wp/villea/2025/09/20/top-interior-design-trends-for-modern-apartments/) adjacent to post with id: 1481 has been purged, triggered by action: save_post 
+[2025-09-20 10:32:10 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 10:32:10 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 10:34:10 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:34:10 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:34:10 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:34:11 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:34:44 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:34:44 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:34:44 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/how-to-choose-the-perfect-apartment-plan/ has been purged, triggered by action: save_post 
+[2025-09-20 10:34:44 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/top-interior-design-trends-for-modern-apartments/) adjacent to post with id: 1515 has been purged, triggered by action: save_post 
+[2025-09-20 10:34:44 : INFO] - Cache for all archives page associated with post_type: post and Title: "How to Choose the Perfect Apartment Plan" have been purged, triggered by action: save_post 
+[2025-09-20 10:34:44 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "How to Choose the Perfect Apartment Plan" has been purged, triggered by action: save_post 
+[2025-09-20 10:35:40 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:35:40 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/how-to-choose-the-perfect-apartment-plan/ has been purged, triggered by action: save_post 
+[2025-09-20 10:35:40 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/top-interior-design-trends-for-modern-apartments/) adjacent to post with id: 1515 has been purged, triggered by action: save_post 
+[2025-09-20 10:35:40 : INFO] - Cache for all archives page associated with post_type: post and Title: "How to Choose the Perfect Apartment Plan" have been purged, triggered by action: save_post 
+[2025-09-20 10:35:40 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "How to Choose the Perfect Apartment Plan" has been purged, triggered by action: save_post 
+[2025-09-20 10:35:40 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:35:41 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:35:42 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:35:42 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/how-to-choose-the-perfect-apartment-plan/ has been purged, triggered by action: save_post 
+[2025-09-20 10:35:42 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/top-interior-design-trends-for-modern-apartments/) adjacent to post with id: 1515 has been purged, triggered by action: save_post 
+[2025-09-20 10:35:42 : INFO] - Cache for all archives page associated with post_type: post and Title: "How to Choose the Perfect Apartment Plan" have been purged, triggered by action: save_post 
+[2025-09-20 10:35:42 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "How to Choose the Perfect Apartment Plan" has been purged, triggered by action: save_post 
+[2025-09-20 10:53:40 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:53:40 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:53:40 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:53:40 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:56:01 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:56:01 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartmentsmaximizing-small-spaces-with-smart-design-ideascurrent-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 10:56:01 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/how-to-choose-the-perfect-apartment-plan/) adjacent to post with id: 1518 has been purged, triggered by action: save_post 
+[2025-09-20 10:56:01 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for ApartmentsMaximizing Small Spaces With Smart Design IdeasCurrent Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 10:56:01 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for ApartmentsMaximizing Small Spaces With Smart Design IdeasCurrent Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 10:56:01 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:56:01 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:56:02 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:56:02 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/current-interior-design-trends-for-apartmentsmaximizing-small-spaces-with-smart-design-ideascurrent-interior-design-trends-for-apartments/ has been purged, triggered by action: save_post 
+[2025-09-20 10:56:02 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/how-to-choose-the-perfect-apartment-plan/) adjacent to post with id: 1518 has been purged, triggered by action: save_post 
+[2025-09-20 10:56:02 : INFO] - Cache for all archives page associated with post_type: post and Title: "Current Interior Design Trends for ApartmentsMaximizing Small Spaces With Smart Design IdeasCurrent Interior Design Trends for Apartments" have been purged, triggered by action: save_post 
+[2025-09-20 10:56:02 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Current Interior Design Trends for ApartmentsMaximizing Small Spaces With Smart Design IdeasCurrent Interior Design Trends for Apartments" has been purged, triggered by action: save_post 
+[2025-09-20 10:56:44 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:56:44 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/maximizing-small-spaces-with-smart-design-ideas/ has been purged, triggered by action: save_post 
+[2025-09-20 10:56:44 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/how-to-choose-the-perfect-apartment-plan/) adjacent to post with id: 1518 has been purged, triggered by action: save_post 
+[2025-09-20 10:56:44 : INFO] - Cache for all archives page associated with post_type: post and Title: "Maximizing Small Spaces With Smart Design Ideas" have been purged, triggered by action: save_post 
+[2025-09-20 10:56:44 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Maximizing Small Spaces With Smart Design Ideas" has been purged, triggered by action: save_post 
+[2025-09-20 10:56:45 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:56:45 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/maximizing-small-spaces-with-smart-design-ideas/ has been purged, triggered by action: save_post 
+[2025-09-20 10:56:45 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/how-to-choose-the-perfect-apartment-plan/) adjacent to post with id: 1518 has been purged, triggered by action: save_post 
+[2025-09-20 10:56:45 : INFO] - Cache for all archives page associated with post_type: post and Title: "Maximizing Small Spaces With Smart Design Ideas" have been purged, triggered by action: save_post 
+[2025-09-20 10:56:45 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Maximizing Small Spaces With Smart Design Ideas" has been purged, triggered by action: save_post 
+[2025-09-20 10:57:13 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:57:13 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/maximizing-small-spaces-with-smart-design-ideas/ has been purged, triggered by action: save_post 
+[2025-09-20 10:57:13 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/how-to-choose-the-perfect-apartment-plan/) adjacent to post with id: 1518 has been purged, triggered by action: save_post 
+[2025-09-20 10:57:13 : INFO] - Cache for all archives page associated with post_type: post and Title: "Maximizing Small Spaces With Smart Design Ideas" have been purged, triggered by action: save_post 
+[2025-09-20 10:57:13 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Maximizing Small Spaces With Smart Design Ideas" has been purged, triggered by action: save_post 
+[2025-09-20 10:57:14 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:57:14 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/maximizing-small-spaces-with-smart-design-ideas/ has been purged, triggered by action: save_post 
+[2025-09-20 10:57:14 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/how-to-choose-the-perfect-apartment-plan/) adjacent to post with id: 1518 has been purged, triggered by action: save_post 
+[2025-09-20 10:57:14 : INFO] - Cache for all archives page associated with post_type: post and Title: "Maximizing Small Spaces With Smart Design Ideas" have been purged, triggered by action: save_post 
+[2025-09-20 10:57:14 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Maximizing Small Spaces With Smart Design Ideas" has been purged, triggered by action: save_post 
+[2025-09-20 10:57:38 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:57:38 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:57:38 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:57:38 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:58:54 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:58:54 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/top-10-smart-tips-for-first-time-buyers-in-properties/ has been purged, triggered by action: save_post 
+[2025-09-20 10:58:54 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/maximizing-small-spaces-with-smart-design-ideas/) adjacent to post with id: 1522 has been purged, triggered by action: save_post 
+[2025-09-20 10:58:54 : INFO] - Cache for all archives page associated with post_type: post and Title: "Top 10 Smart Tips For First-Time Buyers In Properties" have been purged, triggered by action: save_post 
+[2025-09-20 10:58:54 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Top 10 Smart Tips For First-Time Buyers In Properties" has been purged, triggered by action: save_post 
+[2025-09-20 10:58:54 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:58:54 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:58:55 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:58:55 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/top-10-smart-tips-for-first-time-buyers-in-properties/ has been purged, triggered by action: save_post 
+[2025-09-20 10:58:55 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/maximizing-small-spaces-with-smart-design-ideas/) adjacent to post with id: 1522 has been purged, triggered by action: save_post 
+[2025-09-20 10:58:55 : INFO] - Cache for all archives page associated with post_type: post and Title: "Top 10 Smart Tips For First-Time Buyers In Properties" have been purged, triggered by action: save_post 
+[2025-09-20 10:58:55 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Top 10 Smart Tips For First-Time Buyers In Properties" has been purged, triggered by action: save_post 
+[2025-09-20 10:59:27 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:59:27 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:59:27 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:59:27 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:59:42 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 10:59:42 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 11:00:50 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 11:00:50 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/real-estate-market-predictions-for-the-coming-year/ has been purged, triggered by action: save_post 
+[2025-09-20 11:00:50 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/top-10-smart-tips-for-first-time-buyers-in-properties/) adjacent to post with id: 1524 has been purged, triggered by action: save_post 
+[2025-09-20 11:00:50 : INFO] - Cache for all archives page associated with post_type: post and Title: "Real Estate Market Predictions For The Coming Year" have been purged, triggered by action: save_post 
+[2025-09-20 11:00:50 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Real Estate Market Predictions For The Coming Year" has been purged, triggered by action: save_post 
+[2025-09-20 11:00:50 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 11:00:51 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 11:00:51 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/real-estate-market-predictions-for-the-coming-year/ has been purged, triggered by action: save_post 
+[2025-09-20 11:00:51 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/top-10-smart-tips-for-first-time-buyers-in-properties/) adjacent to post with id: 1524 has been purged, triggered by action: save_post 
+[2025-09-20 11:00:51 : INFO] - Cache for all archives page associated with post_type: post and Title: "Real Estate Market Predictions For The Coming Year" have been purged, triggered by action: save_post 
+[2025-09-20 11:00:51 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Real Estate Market Predictions For The Coming Year" has been purged, triggered by action: save_post 
+[2025-09-20 11:01:34 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 11:01:34 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 11:01:34 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 11:01:34 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 11:02:30 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 11:02:30 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/how-to-maximize-roi-from-rental-properties-system/ has been purged, triggered by action: save_post 
+[2025-09-20 11:02:30 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/real-estate-market-predictions-for-the-coming-year/) adjacent to post with id: 1529 has been purged, triggered by action: save_post 
+[2025-09-20 11:02:30 : INFO] - Cache for all archives page associated with post_type: post and Title: "How To Maximize ROI From Rental Properties System" have been purged, triggered by action: save_post 
+[2025-09-20 11:02:30 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "How To Maximize ROI From Rental Properties System" has been purged, triggered by action: save_post 
+[2025-09-20 11:02:30 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 11:02:31 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 11:02:31 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/how-to-maximize-roi-from-rental-properties-system/ has been purged, triggered by action: save_post 
+[2025-09-20 11:02:31 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/real-estate-market-predictions-for-the-coming-year/) adjacent to post with id: 1529 has been purged, triggered by action: save_post 
+[2025-09-20 11:02:31 : INFO] - Cache for all archives page associated with post_type: post and Title: "How To Maximize ROI From Rental Properties System" have been purged, triggered by action: save_post 
+[2025-09-20 11:02:31 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "How To Maximize ROI From Rental Properties System" has been purged, triggered by action: save_post 
+[2025-09-20 11:02:48 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 11:02:48 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/how-to-maximize-roi-from-rental-properties-system/ has been purged, triggered by action: save_post 
+[2025-09-20 11:02:48 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/real-estate-market-predictions-for-the-coming-year/) adjacent to post with id: 1529 has been purged, triggered by action: save_post 
+[2025-09-20 11:02:48 : INFO] - Cache for all archives page associated with post_type: post and Title: "How To Maximize ROI From Rental Properties System" have been purged, triggered by action: save_post 
+[2025-09-20 11:02:48 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "How To Maximize ROI From Rental Properties System" has been purged, triggered by action: save_post 
+[2025-09-20 11:02:49 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 11:02:49 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/how-to-maximize-roi-from-rental-properties-system/ has been purged, triggered by action: save_post 
+[2025-09-20 11:02:49 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/real-estate-market-predictions-for-the-coming-year/) adjacent to post with id: 1529 has been purged, triggered by action: save_post 
+[2025-09-20 11:02:49 : INFO] - Cache for all archives page associated with post_type: post and Title: "How To Maximize ROI From Rental Properties System" have been purged, triggered by action: save_post 
+[2025-09-20 11:02:49 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "How To Maximize ROI From Rental Properties System" has been purged, triggered by action: save_post 
+[2025-09-20 11:03:16 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 11:03:16 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 11:03:16 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/how-to-maximize-roi-from-rental-properties-system/ has been purged, triggered by action: save_post 
+[2025-09-20 11:03:16 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/real-estate-market-predictions-for-the-coming-year/) adjacent to post with id: 1529 has been purged, triggered by action: save_post 
+[2025-09-20 11:03:16 : INFO] - Cache for all archives page associated with post_type: post and Title: "How To Maximize ROI From Rental Properties System" have been purged, triggered by action: save_post 
+[2025-09-20 11:03:16 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "How To Maximize ROI From Rental Properties System" has been purged, triggered by action: save_post 
+[2025-09-20 11:03:31 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 11:03:31 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 11:03:31 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/real-estate-market-predictions-for-the-coming-year/ has been purged, triggered by action: save_post 
+[2025-09-20 11:03:31 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/top-10-smart-tips-for-first-time-buyers-in-properties/) adjacent to post with id: 1524 has been purged, triggered by action: save_post 
+[2025-09-20 11:03:31 : INFO] - Cache for next post (with URL: http://localhost/wp/villea/2025/09/20/how-to-maximize-roi-from-rental-properties-system/) adjacent to post with id: 1524 has been purged, triggered by action: save_post 
+[2025-09-20 11:03:31 : INFO] - Cache for all archives page associated with post_type: post and Title: "Real Estate Market Predictions For The Coming Year" have been purged, triggered by action: save_post 
+[2025-09-20 11:03:31 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Real Estate Market Predictions For The Coming Year" has been purged, triggered by action: save_post 
+[2025-09-20 11:03:43 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 11:03:43 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 11:03:43 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/top-10-smart-tips-for-first-time-buyers-in-properties/ has been purged, triggered by action: save_post 
+[2025-09-20 11:03:43 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/maximizing-small-spaces-with-smart-design-ideas/) adjacent to post with id: 1522 has been purged, triggered by action: save_post 
+[2025-09-20 11:03:43 : INFO] - Cache for next post (with URL: http://localhost/wp/villea/2025/09/20/real-estate-market-predictions-for-the-coming-year/) adjacent to post with id: 1522 has been purged, triggered by action: save_post 
+[2025-09-20 11:03:43 : INFO] - Cache for all archives page associated with post_type: post and Title: "Top 10 Smart Tips For First-Time Buyers In Properties" have been purged, triggered by action: save_post 
+[2025-09-20 11:03:43 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Top 10 Smart Tips For First-Time Buyers In Properties" has been purged, triggered by action: save_post 
+[2025-09-20 11:03:56 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 11:03:56 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 11:03:56 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/maximizing-small-spaces-with-smart-design-ideas/ has been purged, triggered by action: save_post 
+[2025-09-20 11:03:56 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/how-to-choose-the-perfect-apartment-plan/) adjacent to post with id: 1518 has been purged, triggered by action: save_post 
+[2025-09-20 11:03:56 : INFO] - Cache for next post (with URL: http://localhost/wp/villea/2025/09/20/top-10-smart-tips-for-first-time-buyers-in-properties/) adjacent to post with id: 1518 has been purged, triggered by action: save_post 
+[2025-09-20 11:03:56 : INFO] - Cache for all archives page associated with post_type: post and Title: "Maximizing Small Spaces With Smart Design Ideas" have been purged, triggered by action: save_post 
+[2025-09-20 11:03:56 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "Maximizing Small Spaces With Smart Design Ideas" has been purged, triggered by action: save_post 
+[2025-09-20 11:05:12 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 11:05:12 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 11:05:13 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/how-to-maximize-roi-from-rental-properties-system/ has been purged, triggered by action: save_post 
+[2025-09-20 11:05:13 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/real-estate-market-predictions-for-the-coming-year/) adjacent to post with id: 1529 has been purged, triggered by action: save_post 
+[2025-09-20 11:05:13 : INFO] - Cache for all archives page associated with post_type: post and Title: "How To Maximize ROI From Rental Properties System" have been purged, triggered by action: save_post 
+[2025-09-20 11:05:13 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "How To Maximize ROI From Rental Properties System" has been purged, triggered by action: save_post 
+[2025-09-20 11:08:02 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 11:08:02 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-09-20 11:08:02 : INFO] - Cache for URL: http://localhost/wp/villea/2025/09/20/how-to-maximize-roi-from-rental-properties-system/ has been purged, triggered by action: save_post 
+[2025-09-20 11:08:02 : INFO] - Cache for previous post (with URL: http://localhost/wp/villea/2025/09/20/real-estate-market-predictions-for-the-coming-year/) adjacent to post with id: 1529 has been purged, triggered by action: save_post 
+[2025-09-20 11:08:02 : INFO] - Cache for all archives page associated with post_type: post and Title: "How To Maximize ROI From Rental Properties System" have been purged, triggered by action: save_post 
+[2025-09-20 11:08:02 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: post and Title: "How To Maximize ROI From Rental Properties System" has been purged, triggered by action: save_post 
+[2025-09-20 11:19:09 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:19:09 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:19:09 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:19:09 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:19:10 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:19:10 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:19:54 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:19:54 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:19:54 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:19:54 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:19:55 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:19:55 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:21:18 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:21:18 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:21:18 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:21:18 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:21:19 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:21:19 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:22:30 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:22:30 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:22:30 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:22:30 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:22:31 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:22:31 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:23:05 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:23:05 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:23:05 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:23:05 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:23:06 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:23:06 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:30:00 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:30:00 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:30:00 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:30:00 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:30:00 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:30:00 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:30:12 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:30:12 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:30:12 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:30:12 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:30:13 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:30:13 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:38:42 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:38:42 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:38:42 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:38:42 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:38:43 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:38:43 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:42:05 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:42:05 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:42:05 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:42:05 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:42:06 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:42:06 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:42:21 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:42:21 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:42:21 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:42:21 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:42:21 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:42:21 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:43:31 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:43:31 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:43:31 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:43:31 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:43:32 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:43:32 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:44:45 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:44:45 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:44:45 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:44:45 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:44:46 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:44:46 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:46:02 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:46:02 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:46:02 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:46:02 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:46:02 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:46:02 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:47:22 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:47:22 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:47:22 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:47:22 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:47:22 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:47:22 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:55:50 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:55:50 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:55:50 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:55:50 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:55:51 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:55:51 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:57:19 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:57:19 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:57:19 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:57:19 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:57:19 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:57:19 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:59:22 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:59:22 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:59:22 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:59:22 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 
+[2025-09-20 11:59:22 : INFO] - Cache for URL: http://localhost/wp/villea/apartment/ has been purged, triggered by action: save_post 
+[2025-09-20 11:59:22 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment" has been purged, triggered by action: save_post 

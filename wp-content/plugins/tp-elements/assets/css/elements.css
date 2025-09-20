@@ -4,7 +4,7 @@
   --titleFont: "Poppins", sans-serif;
   --transition: all 0.3s ease;
   --body_bg: #ffffff;
-  --globalColor: #f5f5f5;
+  --globalColor: #f4f3f1;
   --borderColor: #dfe0e4;
   --bodyColor: #404a60;
   --titleColor: #222e48;
@@ -14,7 +14,7 @@
   --blackColor: #171717;
   --linkColor: #022e2d;
   --hoverColor: var(--secondaryColor);
-  --boxBorderRadius: 5px;
+  --boxBorderRadius: 12px;
   --imageBorderRadius: 4px;
   --btnBorderRadius: 5px;
   --btnBgColor: #022e2d;

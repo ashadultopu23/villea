@@ -221,7 +221,7 @@ function tp_register_header_metabox()
 		'desc'    => esc_html__('choose your background', 'tp-framework'),
 		'id'      => 'page_bg_colors',
 		'type'    => 'colorpicker',
-		'default' => '#f4f7fb',
+		'default' => '#ffffff',
 	));
 
 	$cmb_demo->add_field(array(
