@@ -246,6 +246,12 @@ final class TPelements_Elementor_Extension
 
 		// image scroll gallery
 		$enqueue_with_version('tpelements-image-scroll-gallery-css', 'widgets/image-scroll-gallery/image-scroll-gallery-css/image-scroll-gallery.css');
+
+		// blog slider
+		$enqueue_with_version('tpelements-blog-slider-css', 'widgets/blog-slider/blog-slider-css/blog-slider.css');
+
+		// blog grid
+		$enqueue_with_version('tpelements-blog-grid-css', 'widgets/blog-grid/blog-css/blog-grid.css');
 	}
 
 	public function tpaddon_register_plugin_styles()

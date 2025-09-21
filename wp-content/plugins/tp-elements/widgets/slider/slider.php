@@ -815,7 +815,7 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%', 'em'],
                 'selectors' => [
-                    '{{WRAPPER}} .tp-slider-navigation .tp-slider-prev i, {{WRAPPER}} .tp-slider-navigation .tp-slider-next i, {{WRAPPER}} .tp-slider-navigation6 > .box-style' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .tp-slider-navigation .tp-slider-prev, {{WRAPPER}} .tp-slider-navigation .tp-slider-next, {{WRAPPER}} .tp-slider-navigation6 > .box-style' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
                 'condition' => ['slider_nav' => 'true',],
             ]
@@ -828,7 +828,7 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%', 'em'],
                 'selectors' => [
-                    '{{WRAPPER}} .tp-slider-navigation .tp-slider-prev i, {{WRAPPER}} .tp-slider-navigation .tp-slider-next i,  {{WRAPPER}} .tp-slider-navigation6 > .box-style' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
+                    '{{WRAPPER}} .tp-slider-navigation .tp-slider-prev, {{WRAPPER}} .tp-slider-navigation .tp-slider-next,  {{WRAPPER}} .tp-slider-navigation6 > .box-style' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
                 ],
                 'condition' => ['slider_nav' => 'true',],
             ]
@@ -838,7 +838,7 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
             Group_Control_Border::get_type(),
             [
                 'name' => 'navigation_border',
-                'selector' => '{{WRAPPER}} .tp-slider-navigation .tp-slider-prev i, {{WRAPPER}} .tp-slider-navigation .tp-slider-next i,  {{WRAPPER}} .tp-slider-navigation6 > .box-style',
+                'selector' => '{{WRAPPER}} .tp-slider-navigation .tp-slider-prev, {{WRAPPER}} .tp-slider-navigation .tp-slider-next,  {{WRAPPER}} .tp-slider-navigation6 > .box-style',
                 'condition' => ['slider_nav' => 'true',],
             ]
         );
@@ -846,7 +846,7 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
             Group_Control_Border::get_type(),
             [
                 'name' => 'navigation_hover_border',
-                'selector' => '{{WRAPPER}} .tp-slider-navigation .tp-slider-prev:hover i, {{WRAPPER}} .tp-slider-navigation .tp-slider-next:hover i,  {{WRAPPER}} .tp-slider-navigation6 > .box-style:hover',
+                'selector' => '{{WRAPPER}} .tp-slider-navigation .tp-slider-prev:hover, {{WRAPPER}} .tp-slider-navigation .tp-slider-next:hover,  {{WRAPPER}} .tp-slider-navigation6 > .box-style:hover',
                 'condition' => ['slider_nav' => 'true',],
             ]
         );
@@ -854,10 +854,10 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
         $this->add_control(
             'pcat_nav_text_bg',
             [
-                'label' => esc_html__('Nav BG Color', 'tp-elements'),
+                'label' => esc_html__('Nav Color', 'tp-elements'),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .tp-slider-navigation i,  {{WRAPPER}} .tp-slider-navigation6 > .box-style' => 'background-color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .tp-slider-navigation .tp-slider-prev, {{WRAPPER}} .tp-slider-navigation .tp-slider-next, {{WRAPPER}} .tp-slider-navigation6 > .box-style' => 'color: {{VALUE}} !important;',
                 ],
                 'condition' => ['slider_nav' => 'true',],
             ]
@@ -865,10 +865,10 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
         $this->add_control(
             'pcat_nav_text_bg_hover',
             [
-                'label' => esc_html__('Nav BG Hover Color', 'tp-elements'),
+                'label' => esc_html__('Nav Hover Color', 'tp-elements'),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .tp-slider-navigation i:hover, {{WRAPPER}} .tp-slider-navigation6 > .box-style:hover::before' => 'background-color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .tp-slider-navigation .tp-slider-prev:hover, {{WRAPPER}} .tp-slider-navigation .tp-slider-next:hover, {{WRAPPER}} .tp-slider-navigation6 > .box-style:hover::before' => 'color: {{VALUE}} !important;',
                 ],
                 'condition' => ['slider_nav' => 'true',],
             ]
@@ -879,7 +879,7 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
                 'label' => esc_html__('Nav BG Icon Color', 'tp-elements'),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .tp-slider-navigation i:before,  {{WRAPPER}} .tp-slider-navigation6 > .box-style i' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .tp-slider-navigation .tp-slider-prev:before, {{WRAPPER}} .tp-slider-navigation .tp-slider-next:before,  {{WRAPPER}} .tp-slider-navigation6 > .box-style ' => 'background: {{VALUE}} !important;',
                 ],
                 'condition' => ['slider_nav' => 'true',],
             ]
@@ -890,7 +890,7 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
                 'label' => esc_html__('Nav BG Icon Hover Color', 'tp-elements'),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .tp-slider-navigation i:hover::before,  {{WRAPPER}} .tp-slider-navigation6 > .box-style:hover i' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .tp-slider-navigation .tp-slider-prev:hover:before, {{WRAPPER}} .tp-slider-navigation .tp-slider-next:hover:before,  {{WRAPPER}} .tp-slider-navigation6 > .box-style:hover i' => 'background: {{VALUE}} !important;',
                 ],
                 'condition' => ['slider_nav' => 'true',],
             ]
@@ -1219,10 +1219,8 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
         $this->end_controls_section();
 
 
-
-
         $this->start_controls_section(
-            '_section_style_grid',
+            '_section_style_content',
             [
                 'label' => esc_html__('Content Style', 'tp-elements'),
                 'tab' => Controls_Manager::TAB_STYLE,
@@ -1273,15 +1271,14 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
             ]
         );
 
-        $this->add_control(
-            'ragting_title_color',
+        $this->end_controls_section();
+
+
+        $this->start_controls_section(
+            '_section_style_image',
             [
-                'label' => esc_html__('Rating Color', 'tp-elements'),
-                'type' => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .tp--slider.slider-style2 .tp-el-star .rating' => 'color: {{VALUE}}',
-                    '{{WRAPPER}} .slider-inner-wrapper .tp-el-star' => 'color: {{VALUE}}',
-                ],
+                'label' => esc_html__('Image Style', 'tp-elements'),
+                'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
 
@@ -1413,6 +1410,16 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
                 'selectors' => [
                     '{{WRAPPER}} .slider-inner-wrapper .tp--slider .single--item .quote-icon' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
                 ],
+            ]
+        );
+        $this->end_controls_section();
+
+
+        $this->start_controls_section(
+            'section_style_text',
+            [
+                'label' => esc_html__('Text', 'plugin-name'),
+                'tab'   => Controls_Manager::TAB_STYLE,
             ]
         );
 

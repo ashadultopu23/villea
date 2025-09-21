@@ -145,9 +145,9 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                 'label' => esc_html__('Button Text', 'tp-elements'),
                 'type' => Controls_Manager::TEXT,
                 'separator' => 'before',
-                'condition' => [
-                    'blog_slider_style' => '3',
-                ],
+                // 'condition' => [
+                //     'blog_slider_style' => '3',
+                // ],
             ]
         );
 
@@ -428,6 +428,10 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                         'title' => esc_html__('Right', 'tp-elements'),
                         'icon' => 'eicon-text-align-right',
                     ],
+                    'space-between' => [
+                        'title' => esc_html__('Justified', 'tp-elements'),
+                        'icon' => 'eicon-text-align-justify',
+                    ],
                 ],
                 'selectors' => [
                     '{{WRAPPER}} .tp-blog-navigation-wrapp' => 'justify-content: {{VALUE}};',
@@ -468,14 +472,18 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
             Group_Control_Border::get_type(),
             [
                 'name' => 'navigation_border',
+                'label' => esc_html__('Border', 'tp-elements'),
                 'selector' => '{{WRAPPER}} .tp-blog-navigation-wrapp > span',
                 'condition' => ['slider_nav' => 'true',],
+
             ]
         );
+
         $this->add_group_control(
             Group_Control_Border::get_type(),
             [
                 'name' => 'navigation_hover_border',
+                'label' => esc_html__('Hover Border', 'tp-elements'),
                 'selector' => '{{WRAPPER}} .tp-blog-navigation-wrapp > span:hover',
                 'condition' => ['slider_nav' => 'true',],
             ]
@@ -506,7 +514,7 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
         $this->add_control(
             'pcat_nav_text_bg_icon',
             [
-                'label' => esc_html__('Nav BG Icon Color', 'tp-elements'),
+                'label' => esc_html__('Nav Icon Color', 'tp-elements'),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .tp-blog-navigation-wrapp > span i' => 'color: {{VALUE}} !important;',
@@ -517,7 +525,7 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
         $this->add_control(
             'pcat_nav_text_bg_hover_icon',
             [
-                'label' => esc_html__('Nav BG Icon Hover Color', 'tp-elements'),
+                'label' => esc_html__('Nav Icon Hover Color', 'tp-elements'),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .tp-blog-navigation-wrapp > span:hover i' => 'color: {{VALUE}} !important;',
@@ -525,34 +533,6 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                 'condition' => ['slider_nav' => 'true',],
             ]
         );
-
-        $this->add_control(
-            'pcat_prev_text',
-            [
-                'label' => esc_html__('Previous Text', 'tp-elements'),
-                'type' => \Elementor\Controls_Manager::TEXT,
-                'default' => esc_html__('Previous', 'tp-elements'),
-                'placeholder' => esc_html__('Type your title here', 'tp-elements'),
-                'condition' => [
-                    'slider_nav' => 'true',
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'pcat_next_text',
-            [
-                'label' => esc_html__('Next Text', 'tp-elements'),
-                'type' => \Elementor\Controls_Manager::TEXT,
-                'default' => esc_html__('Next', 'tp-elements'),
-                'placeholder' => esc_html__('Type your title here', 'tp-elements'),
-                'condition' => [
-                    'slider_nav' => 'true',
-                ],
-
-            ]
-        );
-
 
         $this->add_control(
             'navigation_top_space',
@@ -576,7 +556,6 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
         );
 
 
-
         $this->add_control(
             'slider_autoplay',
             [
@@ -588,9 +567,7 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                     'false' => esc_html__('Disable', 'tp-elements'),
                 ],
                 'separator' => 'before',
-
             ]
-
         );
 
         $this->add_control(
@@ -611,7 +588,6 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                     'slider_autoplay' => 'true',
                 ],
             ]
-
         );
 
         $this->add_control(
@@ -632,7 +608,6 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                     'slider_autoplay' => 'true',
                 ],
             ]
-
         );
 
         $this->add_control(
@@ -650,7 +625,6 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                     'slider_autoplay' => 'true',
                 ],
             ]
-
         );
 
         $this->add_control(
@@ -668,11 +642,7 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                     'slider_autoplay' => 'true',
                 ],
             ]
-
         );
-
-
-
 
 
         $this->add_control(
@@ -686,9 +656,7 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                     'false' => esc_html__('Disable', 'tp-elements'),
                 ],
                 'separator' => 'before',
-
             ]
-
         );
 
         $this->add_control(
@@ -702,9 +670,7 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                     'false' => esc_html__('Disable', 'tp-elements'),
                 ],
                 'separator' => 'before',
-
             ]
-
         );
 
         $this->add_responsive_control(
@@ -721,7 +687,6 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                 'default' => [
                     'size' => 15,
                 ],
-
             ]
         );
 
@@ -748,6 +713,35 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
 
         $this->end_controls_section();
 
+
+        $this->start_controls_section(
+            'section_slider_image_style',
+            [
+                'label' => esc_html__('Image Style', 'tp-elements'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        $this->add_control(
+            'image_border_radius',
+            [
+                'label' => esc_html__('Border Radius', 'tp-elements'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px'],
+                'default' => [
+                    'top' => 0,
+                    'right' => 0,
+                    'bottom' => 0,
+                    'left' => 0,
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .tp-blog-slider .image-part img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->end_controls_section();
+
         $this->start_controls_section(
             'section_slider_title_style',
             [
@@ -755,6 +749,7 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
+
 
         $this->add_control(
             'title_tag',
@@ -820,7 +815,7 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
             [
                 'name' => 'title_typography',
                 'label' => esc_html__('Title Typography', 'tp-elements'),
-                'selector' => '{{WRAPPER}} .tp-blog-slider .title a',
+                'selector' => '{{WRAPPER}} .tp-blog-slider .title',
             ]
         );
 
@@ -884,206 +879,12 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
             ]
         );
 
-
-
-        $this->end_controls_section();
-
-        $this->start_controls_section(
-            'section_slider_category_style',
-            [
-                'label' => esc_html__('Category Style', 'tp-elements'),
-                'tab' => Controls_Manager::TAB_STYLE,
-            ]
-        );
-        $this->add_control(
-            'category_color',
-            [
-                'label' => esc_html__('Category Color', 'tp-elements'),
-                'type' => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .tp-blog-slider .post-categories li a' => 'color: {{VALUE}};',
-
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'category_color_hover',
-            [
-                'label' => esc_html__('Category Hover Color', 'tp-elements'),
-                'type' => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .tp-blog-slider .post-categories li a:hover' => 'color: {{VALUE}};',
-                ],
-            ]
-
-        );
-
         $this->add_group_control(
-            Group_Control_Typography::get_type(),
+            \Elementor\Group_Control_Border::get_type(),
             [
-                'name' => 'category_typography',
-                'label' => esc_html__('Category Typography', 'tp-elements'),
-                'selector' => '{{WRAPPER}} .tp-blog-slider .post-categories li a',
-            ]
-        );
-
-        $this->add_control(
-            'autor_color',
-            [
-                'label' => esc_html__('Author Text Color', 'tp-elements'),
-                'type' => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .tp-blog-slider .blog-content .blog-meta li span' => 'color: {{VALUE}};',
-                ],
-            ]
-
-        );
-
-        $this->add_control(
-            'meta_bg_color',
-            [
-                'label' => esc_html__('Author Meta BG Color', 'tp-elements'),
-                'type' => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .tp-blog-slider.slider-style-1 .image-part .blog-badge' => 'background: {{VALUE}};',
-                ],
-            ]
-
-        );
-
-        $this->add_control(
-            'Seperator Color',
-            [
-                'label' => esc_html__('Author Separator Color', 'tp-elements'),
-                'type' => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .tp-blog-slider .blog-content .blog-meta li' => 'color: {{VALUE}};',
-                ],
-            ]
-
-        );
-
-        $this->add_control(
-            'button_text_color',
-            [
-                'label' => esc_html__('Button Color', 'tp-elements'),
-                'type' => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .tp-blog-slider .tps-read-more' => 'color: {{VALUE}};',
-
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'button_text_color_hover',
-            [
-                'label' => esc_html__('Btton Hover Color', 'tp-elements'),
-                'type' => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .tp-blog-slider .tps-read-more:hover' => 'color: {{VALUE}};',
-                ],
-            ]
-        );
-
-        $this->add_group_control(
-            Group_Control_Typography::get_type(),
-            [
-                'name' => 'btn_typography',
-                'label' => esc_html__('Typography', 'tp-elements'),
-                'selector' => '{{WRAPPER}} .tp-blog-slider.slider-style-5 .footer-area .tps-read-more',
-            ]
-        );
-
-        $this->add_responsive_control(
-            'blog_button_padding',
-            [
-                'label' => esc_html__('Button Padding', 'tp-elements'),
-                'type' => Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', 'em', '%'],
-                'selectors' => [
-                    '{{WRAPPER}} .tp-blog-slider.slider-style-3 .blog-btn.themephi-button a, .tp-blog-slider.slider-style-5 .footer-area .tps-read-more' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'icon_color6',
-            [
-                'label' => esc_html__('Icon Color', 'tp-elements'),
-                'type' => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .tp-portfolio-slider.slider-style-6 .portfolio-item .portfolio-content .p-icon i' => 'color: {{VALUE}};',
-
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'icon_bg_color6',
-            [
-                'label' => esc_html__('Icon Background Color', 'tp-elements'),
-                'type' => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .tp-portfolio-slider.slider-style-6 .portfolio-item .portfolio-content .p-icon i' => 'background: {{VALUE}};',
-
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'item_border_color',
-            [
-                'label' => esc_html__('Border Color', 'tp-elements'),
-                'type' => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .tp-portfolio-slider.slider-style-6 .portfolio-item:before' => 'background: {{VALUE}};',
-
-                ],
-            ]
-        );
-
-        $this->add_group_control(
-            Group_Control_Background::get_type(),
-            [
-                'name' => 'text_bg_color',
-                'label' => esc_html__('Text Background Color', 'tp-elements'),
-                'types' => ['classic', 'gradient'],
-                'condition' => [
-                    'blog_slider_style' => '5',
-                ],
-                'selector' => '{{WRAPPER}} .slider-style-5 .tp-portfolio4 .portfolio-item .portfolio-inner, .tp-blog-slider.slider-style-5 .blog-content'
-            ]
-        );
-
-
-        $this->add_control(
-            'image_overlay',
-            [
-                'label' => esc_html__('Image Overlay', 'tp-elements'),
-                'type' => Controls_Manager::COLOR,
-
-                'selectors' => [
-                    '{{WRAPPER}} .portfolio-content:before' => 'background: {{VALUE}};',
-                    '{{WRAPPER}} .slider-style-5 .tp-portfolio4 .portfolio-item' => 'background: {{VALUE}};',
-                    '{{WRAPPER}} .tp-portfolio-style3 .portfolio-item .portfolio-img:before' => 'background: {{VALUE}};',
-                    '{{WRAPPER}} .tp-portfolio-style2 .portfolio-item:before' => 'background: {{VALUE}};',
-
-                ],
-            ]
-        );
-
-        $this->add_group_control(
-            Group_Control_Background::get_type(),
-            [
-                'name' => 'blog_wrapper_bg',
-                'label' => esc_html__('Blog Wrapper Backgound', 'tp-elements'),
-                'types' => ['classic', 'gradient'],
-                'selector' => '{{WRAPPER}} .tp-blog-slider.slider-style-3 .tps-blog-h-2-wrapper',
-                'condition' => [
-                    'blog_slider_style' => '3'
-                ]
+                'name' => 'card_border',
+                'label' => esc_html__('Border', 'plugin-name'),
+                'selector' => '{{WRAPPER}} .tp-blog-slider .blog-content',
             ]
         );
 
@@ -1111,206 +912,306 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
             ]
         );
 
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+            'section_slider_category_style',
+            [
+                'label' => esc_html__('Category Style', 'tp-elements'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
 
         $this->add_group_control(
-            Group_Control_Background::get_type(),
+            Group_Control_Typography::get_type(),
             [
-                'name' => 'style_overly_bg',
-                'label' => esc_html__('Overlay Background Color', 'tp-elements'),
-                'types' => ['classic', 'gradient'],
-                'selector' => '{{WRAPPER}} .tp-portfolio-slider.slider-style-6 .portfolio-item:after',
+                'name' => 'category_typography',
+                'label' => esc_html__('Typography', 'tp-elements'),
+                'selector' => '{{WRAPPER}} .tp-blog-slider .post-categories li a',
             ]
         );
 
         $this->add_control(
-            'arrow_options',
+            'category_color',
             [
-                'label' => esc_html__('Arrow Style', 'tp-elements'),
-                'type' => Controls_Manager::HEADING,
-                'separator' => 'before',
-            ]
-        );
-
-        $this->add_responsive_control(
-            'arrow_left_position',
-            [
-                'label'      => esc_html__('Left Position', 'tp-elements'),
-                'type'       => Controls_Manager::SLIDER,
-                'size_units' => ['px', '%'],
-                'range' => [
-                    '%' => [
-                        'min' => 0,
-                        'max' => 100,
-                    ],
-                    'px' => [
-                        'min' => -1000,
-                        'max' => 1000,
-                    ],
-                ],
-                'condition' => [
-                    'slider_centerMode' => 'true',
-                ],
-                'selectors' => [
-                    '{{WRAPPER}} .tp-portfolio-slider.slider-style-5 .rt_widget_sliders .slick-prev' => 'left: {{SIZE}}{{UNIT}};',
-                    '{{WRAPPER}} .rt_widget_sliders .slick-prev' => 'left: {{SIZE}}{{UNIT}};',
-                ],
-                'separator' => 'before',
-            ]
-        );
-
-        $this->add_responsive_control(
-            'arrow_right_position',
-            [
-                'label'      => esc_html__('Right Position', 'tp-elements'),
-                'type'       => Controls_Manager::SLIDER,
-                'size_units' => ['px', '%'],
-                'range' => [
-                    '%' => [
-                        'min' => 0,
-                        'max' => 100,
-                    ],
-                    'px' => [
-                        'min' => -1000,
-                        'max' => 1000,
-                    ],
-                ],
-                'condition' => [
-                    'slider_centerMode' => 'true',
-                ],
-                'selectors' => [
-                    '{{WRAPPER}} .tp-portfolio-slider.slider-style-5 .rt_widget_sliders .slick-next' => 'right: {{SIZE}}{{UNIT}};',
-                    '{{WRAPPER}} .rt_widget_sliders .slick-next' => 'right: {{SIZE}}{{UNIT}};',
-                ],
-                'separator' => 'before',
-            ]
-        );
-
-
-        $this->start_controls_tabs('tabs_toggle_arrow_bg');
-
-        $this->start_controls_tab(
-            'tab_toggle_normal',
-            [
-                'label' => __('Normal', 'tp-elements'),
-            ]
-        );
-
-
-        $this->add_group_control(
-            Group_Control_Background::get_type(),
-            [
-                'name' => 'blog_sliderarrow_bg',
-                'label' => esc_html__('Arrow Background', 'tp-elements'),
-                'types' => ['classic', 'gradient'],
-                'exclude' => ['image'],
-                'selector' => '{{WRAPPER}} .tp-blog-slider.tp-blog-style2 .rt_widget_sliders .slick-arrow',
-                'fields_options' => [
-                    'background' => [
-                        'default' => 'classic',
-                    ],
-                ],
-            ]
-        );
-
-
-
-        $this->end_controls_tab();
-
-        $this->start_controls_tab(
-            'tab_toggle_hover',
-            [
-                'label' => __('Hover', 'tp-elements'),
-            ]
-        );
-
-        $this->add_group_control(
-            Group_Control_Background::get_type(),
-            [
-                'name' => 'blog_sliderarrow_bg_hover',
-                'label' => esc_html__('Arrow Background', 'tp-elements'),
-                'types' => ['classic', 'gradient'],
-                'exclude' => ['image'],
-                'selector' => '{{WRAPPER}} .tp-blog-slider.tp-blog-style2 .rt_widget_sliders .slick-arrow:hover',
-                'fields_options' => [
-                    'background' => [
-                        'default' => 'classic',
-                    ],
-                ],
-            ]
-        );
-
-        $this->end_controls_tab();
-
-        $this->end_controls_tabs();
-        $this->add_control(
-            'navigation_arrow_icon_color',
-            [
-                'label' => esc_html__('Icon Color', 'tp-elements'),
+                'label' => esc_html__('Color', 'tp-elements'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .rt_widget_sliders .slick-next::before' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .rt_widget_sliders .slick-prev::before' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .tp-blog-slider .post-categories li a' => 'color: {{VALUE}};',
 
                 ],
             ]
         );
 
         $this->add_control(
-            'bullet_options',
+            'category_color_hover',
             [
-                'label' => esc_html__('Bullet Style', 'tp-elements'),
-                'type' => Controls_Manager::HEADING,
-                'separator' => 'before',
-            ]
-        );
-        $this->add_control(
-            'navigation_dot_border_color',
-            [
-                'label' => esc_html__('Border Color', 'tp-elements'),
+                'label' => esc_html__('Hover Color', 'tp-elements'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .rt_widget_sliders .slick-dots li button' => 'border-color: {{VALUE}};',
-
+                    '{{WRAPPER}} .tp-blog-slider .post-categories li a:hover' => 'color: {{VALUE}};',
                 ],
             ]
         );
 
-
-
         $this->add_control(
-            'navigation_dot_icon_background',
+            'category_bg_color',
             [
                 'label' => esc_html__('Background Color', 'tp-elements'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .rt_widget_sliders .slick-dots li button:hover' => 'background: {{VALUE}};',
-                    '{{WRAPPER}} .rt_widget_sliders .slick-dots li.slick-active button' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .tp-blog-slider .post-categories li a' => 'background-color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'category_bg_hover_color',
+            [
+                'label' => esc_html__('Hover Background Color', 'tp-elements'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .tp-blog-slider .post-categories li a:hover' => 'background-color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'category_padding',
+            [
+                'label' => esc_html__('Padding', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .tp-blog-slider .post-categories li a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'category_margin',
+            [
+                'label' => esc_html__('Margin', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .tp-blog-slider .post-categories li a' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'category_border_radius',
+            [
+                'label' => esc_html__('Border Radius', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .tp-blog-slider .post-categories li a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+            'section_slider_meta_style',
+            [
+                'label' => esc_html__('Meta Style', 'tp-elements'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        $this->add_control(
+            'author_color',
+            [
+                'label' => esc_html__('Text Color', 'tp-elements'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .tp-blog-slider .blog-content .blog-meta li span' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'meta_bg_color',
+            [
+                'label' => esc_html__('Meta BG Color', 'tp-elements'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .tp-blog-slider .blog-content .blog-meta li span' => 'background: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'meta_separator_color',
+            [
+                'label' => esc_html__('Separator Color', 'tp-elements'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .tp-blog-slider .blog-content .blog-meta li::after' => 'background: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->end_controls_section();
+
+
+        $this->start_controls_section(
+            'section_slider_button_style',
+            [
+                'label' => esc_html__('Button Style', 'tp-elements'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'name' => 'btn_typography',
+                'label' => esc_html__('Typography', 'tp-elements'),
+                'selector' => '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a, .tp-blog-slider .tps-read-more',
+            ]
+        );
+
+        $this->add_control(
+            'button_text_color',
+            [
+                'label' => esc_html__('Button Color', 'tp-elements'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a, .tp-blog-slider .tps-read-more' => 'color: {{VALUE}};',
 
                 ],
             ]
         );
 
         $this->add_control(
-            'bullet_spacing_custom',
+            'button_text_color_hover',
             [
-                'label' => esc_html__('Top Gap', 'tp-elements'),
-                'type' => Controls_Manager::SLIDER,
-                'show_label' => true,
-                'range' => [
-                    'px' => [
-                        'max' => 100,
-                    ],
-                ],
-                'default' => [
-                    'size' => 25,
-                ],
-
+                'label' => esc_html__('Button Hover Color', 'tp-elements'),
+                'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .rt_widget_sliders .slick-dots' => 'margin-bottom:-{{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a:hover, .tp-blog-slider .tps-read-more:hover' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_control(
+            'button_bg_color',
+            [
+                'label' => esc_html__('Button BG Color', 'tp-elements'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a, .tp-blog-slider .tps-read-more' => 'background: {{VALUE}};',
+
                 ],
             ]
         );
 
+        $this->add_control(
+            'button_bg_color_hover',
+            [
+                'label' => esc_html__('Button Hover BG Color', 'tp-elements'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a:hover, .tp-blog-slider .tps-read-more:hover' => 'background: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'blog_button_padding',
+            [
+                'label' => esc_html__('Button Padding', 'tp-elements'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', 'em', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a, .tp-blog-slider .tps-read-more' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'blog_button_margin',
+            [
+                'label' => esc_html__('Button Margin', 'tp-elements'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', 'em', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a, .tp-blog-slider .tps-read-more' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'button_border_radius',
+            [
+                'label' => esc_html__('Border Radius', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a, .tp-blog-slider .tps-read-more' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'icon_heading',
+            [
+                'label' => esc_html__('Icon', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::HEADING,
+                'separator' => 'before',
+            ]
+        );
+
+        $this->add_control(
+            'button_icon_color',
+            [
+                'label' => esc_html__('Icon Color', 'tp-elements'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a i, .tp-blog-slider .tps-read-more i' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a svg, .tp-blog-slider .tps-read-more svg' => 'fill: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'button_icon_color_hover',
+            [
+                'label' => esc_html__('Icon Hover Color', 'tp-elements'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a:hover i, .tp-blog-slider .tps-read-more:hover i' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a:hover svg, .tp-blog-slider .tps-read-more:hover svg' => 'fill: {{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_control(
+            'button_icon_bg_color',
+            [
+                'label' => esc_html__('Icon BG Color', 'tp-elements'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a i, .tp-blog-slider .tps-read-more i' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a svg, .tp-blog-slider .tps-read-more svg' => 'background: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'button_icon_bg_color_hover',
+            [
+                'label' => esc_html__('Icon BG Hover Color', 'tp-elements'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a:hover i, .tp-blog-slider .tps-read-more:hover i' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a:hover svg, .tp-blog-slider .tps-read-more:hover svg' => 'background: {{VALUE}};',
+                ],
+            ]
+        );
 
 
         $this->end_controls_section();
@@ -1351,10 +1252,6 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
 
         $item_gap = $settings['item_gap_custom']['size'];
         $item_gap = !empty($item_gap) ? $item_gap : '30';
-        $prev_text = $settings['pcat_prev_text'];
-        $prev_text = !empty($prev_text) ? $prev_text : '';
-        $next_text = $settings['pcat_next_text'];
-        $next_text = !empty($next_text) ? $next_text : '';
         $unique = rand(2012, 35120);
 
         if ($slider_autoplay == 'true') {
@@ -1377,14 +1274,23 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
 
 ?>
         <?php $gray_scale = $settings['show_graycale']; ?>
-        <div class="container ">
-            <div class="tp-blog-navigation-wrapp d-none d-md-flex">
-                <span class="tp-blog-nav-prev "><i class="tp-arrow-left"></i></span>
-                <span class="tp-blog-nav-next "><i class="tp-arrow-right"></i></span>
-
+        <!-- <div class="container position-relative z-1">
+            <div class="tp-blog-navigation-wrapp blog-navigation-<?php echo esc_attr($settings['blog_slider_style']); ?>">
+                <span class="tp-blog-nav tp-blog-nav-prev "><i class="tp-arrow-left"></i></span>
+                <span class="tp-blog-nav tp-blog-nav-next "><i class="tp-arrow-right"></i></span>
             </div>
-        </div>
+        </div> -->
+
         <div class="tpaddon-unique-slider gray_<?php echo $settings['show_graycale']; ?> themephi-addon-slider tp-blog-slider tp-blog tp-blog-style<?php echo esc_attr($settings['blog_slider_style']); ?> slider-style-<?php echo esc_attr($settings['blog_slider_style']); ?> ">
+
+            <?php if ($settings['slider_nav'] == 'true') { ?>
+                <!-- navigation -->
+                <div class="tp-blog-navigation-wrapp blog-navigation-<?php echo esc_attr($settings['blog_slider_style']); ?>">
+                    <span class="tp-blog-nav tp-blog-nav-prev "><i class="tp-arrow-left"></i></span>
+                    <span class="tp-blog-nav tp-blog-nav-next "><i class="tp-arrow-right"></i></span>
+                </div>
+            <?php } ?>
+
             <div id="rsaddon-slick-slider-<?php echo esc_attr($unique); ?>" class="rt_widget_sliders swiper tpaddon-slider-<?php echo esc_attr($unique); ?>">
                 <div class="swiper-wrapper">
                     <?php if ('1' == $settings['blog_slider_style']) {
@@ -1410,7 +1316,9 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                     ?>
                 </div>
             </div>
+
         </div>
+
         <script type="text/javascript">
             jQuery(document).ready(function() {
 

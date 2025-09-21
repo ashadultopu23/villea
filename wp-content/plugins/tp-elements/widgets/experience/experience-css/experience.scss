@@ -31,12 +31,12 @@
       color: inherit;
       transform-origin: 0 70px;
     }
-    @media (max-width: 991px) {
+    @media (max-width: 1024px) {
       p {
         transform: translate(50%, 0);
       }
       span {
-        transform-origin: 0 60px;
+        transform-origin: 0 65px;
       }
     }
   }

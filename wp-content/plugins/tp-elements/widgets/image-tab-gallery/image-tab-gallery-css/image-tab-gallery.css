@@ -15,7 +15,7 @@
   --hoverColor: var(--secondaryColor);
   --boxBorderRadius: 12px;
   --imageBorderRadius: 4px;
-  --btnBorderRadius: 5px;
+  --btnBorderRadius: 8px;
   --btnBgColor: #022e2d;
   --btnHoverBgColor: #b07e50;
   --btnColor: #ffffff;
@@ -26,19 +26,26 @@
   --btnHoverColor2: #ffffff;
 }
 
+/* Container Layout Improvements */
+.expert-solutions .flex-container {
+  display: flex;
+  gap: 5rem;
+}
+
 /* Enhanced Image Container */
 .solution-image-container {
   position: relative;
   border-radius: 12px;
+  width: 100%;
+  /* Main Image with Smooth Transitions */
+  /* Enhanced Hover Effects for Image Container */
 }
 .solution-image-container .img_border {
   position: relative;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
 }
-
-/* Main Image with Smooth Transitions */
-.solution-img {
+.solution-image-container .solution-img {
   width: 100%;
   height: auto;
   border-radius: 12px;
@@ -48,14 +55,16 @@
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: opacity, transform;
 }
-
-/* Enhanced Hover Effects for Image Container */
 .solution-image-container:hover .img_border {
   transform: scale(1.02) rotate(-0.5deg);
 }
 
 /* Solution Items */
-.solution-item {
+.solution-items {
+  width: 100%;
+  /* Focus States for Accessibility */
+}
+.solution-items .solution-item {
   padding: 20px;
   margin-bottom: 10px;
   cursor: pointer;
@@ -68,14 +77,29 @@
   background-color: transparent;
   will-change: background-color, transform;
 }
-
-.solution-item:hover,
-.solution-item.active {
+.solution-items .solution-item:hover,
+.solution-items .solution-item .active {
   background-color: rgba(0, 0, 0, 0.05);
   transform: translateX(4px);
 }
-
-.solution-item i {
+.solution-items .solution-item:hover i,
+.solution-items .solution-item .active i {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  width: 24px;
+}
+.solution-items .solution-item:hover h3,
+.solution-items .solution-item:hover h6,
+.solution-items .solution-item .active h3,
+.solution-items .solution-item .active h6 {
+  color: #333;
+}
+.solution-items .solution-item:hover .solution-index,
+.solution-items .solution-item .active .solution-index {
+  transform: scale(1.1);
+}
+.solution-items .solution-item i {
   font-size: 24px;
   color: #333;
   visibility: hidden;
@@ -86,24 +110,14 @@
   overflow: hidden;
   will-change: opacity, transform, width;
 }
-
-.solution-item:hover i,
-.solution-item.active i {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(0);
-  width: 24px;
-}
-
-.solution-item .content {
+.solution-items .solution-item .content {
   display: flex;
   gap: 12px;
   align-items: center;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
 }
-
-.solution-item h3 {
+.solution-items .solution-item h3 {
   font-size: 20px;
   font-weight: 600;
   color: rgba(51, 51, 51, 0.3);
@@ -111,30 +125,14 @@
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: color;
 }
-
-.solution-item .solution-index {
+.solution-items .solution-item .solution-index {
   font-size: 16px;
   color: rgba(51, 51, 51, 0.3);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: color;
   transform: scale(1);
 }
-
-/* Active/Hover States */
-.solution-item.active h3,
-.solution-item.active h6,
-.solution-item:hover h3,
-.solution-item:hover h6 {
-  color: #333;
-}
-
-.solution-item.active .solution-index,
-.solution-item:hover .solution-index {
-  transform: scale(1.1);
-}
-
-/* Focus States for Accessibility */
-.solution-item:focus-visible {
+.solution-items .solution-item:focus-visible {
   outline: 2px solid #007cba;
   outline-offset: 2px;
 }
@@ -178,17 +176,6 @@
 }
 .solution-item:nth-child(8) {
   animation-delay: 0.8s;
-}
-
-/* Container Layout Improvements */
-.expert-solutions .flex-container {
-  gap: 2rem;
-}
-@media (max-width: 991px) {
-  .expert-solutions .flex-container {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
 }
 
 /* Responsive Optimizations */

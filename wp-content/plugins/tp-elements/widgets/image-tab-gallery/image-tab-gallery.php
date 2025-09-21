@@ -175,19 +175,100 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 		$this->start_controls_section(
 			'design_select',
 			[
-				'label' => esc_html__('Style', 'tp-elements'),
+				'label' => esc_html__('Image Style', 'tp-elements'),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
 
-		$this->add_control(
-			'image_heading',
+
+
+
+		$this->add_responsive_control(
+			'tab_wrap',
 			[
-				'label' => esc_html__('Image Style', 'tp-elements'),
-				'type' => \Elementor\Controls_Manager::HEADING,
-				'separator' => 'before',
+				'label' => esc_html__('Tabs Wrap', 'tp-elements'),
+				'type' => \Elementor\Controls_Manager::SELECT,
+				'default' => 'nowrap',
+				'options' => [
+					'nowrap' => esc_html__('No Wrap', 'tp-elements'),
+					'wrap' => esc_html__('Wrap', 'tp-elements'),
+				],
+				'selectors' => [
+					'{{WRAPPER}} .expert-solutions .flex-container ' => 'flex-wrap: {{VALUE}} !important;',
+				]
 			]
 		);
+
+		$this->add_responsive_control(
+			'tab_spacing',
+			[
+				'label' => esc_html__('Space between Tabs', 'tp-elements'),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => ['px'],
+				'range' => [
+					'px' => [
+						'min' => 1,
+						'max' => 100,
+						'step' => 1,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .expert-solutions .flex-container ' => 'gap: {{SIZE}}{{UNIT}} !important;',
+				]
+			]
+		);
+
+		$this->add_responsive_control(
+			'tab_width',
+			[
+				'label' => esc_html__('Image Width', 'tp-elements'),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => ['px'],
+				'range' => [
+					'px' => [
+						'min' => 1,
+						'max' => 100,
+						'step' => 1,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .flex-container .solution-image-container' => 'width: {{SIZE}}{{UNIT}} !important;',
+				]
+			]
+		);
+
+		$this->add_responsive_control(
+			'solution_tab_width',
+			[
+				'label' => esc_html__('List Width', 'tp-elements'),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => ['px'],
+				'range' => [
+					'px' => [
+						'min' => 1,
+						'max' => 100,
+						'step' => 1,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .solution-tab-container' => 'width: {{SIZE}}{{UNIT}} !important;',
+				]
+			]
+		);
+
+		$this->end_controls_section();
+
+
+
+
+		$this->start_controls_section(
+			'image_style',
+			[
+				'label' => esc_html__('Image Style', 'tp-elements'),
+				'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);
+
 
 		$this->add_group_control(
 			\Elementor\Group_Control_Border::get_type(),
@@ -231,25 +312,6 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 				'selectors' => [
 					'{{WRAPPER}} .solution-image-container .img_border img' => 'transform: rotate({{SIZE}}{{UNIT}});',
 				],
-			]
-		);
-
-		$this->add_responsive_control(
-			'tab_spacing',
-			[
-				'label' => esc_html__('Space between Tabs', 'tp-elements'),
-				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => ['px'],
-				'range' => [
-					'px' => [
-						'min' => 1,
-						'max' => 100,
-						'step' => 1,
-					],
-				],
-				'selectors' => [
-					'{{WRAPPER}} .expert-solutions .flex-container ' => 'gap: {{SIZE}}{{UNIT}} !important;',
-				]
 			]
 		);
 
@@ -431,17 +493,6 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 			]
 		);
 
-		// $this->add_control(
-		// 	'icon_active_color',
-		// 	[
-		// 		'label'     => esc_html__('Hover /  Active Color', 'tp-elements'),
-		// 		'type'      => Controls_Manager::COLOR,
-		// 		'selectors' => [
-		// 			'{{WRAPPER}} .solution-items .solution-item:hover i, {{WRAPPER}} .solution-items .solution-item.active i' => 'color: {{VALUE}} !important;',
-		// 		],
-		// 	]
-		// );
-
 		$this->add_responsive_control(
 			'icon_size',
 			[
@@ -495,47 +546,43 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 ?>
 
 		<section class="expert-solutions" id="tp-widget-<?php echo $this->get_id(); ?>">
-			<div class="flex-container d-flex flex-wrap flex-lg-nowrap gap-5">
+			<div class="flex-container">
 
 				<!-- Image Column -->
-				<div class="w-100">
-					<div class="solution-image-container w-100">
-						<div class="img_border">
-							<img src="<?php echo esc_url($default_image); ?>"
-								class="solution-img"
-								alt="<?php echo !empty($settings['list_repeater'][0]['list_title'])
-											? esc_attr($settings['list_repeater'][0]['list_title'])
-											: esc_attr__('Default image', 'tp-elements'); ?>" />
-						</div>
+				<div class="solution-image-container">
+					<div class="img_border">
+						<img src="<?php echo esc_url($default_image); ?>"
+							class="solution-img"
+							alt="<?php echo !empty($settings['list_repeater'][0]['list_title'])
+										? esc_attr($settings['list_repeater'][0]['list_title'])
+										: esc_attr__('Default image', 'tp-elements'); ?>" />
 					</div>
 				</div>
 
 				<!-- Solution Items Column -->
-				<div class="w-100">
-					<div class="solution-items w-100">
-						<?php
-						if (!empty($settings['list_repeater']) && is_array($settings['list_repeater'])) :
-							$index = 1;
-							foreach ($settings['list_repeater'] as $item) :
-								$image_url = isset($item['image']['url']) ? $item['image']['url'] : '';
-								$title = isset($item['list_title']) ? $item['list_title'] : '';
-						?>
-								<!-- Solution Item -->
-								<div class="solution-item" data-img="<?php echo esc_url($image_url); ?>">
-									<i class="tp-arrow-up-right"></i>
-									<div class="content">
-										<?php if (!empty($title)) : ?>
-											<h3 class="solution-title inactive"><?php echo wp_kses_post($title); ?></h3>
-										<?php endif; ?>
-										<h6 class="solution-index inactive"><?php echo sprintf("%02d", $index); ?></h6>
-									</div>
+				<div class="solution-items">
+					<?php
+					if (!empty($settings['list_repeater']) && is_array($settings['list_repeater'])) :
+						$index = 1;
+						foreach ($settings['list_repeater'] as $item) :
+							$image_url = isset($item['image']['url']) ? $item['image']['url'] : '';
+							$title = isset($item['list_title']) ? $item['list_title'] : '';
+					?>
+							<!-- Solution Item -->
+							<div class="solution-item" data-img="<?php echo esc_url($image_url); ?>">
+								<i class="tp-arrow-up-right"></i>
+								<div class="content">
+									<?php if (!empty($title)) : ?>
+										<h3 class="solution-title inactive"><?php echo wp_kses_post($title); ?></h3>
+									<?php endif; ?>
+									<h6 class="solution-index inactive"><?php echo sprintf("%02d", $index); ?></h6>
 								</div>
-						<?php
-								$index++;
-							endforeach;
-						endif;
-						?>
-					</div>
+							</div>
+					<?php
+							$index++;
+						endforeach;
+					endif;
+					?>
 				</div>
 
 			</div>
