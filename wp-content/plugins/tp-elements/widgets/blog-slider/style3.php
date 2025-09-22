@@ -19,6 +19,8 @@ if (empty($cat)) {
 		)
 	));
 }
+
+
 while ($best_wp->have_posts()): $best_wp->the_post();
 	$cats_show = get_the_term_list($best_wp->ID, 'category', ' ', '<span class="separator">,</span> ');
 
@@ -33,7 +35,13 @@ while ($best_wp->have_posts()): $best_wp->the_post();
 			</a>
 			<?php if (($settings['blog_cat_show_hide'] == 'yes')) { ?>
 				<div class="cat_list">
-					<?php the_category(); ?>
+					<?php
+					$categories = get_the_category();
+					if (! empty($categories)) {
+						$category_link = get_category_link($categories[0]->term_id);
+						echo '<a href="' . esc_url($category_link) . '">' . esc_html($categories[0]->name) . '</a>';
+					}
+					?>
 				</div>
 			<?php } ?>
 		</div>

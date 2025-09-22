@@ -53,6 +53,7 @@
 .swiper.team-slider-style1 .team-item .image-wrap {
   position: relative;
   overflow: hidden;
+  clip-path: polygon(0 0, 90% 0, 100% 10%, 100% 100%, 0 100%, 0 50%);
 }
 .swiper.team-slider-style1 .team-item .image-wrap .social-icons1 {
   position: absolute;

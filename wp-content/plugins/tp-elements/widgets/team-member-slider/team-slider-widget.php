@@ -1305,9 +1305,9 @@ class Themephi_Elementor_Team_Slider_Widget extends \Elementor\Widget_Base
                         },
                         <?php
                         echo (!empty($col_xs)) ?  '0: { slidesPerView: ' . $col_xs . ' },' : '';
-                        echo (!empty($col_sm)) ?  '575: { slidesPerView: ' . $col_sm . ' },' : '';
-                        echo (!empty($col_md)) ?  '767: { slidesPerView: ' . $col_md . ' },' : '';
-                        echo (!empty($col_lg)) ?  '991: { slidesPerView: ' . $col_lg . ' },' : '';
+                        echo (!empty($col_sm)) ?  '576: { slidesPerView: ' . $col_sm . ' },' : '';
+                        echo (!empty($col_md)) ?  '768: { slidesPerView: ' . $col_md . ' },' : '';
+                        echo (!empty($col_lg)) ?  '992: { slidesPerView: ' . $col_lg . ' },' : '';
                         echo (!empty($col_xl)) ?  '1199: { slidesPerView: ' . $col_xl . ' },' : '';
                         ?>
                         1399: {

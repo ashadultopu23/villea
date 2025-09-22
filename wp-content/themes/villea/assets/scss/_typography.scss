@@ -261,6 +261,12 @@ table thead tr th {
   }
 }
 
+@media (max-width: 767px) {
+  .display-four {
+    font-size: 42px !important;
+  }
+}
+
 @media (max-width: 575px) {
   .display-one {
     font-size: 56px;

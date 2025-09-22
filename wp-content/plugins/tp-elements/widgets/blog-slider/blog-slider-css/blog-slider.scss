@@ -216,6 +216,7 @@
         left: 20px;
         top: 20px;
         letter-spacing: 0.05em;
+
         .post-categories {
           margin: 0;
           padding: 0;
@@ -225,23 +226,24 @@
           li {
             margin: 0;
             list-style: none;
-            a {
-              color: var(--primaryColor);
-              font-family: var(--bodyFont);
-              padding: 8px 16px;
-              font-weight: 600;
-              font-size: 16px;
-              background: var(--whiteColor);
-              border-radius: var(--btnBorderRadius);
-              display: inline-block;
-            }
           }
+        }
+        a {
+          color: var(--primaryColor);
+          font-family: var(--bodyFont);
+          padding: 8px 16px;
+          font-weight: 600;
+          font-size: 16px;
+          background: var(--whiteColor);
+          border-radius: var(--btnBorderRadius);
+          display: inline-block;
         }
       }
     }
     .blog-content {
       .blog-meta {
         gap: 0;
+        flex-wrap: wrap;
         li {
           font-weight: 400;
           text-transform: capitalize;

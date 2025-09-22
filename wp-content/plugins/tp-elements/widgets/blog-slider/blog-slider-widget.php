@@ -265,7 +265,7 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
         );
 
         $this->add_control(
-            'col_xl',
+            'col_xxl',
             [
                 'label'   => esc_html__('Wide Screen > 1399px', 'tp-elements'),
                 'type'    => Controls_Manager::SELECT,
@@ -286,7 +286,7 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
         );
 
         $this->add_control(
-            'col_lg',
+            'col_xl',
             [
                 'label'   => esc_html__('Desktops > 1199px', 'tp-elements'),
                 'type'    => Controls_Manager::SELECT,
@@ -300,11 +300,10 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                 ],
                 'separator' => 'before',
             ]
-
         );
 
         $this->add_control(
-            'col_md',
+            'col_lg',
             [
                 'label'   => esc_html__('Laptop > 991px', 'tp-elements'),
                 'type'    => Controls_Manager::SELECT,
@@ -317,13 +316,11 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                     '6' => esc_html__('6 Column', 'tp-elements'),
                 ],
                 'separator' => 'before',
-
             ]
-
         );
 
         $this->add_control(
-            'col_sm',
+            'col_md',
             [
                 'label'   => esc_html__('Tablets > 767px', 'tp-elements'),
                 'type'    => Controls_Manager::SELECT,
@@ -336,15 +333,13 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                     '6' => esc_html__('6 Column', 'tp-elements'),
                 ],
                 'separator' => 'before',
-
             ]
-
         );
 
         $this->add_control(
-            'col_xs',
+            'col_sm',
             [
-                'label'   => esc_html__('Tablets < 768px', 'tp-elements'),
+                'label'   => esc_html__('Tablets > 575px', 'tp-elements'),
                 'type'    => Controls_Manager::SELECT,
                 'default' => 1,
                 'options' => [
@@ -355,10 +350,26 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                     '6' => esc_html__('6 Column', 'tp-elements'),
                 ],
                 'separator' => 'before',
-
             ]
-
         );
+
+        $this->add_control(
+            'col_xs',
+            [
+                'label'   => esc_html__('Tablets < 575px', 'tp-elements'),
+                'type'    => Controls_Manager::SELECT,
+                'default' => 1,
+                'options' => [
+                    '1' => esc_html__('1 Column', 'tp-elements'),
+                    '2' => esc_html__('2 Column', 'tp-elements'),
+                    '3' => esc_html__('3 Column', 'tp-elements'),
+                    '4' => esc_html__('4 Column', 'tp-elements'),
+                    '6' => esc_html__('6 Column', 'tp-elements'),
+                ],
+                'separator' => 'before',
+            ]
+        );
+
 
         $this->add_control(
             'slides_ToScroll',
@@ -1229,6 +1240,8 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
     {
 
         $settings              = $this->get_settings_for_display();
+        $col_xxl         = $settings['col_xxl'];
+        $col_xxl         = !empty($col_xxl) ? $col_xxl : 3;
         $col_xl          = $settings['col_xl'];
         $col_xl          = !empty($col_xl) ? $col_xl : 3;
         $slidesToShow    = $col_xl;
@@ -1344,13 +1357,14 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
 
                         },
                         <?php
-                        echo (!empty($col_xs)) ?  '575: { slidesPerView: ' . $col_xs . ' },' : '';
-                        echo (!empty($col_sm)) ?  '767: { slidesPerView: ' . $col_sm . ' },' : '';
-                        echo (!empty($col_md)) ?  '991: { slidesPerView: ' . $col_md . ' },' : '';
-                        echo (!empty($col_lg)) ?  '1199: { slidesPerView: ' . $col_lg . ' },' : '';
+                        echo (!empty($col_xs)) ?  '320: { slidesPerView: ' . $col_xs . ' },' : '';
+                        echo (!empty($col_sm)) ?  '576: { slidesPerView: ' . $col_sm . ' },' : '';
+                        echo (!empty($col_md)) ?  '768: { slidesPerView: ' . $col_md . ' },' : '';
+                        echo (!empty($col_lg)) ?  '992: { slidesPerView: ' . $col_lg . ' },' : '';
+                        echo (!empty($col_xl)) ?  '1199: { slidesPerView: ' . $col_xl . ' },' : '';
                         ?>
                         1399: {
-                            slidesPerView: <?php echo esc_attr($col_xl); ?>,
+                            slidesPerView: <?php echo esc_attr($col_xxl); ?>,
                             spaceBetween: <?php echo esc_attr($item_gap); ?>
                         }
                     }

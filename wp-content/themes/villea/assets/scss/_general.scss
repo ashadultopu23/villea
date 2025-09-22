@@ -3016,3 +3016,30 @@ html:has(.fixed-header) .themephi-breadcrumbs {
     margin-right: auto !important;
   }
 }
+
+.el-tab-button-display-flex {
+  .e-n-tabs-heading {
+    display: flex !important;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 24px !important;
+      .e-n-tab-title {
+        margin: 0 !important;
+      }
+    }
+  }
+}
+
+.img-h-inherit {
+  height: inherit;
+  min-height: inherit;
+  max-height: inherit;
+
+  .elementor-shortcode,
+  .elementor-shortcode > div,
+  * img {
+    height: inherit !important;
+    min-height: inherit !important;
+    max-height: inherit !important;
+  }
+}

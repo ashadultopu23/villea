@@ -233,7 +233,7 @@
   margin: 0;
   list-style: none;
 }
-.tp-blog-slider.slider-style-3 .image-part .cat_list .post-categories li a {
+.tp-blog-slider.slider-style-3 .image-part .cat_list a {
   color: var(--primaryColor);
   font-family: var(--bodyFont);
   padding: 8px 16px;
@@ -245,6 +245,7 @@
 }
 .tp-blog-slider.slider-style-3 .blog-content .blog-meta {
   gap: 0;
+  flex-wrap: wrap;
 }
 .tp-blog-slider.slider-style-3 .blog-content .blog-meta li {
   font-weight: 400;

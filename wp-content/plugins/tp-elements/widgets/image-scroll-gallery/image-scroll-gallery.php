@@ -353,25 +353,6 @@ class Themephi_Image_Scroll_Gallery_Widget extends \Elementor\Widget_Base
 			]
 		);
 
-		// Progress Circle Radius (affects the actual circle size within the SVG)
-		$this->add_responsive_control(
-			'progress_radius',
-			[
-				'label' => __('Progress Circle Radius', 'tp-elements'),
-				'type'  => Controls_Manager::SLIDER,
-				'range' => [
-					'px' => [
-						'min' => 20,
-						'max' => 180,
-					],
-				],
-				'default' => [
-					'size' => 54,
-				],
-				'description' => __('Adjust the radius of the progress circle. Should be smaller than half the counter size.', 'tp-elements'),
-			]
-		);
-
 		// Progress Colors
 		$this->add_control(
 			'progress_active_color',
@@ -519,16 +500,6 @@ class Themephi_Image_Scroll_Gallery_Widget extends \Elementor\Widget_Base
 		$top_items = $settings['top_row_gallery_items'];
 		$bottom_items = $settings['bottom_row_gallery_items'];
 
-
-		// Get dynamic values from settings with fallbacks
-		$counter_size = !empty($settings['counter_size']['size']) ? $settings['counter_size']['size'] : 120;
-		$progress_radius = !empty($settings['progress_radius']['size']) ? $settings['progress_radius']['size'] : 54;
-		$svg_center = $counter_size / 2;
-
-		// Ensure radius doesn't exceed reasonable bounds (leave some padding for stroke)
-		$stroke_width = !empty($settings['progress_stroke_width']['size']) ? $settings['progress_stroke_width']['size'] : 8;
-		$max_radius = ($counter_size / 2) - ($stroke_width / 2) - 5; // 5px padding
-		$progress_radius = min($progress_radius, $max_radius);
 ?>
 
 		<div class="gallery-container gallery-container-<?php echo $this->get_id(); ?>">
@@ -557,18 +528,10 @@ class Themephi_Image_Scroll_Gallery_Widget extends \Elementor\Widget_Base
 			</div>
 
 			<div class="counter-circle">
-				<svg class="progress-ring" width="<?php echo $counter_size; ?>" height="<?php echo $counter_size; ?>">
-					<circle
-						class="progress-ring__background"
-						cx="<?php echo $svg_center; ?>"
-						cy="<?php echo $svg_center; ?>"
-						r="<?php echo $progress_radius; ?>" />
-					<circle
-						class="progress-ring__circle"
-						cx="<?php echo $svg_center; ?>"
-						cy="<?php echo $svg_center; ?>"
-						r="<?php echo $progress_radius; ?>" />
+				<svg class="progress-ring">
+					<!-- Circles will be dynamically positioned -->
 				</svg>
+
 				<span id="counterText-<?php echo $this->get_id(); ?>" class="counter-text">
 					<?php echo count($top_items) + count($bottom_items); ?>
 				</span>
@@ -585,215 +548,265 @@ class Themephi_Image_Scroll_Gallery_Widget extends \Elementor\Widget_Base
 
 
 		<script>
-			document.addEventListener("DOMContentLoaded", function() {
-				document.querySelectorAll(".gallery-container").forEach(function(container) {
-					const topRow = container.querySelector(".top-row");
-					const bottomRow = container.querySelector(".bottom-row");
-					const counter = container.closest(".gallery-container").querySelector(".counter-circle span");
-					const popupOverlay = container.closest(".gallery-container").querySelector(".popup-overlay");
-					const popupImage = container.closest(".gallery-container").querySelector(".popup-overlay img");
-					const closeBtn = container.closest(".gallery-container").querySelector(".popup-overlay .close-btn");
-					const galleryItems = container.querySelectorAll(".gallery-item");
+			document.querySelectorAll(".gallery-container").forEach(function(container) {
+				const topRow = container.querySelector(".top-row");
+				const bottomRow = container.querySelector(".bottom-row");
+				const counter = container.closest(".gallery-container").querySelector(".counter-circle span");
+				const popupOverlay = container.closest(".gallery-container").querySelector(".popup-overlay");
+				const popupImage = container.closest(".gallery-container").querySelector(".popup-overlay img");
+				const closeBtn = container.closest(".gallery-container").querySelector(".popup-overlay .close-btn");
+				const galleryItems = container.querySelectorAll(".gallery-item");
 
-					const circle = container.querySelector(".progress-ring__circle");
-					const backgroundCircle = container.querySelector(".progress-ring__background");
+				const svg = container.querySelector(".progress-ring");
+				let circle, backgroundCircle;
 
-					let radius = 54;
-					if (circle) {
-						radius = parseFloat(circle.getAttribute('r')) || 54;
-					}
-					const circumference = 2 * Math.PI * radius;
+				// Function to update SVG dimensions and circle properties
+				function updateSVGDimensions() {
+					const counterElement = container.querySelector(".counter-circle");
+					const counterRect = counterElement.getBoundingClientRect();
 
-					if (circle) {
-						circle.style.strokeDasharray = circumference;
-						circle.style.strokeDashoffset = circumference;
-					}
+					// Get current counter size from computed styles
+					const counterSize = Math.min(counterRect.width, counterRect.height);
+					const svgCenter = counterSize / 2;
 
-					// Track if container is in viewport
-					let isInViewport = false;
-					let containerRect = null;
+					// Get responsive progress radius from CSS custom property
+					const computedStyle = getComputedStyle(counterElement);
+					let progressRadius = parseFloat(computedStyle.getPropertyValue('--progress-radius')) || 54;
 
-					function setProgress(percent) {
-						if (circle) {
-							const offset = circumference - (percent / 100) * circumference;
-							circle.style.strokeDashoffset = offset;
-						}
+					// If no CSS variable is set, calculate based on counter size
+					if (!computedStyle.getPropertyValue('--progress-radius')) {
+						const baseRadius = 54; // Default from your settings
+						const baseSize = 120; // Default counter size
+						const scaleFactor = counterSize / baseSize;
+						progressRadius = baseRadius * scaleFactor;
 					}
 
-					// Set initial positions
-					function setInitialPositions() {
-						if (topRow) {
-							topRow.style.transform = 'translateX(0px)';
-						}
+					// Get stroke width from computed styles or CSS variable
+					const strokeWidth = parseFloat(computedStyle.getPropertyValue('--progress-stroke-width')) ||
+						parseFloat(computedStyle.strokeWidth) || 8;
 
-						if (bottomRow) {
-							const bottomRowWidth = bottomRow.scrollWidth;
-							const containerWidth = bottomRow.parentElement.offsetWidth;
-							const maxMovement = Math.max(0, bottomRowWidth - containerWidth);
-							bottomRow.style.transform = `translateX(-${maxMovement}px)`;
-						}
+					// Ensure radius doesn't exceed bounds
+					const maxRadius = (counterSize / 2) - (strokeWidth / 2) - 5;
+					const finalRadius = Math.min(progressRadius, maxRadius);
+
+					// Update SVG viewBox and dimensions
+					svg.setAttribute('viewBox', `0 0 ${counterSize} ${counterSize}`);
+					svg.setAttribute('width', counterSize);
+					svg.setAttribute('height', counterSize);
+
+					// Remove existing circles
+					svg.innerHTML = '';
+
+					// Create background circle
+					backgroundCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+					backgroundCircle.classList.add('progress-ring__background');
+					backgroundCircle.setAttribute('cx', svgCenter);
+					backgroundCircle.setAttribute('cy', svgCenter);
+					backgroundCircle.setAttribute('r', finalRadius);
+					svg.appendChild(backgroundCircle);
+
+					// Create progress circle
+					circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+					circle.classList.add('progress-ring__circle');
+					circle.setAttribute('cx', svgCenter);
+					circle.setAttribute('cy', svgCenter);
+					circle.setAttribute('r', finalRadius);
+					svg.appendChild(circle);
+
+					// Set up stroke dash properties
+					const circumference = 2 * Math.PI * finalRadius;
+					circle.style.strokeDasharray = circumference;
+					circle.style.strokeDashoffset = circumference;
+
+					return {
+						radius: finalRadius,
+						circumference
+					};
+				}
+
+				// Initialize SVG dimensions
+				let svgProperties = updateSVGDimensions();
+
+				// Track if container is in viewport
+				let isInViewport = false;
+				let containerRect = null;
+
+				function setProgress(percent) {
+					if (circle && svgProperties) {
+						const offset = svgProperties.circumference - (percent / 100) * svgProperties.circumference;
+						circle.style.strokeDashoffset = offset;
+					}
+				}
+
+				// Set initial positions
+				function setInitialPositions() {
+					if (topRow) {
+						topRow.style.transform = 'translateX(0px)';
 					}
 
-					// Calculate scroll percentage within the container's viewport range
-					function calculateContainerScrollPercent() {
-						if (!isInViewport || !containerRect) return 0;
+					if (bottomRow) {
+						const bottomRowWidth = bottomRow.scrollWidth;
+						const containerWidth = bottomRow.parentElement.offsetWidth;
+						const maxMovement = Math.max(0, bottomRowWidth - containerWidth);
+						bottomRow.style.transform = `translateX(-${maxMovement}px)`;
+					}
+				}
 
-						const scrollTop = window.pageYOffset;
-						const windowHeight = window.innerHeight;
+				// Calculate scroll percentage within the container's viewport range
+				function calculateContainerScrollPercent() {
+					if (!isInViewport || !containerRect) return 0;
 
-						// Container position relative to viewport
-						const containerTop = containerRect.top + scrollTop;
-						const containerBottom = containerTop + containerRect.height;
+					const scrollTop = window.pageYOffset;
+					const windowHeight = window.innerHeight;
 
-						// Calculate when container starts and ends being "active"
-						const startScroll = containerTop - windowHeight; // Start when container enters viewport
-						const endScroll = containerBottom; // End when container fully exits viewport
+					// Container position relative to viewport
+					const containerTop = containerRect.top + scrollTop;
+					const containerBottom = containerTop + containerRect.height;
 
-						const scrollRange = endScroll - startScroll;
-						const currentScroll = scrollTop - startScroll;
+					// Calculate when container starts and ends being "active"
+					const startScroll = containerTop - windowHeight;
+					const endScroll = containerBottom;
 
-						// Calculate percentage (0 to 1)
-						const scrollPercent = Math.max(0, Math.min(1, currentScroll / scrollRange));
+					const scrollRange = endScroll - startScroll;
+					const currentScroll = scrollTop - startScroll;
 
-						return scrollPercent;
+					// Calculate percentage (0 to 1)
+					const scrollPercent = Math.max(0, Math.min(1, currentScroll / scrollRange));
+
+					return scrollPercent;
+				}
+
+				// Handle scroll with viewport-aware calculation
+				function handleScroll() {
+					if (!isInViewport) {
+						if (counter) counter.textContent = '0%';
+						setProgress(0);
+						return;
 					}
 
-					// Handle scroll with viewport-aware calculation
-					function handleScroll() {
-						if (!isInViewport) {
-							// Reset progress when not in viewport
-							if (counter) counter.textContent = '0%';
-							setProgress(0);
-							return;
-						}
+					const scrollPercent = calculateContainerScrollPercent();
 
-						const scrollPercent = calculateContainerScrollPercent();
+					// Base speed for top row
+					const topRowSpeed = 1;
 
-						// Base speed for top row
-						const topRowSpeed = 1;
+					let topMaxMovement = 0;
+					let bottomMaxMovement = 0;
 
-						let topMaxMovement = 0;
-						let bottomMaxMovement = 0;
-
-						// Calculate max movements for both rows
-						if (topRow) {
-							const topRowWidth = topRow.scrollWidth;
-							const containerWidth = topRow.parentElement.offsetWidth;
-							topMaxMovement = Math.max(0, topRowWidth - containerWidth);
-						}
-
-						if (bottomRow) {
-							const bottomRowWidth = bottomRow.scrollWidth;
-							const containerWidth = bottomRow.parentElement.offsetWidth;
-							bottomMaxMovement = Math.max(0, bottomRowWidth - containerWidth);
-						}
-
-						// Calculate dynamic bottom row speed
-						let bottomRowSpeed;
-
-						if (topMaxMovement > 0 && bottomMaxMovement > 0) {
-							bottomRowSpeed = topMaxMovement / bottomMaxMovement;
-							bottomRowSpeed = Math.max(0.2, Math.min(2, bottomRowSpeed));
-						} else if (bottomMaxMovement > 0) {
-							bottomRowSpeed = 0.5;
-						} else {
-							bottomRowSpeed = 0;
-						}
-
-						// Top Row: moves from left (0) to right (-maxMovement)
-						if (topRow && topMaxMovement > 0) {
-							const movement = (scrollPercent * topRowSpeed) * topMaxMovement;
-							topRow.style.transform = `translateX(-${movement}px)`;
-						}
-
-						// Bottom Row: moves from right (-maxMovement) to left (0)
-						if (bottomRow && bottomMaxMovement > 0) {
-							const adjustedScrollPercent = scrollPercent * bottomRowSpeed;
-							const movement = bottomMaxMovement - (adjustedScrollPercent * bottomMaxMovement);
-							bottomRow.style.transform = `translateX(-${movement}px)`;
-						}
-
-						const counterPercentage = Math.min(100, Math.round(scrollPercent * 100));
-						if (counter) counter.textContent = `${counterPercentage}%`;
-						setProgress(counterPercentage);
+					// Calculate max movements for both rows
+					if (topRow) {
+						const topRowWidth = topRow.scrollWidth;
+						const containerWidth = topRow.parentElement.offsetWidth;
+						topMaxMovement = Math.max(0, topRowWidth - containerWidth);
 					}
 
-					// Intersection Observer to detect when container is in viewport
-					const observer = new IntersectionObserver((entries) => {
-						entries.forEach(entry => {
-							const wasInViewport = isInViewport;
-							isInViewport = entry.isIntersecting;
-							containerRect = entry.boundingClientRect;
+					if (bottomRow) {
+						const bottomRowWidth = bottomRow.scrollWidth;
+						const containerWidth = bottomRow.parentElement.offsetWidth;
+						bottomMaxMovement = Math.max(0, bottomRowWidth - containerWidth);
+					}
 
-							// If container just entered viewport, update positions
-							if (isInViewport && !wasInViewport) {
-								containerRect = container.getBoundingClientRect();
-								handleScroll();
-							} else if (!isInViewport && wasInViewport) {
-								// Container left viewport - reset or maintain last state
-								// Uncomment next line if you want to reset when leaving viewport
-								// handleScroll();
-							}
-						});
-					}, {
-						threshold: [0, 0.1, 0.5, 0.9, 1], // Multiple thresholds for smooth tracking
-						rootMargin: '50px 0px 50px 0px' // Start tracking 50px before entering viewport
-					});
+					// Calculate dynamic bottom row speed
+					let bottomRowSpeed;
 
-					// Start observing the container
-					observer.observe(container);
+					if (topMaxMovement > 0 && bottomMaxMovement > 0) {
+						bottomRowSpeed = topMaxMovement / bottomMaxMovement;
+						bottomRowSpeed = Math.max(0.2, Math.min(2, bottomRowSpeed));
+					} else if (bottomMaxMovement > 0) {
+						bottomRowSpeed = 0.5;
+					} else {
+						bottomRowSpeed = 0;
+					}
 
-					// Update container rect on resize
-					function updateContainerRect() {
-						if (isInViewport) {
+					// Top Row: moves from left (0) to right (-maxMovement)
+					if (topRow && topMaxMovement > 0) {
+						const movement = (scrollPercent * topRowSpeed) * topMaxMovement;
+						topRow.style.transform = `translateX(-${movement}px)`;
+					}
+
+					// Bottom Row: moves from right (-maxMovement) to left (0)
+					if (bottomRow && bottomMaxMovement > 0) {
+						const adjustedScrollPercent = scrollPercent * bottomRowSpeed;
+						const movement = bottomMaxMovement - (adjustedScrollPercent * bottomMaxMovement);
+						bottomRow.style.transform = `translateX(-${movement}px)`;
+					}
+
+					const counterPercentage = Math.min(100, Math.round(scrollPercent * 100));
+					if (counter) counter.textContent = `${counterPercentage}%`;
+					setProgress(counterPercentage);
+				}
+
+				// Intersection Observer to detect when container is in viewport
+				const observer = new IntersectionObserver((entries) => {
+					entries.forEach(entry => {
+						const wasInViewport = isInViewport;
+						isInViewport = entry.isIntersecting;
+						containerRect = entry.boundingClientRect;
+
+						if (isInViewport && !wasInViewport) {
 							containerRect = container.getBoundingClientRect();
-						}
-						setInitialPositions();
-						handleScroll();
-					}
-
-					function openPopup(imageSrc) {
-						popupImage.src = imageSrc;
-						popupOverlay.classList.add("active");
-						document.body.style.overflow = "hidden";
-					}
-
-					function closePopup() {
-						popupOverlay.classList.remove("active");
-						document.body.style.overflow = "auto";
-					}
-
-					// Set initial positions
-					setInitialPositions();
-
-					// Event listeners
-					window.addEventListener("scroll", handleScroll);
-					window.addEventListener("resize", updateContainerRect);
-
-					galleryItems.forEach((item) => {
-						item.addEventListener("click", function() {
-							const imageSrc = this.getAttribute("data-src");
-							openPopup(imageSrc);
-						});
-					});
-
-					closeBtn.addEventListener("click", closePopup);
-					popupOverlay.addEventListener("click", function(e) {
-						if (e.target === popupOverlay) {
-							closePopup();
+							handleScroll();
 						}
 					});
-
-					document.addEventListener("keydown", function(e) {
-						if (e.key === "Escape") {
-							closePopup();
-						}
-					});
-
-					// Initial call
-					containerRect = container.getBoundingClientRect();
-					handleScroll();
+				}, {
+					threshold: [0, 0.1, 0.5, 0.9, 1],
+					rootMargin: '50px 0px 50px 0px'
 				});
+
+				// Start observing the container
+				observer.observe(container);
+
+				// Update container rect and SVG on resize
+				function updateContainerRect() {
+					if (isInViewport) {
+						containerRect = container.getBoundingClientRect();
+					}
+					// Update SVG dimensions on resize
+					svgProperties = updateSVGDimensions();
+					setInitialPositions();
+					handleScroll();
+				}
+
+				function openPopup(imageSrc) {
+					popupImage.src = imageSrc;
+					popupOverlay.classList.add("active");
+					document.body.style.overflow = "hidden";
+				}
+
+				function closePopup() {
+					popupOverlay.classList.remove("active");
+					document.body.style.overflow = "auto";
+				}
+
+				// Set initial positions
+				setInitialPositions();
+
+				// Event listeners
+				window.addEventListener("scroll", handleScroll);
+				window.addEventListener("resize", updateContainerRect);
+
+				galleryItems.forEach((item) => {
+					item.addEventListener("click", function() {
+						const imageSrc = this.getAttribute("data-src");
+						openPopup(imageSrc);
+					});
+				});
+
+				closeBtn.addEventListener("click", closePopup);
+				popupOverlay.addEventListener("click", function(e) {
+					if (e.target === popupOverlay) {
+						closePopup();
+					}
+				});
+
+				document.addEventListener("keydown", function(e) {
+					if (e.key === "Escape") {
+						closePopup();
+					}
+				});
+
+				// Initial call
+				containerRect = container.getBoundingClientRect();
+				handleScroll();
 			});
 		</script>
 <?php
