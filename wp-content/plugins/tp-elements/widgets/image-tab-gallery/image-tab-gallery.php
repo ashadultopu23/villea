@@ -114,9 +114,25 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 				'default' => 'style1',
 				'options' => [
 					'style1' => 'Style 1',
+					'style2' => 'Style 2',
 				],
 			]
 		);
+
+		$this->add_control(
+			'hover_content_style',
+			[
+				'label' => esc_html__('Hover Content Style', 'tp-elements'),
+				'type' => \Elementor\Controls_Manager::SELECT,
+				'default' => 'content_style1',
+				'options' => [
+					'content_style1' => esc_html__('Style 1', 'tp-elements'),
+					'content_style2' => esc_html__('Style 2', 'tp-elements'),
+					'content_style3' => esc_html__('Style 3', 'tp-elements'),
+				],
+			]
+		);
+
 		$this->end_controls_section();
 
 		$this->start_controls_section(
@@ -125,10 +141,9 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 				'label' => esc_html__('Repeater', 'tp-elements')
 			]
 		);
-		// Repeater
+
+		// Repeater for style one
 		$repeater = new \Elementor\Repeater();
-
-
 		$repeater->add_control(
 			'image',
 			[
@@ -149,11 +164,10 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 			]
 		);
 
-
 		$this->add_control(
 			'list_repeater',
 			[
-				'label' => esc_html__('Repeater List', 'tp-elements'),
+				'label' => esc_html__('Feature List', 'tp-elements'),
 				'type' => \Elementor\Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 				'default' => [
@@ -161,28 +175,108 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 						'list_title' => esc_html__('Title #1', 'tp-elements'),
 
 					],
-					[
-						'list_title' => esc_html__('Title #2', 'tp-elements'),
-					],
 				],
 				'title_field' => '{{{ list_title }}}',
+				'condition' => [
+					'feature_style' => 'style1',
+				]
+			]
+		);
+
+		// Repeater for style two
+		$repeater2 = new \Elementor\Repeater();
+
+		$repeater2->add_control(
+			'feature_title',
+			[
+				'label' => esc_html__('Title', 'tp-elements'),
+				'type' => \Elementor\Controls_Manager::TEXTAREA,
+				'default' => esc_html__('Feature Title', 'tp-elements'),
+				'placeholder' => esc_html__('Enter feature title', 'tp-elements'),
+			]
+		);
+
+		$repeater2->add_control(
+			'feature_description',
+			[
+				'label' => esc_html__('Description', 'tp-elements'),
+				'type' => \Elementor\Controls_Manager::TEXTAREA,
+				'default' => esc_html__('Feature description goes here...', 'tp-elements'),
+				'placeholder' => esc_html__('Enter feature description', 'tp-elements'),
+			]
+		);
+
+		$repeater2->add_control(
+			'feature_icon',
+			[
+				'label' => esc_html__('Icon', 'tp-elements'),
+				'type' => \Elementor\Controls_Manager::ICONS,
+				'default' => [
+					'value' => 'fas fa-star',
+					'library' => 'fa-solid',
+				],
+			]
+		);
+
+		$repeater2->add_control(
+			'hover_image',
+			[
+				'label' => esc_html__('Hover Image', 'tp-elements'),
+				'type' => \Elementor\Controls_Manager::MEDIA,
+				'default' => [
+					'url' => \Elementor\Utils::get_placeholder_image_src(),
+				],
+			]
+		);
+
+		$this->add_control(
+			'features_list',
+			[
+				'label' => esc_html__('Features List', 'tp-elements'),
+				'type' => \Elementor\Controls_Manager::REPEATER,
+				'fields' => $repeater2->get_controls(),
+				'default' => [
+					[
+						'feature_title' => esc_html__('Free High Speed Wi-Fi', 'tp-elements'),
+						'feature_description' => esc_html__('It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.', 'tp-elements'),
+						'feature_icon' => ['value' => 'fas fa-wifi', 'library' => 'fa-solid'],
+					],
+					[
+						'feature_title' => esc_html__('Washer–Dryer System', 'tp-elements'),
+						'feature_description' => esc_html__('It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.', 'tp-elements'),
+						'feature_icon' => ['value' => 'fas fa-tshirt', 'library' => 'fa-solid'],
+					],
+					[
+						'feature_title' => esc_html__('Parking Space Place', 'tp-elements'),
+						'feature_description' => esc_html__('It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.', 'tp-elements'),
+						'feature_icon' => ['value' => 'fas fa-car', 'library' => 'fa-solid'],
+					],
+					[
+						'feature_title' => esc_html__('Swimming Pool', 'tp-elements'),
+						'feature_description' => esc_html__('It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.', 'tp-elements'),
+						'feature_icon' => ['value' => 'fas fa-swimmer', 'library' => 'fa-solid'],
+					],
+				],
+				'title_field' => '{{{ feature_title }}}',
+				'condition' => [
+					'feature_style' => 'style2',
+				]
 			]
 		);
 
 		$this->end_controls_section();
 
-
+		// style one - tab design
 		$this->start_controls_section(
-			'design_select',
+			'tab_design_style',
 			[
-				'label' => esc_html__('Image Style', 'tp-elements'),
+				'label' => esc_html__('Tab Style', 'tp-elements'),
 				'tab' => Controls_Manager::TAB_STYLE,
+				'condition' => [
+					'feature_style' => 'style1',
+				]
 			]
 		);
-
-
-
-
 		$this->add_responsive_control(
 			'tab_wrap',
 			[
@@ -194,11 +288,10 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 					'wrap' => esc_html__('Wrap', 'tp-elements'),
 				],
 				'selectors' => [
-					'{{WRAPPER}} .expert-solutions .flex-container ' => 'flex-wrap: {{VALUE}} !important;',
-				]
+					'{{WRAPPER}} .gallery-feature-tab .gallery-feature-tab-container ' => 'flex-wrap: {{VALUE}} !important;',
+				],
 			]
 		);
-
 		$this->add_responsive_control(
 			'tab_spacing',
 			[
@@ -213,52 +306,310 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .expert-solutions .flex-container ' => 'gap: {{SIZE}}{{UNIT}} !important;',
-				]
+					'{{WRAPPER}} .gallery-feature-tab .gallery-feature-tab-container ' => 'gap: {{SIZE}}{{UNIT}} !important;',
+				],
 			]
 		);
-
 		$this->add_responsive_control(
-			'tab_width',
+			'image_tab_width',
 			[
 				'label' => esc_html__('Image Width', 'tp-elements'),
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => ['px'],
+				'size_units' => ['px', '%'],
+				'range' => [
+					'px' => [
+						'min' => 1,
+						'max' => 1000,
+					],
+					'%' => [
+						'min' => 1,
+						'max' => 100,
+					]
+				],
+				'selectors' => [
+					'{{WRAPPER}} .gallery-feature-tab-container .gallery-feature-tab-image' => 'width: {{SIZE}}{{UNIT}} !important;',
+				]
+			]
+		);
+		$this->add_responsive_control(
+			'gallery_tab_width',
+			[
+				'label' => esc_html__('List Width', 'tp-elements'),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => ['px', '%'],
+				'range' => [
+					'px' => [
+						'min' => 1,
+						'max' => 1000,
+					],
+					'%' => [
+						'min' => 1,
+						'max' => 100,
+					]
+				],
+				'selectors' => [
+					'{{WRAPPER}} .gallery-feature-tab-items' => 'width: {{SIZE}}{{UNIT}} !important;',
+				]
+			]
+		);
+		$this->end_controls_section();
+
+		// style two - hover design
+		$this->start_controls_section(
+			'hover_design_style',
+			[
+				'label' => esc_html__('Hover Style', 'tp-elements'),
+				'tab' => Controls_Manager::TAB_STYLE,
+				'condition' => [
+					'feature_style' => 'style2',
+				]
+			]
+		);
+
+
+		$this->add_responsive_control(
+			'number_max_width',
+			[
+				'label' => esc_html__('Number Max Width', 'plugin-name'),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => ['px', '%'],
 				'range' => [
 					'px' => [
 						'min' => 1,
 						'max' => 100,
 						'step' => 1,
 					],
+					'%' => [
+						'min' => 1,
+						'max' => 100,
+					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .flex-container .solution-image-container' => 'width: {{SIZE}}{{UNIT}} !important;',
+					'{{WRAPPER}} .gallery-feature-number-wrapper' => 'max-width: {{SIZE}}{{UNIT}} !important;',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'number_width',
+			[
+				'label' => esc_html__('Number Width', 'plugin-name'),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => ['px', '%'],
+				'range' => [
+					'px' => [
+						'min' => 1,
+						'max' => 100,
+						'step' => 1,
+					],
+					'%' => [
+						'min' => 1,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .gallery-feature-number-wrapper' => 'width: {{SIZE}}{{UNIT}} !important;',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'content_max_width',
+			[
+				'label' => esc_html__('Content Max Width', 'plugin-name'),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => ['px', '%'],
+				'range' => [
+					'px' => [
+						'min' => 1,
+						'max' => 100,
+						'step' => 1,
+					],
+					'%' => [
+						'min' => 1,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .gallery-feature-content-wrapper' => 'max-width: {{SIZE}}{{UNIT}} !important;',
+				],
+				'condition' => [
+					'hover_content_style' => ['content_style1', 'content_style2'],
+				]
+			]
+		);
+		$this->add_responsive_control(
+			'content_width',
+			[
+				'label' => esc_html__('Content Width', 'plugin-name'),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => ['px', '%'],
+				'range' => [
+					'px' => [
+						'min' => 1,
+						'max' => 500,
+						'step' => 1,
+					],
+					'%' => [
+						'min' => 1,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .gallery-feature-content-wrapper' => 'width: {{SIZE}}{{UNIT}} !important;',
+				],
+				'condition' => [
+					'hover_content_style' => ['content_style1', 'content_style2'],
 				]
 			]
 		);
 
 		$this->add_responsive_control(
-			'solution_tab_width',
+			'content_title_width',
 			[
-				'label' => esc_html__('List Width', 'tp-elements'),
+				'label' => esc_html__('Content Title Width', 'plugin-name'),
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => ['px'],
+				'size_units' => ['px', '%'],
+				'range' => [
+					'px' => [
+						'min' => 1,
+						'max' => 500,
+						'step' => 1,
+					],
+					'%' => [
+						'min' => 1,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .gallery-feature-content.title-wrapper' => 'max-width: {{SIZE}}{{UNIT}} !important;',
+				],
+				'condition' => [
+					'hover_content_style' => 'content_style3',
+				]
+			]
+		);
+
+		$this->add_responsive_control(
+			'content_description_width',
+			[
+				'label' => esc_html__('Content Description Width', 'plugin-name'),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => ['px', '%'],
+				'range' => [
+					'px' => [
+						'min' => 1,
+						'max' => 500,
+						'step' => 1,
+					],
+					'%' => [
+						'min' => 1,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .gallery-feature-content.description-wrapper' => 'max-width: {{SIZE}}{{UNIT}} !important;',
+				],
+				'condition' => [
+					'hover_content_style' => 'content_style3',
+				]
+			]
+		);
+
+		$this->add_responsive_control(
+			'icon_width',
+			[
+				'label' => esc_html__('Icon Width', 'plugin-name'),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => ['px', '%'],
 				'range' => [
 					'px' => [
 						'min' => 1,
 						'max' => 100,
 						'step' => 1,
 					],
+					'%' => [
+						'min' => 1,
+						'max' => 100,
+					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .solution-tab-container' => 'width: {{SIZE}}{{UNIT}} !important;',
-				]
+					'{{WRAPPER}} .gallery-feature-icon-wrapper' => 'width: {{SIZE}}{{UNIT}} !important;',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'hover_image_item_align',
+			[
+				'label' => esc_html__('Justify', 'plugin-name'),
+				'type' => \Elementor\Controls_Manager::CHOOSE,
+				'options' => [
+					'start' => [
+						'title' => esc_html__('Start', 'plugin-name'),
+						'icon' => 'eicon-justify-end-h',
+					],
+					'center' => [
+						'title' => esc_html__('Center', 'plugin-name'),
+						'icon' => 'eicon-justify-center-h',
+					],
+					'end' => [
+						'title' => esc_html__('End', 'plugin-name'),
+						'icon' => 'eicon-justify-start-h',
+					],
+					'space-between' => [
+						'title' => esc_html__('Space Between', 'plugin-name'),
+						'icon' => 'eicon-justify-space-between-h',
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .gallery-feature-items.gallery-image-hover .gallery-feature-item' => 'justify-content: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'hover_style_content_gap',
+			[
+				'label' => esc_html__('Content Spacing', 'textdomain'),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 50,
+					],
+				],
+				'default' => [
+					'size' => 0,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .gallery-feature-items.gallery-image-hover .gallery-feature-item' => 'gap: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+
+		$this->add_responsive_control(
+			'hover_style_item_gap',
+			[
+				'label' => esc_html__('Item Spacing', 'textdomain'),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 50,
+					],
+				],
+				'default' => [
+					'size' => 0,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .gallery-feature-items.gallery-image-hover' => 'gap: {{SIZE}}{{UNIT}};',
+				],
 			]
 		);
 
 		$this->end_controls_section();
-
-
 
 
 		$this->start_controls_section(
@@ -269,13 +620,30 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 			]
 		);
 
+		$this->add_control(
+			'enable_hover_image',
+			[
+				'label' => esc_html__('Enable Hover Images', 'textdomain'),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__('Yes', 'textdomain'),
+				'label_off' => esc_html__('No', 'textdomain'),
+				'return_value' => 'yes',
+				'default' => 'yes',
+				'description' => esc_html__('If you want to show hover images, then enable this option.', 'textdomain'),
+				'condition' => [
+					'feature_style' => 'style2',
+				]
+			]
+		);
+
+
 
 		$this->add_group_control(
 			\Elementor\Group_Control_Border::get_type(),
 			[
 				'name' => 'image_border',
 				'label' => esc_html__('Border', 'tp-elements'),
-				'selector' => '{{WRAPPER}} .solution-image-container .img_border',
+				'selector' => '{{WRAPPER}} .gallery-feature-tab-image .img_border',
 			]
 		);
 
@@ -286,8 +654,8 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => ['px', '%', 'em'],
 				'selectors' => [
-					'{{WRAPPER}} .solution-image-container .img_border,
-					{{WRAPPER}} .solution-image-container .img_border img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .gallery-feature-tab-image .img_border,
+					{{WRAPPER}} .gallery-feature-tab-image .img_border img, {{WRAPPER}} .gallery-hover-image' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -310,7 +678,52 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 					'unit' => 'deg',
 				],
 				'selectors' => [
-					'{{WRAPPER}} .solution-image-container .img_border img' => 'transform: rotate({{SIZE}}{{UNIT}});',
+					'{{WRAPPER}} .gallery-feature-tab-image .img_border img, {{WRAPPER}} .gallery-hover-image, {{WRAPPER}} .gallery-hover-image-wrapper' => 'transform: rotate({{SIZE}}{{UNIT}});',
+				],
+			]
+		);
+
+
+		$this->add_control(
+			'hover_image_width',
+			[
+				'label' => esc_html__('Image Width', 'tp-elements'),
+				'type' => Controls_Manager::SLIDER,
+				'size_units' => ['px'],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 1000,
+					],
+				],
+				'default' => [
+					'size' => 300,
+					'unit' => 'px',
+				],
+				'selectors' => [
+					'{{WRAPPER}} .gallery-hover-image' => 'width: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'hover_image_height',
+			[
+				'label' => esc_html__('Image Height', 'tp-elements'),
+				'type' => Controls_Manager::SLIDER,
+				'size_units' => ['px'],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 1000,
+					],
+				],
+				'default' => [
+					'size' => 300,
+					'unit' => 'px',
+				],
+				'selectors' => [
+					'{{WRAPPER}} .gallery-hover-image' => 'height: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
@@ -318,7 +731,7 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 		$this->end_controls_section();
 
 		$this->start_controls_section(
-			'heading_style',
+			'item_style',
 			[
 				'label' => esc_html__('Items Style', 'tp-elements'),
 				'tab'   => Controls_Manager::TAB_STYLE,
@@ -331,7 +744,7 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 				'label' => esc_html__('background', 'tp-elements'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .solution-items .solution-item' => 'background-color: {{VALUE}} !important',
+					'{{WRAPPER}} .gallery-feature-items .gallery-feature-item' => 'background-color: {{VALUE}} !important',
 				],
 			]
 		);
@@ -342,7 +755,7 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 				'label' => esc_html__('Hover / Active background', 'tp-elements'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .solution-items .solution-item:hover, {{WRAPPER}} .solution-items .solution-item.active' => 'background-color: {{VALUE}} !important',
+					'{{WRAPPER}} .gallery-feature-items .gallery-feature-item:hover, {{WRAPPER}} .gallery-feature-items .gallery-feature-item.active' => 'background-color: {{VALUE}} !important',
 				],
 			]
 		);
@@ -354,7 +767,7 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => ['px', '%'],
 				'selectors' => [
-					'{{WRAPPER}} .solution-items .solution-item' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .gallery-feature-items .gallery-feature-item' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -366,7 +779,7 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => ['px', '%', 'em'],
 				'selectors' => [
-					'{{WRAPPER}} .solution-items .solution-item' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .gallery-feature-items .gallery-feature-item' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -376,7 +789,7 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 			[
 				'name' => 'card_border',
 				'label' => esc_html__('Border', 'tp-elements'),
-				'selector' => '{{WRAPPER}} .solution-items .solution-item',
+				'selector' => '{{WRAPPER}} .gallery-feature-items .gallery-feature-item',
 			]
 		);
 
@@ -387,17 +800,21 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => ['px', '%', 'em'],
 				'selectors' => [
-					'{{WRAPPER}} .solution-items .solution-item' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .gallery-feature-items .gallery-feature-item' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
 
-		$this->add_control(
-			'title_heading',
+		$this->end_controls_section();
+
+
+
+		// Title Style Tab
+		$this->start_controls_section(
+			'title_style',
 			[
-				'label' => esc_html__('Title', 'tp-elements'),
-				'type' => \Elementor\Controls_Manager::HEADING,
-				'separator' => 'before',
+				'label' => esc_html__('Title', 'textdomain'),
+				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
 
@@ -406,7 +823,7 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 			[
 				'label'    => esc_html__('Typography', 'tp-elements'),
 				'name'     => 'title_typ',
-				'selector' => '{{WRAPPER}} .solution-items .solution-item .solution-title',
+				'selector' => '{{WRAPPER}} .gallery-feature-items .gallery-feature-item .gallery-feature-item-title',
 
 			]
 		);
@@ -417,7 +834,7 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 				'label'     => esc_html__('Color', 'tp-elements'),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .solution-items .solution-item .solution-title' => 'color: {{VALUE}} !important;',
+					'{{WRAPPER}} .gallery-feature-items .gallery-feature-item .gallery-feature-item-title' => 'color: {{VALUE}} !important;',
 				],
 			]
 		);
@@ -428,27 +845,190 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 				'label'     => esc_html__('Hover /  Active Color', 'tp-elements'),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .solution-items .solution-item:hover .solution-title, {{WRAPPER}} .solution-items .solution-item.active .solution-title' => 'color: {{VALUE}} !important;',
+					'{{WRAPPER}} .gallery-feature-items .gallery-feature-item:hover .gallery-feature-item-title, {{WRAPPER}} .gallery-feature-items .gallery-feature-item.active .gallery-feature-item-title' => 'color: {{VALUE}} !important;',
+				],
+			]
+		);
+
+		$this->end_controls_section();
+
+		// Description Style Tab
+		$this->start_controls_section(
+			'description_style',
+			[
+				'label' => esc_html__('Description', 'textdomain'),
+				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
+			[
+				'name' => 'description_typography',
+				'selector' => '{{WRAPPER}} .feature-content p, {{WRAPPER}} .gallery-feature-items .gallery-feature-item .gallery-feature-item-description',
+			]
+		);
+
+		$this->add_control(
+			'description_color',
+			[
+				'label' => esc_html__('Color', 'textdomain'),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '#5a5a5a',
+				'selectors' => [
+					'{{WRAPPER}} .feature-content p, {{WRAPPER}} .gallery-feature-items .gallery-feature-item .gallery-feature-item-description' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'description_margin',
+			[
+				'label' => esc_html__('Margin', 'textdomain'),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => ['px', '%', 'em'],
+				'selectors' => [
+					'{{WRAPPER}} .feature-content p, {{WRAPPER}} .gallery-feature-items .gallery-feature-item .gallery-feature-item-description' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'description_max_width',
+			[
+				'label' => esc_html__('Max Width', 'textdomain'),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => ['px', '%'],
+				'range' => [
+					'px' => [
+						'min' => 200,
+						'max' => 800,
+					],
+					'%' => [
+						'min' => 10,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .feature-content p, {{WRAPPER}} .gallery-feature-items .gallery-feature-item .gallery-feature-item-description' => 'max-width: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->end_controls_section();
+
+		// Icon Style Tab
+		$this->start_controls_section(
+			'icon_style',
+			[
+				'label' => esc_html__('Icon', 'textdomain'),
+				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->add_responsive_control(
+			'icon_size',
+			[
+				'label' => esc_html__('Icon Size', 'textdomain'),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'range' => [
+					'px' => [
+						'min' => 16,
+						'max' => 60,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .gallery-feature-items .gallery-feature-item .gallery-feature-icon svg' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .gallery-feature-items .gallery-feature-item .gallery-feature-icon i' => 'font-size: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'icon_box_size',
+			[
+				'label' => esc_html__('Box Size', 'textdomain'),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'range' => [
+					'px' => [
+						'min' => 40,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .gallery-feature-items .gallery-feature-item .gallery-feature-icon' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
 
 		$this->add_control(
-			'count_heading',
+			'icon_color',
 			[
-				'label' => esc_html__('Count', 'tp-elements'),
-				'type' => \Elementor\Controls_Manager::HEADING,
-				'separator' => 'before',
+				'label' => esc_html__('Color', 'textdomain'),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .gallery-feature-items .gallery-feature-item .gallery-feature-icon i' => 'color: {{VALUE}} !important;',
+					'{{WRAPPER}} .gallery-feature-items .gallery-feature-item .gallery-feature-icon svg' => 'fill: {{VALUE}} !important;',
+				],
 			]
 		);
+
+		$this->add_control(
+			'icon_bg_color',
+			[
+				'label' => esc_html__('Background Color', 'textdomain'),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .gallery-feature-items .gallery-feature-item .gallery-feature-icon svg' => 'background-color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'icon_border_radius',
+			[
+				'label' => esc_html__('Border Radius', 'plugin-name'),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => ['px', '%'],
+				'selectors' => [
+					'{{WRAPPER}} .gallery-feature-items .gallery-feature-item .gallery-feature-icon' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->end_controls_section();
+
+		// Count Style Tab
+		$this->start_controls_section(
+			'number_style',
+			[
+				'label' => esc_html__('Numbers', 'textdomain'),
+				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->add_control(
+			'show_numbers',
+			[
+				'label' => esc_html__('Show Numbers', 'textdomain'),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__('Show', 'textdomain'),
+				'label_off' => esc_html__('Hide', 'textdomain'),
+				'return_value' => 'yes',
+				'default' => 'yes',
+			]
+		);
+
 
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
 				'label'    => esc_html__('Typography', 'tp-elements'),
 				'name'     => 'count_typ',
-				'selector' => '{{WRAPPER}} .solution-items .solution-item .solution-index',
-
+				'selector' => '{{WRAPPER}} .gallery-feature-items .gallery-feature-item .gallery-feature-item-index',
+				'condition' => [
+					'show_numbers' => 'yes',
+				],
 			]
 		);
 
@@ -458,7 +1038,10 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 				'label'     => esc_html__('Color', 'tp-elements'),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .solution-items .solution-item .solution-index' => 'color: {{VALUE}} !important;',
+					'{{WRAPPER}} .gallery-feature-items .gallery-feature-item .gallery-feature-item-index' => 'color: {{VALUE}} !important;',
+				],
+				'condition' => [
+					'show_numbers' => 'yes',
 				],
 			]
 		);
@@ -469,50 +1052,10 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 				'label'     => esc_html__('Hover /  Active Color', 'tp-elements'),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .solution-items .solution-item:hover .solution-index, {{WRAPPER}} .solution-items .solution-item.active .solution-index' => 'color: {{VALUE}} !important;',
+					'{{WRAPPER}} .gallery-feature-items .gallery-feature-item:hover .gallery-feature-item-index, {{WRAPPER}} .gallery-feature-items .gallery-feature-item.active .gallery-feature-item-index' => 'color: {{VALUE}} !important;',
 				],
-			]
-		);
-
-		$this->add_control(
-			'icon_heading',
-			[
-				'label' => esc_html__('Icon', 'plugin-name'),
-				'type' => \Elementor\Controls_Manager::HEADING,
-				'separator' => 'before',
-			]
-		);
-		$this->add_control(
-			'icon_color',
-			[
-				'label'     => esc_html__('Color', 'tp-elements'),
-				'type'      => Controls_Manager::COLOR,
-				'selectors' => [
-					'{{WRAPPER}} .solution-items .solution-item i' => 'color: {{VALUE}} !important;',
-				],
-			]
-		);
-
-		$this->add_responsive_control(
-			'icon_size',
-			[
-				'label' => esc_html__('Size', 'plugin-name'),
-				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => ['px', '%'],
-				'range' => [
-					'px' => [
-						'min' => 1,
-						'max' => 100,
-						'step' => 1,
-					],
-					'%' => [
-						'min' => 1,
-						'max' => 100,
-					],
-				],
-				'selectors' => [
-					'{{WRAPPER}} .solution-items .solution-item svg' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
-					'{{WRAPPER}} .solution-items .solution-item i' => 'font-size: {{SIZE}}{{UNIT}};',
+				'condition' => [
+					'show_numbers' => 'yes',
 				],
 			]
 		);
@@ -540,112 +1083,13 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 	protected function render()
 	{
 		$settings = $this->get_settings_for_display();
-		$default_image = !empty($settings['list_repeater'][0]['image']['url'])
-			? $settings['list_repeater'][0]['image']['url']
-			: \Elementor\Utils::get_placeholder_image_src();
-?>
 
-		<section class="expert-solutions" id="tp-widget-<?php echo $this->get_id(); ?>">
-			<div class="flex-container">
+		$sstyle = $settings['feature_style'];
 
-				<!-- Image Column -->
-				<div class="solution-image-container">
-					<div class="img_border">
-						<img src="<?php echo esc_url($default_image); ?>"
-							class="solution-img"
-							alt="<?php echo !empty($settings['list_repeater'][0]['list_title'])
-										? esc_attr($settings['list_repeater'][0]['list_title'])
-										: esc_attr__('Default image', 'tp-elements'); ?>" />
-					</div>
-				</div>
-
-				<!-- Solution Items Column -->
-				<div class="solution-items">
-					<?php
-					if (!empty($settings['list_repeater']) && is_array($settings['list_repeater'])) :
-						$index = 1;
-						foreach ($settings['list_repeater'] as $item) :
-							$image_url = isset($item['image']['url']) ? $item['image']['url'] : '';
-							$title = isset($item['list_title']) ? $item['list_title'] : '';
-					?>
-							<!-- Solution Item -->
-							<div class="solution-item" data-img="<?php echo esc_url($image_url); ?>">
-								<i class="tp-arrow-up-right"></i>
-								<div class="content">
-									<?php if (!empty($title)) : ?>
-										<h3 class="solution-title inactive"><?php echo wp_kses_post($title); ?></h3>
-									<?php endif; ?>
-									<h6 class="solution-index inactive"><?php echo sprintf("%02d", $index); ?></h6>
-								</div>
-							</div>
-					<?php
-							$index++;
-						endforeach;
-					endif;
-					?>
-				</div>
-
-			</div>
-		</section>
-
-		<script>
-			(function($) {
-				// Define the function only once
-				if (typeof window.initSolutionHover === "undefined") {
-					window.initSolutionHover = function(container) {
-						if (!container) return;
-
-						const solutionItems = container.querySelectorAll(".solution-item");
-						const solutionImg = container.querySelector(".solution-img");
-
-						if (!solutionItems.length || !solutionImg) return;
-
-						solutionItems.forEach((item) => {
-							item.addEventListener("mouseenter", function() {
-								const imgSrc = this.getAttribute("data-img");
-
-								// Preload image for smoother transition
-								const newImg = new Image();
-								newImg.onload = function() {
-									solutionImg.src = imgSrc;
-								};
-								newImg.src = imgSrc;
-
-								solutionItems.forEach((i) => i.classList.remove("active"));
-								this.classList.add("active");
-							});
-
-							// Add tabindex for keyboard navigation
-							item.setAttribute("tabindex", "0");
-
-							// Add click event for mobile/touch devices
-							item.addEventListener("click", function() {
-								const imgSrc = this.getAttribute("data-img");
-								const newImg = new Image();
-								newImg.onload = function() {
-									solutionImg.src = imgSrc;
-								};
-								newImg.src = imgSrc;
-
-								solutionItems.forEach((i) => i.classList.remove("active"));
-								this.classList.add("active");
-							});
-						});
-					};
-				}
-
-				// Initialize for this specific widget instance
-				$(document).ready(function() {
-					const container = document.getElementById('tp-widget-<?php echo $this->get_id(); ?>');
-					if (container) {
-						window.initSolutionHover(container);
-					}
-				});
-
-			})(jQuery);
-		</script>
-
-
-<?php
+		if ($sstyle) {
+			require_once plugin_dir_path(__FILE__) . "/$sstyle.php";
+		} else {
+			require_once plugin_dir_path(__FILE__) . "/style1.php";
+		}
 	}
 }
