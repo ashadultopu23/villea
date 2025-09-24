@@ -255,6 +255,9 @@ final class TPelements_Elementor_Extension
 
 		// image showcase
 		$enqueue_with_version('tpelements-image-showcase-css', 'widgets/image-widget/image-css/image.css');
+
+		// step count box
+		$enqueue_with_version('tpelements-step-count-box-css', 'widgets/step-count-box/step-count-box-css/step-count.css');
 	}
 
 	public function tpaddon_register_plugin_styles()
@@ -861,6 +864,10 @@ final class TPelements_Elementor_Extension
 		// image scroll gallery 
 		require_once(__DIR__ . '/widgets/image-scroll-gallery/image-scroll-gallery.php');
 		\Elementor\Plugin::instance()->widgets_manager->register(new \Themephi_Image_Scroll_Gallery_Widget());
+
+		// step count box
+		require_once(__DIR__ . '/widgets/step-count-box/step-count-box.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \Themephi_StepCountBox_Widget());
 
 
 		// Register widget				

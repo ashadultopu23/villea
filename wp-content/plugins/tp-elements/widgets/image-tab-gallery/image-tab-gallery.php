@@ -979,7 +979,7 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 				'label' => esc_html__('Background Color', 'textdomain'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .gallery-feature-items .gallery-feature-item .gallery-feature-icon svg' => 'background-color: {{VALUE}};',
+					'{{WRAPPER}} .gallery-feature-items .gallery-feature-item .gallery-feature-icon' => 'background-color: {{VALUE}};',
 				],
 			]
 		);
@@ -993,6 +993,15 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 				'selectors' => [
 					'{{WRAPPER}} .gallery-feature-items .gallery-feature-item .gallery-feature-icon' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
+			]
+		);
+
+		$this->add_group_control(
+			\Elementor\Group_Control_Border::get_type(),
+			[
+				'name' => 'icon_border',
+				'label' => esc_html__('Border', 'plugin-name'),
+				'selector' => '{{WRAPPER}} .gallery-feature-items .gallery-feature-item .gallery-feature-icon',
 			]
 		);
 

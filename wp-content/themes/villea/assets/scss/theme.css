@@ -3226,7 +3226,30 @@ html:has(.fixed-header) .themephi-breadcrumbs .breadcrumbs-inner {
   box-shadow: none !important;
 }
 
-.gt_selector.notranslate {
+.notranslate.gt_switcher .gt_option,
+.notranslate.gt_switcher .gt_options, .notranslate.gt_float_switcher .gt_option,
+.notranslate.gt_float_switcher .gt_options {
+  position: absolute !important;
+  max-width: 220px !important;
+  width: 100% !important;
+  background-color: var(--whiteColor) !important;
+}
+.notranslate.gt_switcher .gt_option a,
+.notranslate.gt_switcher .gt_options a, .notranslate.gt_float_switcher .gt_option a,
+.notranslate.gt_float_switcher .gt_options a {
+  font-size: 14px !important;
+  line-height: 20px !important;
+}
+.notranslate.gt_switcher .gt_option a img,
+.notranslate.gt_switcher .gt_options a img, .notranslate.gt_float_switcher .gt_option a img,
+.notranslate.gt_float_switcher .gt_options a img {
+  width: 20px;
+  height: 20px;
+}
+.notranslate.gt_switcher .gt_options, .notranslate.gt_float_switcher .gt_options {
+  top: 60px;
+}
+.notranslate.gt_selector {
   padding: 12px !important;
   margin: 0;
   height: unset !important;
@@ -3241,7 +3264,7 @@ html:has(.fixed-header) .themephi-breadcrumbs .breadcrumbs-inner {
   background-position: right 10px center;
 }
 @media (max-width: 767px) {
-  .gt_selector.notranslate {
+  .notranslate.gt_selector {
     padding: 8px !important;
     font-size: 14px;
   }
@@ -3316,6 +3339,26 @@ html:has(.fixed-header) .themephi-breadcrumbs .breadcrumbs-inner {
   height: inherit !important;
   min-height: inherit !important;
   max-height: inherit !important;
+}
+
+.writing-mode-vertical-lr {
+  writing-mode: vertical-lr;
+}
+
+.writing-mode-vertical-rl {
+  writing-mode: vertical-rl;
+}
+
+.writing-mode-sideways-rl {
+  writing-mode: sideways-rl;
+}
+
+.writing-mode-sideways-lr {
+  writing-mode: sideways-lr;
+}
+
+.writing-mode-horizontal-tb {
+  writing-mode: horizontal-tb;
 }
 
 /* ---------------------------

@@ -1,0 +1,44 @@
+@import "../../../scss/base";
+
+.step-count-box,
+.step-circle_box-wrapper {
+  position: sticky !important;
+  top: 100px;
+  z-index: 1;
+}
+
+.step-circle_box {
+  width: 306px;
+  height: 306px;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background: var(--whiteColor);
+  padding: 14px;
+
+  .inner_circle {
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    background: var(--whiteColor);
+    padding: 50px;
+    border: 12px solid rgba(15, 96, 77, 0.1098039216);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+    h2 {
+      font-size: 40px;
+      font-weight: 600;
+      color: var(--secondaryColor3);
+    }
+
+    p {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--secondaryColor3);
+    }
+  }
+}

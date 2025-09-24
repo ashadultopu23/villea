@@ -2943,25 +2943,51 @@ html:has(.fixed-header) .themephi-breadcrumbs {
   }
 }
 
-.gt_selector.notranslate {
-  padding: 12px !important;
-  margin: 0;
-  height: unset !important;
-  width: 100px;
-  /* Remove default arrow */
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+// google translate - GTranslate
+.notranslate {
+  &.gt_switcher,
+  &.gt_float_switcher {
+    .gt_option,
+    .gt_options {
+      position: absolute !important;
+      max-width: 220px !important;
+      width: 100% !important;
+      background-color: var(--whiteColor) !important;
+      a {
+        font-size: 14px !important;
+        line-height: 20px !important;
 
-  /* Custom arrow */
-  background: url("data:image/svg+xml;utf8,<svg fill='black' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>")
-    no-repeat right 10px center;
-  background-color: #fff;
-  background-position: right 10px center;
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+    .gt_options {
+      top: 60px;
+    }
+  }
 
-  @media (max-width: 767px) {
-    padding: 8px !important;
-    font-size: 14px;
+  &.gt_selector {
+    padding: 12px !important;
+    margin: 0;
+    height: unset !important;
+    width: 100px;
+    /* Remove default arrow */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    /* Custom arrow */
+    background: url("data:image/svg+xml;utf8,<svg fill='black' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>")
+      no-repeat right 10px center;
+    background-color: #fff;
+    background-position: right 10px center;
+
+    @media (max-width: 767px) {
+      padding: 8px !important;
+      font-size: 14px;
+    }
   }
 }
 
@@ -3042,4 +3068,24 @@ html:has(.fixed-header) .themephi-breadcrumbs {
     min-height: inherit !important;
     max-height: inherit !important;
   }
+}
+
+.writing-mode-vertical-lr {
+  writing-mode: vertical-lr;
+}
+
+.writing-mode-vertical-rl {
+  writing-mode: vertical-rl;
+}
+
+.writing-mode-sideways-rl {
+  writing-mode: sideways-rl;
+}
+
+.writing-mode-sideways-lr {
+  writing-mode: sideways-lr;
+}
+
+.writing-mode-horizontal-tb {
+  writing-mode: horizontal-tb;
 }

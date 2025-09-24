@@ -1,0 +1,67 @@
+:root {
+  --bodyFont: "DM Sans", sans-serif;
+  --titleFont: "Poppins", sans-serif;
+  --transition: all 0.3s ease;
+  --body_bg: #ffffff;
+  --globalColor: #f4f3f1;
+  --borderColor: #dfe0e4;
+  --bodyColor: #404a60;
+  --titleColor: #222e48;
+  --primaryColor: #022e2d;
+  --secondaryColor: #b07e50;
+  --whiteColor: #ffffff;
+  --blackColor: #171717;
+  --linkColor: #022e2d;
+  --hoverColor: var(--secondaryColor);
+  --boxBorderRadius: 12px;
+  --imageBorderRadius: 4px;
+  --btnBorderRadius: 8px;
+  --btnBgColor: #022e2d;
+  --btnHoverBgColor: #b07e50;
+  --btnColor: #ffffff;
+  --btnHoverColor: #ffffff;
+  --btnBgColor2: transparent;
+  --btnHoverBgColor2: #022e2d;
+  --btnColor2: #222e48;
+  --btnHoverColor2: #ffffff;
+}
+
+.step-count-box,
+.step-circle_box-wrapper {
+  position: sticky !important;
+  top: 100px;
+  z-index: 1;
+}
+
+.step-circle_box {
+  width: 306px;
+  height: 306px;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background: var(--whiteColor);
+  padding: 14px;
+}
+.step-circle_box .inner_circle {
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background: var(--whiteColor);
+  padding: 50px;
+  border: 12px solid rgba(15, 96, 77, 0.1098039216);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.step-circle_box .inner_circle h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--secondaryColor3);
+}
+.step-circle_box .inner_circle p {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--secondaryColor3);
+}/*# sourceMappingURL=step-count.css.map */
