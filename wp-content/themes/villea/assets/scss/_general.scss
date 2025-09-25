@@ -3031,6 +3031,14 @@ html:has(.fixed-header) .themephi-breadcrumbs {
     border-radius: 8px;
   }
 }
+
+.el-tab-button-wrap {
+  &.el-tab-button-wrap-primary {
+    .e-n-tabs-heading {
+      background: #022e2d;
+    }
+  }
+}
 .el-tab-button-w-fit {
   .e-n-tabs-heading {
     width: fit-content !important;

@@ -77,6 +77,9 @@
   font-size: 20px;
   transition: all 0.9s ease-in-out;
 }
+.themephi-button:not(.link_btn) a .btn_text {
+  transition: all 0.9s ease-in-out;
+}
 .themephi-button:not(.link_btn).primary_btn a {
   color: var(--btnColor);
   background: var(--btnBgColor);

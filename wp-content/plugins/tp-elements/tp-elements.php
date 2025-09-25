@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 /**
  *Plugin Name: TP Elements
  * Description: Theme core addon pluign.
@@ -6,13 +7,13 @@
  * Text Domain: tp-elements
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (! defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
-define( 'TPELEMENTS_FILE', __FILE__ );
-define( 'TPELEMENTS_DIR_PATH_PRO', plugin_dir_path( __FILE__ ) );
-define( 'TPELEMENTS_DIR_URL_PRO', plugin_dir_url( __FILE__ ) );
-define( 'TPELEMENTS_ASSETS_PRO', trailingslashit( TPELEMENTS_DIR_URL_PRO . 'assets' ) );
+define('TPELEMENTS_FILE', __FILE__);
+define('TPELEMENTS_DIR_PATH_PRO', plugin_dir_path(__FILE__));
+define('TPELEMENTS_DIR_URL_PRO', plugin_dir_url(__FILE__));
+define('TPELEMENTS_ASSETS_PRO', trailingslashit(TPELEMENTS_DIR_URL_PRO . 'assets'));
 
 require TPELEMENTS_DIR_PATH_PRO . 'base.php';
 require TPELEMENTS_DIR_PATH_PRO . 'post-type/post-type.php';
@@ -21,9 +22,25 @@ require TPELEMENTS_DIR_PATH_PRO . 'inc/custom-tp-icon.php';
 require TPELEMENTS_DIR_PATH_PRO . 'widget-option/admin-init.php';
 require TPELEMENTS_DIR_PATH_PRO . 'themephi-header-footer-elementor/themephi-header-footer-elementor.php';
 
-function hyperai_mime_types($mimes) {
+function hyperai_mime_types($mimes)
+{
 	$mimes['svg'] = 'image/svg+xml';
 	$mimes['svgz'] = 'image/svg+xml';
 	return $mimes;
 }
 add_filter('upload_mimes', 'hyperai_mime_types');
+
+
+
+add_filter('single_template', function ($single) {
+	global $post;
+
+	if ($post->post_type === 'tpelements_pro') {
+		$plugin_template = plugin_dir_path(__FILE__) . 'templates/single-tpelements_pro.php';
+		if (file_exists($plugin_template)) {
+			return $plugin_template;
+		}
+	}
+
+	return $single;
+});

@@ -3306,6 +3306,10 @@ html:has(.fixed-header) .themephi-breadcrumbs .breadcrumbs-inner {
   border-radius: 8px;
 }
 
+.el-tab-button-wrap.el-tab-button-wrap-primary .e-n-tabs-heading {
+  background: #022e2d;
+}
+
 .el-tab-button-w-fit .e-n-tabs-heading {
   width: -moz-fit-content !important;
   width: fit-content !important;

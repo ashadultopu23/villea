@@ -138,84 +138,98 @@
   box-shadow: 0px 2px 20px rgba(24, 16, 16, 0.09);
 }
 
-.team-slider-style2 {
-  padding-bottom: 110px !important;
-}
-.team-slider-style2 .team-inner-wrap {
+.team-slider-style2 .team-item .team-inner-wrap {
   position: relative;
-  margin-bottom: 35px;
-  padding-top: 20px;
 }
-.team-slider-style2 .team-inner-wrap .image-wrap {
+.team-slider-style2 .team-item .team-inner-wrap .image-wrap {
   border-radius: 15px;
   overflow: hidden;
 }
-.team-slider-style2 .team-inner-wrap a {
+.team-slider-style2 .team-item .team-inner-wrap a {
   text-decoration: none;
 }
-.team-slider-style2 .team-inner-wrap .team-img-sec {
+.team-slider-style2 .team-item .team-inner-wrap .team-img-sec {
   position: relative;
 }
-.team-slider-style2 .team-inner-wrap .wrap-text {
+.team-slider-style2 .team-item .team-inner-wrap .wrap-text {
   box-shadow: 0 5px 20px rgba(34, 34, 34, 0.1);
   padding: 0 40px 12px;
   background: #fff;
 }
-.team-slider-style2 .team-inner-wrap .wrap-text .team-desc {
+.team-slider-style2 .team-item .team-inner-wrap .wrap-text .team-desc {
   margin-bottom: 0;
 }
-.team-slider-style2 .team-content {
+.team-slider-style2 .team-item .team-content {
   position: absolute;
-  left: 0;
-  bottom: -20%;
+  left: 50%;
   background: #fff;
-  border-radius: 0 15px 15px 15px;
+  border-radius: 12px;
   box-shadow: 0px 4px 27px rgba(0, 0, 0, 0.0705882353);
   text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
 }
-.team-slider-style2 .team-content .header {
-  padding: 30px 82px 22px 82px;
-  border-bottom: 1px solid #f0f0f0;
+.team-slider-style2 .team-item .team-content .header {
+  margin-bottom: 16px;
 }
-.team-slider-style2 .team-content .header .team-name {
-  margin-bottom: 3px;
+.team-slider-style2 .team-item .team-content .header .team-name {
+  margin-bottom: 4px;
 }
-.team-slider-style2 .team-content .header .team-name a {
+.team-slider-style2 .team-item .team-content .header .team-name a {
   color: #1c2539;
 }
-.team-slider-style2 .team-content .header .team-title {
-  color: #f64a00;
+.team-slider-style2 .team-item .team-content .header .team-title {
+  color: var(--titleColor);
 }
-.team-slider-style2 .team-content .social-icons {
-  padding: 27px 0 36px 0;
+.team-slider-style2 .team-item .team-content .social-icons {
   display: flex;
   justify-content: center;
 }
-.team-slider-style2 .team-content .social-icons a {
+.team-slider-style2 .team-item .team-content .social-icons a {
   position: relative;
   z-index: 1;
   transition: 0.3s;
-  width: 40px;
-  height: 40px;
-  background-color: #f6f6f6;
-  border-radius: 50%;
-  display: block;
-  line-height: 40px;
-  margin-right: 7px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.team-slider-style2 .team-content .social-icons a:last-child {
+.team-slider-style2 .team-item .team-content .social-icons a:last-child {
   margin-right: 0;
 }
-.team-slider-style2 .team-content .social-icons a i {
+.team-slider-style2 .team-item .team-content .social-icons a i {
   font-size: 14px;
   color: #1c2539;
   transition: 0.3s;
 }
-.team-slider-style2 .team-content .social-icons a:hover {
-  background: #f64a00;
+.team-slider-style2 .team-item .team-content .social-icons a:hover i {
+  color: var(--whiteColor);
 }
-.team-slider-style2 .team-content .social-icons a:hover i {
-  color: #fff;
+.team-slider-style2 .team-item.even .team-inner-wrap {
+  margin-top: 120px;
+}
+.team-slider-style2 .team-item.even .team-inner-wrap .team-content {
+  top: 0;
+  transform: translate(-50%, -50%) scale(0);
+}
+.team-slider-style2 .team-item.odd .team-inner-wrap {
+  margin-bottom: 120px;
+}
+.team-slider-style2 .team-item.odd .team-inner-wrap .team-content {
+  bottom: 0;
+  transform: translate(-50%, 50%) scale(0);
+}
+.team-slider-style2 .team-item:hover.even .team-inner-wrap .team-content {
+  transform: translate(-50%, -50%) scale(1);
+}
+.team-slider-style2 .team-item:hover.odd .team-inner-wrap .team-content {
+  transform: translate(-50%, 50%) scale(1);
 }
 
 .team-slider-style3 .style3 {
