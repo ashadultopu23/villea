@@ -22,12 +22,6 @@
         const stepsCountBox = document.querySelectorAll(".step-count-box");
         const currentStepEl = document.querySelector(".current-count-step");
 
-        console.log({
-            stepsCountBox,
-            currentStepEl,
-        });
-
-
         if (stepsCountBox && currentStepEl) {
             function updateStepIndicator() {
                 let currentStep = 0;

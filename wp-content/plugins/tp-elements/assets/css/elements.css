@@ -2825,10 +2825,6 @@ tp-grid-figure .logo-img.logo-gray a:hover img {
   padding: 0;
 }
 
-.order-in-first {
-  order: -1;
-}
-
 .tp-slider-navigation {
   display: flex;
   align-items: center;

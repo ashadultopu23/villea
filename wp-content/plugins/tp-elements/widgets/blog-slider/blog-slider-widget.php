@@ -177,6 +177,20 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
             ]
         );
         $this->add_control(
+            'blog_meta_show_hide',
+            [
+                'label' => esc_html__('Meta Show / Hide', 'tp-elements'),
+                'type' => Controls_Manager::SELECT,
+                'default' => 'yes',
+                'options' => [
+                    'yes' => esc_html__('Yes', 'tp-elements'),
+                    'no' => esc_html__('No', 'tp-elements'),
+                ],
+                'separator' => 'before',
+            ]
+        );
+
+        $this->add_control(
             'blog_avatar_show_hide',
             [
                 'label' => esc_html__('Author Show / Hide', 'tp-elements'),
@@ -218,8 +232,10 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
             ]
         );
 
+
+
         $this->add_control(
-            'blog_meta_show_hide',
+            'blog_date_show_hide',
             [
                 'label' => esc_html__('Date Show / Hide', 'tp-elements'),
                 'type' => Controls_Manager::SELECT,
@@ -753,6 +769,109 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
 
         $this->end_controls_section();
 
+
+
+        $this->start_controls_section(
+            'section_slider_card_style',
+            [
+                'label' => esc_html__('Card Content Style', 'tp-elements'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        $this->add_responsive_control(
+            'card_content_width',
+            [
+                'label' => esc_html__('Width', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => ['px', '%'],
+                'range' => [
+                    'px' => [
+                        'min' => 1,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 1,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .tp-blog-slider .blog-content' => 'width: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_group_control(
+            Group_Control_Background::get_type(),
+            [
+                'name' => 'blog_card_background',
+                'label' => esc_html__('Background', 'tp-elements'),
+                'types' => ['classic', 'gradient'],
+                'exclude' => ['image'],
+                'selector' => '{{WRAPPER}} .tp-blog-slider  .blog-content',
+                'fields_options' => [
+                    'background' => [
+                        'default' => 'classic',
+                    ],
+                ],
+            ]
+        );
+
+        $this->add_group_control(
+            \Elementor\Group_Control_Border::get_type(),
+            [
+                'name' => 'card_border',
+                'label' => esc_html__('Content Border', 'plugin-name'),
+                'selector' => '{{WRAPPER}} .tp-blog-slider .blog-content',
+            ]
+        );
+
+        $this->add_responsive_control(
+            'blog_slider_content_padding',
+            [
+                'label' => esc_html__('Content Padding', 'tp-elements'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', 'em', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .tp-blog-slider .blog-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'blog_slider_content_margin',
+            [
+                'label' => esc_html__('Content Margin', 'tp-elements'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', 'em', '%', 'custom'],
+                'selectors' => [
+                    '{{WRAPPER}} .tp-blog-slider .blog-content' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'card_border_radius',
+            [
+                'label' => esc_html__('Border Radius', 'tp-elements'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px'],
+                'default' => [
+                    'top' => 0,
+                    'right' => 0,
+                    'bottom' => 0,
+                    'left' => 0,
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .tp-blog-slider .blog-content' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->end_controls_section();
+
+
         $this->start_controls_section(
             'section_slider_title_style',
             [
@@ -860,65 +979,6 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                 'size_units' => ['px', 'em', '%'],
                 'selectors' => [
                     '{{WRAPPER}} .tp-blog-slider .title' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                ],
-            ]
-        );
-
-        $this->end_controls_section();
-
-        $this->start_controls_section(
-            'section_slider_card_style',
-            [
-                'label' => esc_html__('Card Style', 'tp-elements'),
-                'tab' => Controls_Manager::TAB_STYLE,
-            ]
-        );
-
-        $this->add_group_control(
-            Group_Control_Background::get_type(),
-            [
-                'name' => 'blog_card_background',
-                'label' => esc_html__('Background', 'tp-elements'),
-                'types' => ['classic', 'gradient'],
-                'exclude' => ['image'],
-                'selector' => '{{WRAPPER}} .tp-blog-slider  .blog-content',
-                'fields_options' => [
-                    'background' => [
-                        'default' => 'classic',
-                    ],
-                ],
-            ]
-        );
-
-        $this->add_group_control(
-            \Elementor\Group_Control_Border::get_type(),
-            [
-                'name' => 'card_border',
-                'label' => esc_html__('Border', 'plugin-name'),
-                'selector' => '{{WRAPPER}} .tp-blog-slider .blog-content',
-            ]
-        );
-
-        $this->add_responsive_control(
-            'blog_slider_content_padding',
-            [
-                'label' => esc_html__('Content Padding', 'tp-elements'),
-                'type' => Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', 'em', '%'],
-                'selectors' => [
-                    '{{WRAPPER}} .tp-blog-slider .blog-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                ],
-            ]
-        );
-
-        $this->add_responsive_control(
-            'blog_slider_content_margin',
-            [
-                'label' => esc_html__('Content Margin', 'tp-elements'),
-                'type' => Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', 'em', '%'],
-                'selectors' => [
-                    '{{WRAPPER}} .tp-blog-slider .blog-content' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );

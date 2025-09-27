@@ -92,13 +92,12 @@
     ul {
       margin: 0;
       padding: 0;
-      margin-bottom: 12px;
+      // margin-bottom: 12px;
       list-style: none;
       li {
         list-style: none;
       }
     }
-    padding: 30px 40px 30px;
   }
 
   .title {
@@ -299,39 +298,21 @@
       }
       .image-part {
         overflow: hidden;
+        position: relative;
         a {
           img {
             width: 100%;
             transition: all 0.5s ease-out;
           }
         }
-        &::before {
-          content: "";
-          width: 100%;
-          height: 100%;
-          display: block;
-          background: linear-gradient(
-            360deg,
-            #0e0e0e -6%,
-            rgba(17, 17, 17, 0) 125%
-          );
-          opacity: 1;
-          position: absolute;
-          left: 0;
-          top: 0;
-          z-index: 1;
-        }
-      }
-      .col-bottom {
-        position: absolute;
-        bottom: 22px;
-        left: 40px;
-        z-index: 1;
       }
       .blog-content {
-        padding: 15px 20px 0px 8px;
+        position: relative;
+        z-index: 1;
+        background: var(--whiteColor);
+        padding: 16px;
         .blog-meta {
-          margin-bottom: 7px;
+          margin-bottom: 8px;
           padding: 0;
         }
         .post-categories li a {

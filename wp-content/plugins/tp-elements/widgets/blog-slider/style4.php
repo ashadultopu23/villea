@@ -25,45 +25,46 @@ while ($best_wp->have_posts()): $best_wp->the_post();
     $post_admin     = get_the_author();
 ?>
     <div class="align-items-center no-gutter blog-item themephi-blog-grid1 swiper-slide">
-        <div class="col-top">
-            <div class="image-part">
-                <a href="<?php the_permalink(); ?>">
-                    <?php the_post_thumbnail($settings['thumbnail_size']); ?>
-                </a>
-                <?php if (($settings['blog_meta_show_hide'] == 'yes')) { ?>
-                    <?php if (!empty($full_date)) { ?>
-                        <div class="blog-badge"> <?php echo esc_html($full_date); ?></div>
-                    <?php } ?>
-                <?php } ?>
-            </div>
+        <div class="image-part">
+            <a href="<?php the_permalink(); ?>">
+                <?php the_post_thumbnail($settings['thumbnail_size']); ?>
+            </a>
         </div>
-        <div class="col-bottom">
-            <div class="blog-content">
-                <?php if (!empty($settings['blog_meta_show_hide']) || !empty($settings['blog_avatar_show_hide'])) { ?>
-                    <ul class="blog-meta">
-                        <?php if (($settings['blog_cat_show_hide'] == 'yes')) { ?>
-                            <li class="cat_list">
-                                <?php the_category(); ?>
+
+        <div class="blog-content">
+            <?php if (!empty($settings['blog_meta_show_hide']) || !empty($settings['blog_avatar_show_hide'])) { ?>
+                <ul class="blog-meta">
+                    <?php if (($settings['blog_cat_show_hide'] == 'yes') && !empty($category)) { ?>
+                        <li><span class="meta_category"><i class="tp tp-tags"></i> <?php echo esc_html($category[0]->cat_name); ?></span></li>
+                    <?php } ?>
+                    <?php if (($settings['blog_avatar_show_hide'] == 'yes')) { ?>
+                        <?php if (!empty($post_admin)) { ?>
+                            <li>
+                                <i class="tp tp-user-2"></i>
+                                <span> <?php echo esc_html__('By', 'tp-elements'); ?></span>
+                                <span class="author"><?php echo esc_html($post_admin); ?></span>
                             </li>
                         <?php } ?>
-                        <?php if (($settings['blog_avatar_show_hide'] == 'yes')) { ?>
-                            <?php if (!empty($post_admin)) { ?>
-                                <li>/ <span> By </span><span class="author"><?php echo esc_html($post_admin); ?></span></li>
-                            <?php } ?>
+                    <?php } ?>
+                    <?php if (($settings['blog_date_show_hide'] == 'yes')) { ?>
+                        <?php if (!empty($post_admin)) { ?>
+                            <li><i class="tp tp-clock"></i><span class="date"><?php echo esc_html($full_date); ?></span></li>
                         <?php } ?>
-                    </ul>
-                <?php } ?>
+                    <?php } ?>
+                    <?php if (($settings['blog_comments_show_hide'] == 'yes') && !empty($comment_ccount)) { ?>
+                        <li><i class="tp tp-message"></i><span class="meta_comments"><?php echo esc_html($comment_ccount)  . esc_html__(' Comments', 'tp-elements'); ?></span></li>
+                    <?php } ?>
+                </ul>
+            <?php } ?>
 
-                <<?php echo $settings['title_tag'] ?> class="title dd">
-                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                </<?php echo $settings['title_tag'] ?>>
+            <<?php echo $settings['title_tag'] ?> class="title dd">
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            </<?php echo $settings['title_tag'] ?>>
 
-                <?php if ($settings['blog_readmore_text']) : ?>
-                    <a class="tps-read-more btn-primary" href="blog-details.html">
-                        <i class="tp tp-arrow-right"></i> <?php echo $settings['blog_readmore_text']; ?> </a>
-                <?php endif; ?>
-
-            </div>
+            <?php if ($settings['blog_readmore_text']) : ?>
+                <a class="tps-read-more btn-primary" href="blog-details.html">
+                    <i class="tp tp-arrow-right"></i> <?php echo $settings['blog_readmore_text']; ?> </a>
+            <?php endif; ?>
         </div>
 
     </div>

@@ -65,6 +65,9 @@
   margin-top: 16px;
   margin-bottom: 32px;
 }
+.slider-inner-wrapper .tp--slider.slider-style1 .single--item .review-body .desc p {
+  margin-bottom: 0px;
+}
 .slider-inner-wrapper .tp--slider.slider-style2 .single--item {
   position: relative;
   padding: 24px;

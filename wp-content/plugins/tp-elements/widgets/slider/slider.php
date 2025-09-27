@@ -208,17 +208,57 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
             ]
         );
 
+
         $this->add_control(
             'show_rating_in_first',
             [
-                'label' => esc_html__('Show in First', 'tp-elements'),
+                'label' => esc_html__('Show Rating First', 'tp-elements'),
                 'type' => \Elementor\Controls_Manager::SWITCHER,
                 'label_on' => esc_html__('Show', 'tp-elements'),
                 'label_off' => esc_html__('Hide', 'tp-elements'),
                 'return_value' => 'yes',
-                'default' => 'no',
+                'default' => 'yes',
                 'condition' => [
                     'show_rating' => 'yes',
+                    'tp_slider_style' => 'style1',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'show_user_img',
+            [
+                'label' => esc_html__('Show User Image', 'tp-elements'),
+                'type' => \Elementor\Controls_Manager::SWITCHER,
+                'label_on' => esc_html__('Show', 'tp-elements'),
+                'label_off' => esc_html__('Hide', 'tp-elements'),
+                'return_value' => 'yes',
+                'default' => 'yes',
+            ]
+        );
+
+        $this->add_control(
+            'show_quote_icon',
+            [
+                'label' => esc_html__('Show Quote Icon', 'tp-elements'),
+                'type' => \Elementor\Controls_Manager::SWITCHER,
+                'label_on' => esc_html__('Show', 'tp-elements'),
+                'label_off' => esc_html__('Hide', 'tp-elements'),
+                'return_value' => 'yes',
+                'default' => 'yes',
+            ]
+        );
+        $this->add_control(
+            'show_quote_in_first',
+            [
+                'label' => esc_html__('Show Quote First', 'tp-elements'),
+                'type' => \Elementor\Controls_Manager::SWITCHER,
+                'label_on' => esc_html__('Show', 'tp-elements'),
+                'label_off' => esc_html__('Hide', 'tp-elements'),
+                'return_value' => 'yes',
+                'default' => 'yes',
+                'condition' => [
+                    'show_quote_icon' => 'yes',
                     'tp_slider_style' => 'style1',
                 ],
             ]
