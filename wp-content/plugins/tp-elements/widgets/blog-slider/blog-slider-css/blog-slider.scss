@@ -437,3 +437,22 @@
     }
   }
 }
+
+.tp-blog-pagination {
+  text-align: center;
+  margin-top: 30px;
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #d6d6d6;
+    opacity: 1;
+    border-radius: 50%;
+    margin: 0 6px !important;
+    transition: all 0.3s ease;
+    &.swiper-pagination-bullet-active {
+      background: var(--primaryColor);
+      width: 26px;
+      border-radius: 30px;
+    }
+  }
+}

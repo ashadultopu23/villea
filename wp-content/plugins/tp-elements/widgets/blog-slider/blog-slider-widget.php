@@ -424,9 +424,7 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                     '4' => esc_html__('4 Item', 'tp-elements'),
                 ],
                 'separator' => 'before',
-
             ]
-
         );
 
         $this->add_control(
@@ -454,9 +452,7 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                     'false' => esc_html__('Disable', 'tp-elements'),
                 ],
                 'separator' => 'before',
-
             ]
-
         );
 
 
@@ -526,7 +522,6 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                 'label' => esc_html__('Border', 'tp-elements'),
                 'selector' => '{{WRAPPER}} .tp-blog-navigation-wrapp > span',
                 'condition' => ['slider_nav' => 'true',],
-
             ]
         );
 
@@ -1371,12 +1366,6 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
 
 ?>
         <?php $gray_scale = $settings['show_graycale']; ?>
-        <!-- <div class="container position-relative z-1">
-            <div class="tp-blog-navigation-wrapp blog-navigation-<?php echo esc_attr($settings['blog_slider_style']); ?>">
-                <span class="tp-blog-nav tp-blog-nav-prev "><i class="tp-arrow-left"></i></span>
-                <span class="tp-blog-nav tp-blog-nav-next "><i class="tp-arrow-right"></i></span>
-            </div>
-        </div> -->
 
         <div class="tpaddon-unique-slider gray_<?php echo $settings['show_graycale']; ?> themephi-addon-slider tp-blog-slider tp-blog tp-blog-style<?php echo esc_attr($settings['blog_slider_style']); ?> slider-style-<?php echo esc_attr($settings['blog_slider_style']); ?> ">
 
@@ -1414,6 +1403,10 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                 </div>
             </div>
 
+            <?php if ($settings['slider_dots'] == 'true') { ?>
+                <div class="tp-blog-pagination"></div>
+            <?php } ?>
+
         </div>
 
         <script type="text/javascript">
@@ -1427,7 +1420,7 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                     <?php echo esc_attr($slider_autoplay); ?>,
                     spaceBetween: <?php echo esc_attr($item_gap); ?>,
                     pagination: {
-                        el: ".swiper-pagination",
+                        el: ".tp-blog-pagination",
                         clickable: true,
                     },
                     centeredSlides: <?php echo esc_attr($centerMode); ?>,

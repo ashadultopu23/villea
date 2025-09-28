@@ -1,0 +1,15 @@
+.image-zooming-section {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image-zooming-section img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.1s linear; /* smooth update */
+}/*# sourceMappingURL=image-zooming-bg.css.map */

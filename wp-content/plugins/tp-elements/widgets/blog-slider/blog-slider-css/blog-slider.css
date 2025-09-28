@@ -415,4 +415,23 @@
   width: 36px;
   height: 36px;
   border-radius: 8px;
+}
+
+.tp-blog-pagination {
+  text-align: center;
+  margin-top: 30px;
+}
+.tp-blog-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: #d6d6d6;
+  opacity: 1;
+  border-radius: 50%;
+  margin: 0 6px !important;
+  transition: all 0.3s ease;
+}
+.tp-blog-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: var(--primaryColor);
+  width: 26px;
+  border-radius: 30px;
 }/*# sourceMappingURL=blog-slider.css.map */
