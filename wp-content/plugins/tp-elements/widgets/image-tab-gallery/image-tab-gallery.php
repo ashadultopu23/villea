@@ -571,7 +571,7 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'hover_style_content_gap',
 			[
-				'label' => esc_html__('Content Spacing', 'textdomain'),
+				'label' => esc_html__('Content Spacing', 'tp-elements'),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -592,7 +592,7 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'hover_style_item_gap',
 			[
-				'label' => esc_html__('Item Spacing', 'textdomain'),
+				'label' => esc_html__('Item Spacing', 'tp-elements'),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -623,13 +623,13 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 		$this->add_control(
 			'enable_hover_image',
 			[
-				'label' => esc_html__('Enable Hover Images', 'textdomain'),
+				'label' => esc_html__('Enable Hover Images', 'tp-elements'),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
-				'label_on' => esc_html__('Yes', 'textdomain'),
-				'label_off' => esc_html__('No', 'textdomain'),
+				'label_on' => esc_html__('Yes', 'tp-elements'),
+				'label_off' => esc_html__('No', 'tp-elements'),
 				'return_value' => 'yes',
 				'default' => 'yes',
-				'description' => esc_html__('If you want to show hover images, then enable this option.', 'textdomain'),
+				'description' => esc_html__('If you want to show hover images, then enable this option.', 'tp-elements'),
 				'condition' => [
 					'feature_style' => 'style2',
 				]
@@ -813,7 +813,7 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 		$this->start_controls_section(
 			'title_style',
 			[
-				'label' => esc_html__('Title', 'textdomain'),
+				'label' => esc_html__('Title', 'tp-elements'),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -856,7 +856,7 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 		$this->start_controls_section(
 			'description_style',
 			[
-				'label' => esc_html__('Description', 'textdomain'),
+				'label' => esc_html__('Description', 'tp-elements'),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -872,7 +872,7 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 		$this->add_control(
 			'description_color',
 			[
-				'label' => esc_html__('Color', 'textdomain'),
+				'label' => esc_html__('Color', 'tp-elements'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#5a5a5a',
 				'selectors' => [
@@ -884,7 +884,7 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'description_margin',
 			[
-				'label' => esc_html__('Margin', 'textdomain'),
+				'label' => esc_html__('Margin', 'tp-elements'),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => ['px', '%', 'em'],
 				'selectors' => [
@@ -896,7 +896,7 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'description_max_width',
 			[
-				'label' => esc_html__('Max Width', 'textdomain'),
+				'label' => esc_html__('Max Width', 'tp-elements'),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => ['px', '%'],
 				'range' => [
@@ -921,7 +921,7 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 		$this->start_controls_section(
 			'icon_style',
 			[
-				'label' => esc_html__('Icon', 'textdomain'),
+				'label' => esc_html__('Icon', 'tp-elements'),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -929,7 +929,7 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'icon_size',
 			[
-				'label' => esc_html__('Icon Size', 'textdomain'),
+				'label' => esc_html__('Icon Size', 'tp-elements'),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -947,7 +947,7 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'icon_box_size',
 			[
-				'label' => esc_html__('Box Size', 'textdomain'),
+				'label' => esc_html__('Box Size', 'tp-elements'),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -964,7 +964,7 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 		$this->add_control(
 			'icon_color',
 			[
-				'label' => esc_html__('Color', 'textdomain'),
+				'label' => esc_html__('Color', 'tp-elements'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .gallery-feature-items .gallery-feature-item .gallery-feature-icon i' => 'color: {{VALUE}} !important;',
@@ -976,7 +976,7 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 		$this->add_control(
 			'icon_bg_color',
 			[
-				'label' => esc_html__('Background Color', 'textdomain'),
+				'label' => esc_html__('Background Color', 'tp-elements'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .gallery-feature-items .gallery-feature-item .gallery-feature-icon' => 'background-color: {{VALUE}};',
@@ -1011,7 +1011,7 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 		$this->start_controls_section(
 			'number_style',
 			[
-				'label' => esc_html__('Numbers', 'textdomain'),
+				'label' => esc_html__('Numbers', 'tp-elements'),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -1019,10 +1019,10 @@ class Themephi_Image_Tab_Gallery_Widget extends \Elementor\Widget_Base
 		$this->add_control(
 			'show_numbers',
 			[
-				'label' => esc_html__('Show Numbers', 'textdomain'),
+				'label' => esc_html__('Show Numbers', 'tp-elements'),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
-				'label_on' => esc_html__('Show', 'textdomain'),
-				'label_off' => esc_html__('Hide', 'textdomain'),
+				'label_on' => esc_html__('Show', 'tp-elements'),
+				'label_off' => esc_html__('Hide', 'tp-elements'),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]

@@ -27,7 +27,8 @@ while ($best_wp->have_posts()): $best_wp->the_post();
     $blog_date      = get_the_date('d');
     $blog_month      = get_the_date('M');
     $post_admin     = get_the_author();
-    $comment_ccount = wp_count_comments()->total_comments;
+    // $comment_ccount = wp_count_comments()->total_comments;
+    $comment_ccount = get_comments_number(get_the_ID());
 ?>
     <div class="align-items-center no-gutter blog-item themephi-blog-grid1 swiper-slide">
         <div class="col-top">

@@ -304,6 +304,8 @@
 .tp-blog-slider.slider-style-4 .blog-item .blog-content .blog-meta {
   margin-bottom: 8px;
   padding: 0;
+  flex-wrap: wrap;
+  row-gap: 4px;
 }
 .tp-blog-slider.slider-style-4 .blog-item .blog-content .post-categories li a {
   font-weight: 700;

@@ -23,6 +23,9 @@ while ($best_wp->have_posts()): $best_wp->the_post();
     $full_date      = get_the_date();
     $blog_date      = get_the_date('M d y');
     $post_admin     = get_the_author();
+    // $comment_ccount = wp_count_comments()->total_comments;
+    $comment_ccount = get_comments_number(get_the_ID());
+    $category = get_the_category();
 ?>
     <div class="align-items-center no-gutter blog-item themephi-blog-grid1 swiper-slide">
         <div class="image-part">
@@ -32,10 +35,14 @@ while ($best_wp->have_posts()): $best_wp->the_post();
         </div>
 
         <div class="blog-content">
-            <?php if (!empty($settings['blog_meta_show_hide']) || !empty($settings['blog_avatar_show_hide'])) { ?>
+            <?php if (!empty($settings['blog_meta_show_hide'])) { ?>
                 <ul class="blog-meta">
                     <?php if (($settings['blog_cat_show_hide'] == 'yes') && !empty($category)) { ?>
-                        <li><span class="meta_category"><i class="tp tp-tags"></i> <?php echo esc_html($category[0]->cat_name); ?></span></li>
+                        <li>
+                            <span class="meta_category">
+                                <i class="tp tp-tags"></i> <?php echo esc_html($category[0]->cat_name); ?>
+                            </span>
+                        </li>
                     <?php } ?>
                     <?php if (($settings['blog_avatar_show_hide'] == 'yes')) { ?>
                         <?php if (!empty($post_admin)) { ?>
@@ -48,7 +55,7 @@ while ($best_wp->have_posts()): $best_wp->the_post();
                     <?php } ?>
                     <?php if (($settings['blog_date_show_hide'] == 'yes')) { ?>
                         <?php if (!empty($post_admin)) { ?>
-                            <li><i class="tp tp-clock"></i><span class="date"><?php echo esc_html($full_date); ?></span></li>
+                            <li><i class="tp-clock-regular"></i><span class="date"><?php echo esc_html($full_date); ?></span></li>
                         <?php } ?>
                     <?php } ?>
                     <?php if (($settings['blog_comments_show_hide'] == 'yes') && !empty($comment_ccount)) { ?>
@@ -62,8 +69,20 @@ while ($best_wp->have_posts()): $best_wp->the_post();
             </<?php echo $settings['title_tag'] ?>>
 
             <?php if ($settings['blog_readmore_text']) : ?>
-                <a class="tps-read-more btn-primary" href="blog-details.html">
-                    <i class="tp tp-arrow-right"></i> <?php echo $settings['blog_readmore_text']; ?> </a>
+                <a class="tps-read-more btn-primary" href="<?php the_permalink(); ?>">
+                    <?php if ($settings['blog_readmore_icon'] && $settings['blog_readmore_icon_position'] == 'left') : ?>
+                        <span class="icon">
+                            <i class="<?php echo esc_attr($settings['blog_readmore_icon']); ?>"></i>
+                        </span>
+                    <?php endif; ?>
+                    <?php echo $settings['blog_readmore_text']; ?>
+
+                    <?php if ($settings['blog_readmore_icon'] && $settings['blog_readmore_icon_position'] == 'right') : ?>
+                        <span class="icon">
+                            <i class="<?php echo esc_attr($settings['blog_readmore_icon']); ?>"></i>
+                        </span>
+                    <?php endif; ?>
+                </a>
             <?php endif; ?>
         </div>
 

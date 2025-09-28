@@ -126,6 +126,69 @@ class Themephi_Elementor_pro_Gallery_Widget extends \Elementor\Widget_Base
 			]
 		);
 
+		$this->add_control(
+			'gallery_columns_xl',
+			[
+				'label'   => esc_html__('Columns <= 1200px', 'tp-elements'),
+				'type'    => Controls_Manager::SELECT,
+				'default' => 4,
+				'options' => [
+					'6' => esc_html__('2 Column', 'tp-elements'),
+					'4' => esc_html__('3 Column', 'tp-elements'),
+					'3' => esc_html__('4 Column', 'tp-elements'),
+					'2' => esc_html__('6 Column', 'tp-elements'),
+				],
+				'separator' => 'before',
+			]
+		);
+
+		$this->add_control(
+			'gallery_columns_lg',
+			[
+				'label'   => esc_html__('Columns <= 992px', 'tp-elements'),
+				'type'    => Controls_Manager::SELECT,
+				'default' => 4,
+				'options' => [
+					'6' => esc_html__('2 Column', 'tp-elements'),
+					'4' => esc_html__('3 Column', 'tp-elements'),
+					'3' => esc_html__('4 Column', 'tp-elements'),
+					'2' => esc_html__('6 Column', 'tp-elements'),
+				],
+				'separator' => 'before',
+			]
+		);
+
+		$this->add_control(
+			'gallery_columns_md',
+			[
+				'label'   => esc_html__('Columns <= 768px', 'tp-elements'),
+				'type'    => Controls_Manager::SELECT,
+				'default' => 4,
+				'options' => [
+					'6' => esc_html__('2 Column', 'tp-elements'),
+					'4' => esc_html__('3 Column', 'tp-elements'),
+					'3' => esc_html__('4 Column', 'tp-elements'),
+					'2' => esc_html__('6 Column', 'tp-elements'),
+				],
+				'separator' => 'before',
+			]
+		);
+
+		$this->add_control(
+			'gallery_columns_sm',
+			[
+				'label'   => esc_html__('Columns <= 576px', 'tp-elements'),
+				'type'    => Controls_Manager::SELECT,
+				'default' => 4,
+				'options' => [
+					'6' => esc_html__('2 Column', 'tp-elements'),
+					'4' => esc_html__('3 Column', 'tp-elements'),
+					'3' => esc_html__('4 Column', 'tp-elements'),
+					'2' => esc_html__('6 Column', 'tp-elements'),
+				],
+				'separator' => 'before',
+			]
+		);
 
 		$this->add_control(
 			'gallery_columns',
@@ -138,11 +201,11 @@ class Themephi_Elementor_pro_Gallery_Widget extends \Elementor\Widget_Base
 					'4' => esc_html__('3 Column', 'tp-elements'),
 					'3' => esc_html__('4 Column', 'tp-elements'),
 					'2' => esc_html__('6 Column', 'tp-elements'),
-
 				],
 				'separator' => 'before',
 			]
 		);
+
 
 
 

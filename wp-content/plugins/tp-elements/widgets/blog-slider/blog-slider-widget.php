@@ -262,8 +262,32 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
         $this->add_control(
             'blog_readmore_text',
             [
-                'label' => esc_html__('Read More Button text', 'tp-elements'),
+                'label' => esc_html__('Button text', 'tp-elements'),
                 'type' => Controls_Manager::TEXT,
+                'separator' => 'before',
+            ]
+        );
+
+        $this->add_control(
+            'blog_readmore_icon',
+            [
+                'label' => esc_html__('Button Icon', 'tp-elements'),
+                'type' => Controls_Manager::ICON,
+                'separator' => 'before',
+                'label_block' => true,
+            ]
+        );
+
+        $this->add_control(
+            'blog_readmore_icon_position',
+            [
+                'label' => esc_html__('Button Icon Position', 'tp-elements'),
+                'type' => Controls_Manager::SELECT,
+                'default' => 'left',
+                'options' => [
+                    'left' => esc_html__('Left', 'tp-elements'),
+                    'right' => esc_html__('Right', 'tp-elements'),
+                ],
                 'separator' => 'before',
             ]
         );

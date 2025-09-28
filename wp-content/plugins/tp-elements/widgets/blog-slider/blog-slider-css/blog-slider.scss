@@ -314,6 +314,8 @@
         .blog-meta {
           margin-bottom: 8px;
           padding: 0;
+          flex-wrap: wrap;
+          row-gap: 4px;
         }
         .post-categories li a {
           font-weight: 700;

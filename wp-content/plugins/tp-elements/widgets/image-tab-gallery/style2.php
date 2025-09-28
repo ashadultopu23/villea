@@ -55,7 +55,7 @@ $rotate = is_numeric($rotate) ? $rotate : '-6';
 			<?php if (!empty($settings['hover_content_style']) && $settings['hover_content_style'] === 'content_style2') : ?>
 				<?php if ($settings['show_numbers'] === 'yes') : ?>
 					<div class="gallery-feature-number-wrapper">
-						<span class="gallery-feature-number"><?php echo esc_html($number); ?></span>
+						<span class="gallery-feature-number gallery-feature-item-index"><?php echo esc_html($number); ?></span>
 					</div>
 				<?php endif; ?>
 
@@ -73,26 +73,29 @@ $rotate = is_numeric($rotate) ? $rotate : '-6';
 
 			<!-- Content Style 3 -->
 			<?php if (!empty($settings['hover_content_style']) && $settings['hover_content_style'] === 'content_style3') : ?>
-				<!-- <div class="gallery-feature-left-content"> -->
 				<?php if ($settings['show_numbers'] === 'yes') : ?>
 					<div class="gallery-feature-number-wrapper">
-						<span class="gallery-feature-number"><?php echo esc_html($number); ?></span>
+						<span class="gallery-feature-number gallery-feature-item-index"><?php echo esc_html($number); ?></span>
 					</div>
 				<?php endif; ?>
+
 				<div class="gallery-feature-content title-wrapper">
 					<h3 class="gallery-feature-item-title"><?php echo wp_kses($item['feature_title'], 'post') ?></h3>
 				</div>
-				<!-- </div> -->
-				<!-- <div class="gallery-feature-right-content"> -->
 				<div class="gallery-feature-content description-wrapper">
 					<p class="gallery-feature-item-description"><?php echo wp_kses($item['feature_description'], 'post'); ?></p>
 				</div>
+
+				<div class="gallery-feature-content-wrapper">
+					<h3 class="gallery-feature-item-title"><?php echo wp_kses($item['feature_title'], 'post') ?></h3>
+					<p class="gallery-feature-item-description"><?php echo wp_kses($item['feature_description'], 'post'); ?></p>
+				</div>
+
 				<div class="gallery-feature-icon-wrapper">
 					<div class="gallery-feature-icon">
 						<?php \Elementor\Icons_Manager::render_icon($item['feature_icon'], ['aria-hidden' => 'true']); ?>
 					</div>
 				</div>
-				<!-- </div> -->
 			<?php endif; ?>
 
 			<!-- Icon -->

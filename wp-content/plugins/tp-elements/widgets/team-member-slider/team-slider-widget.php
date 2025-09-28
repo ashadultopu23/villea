@@ -273,7 +273,7 @@ class Themephi_Elementor_Team_Slider_Widget extends \Elementor\Widget_Base
         $this->add_control(
             'col_xs',
             [
-                'label'   => esc_html__('Tablets < 575px', 'tp-elements'),
+                'label'   => esc_html__('Mobile < 575px', 'tp-elements'),
                 'type'    => Controls_Manager::SELECT,
                 'default' => 1,
                 'options' => [
@@ -285,9 +285,25 @@ class Themephi_Elementor_Team_Slider_Widget extends \Elementor\Widget_Base
                     '6' => esc_html__('6 Column', 'tp-elements'),
                 ],
                 'separator' => 'before',
-
             ]
+        );
 
+        $this->add_control(
+            'col_xxs',
+            [
+                'label'   => esc_html__('Mobile < 480px', 'tp-elements'),
+                'type'    => Controls_Manager::SELECT,
+                'default' => 1,
+                'options' => [
+                    '1' => esc_html__('1 Column', 'tp-elements'),
+                    '2' => esc_html__('2 Column', 'tp-elements'),
+                    '3' => esc_html__('3 Column', 'tp-elements'),
+                    '4' => esc_html__('4 Column', 'tp-elements'),
+                    '5' => esc_html__('5 Column', 'tp-elements'),
+                    '6' => esc_html__('6 Column', 'tp-elements'),
+                ],
+                'separator' => 'before',
+            ]
         );
 
         $this->add_control(
@@ -1253,6 +1269,7 @@ class Themephi_Elementor_Team_Slider_Widget extends \Elementor\Widget_Base
         $col_md          = $settings['col_md'];
         $col_sm          = $settings['col_sm'];
         $col_xs          = $settings['col_xs'];
+        $col_xxs          = $settings['col_xxs'];
         $item_gap = $settings['item_gap_custom']['size'];
         $item_gap = !empty($item_gap) ? $item_gap : '30';
         $prev_text = $settings['pcat_prev_text'];
@@ -1339,10 +1356,11 @@ class Themephi_Elementor_Team_Slider_Widget extends \Elementor\Widget_Base
                     },
                     breakpoints: {
                         0: {
-                            slidesPerView: <?php echo $col_xs; ?>
+                            slidesPerView: <?php echo $col_xxs; ?>
                         },
                         <?php
-                        echo (!empty($col_xs)) ?  '0: { slidesPerView: ' . $col_xs . ' },' : '';
+                        echo (!empty($col_xxs)) ?  '0: { slidesPerView: ' . $col_xxs . ' },' : '';
+                        echo (!empty($col_xs)) ?  '480: { slidesPerView: ' . $col_xs . ' },' : '';
                         echo (!empty($col_sm)) ?  '576: { slidesPerView: ' . $col_sm . ' },' : '';
                         echo (!empty($col_md)) ?  '768: { slidesPerView: ' . $col_md . ' },' : '';
                         echo (!empty($col_lg)) ?  '992: { slidesPerView: ' . $col_lg . ' },' : '';
