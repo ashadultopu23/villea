@@ -86,6 +86,10 @@ Heading  css
   transition: 0.3s;
   z-index: 1;
   overflow: hidden;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--titleFont);
 }
 .themephi-heading .tp-button a::before,
 .rs-dual-heading .tp-button a::before {
@@ -99,6 +103,7 @@ Heading  css
   background: var(--titleColor);
   transition: all 0.5s;
   z-index: -1;
+  border-radius: 50%;
 }
 .themephi-heading .tp-button a svg,
 .rs-dual-heading .tp-button a svg {
@@ -124,8 +129,8 @@ Heading  css
 }
 .themephi-heading .tp-button a:hover::before,
 .rs-dual-heading .tp-button a:hover::before {
-  width: 100%;
-  height: 100%;
+  width: 200%;
+  height: 200%;
 }
 .themephi-heading.big .title-inner h2,
 .rs-dual-heading.big .title-inner h2 {

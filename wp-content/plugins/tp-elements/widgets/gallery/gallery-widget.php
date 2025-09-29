@@ -102,29 +102,45 @@ class Themephi_Elementor_pro_Gallery_Widget extends \Elementor\Widget_Base
 		);
 
 		$this->add_control(
-			'rs-gallery',
+			'gallery_style',
 			[
-				'label' => esc_html__('Gallery Images', 'tp-elements'),
-				'type' => Controls_Manager::GALLERY,
-				'default' => [],
+				'label' => esc_html__('Gallery Style', 'text-domain'),
+				'type' => Controls_Manager::SELECT,
+				'default' => 'style1',
+				'options' => [
+					'style1' => esc_html__('Style One', 'text-domain'),
+					'style2' => esc_html__('Style Two', 'text-domain'),
+				],
 			]
 		);
 
 
 		$this->add_control(
-			'gallery_style',
+			'rs-gallery',
 			[
-				'label'   => esc_html__('Style', 'tp-elements'),
-				'type'    => Controls_Manager::SELECT,
-				'default' => 'style1',
-				'options' => [
-					'style1' => esc_html__('Style 1', 'tp-elements'),
-					'style2' => esc_html__('Style 2', 'tp-elements'),
-
-				],
-				'separator' => 'before',
+				'label' => esc_html__('Gallery Images', 'tp-elements'),
+				'type' => Controls_Manager::GALLERY,
+				'default' => [],
+				'condition' => [
+					"gallery_style" => 'style1'
+				]
 			]
 		);
+
+		$this->add_control(
+			'gallery_image_single',
+			[
+				'label' => esc_html__('Choose Image', 'plugin-name'),
+				'type' => \Elementor\Controls_Manager::MEDIA,
+				'default' => [
+					'url' => \Elementor\Utils::get_placeholder_image_src(),
+				],
+				'condition' => [
+					"gallery_style" => 'style2'
+				]
+			]
+		);
+
 
 		$this->add_control(
 			'gallery_columns_xl',
@@ -137,6 +153,9 @@ class Themephi_Elementor_pro_Gallery_Widget extends \Elementor\Widget_Base
 					'4' => esc_html__('3 Column', 'tp-elements'),
 					'3' => esc_html__('4 Column', 'tp-elements'),
 					'2' => esc_html__('6 Column', 'tp-elements'),
+				],
+				'condition' => [
+					"gallery_style" => 'style1'
 				],
 				'separator' => 'before',
 			]
@@ -154,6 +173,9 @@ class Themephi_Elementor_pro_Gallery_Widget extends \Elementor\Widget_Base
 					'3' => esc_html__('4 Column', 'tp-elements'),
 					'2' => esc_html__('6 Column', 'tp-elements'),
 				],
+				'condition' => [
+					"gallery_style" => 'style1'
+				],
 				'separator' => 'before',
 			]
 		);
@@ -169,6 +191,9 @@ class Themephi_Elementor_pro_Gallery_Widget extends \Elementor\Widget_Base
 					'4' => esc_html__('3 Column', 'tp-elements'),
 					'3' => esc_html__('4 Column', 'tp-elements'),
 					'2' => esc_html__('6 Column', 'tp-elements'),
+				],
+				'condition' => [
+					"gallery_style" => 'style1'
 				],
 				'separator' => 'before',
 			]
@@ -186,6 +211,9 @@ class Themephi_Elementor_pro_Gallery_Widget extends \Elementor\Widget_Base
 					'3' => esc_html__('4 Column', 'tp-elements'),
 					'2' => esc_html__('6 Column', 'tp-elements'),
 				],
+				'condition' => [
+					"gallery_style" => 'style1'
+				],
 				'separator' => 'before',
 			]
 		);
@@ -201,6 +229,9 @@ class Themephi_Elementor_pro_Gallery_Widget extends \Elementor\Widget_Base
 					'4' => esc_html__('3 Column', 'tp-elements'),
 					'3' => esc_html__('4 Column', 'tp-elements'),
 					'2' => esc_html__('6 Column', 'tp-elements'),
+				],
+				'condition' => [
+					"gallery_style" => 'style1'
 				],
 				'separator' => 'before',
 			]
@@ -218,6 +249,9 @@ class Themephi_Elementor_pro_Gallery_Widget extends \Elementor\Widget_Base
 				'options' => [
 					'default' => esc_html__('Yes', 'tp-elements'),
 					'no-gutters' => esc_html__('No', 'tp-elements'),
+				],
+				'condition' => [
+					"gallery_style" => 'style1'
 				],
 				'separator' => 'before',
 			]
@@ -293,6 +327,9 @@ class Themephi_Elementor_pro_Gallery_Widget extends \Elementor\Widget_Base
 				'prefix_class' => 'gallery-spacing-',
 				'default'      => '',
 				'separator' => 'before',
+				'condition' => [
+					"gallery_style" => 'style1'
+				],
 			]
 		);
 
@@ -313,6 +350,7 @@ class Themephi_Elementor_pro_Gallery_Widget extends \Elementor\Widget_Base
 
 				'condition' => [
 					'image_spacing' => 'custom',
+					"gallery_style" => 'style1'
 				],
 
 				'selectors' => [
@@ -491,11 +529,26 @@ class Themephi_Elementor_pro_Gallery_Widget extends \Elementor\Widget_Base
 	{
 
 		$settings = $this->get_settings_for_display();
+		$id = $this->get_id();
 
 		if ($settings['gallery_style'] == 'style1') {
 			require_once plugin_dir_path(__FILE__) . "/style1.php";
 		} elseif ($settings['gallery_style'] == 'style2') {
 			require_once plugin_dir_path(__FILE__) . "/style2.php";
+			var_dump($settings['gallery_style']);
 		}
+
+?>
+		<!-- <script>
+			jQuery(document).ready(function($) {
+				$('#tp-gallery-<?php echo esc_js($id); ?> .image-popup').magnificPopup({
+					type: 'image',
+					gallery: {
+						enabled: true
+					}
+				});
+			});
+		</script> -->
+<?php
 	}
 }

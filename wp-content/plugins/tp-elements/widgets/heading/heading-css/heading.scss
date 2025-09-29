@@ -86,6 +86,10 @@ Heading  css
       transition: 0.3s;
       z-index: 1;
       overflow: hidden;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: 600;
+      font-family: var(--titleFont);
 
       &::before {
         position: absolute;
@@ -98,6 +102,7 @@ Heading  css
         background: var(--titleColor);
         transition: all 0.5s;
         z-index: -1;
+        border-radius: 50%;
       }
       svg {
         width: 20px;
@@ -118,8 +123,8 @@ Heading  css
       &:hover {
         color: var(--primaryColor);
         &::before {
-          width: 100%;
-          height: 100%;
+          width: 200%;
+          height: 200%;
         }
       }
     }
@@ -518,7 +523,6 @@ Heading  css
       }
     }
   }
-
   &.style9 {
     .title-img {
       img {
@@ -563,7 +567,6 @@ Heading  css
       }
     }
   }
-
   &.style15 {
     .sub-text-dot {
       display: inline-block;
@@ -575,7 +578,6 @@ Heading  css
       margin: 0 10px;
     }
   }
-
   &.style16 {
     .sub-text-has-icon {
       display: inline-flex;

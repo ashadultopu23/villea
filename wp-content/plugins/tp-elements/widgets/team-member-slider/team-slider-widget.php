@@ -702,6 +702,62 @@ class Themephi_Elementor_Team_Slider_Widget extends \Elementor\Widget_Base
             ]
         );
 
+        // $this->add_responsive_control(
+        //     'content_position_bottom',
+        //     [
+        //         'label' => esc_html__('Content Position Bottom', 'plugin-name'),
+        //         'type' => \Elementor\Controls_Manager::SLIDER,
+        //         'size_units' => ['px', '%'],
+        //         'range' => [
+        //             'px' => [
+        //                 'min' => -100,
+        //                 'max' => 100,
+        //                 'step' => 1,
+        //             ],
+        //             '%' => [
+        //                 'min' => -100,
+        //                 'max' => 100,
+        //             ],
+        //         ],
+        //         'selectors' => [
+        //             '{{WRAPPER}} .team-item .team-content' => 'bottom: {{SIZE}}{{UNIT}};',
+        //         ],
+        //     ]
+        // );
+
+        // $this->add_control(
+        //     'content_opacity',
+        //     [
+        //         'label' => esc_html__('Content Initial Opacity', 'plugin-name'),
+        //         'type' => \Elementor\Controls_Manager::SLIDER,
+        //         'range' => [
+        //             'min' => 0,
+        //             'max' => 1,
+        //             'step' => 0.01,
+        //         ],
+        //         'selectors' => [
+        //             '{{WRAPPER}} .team-item .team-content' => 'opacity: {{SIZE}}',
+        //         ],
+        //     ]
+        // );
+
+        // $this->add_control(
+        //     'content_hover_opacity',
+        //     [
+        //         'label' => esc_html__('Content Initial Opacity', 'plugin-name'),
+        //         'type' => \Elementor\Controls_Manager::SLIDER,
+        //         'range' => [
+        //             'min' => 0,
+        //             'max' => 1,
+        //             'step' => 0.01,
+        //         ],
+        //         'selectors' => [
+        //             '{{WRAPPER}} .team-item:hover .team-content' => 'opacity: {{SIZE}}',
+        //         ],
+        //     ]
+        // );
+
+
         $this->add_group_control(
             \Elementor\Group_Control_Border::get_type(),
             [
@@ -786,7 +842,6 @@ class Themephi_Elementor_Team_Slider_Widget extends \Elementor\Widget_Base
                     '{{WRAPPER}} .team-item .team-content .team-name' => 'color: {{VALUE}};',
                     '{{WRAPPER}} .team-slider-style5 .tps-team-one-start .inner .title' => 'color: {{VALUE}};',
                     '{{WRAPPER}}  .team-item.swiper-slide .single-team-nine .inner-content a .title' => 'color: {{VALUE}};',
-
                 ],
             ]
         );
@@ -827,7 +882,6 @@ class Themephi_Elementor_Team_Slider_Widget extends \Elementor\Widget_Base
                     '{{WRAPPER}} .team-content .team-title' => 'color: {{VALUE}} !important;',
                     '{{WRAPPER}} .team-slider-style4 .team-item .team-content .team-title' => 'color: {{VALUE}} !important;',
                     '{{WRAPPER}} .swiper.team-slider-style5 .tps-team-one-start .inner span' => 'color: {{VALUE}} !important;',
-
                 ],
             ]
         );
@@ -885,7 +939,6 @@ class Themephi_Elementor_Team_Slider_Widget extends \Elementor\Widget_Base
                     '{{WRAPPER}} .team-item .team-content .team-text' => 'color: {{VALUE}};',
                     '{{WRAPPER}} .team-slider-style3 .team-img .team-img-sec .team-content' => 'color: {{VALUE}};',
                     '{{WRAPPER}} .team-slider-style4 .team-item .team-content .team-text' => 'color: {{VALUE}};',
-
                 ],
             ]
         );
@@ -901,7 +954,6 @@ class Themephi_Elementor_Team_Slider_Widget extends \Elementor\Widget_Base
                 ],
                 'selectors' => [
                     '{{WRAPPER}} .team-slider-style4 .team-item .team-content .team-text::before' => 'background: {{VALUE}};',
-
                 ],
             ]
         );
@@ -917,7 +969,6 @@ class Themephi_Elementor_Team_Slider_Widget extends \Elementor\Widget_Base
                 ],
                 'selectors' => [
                     '{{WRAPPER}} .team-slider-style5 .team-inner-wrap .team-content::before' => 'background: {{VALUE}};',
-
                 ],
             ]
         );
