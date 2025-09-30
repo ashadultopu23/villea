@@ -82,6 +82,11 @@ class Themephi_Elementor_pro_Gallery_Widget extends \Elementor\Widget_Base
 		return ['tpaddon_category'];
 	}
 
+	public function get_keywords()
+	{
+		return ['gallery', 'image', 'photos',];
+	}
+
 	/**
 	 * Register rsgallery widget controls.
 	 *
@@ -532,23 +537,9 @@ class Themephi_Elementor_pro_Gallery_Widget extends \Elementor\Widget_Base
 		$id = $this->get_id();
 
 		if ($settings['gallery_style'] == 'style1') {
-			require_once plugin_dir_path(__FILE__) . "/style1.php";
+			require plugin_dir_path(__FILE__) . "/style1.php";
 		} elseif ($settings['gallery_style'] == 'style2') {
-			require_once plugin_dir_path(__FILE__) . "/style2.php";
-			var_dump($settings['gallery_style']);
+			require plugin_dir_path(__FILE__) . "/style2.php";
 		}
-
-?>
-		<!-- <script>
-			jQuery(document).ready(function($) {
-				$('#tp-gallery-<?php echo esc_js($id); ?> .image-popup').magnificPopup({
-					type: 'image',
-					gallery: {
-						enabled: true
-					}
-				});
-			});
-		</script> -->
-<?php
 	}
 }

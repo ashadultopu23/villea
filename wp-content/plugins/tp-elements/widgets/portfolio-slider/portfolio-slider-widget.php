@@ -2535,7 +2535,7 @@ class Themephi_Portfolio_Slider_Widget extends \Elementor\Widget_Base {
 
         <?php if ( $show_filter == 'yes' && $filter_by == 'cat' && ( $listing_type != 'slider' || $listing_type != 'cards' ) ) : ?>
 
-        <div class="portfolio-filter">
+        <div class="portfolio-filter isotope-filter">
             <button class="active" data-filter="*"><?php echo esc_html($settings['filter_title']);?></button>
             <?php $taxonomy = "portfolio-category";
                 $select_cat = $categories;

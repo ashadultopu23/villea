@@ -301,9 +301,9 @@
             });
         }
 
-        // JS for portfolio Filter
+        // JS for isotope Filter
         $('.grid').imagesLoaded(function () {
-            $('.portfolio-filter').on('click', 'button', function () {
+            $('.isotope-filter').on('click', 'button', function () {
                 var filterValue = $(this).attr('data-filter');
                 $grid.isotope({
                     filter: filterValue
@@ -323,13 +323,14 @@
                 }
             });
         });
-        $('.portfolio-filter button').on('click', function (event) {
+        $('.isotope-filter button').on('click', function (event) {
             $(this).siblings('.active').removeClass('active');
             $(this).addClass('active');
             event.preventDefault();
         });
 
     });
+    
     // Counter Up  
     $('.rs-counter').counterUp({
         delay: 20,

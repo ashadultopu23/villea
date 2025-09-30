@@ -238,14 +238,20 @@ final class TPelements_Elementor_Extension
 		// button
 		$enqueue_with_version('tpelements-video-button-css', 'widgets/video-button/video-button-css/video-button.css');
 
+		// gallery
+		$enqueue_with_version('tpelements-gallery-css', 'widgets/gallery/gallery-css/gallery-css.css');
+
+		// gallery masonry
+		$enqueue_with_version('tpelements-gallery-masonry-css', 'widgets/gallery-masonry/gallery-masonry-css/gallery-masonry.css');
+
 		// image-tab-gallery
 		$enqueue_with_version('tpelements-image-tab-gallery-css', 'widgets/image-tab-gallery/image-tab-gallery-css/image-tab-gallery.css');
 
-		// team
-		$enqueue_with_version('tpelements-team-css', 'widgets/team-member-slider/team-slider-css/team-slider.css');
-
 		// image scroll gallery
 		$enqueue_with_version('tpelements-image-scroll-gallery-css', 'widgets/image-scroll-gallery/image-scroll-gallery-css/image-scroll-gallery.css');
+
+		// team
+		$enqueue_with_version('tpelements-team-css', 'widgets/team-member-slider/team-slider-css/team-slider.css');
 
 		// blog slider
 		$enqueue_with_version('tpelements-blog-slider-css', 'widgets/blog-slider/blog-slider-css/blog-slider.css');
@@ -828,7 +834,10 @@ final class TPelements_Elementor_Extension
 		\Elementor\Plugin::instance()->widgets_manager->register(new \Themephi_Elementor_Heading_Dual_Widget());
 
 		require_once(__DIR__ . '/widgets/gallery/gallery-widget.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \Themephi_Elementor_pro_Gallery_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \Themephi_Elementor_Pro_Gallery_Widget());
+
+		require_once(__DIR__ . '/widgets/gallery-masonry/gallery-masonry-widget.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \Themephi_Elementor_Gallery_Masonry_Widget());
 
 		require_once(__DIR__ . '/widgets/instagram/instagram.php');
 		\Elementor\Plugin::instance()->widgets_manager->register(new \Themephi_Instagram_Widget());

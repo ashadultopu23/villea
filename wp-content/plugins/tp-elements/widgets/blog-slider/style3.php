@@ -28,7 +28,7 @@ while ($best_wp->have_posts()): $best_wp->the_post();
 	$blog_date      = get_the_date('M d y');
 	$post_admin     = get_the_author();
 ?>
-	<div class="align-items-center no-gutter blog-item themephi-blog-grid1 swiper-slide">
+	<div class="blog-item swiper-slide">
 		<div class="image-part">
 			<a href="<?php the_permalink(); ?>">
 				<?php the_post_thumbnail($settings['thumbnail_size']); ?>
@@ -47,7 +47,7 @@ while ($best_wp->have_posts()): $best_wp->the_post();
 		</div>
 
 		<div class="blog-content">
-			<?php if (!empty($settings['blog_meta_show_hide']) || !empty($settings['blog_avatar_show_hide'])) { ?>
+			<?php if (!empty($settings['blog_meta_show_hide']) && $settings['blog_meta_show_hide'] == 'yes') { ?>
 				<ul class="blog-meta">
 					<?php if (($settings['blog_avatar_show_hide'] == 'yes')) { ?>
 						<?php if (!empty($post_admin)) { ?>
@@ -63,7 +63,7 @@ while ($best_wp->have_posts()): $best_wp->the_post();
 						<?php } ?>
 					<?php } ?>
 
-					<?php if (($settings['blog_meta_show_hide'] == 'yes')) { ?>
+					<?php if (($settings['blog_date_show_hide'] == 'yes')) { ?>
 						<li>
 							<span class="icon calendar-icon">
 								<i class="tp-clock-regular"></i>
@@ -84,12 +84,23 @@ while ($best_wp->have_posts()): $best_wp->the_post();
 			</<?php echo $settings['title_tag'] ?>>
 
 
-			<?php if ($settings['blog_readmore_text']) : ?>
-				<a class="tps-read-more" href="<?php the_permalink(); ?>">
+			<?php if ($settings['blog_readmore_text'] || $settings['blog_readmore_icon']) : ?>
+				<a class="tps-read-more " href="<?php the_permalink(); ?>">
+					<?php if ($settings['blog_readmore_icon'] && $settings['blog_readmore_icon_position'] == 'left') : ?>
+						<span class="icon <?php echo esc_attr($settings['blog_readmore_icon_position']); ?>">
+							<i class="<?php echo esc_attr($settings['blog_readmore_icon']); ?>"></i>
+						</span>
+					<?php endif; ?>
 					<?php echo $settings['blog_readmore_text']; ?>
-					<i class="tp tp-arrow-right"></i>
+
+					<?php if ($settings['blog_readmore_icon'] && $settings['blog_readmore_icon_position'] == 'right') : ?>
+						<span class="icon <?php echo esc_attr($settings['blog_readmore_icon_position']); ?>">
+							<i class="<?php echo esc_attr($settings['blog_readmore_icon']); ?>"></i>
+						</span>
+					<?php endif; ?>
 				</a>
 			<?php endif; ?>
+
 		</div>
 	</div>
 <?php

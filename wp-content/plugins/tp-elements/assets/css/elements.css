@@ -313,31 +313,31 @@ Team Member
   border-radius: 15px;
 }
 
-/** Portfolio CSS ---------------------
+/** isotope filter CSS ---------------------
 --------------------------------------*/
-.portfolio-filter {
+.isotope-filter {
   text-align: center;
   max-width: 1290px;
   margin: auto;
   margin-bottom: 40px;
 }
-.portfolio-filter button {
+.isotope-filter button {
   border-radius: 15px;
   font-weight: 600;
   font-size: 16px;
   padding: 12px 30px;
   margin-right: 7px;
 }
-.portfolio-filter span {
+.isotope-filter span {
   color: #333;
   padding: 10px;
   cursor: pointer;
   display: inline-block;
 }
-.portfolio-filter span.active {
+.isotope-filter span.active {
   color: var(--primaryColor);
 }
-.portfolio-filter span:hover {
+.isotope-filter span:hover {
   color: var(--primaryColor);
 }
 

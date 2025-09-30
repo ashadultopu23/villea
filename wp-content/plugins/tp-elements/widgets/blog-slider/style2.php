@@ -25,14 +25,14 @@ while ($best_wp->have_posts()): $best_wp->the_post();
 	$blog_date      = get_the_date('M d y');
 	$post_admin     = get_the_author();
 ?>
-	<div class="align-items-center no-gutter blog-item themephi-blog-grid1 swiper-slide">
+	<div class="blog-item swiper-slide">
 		<div class="tps-blog-h-2-wrapper">
 			<div class="col-top">
 				<div class="image-part">
 					<a href="<?php the_permalink(); ?>">
 						<?php the_post_thumbnail($settings['thumbnail_size']); ?>
 					</a>
-					<?php if (($settings['blog_meta_show_hide'] == 'yes')) { ?>
+					<?php if (($settings['blog_date_show_hide'] == 'yes')) { ?>
 						<div class="blog-badge">
 							<div class="date-2">
 								<span class="date"><?php echo get_the_date('d'); ?></span>
@@ -48,7 +48,7 @@ while ($best_wp->have_posts()): $best_wp->the_post();
 			</div>
 			<div class="col-bottom">
 				<div class="blog-content">
-					<?php if (!empty($settings['blog_meta_show_hide']) || !empty($settings['blog_avatar_show_hide'])) { ?>
+					<?php if (!empty($settings['blog_meta_show_hide']) && $settings['blog_meta_show_hide'] == 'yes') { ?>
 						<ul class="blog-meta">
 							<?php if (($settings['blog_cat_show_hide'] == 'yes')) { ?>
 								<li class="cat_list">

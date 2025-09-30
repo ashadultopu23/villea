@@ -760,6 +760,123 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
         $this->end_controls_section();
 
 
+
+
+        $this->start_controls_section(
+            'card_style',
+            [
+                'label' => esc_html__('Card Style', 'tp-elements'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        $this->add_group_control(
+            Group_Control_Background::get_type(),
+            [
+                'name' => 'blog_card_background',
+                'label' => esc_html__('Background', 'tp-elements'),
+                'types' => ['classic', 'gradient'],
+                'exclude' => ['image'],
+                'selector' => '{{WRAPPER}} .tp-blog-slider  .blog-item',
+                'fields_options' => [
+                    'background' => [
+                        'default' => 'classic',
+                        'label' => esc_html__('Background', 'tp-elements'),
+                    ],
+                ],
+            ]
+        );
+
+        $this->add_group_control(
+            Group_Control_Background::get_type(),
+            [
+                'name' => 'blog_card_hover_background',
+                'label' => esc_html__('Hover Background', 'tp-elements'),
+                'types' => ['classic', 'gradient'],
+                'exclude' => ['image'],
+                'selector' => '{{WRAPPER}} .tp-blog-slider  .blog-item:hover',
+                'fields_options' => [
+                    'background' => [
+                        'default' => 'classic',
+                        'label' => esc_html__('Hover Background', 'tp-elements'),
+                    ],
+                ],
+            ]
+        );
+
+        $this->add_group_control(
+            \Elementor\Group_Control_Border::get_type(),
+            [
+                'name' => 'card_border',
+                'label' => esc_html__('Card Border', 'plugin-name'),
+                'selector' => '{{WRAPPER}} .tp-blog-slider .blog-item',
+                'fields_options' => [
+                    'border' => [
+                        'label' => esc_html__('Card Border', 'plugin-name'),
+                    ],
+                ],
+            ]
+        );
+
+        $this->add_group_control(
+            \Elementor\Group_Control_Border::get_type(),
+            [
+                'name' => 'card_hover_border',
+                'label' => esc_html__('Card Hover Border', 'plugin-name'),
+                'selector' => '{{WRAPPER}} .tp-blog-slider .blog-item:hover',
+                'fields_options' => [
+                    'border' => [
+                        'label' => esc_html__('Card Hover Border', 'plugin-name'),
+                    ],
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'card_padding',
+            [
+                'label' => esc_html__('Card Padding', 'tp-elements'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', 'em', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .tp-blog-slider .blog-item' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'card_margin',
+            [
+                'label' => esc_html__('Card Margin', 'tp-elements'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', 'em', '%', 'custom'],
+                'selectors' => [
+                    '{{WRAPPER}} .tp-blog-slider .blog-item' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'card_border_radius',
+            [
+                'label' => esc_html__('Card Border Radius', 'tp-elements'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px'],
+                'default' => [
+                    'top' => 0,
+                    'right' => 0,
+                    'bottom' => 0,
+                    'left' => 0,
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .tp-blog-slider .blog-item' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->end_controls_section();
+
+
         $this->start_controls_section(
             'section_slider_image_style',
             [
@@ -791,7 +908,7 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
 
 
         $this->start_controls_section(
-            'section_slider_card_style',
+            'card_content_style',
             [
                 'label' => esc_html__('Card Content Style', 'tp-elements'),
                 'tab' => Controls_Manager::TAB_STYLE,
@@ -824,7 +941,7 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
         $this->add_group_control(
             Group_Control_Background::get_type(),
             [
-                'name' => 'blog_card_background',
+                'name' => 'blog_card_content_background',
                 'label' => esc_html__('Background', 'tp-elements'),
                 'types' => ['classic', 'gradient'],
                 'exclude' => ['image'],
@@ -840,7 +957,7 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
         $this->add_group_control(
             \Elementor\Group_Control_Border::get_type(),
             [
-                'name' => 'card_border',
+                'name' => 'card_content_border',
                 'label' => esc_html__('Content Border', 'plugin-name'),
                 'selector' => '{{WRAPPER}} .tp-blog-slider .blog-content',
             ]
@@ -871,7 +988,7 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
         );
 
         $this->add_control(
-            'card_border_radius',
+            'card_content_border_radius',
             [
                 'label' => esc_html__('Border Radius', 'tp-elements'),
                 'type' => Controls_Manager::DIMENSIONS,

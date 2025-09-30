@@ -41,7 +41,6 @@
 	?>
 
 	<div class="col grid-item <?php echo $termsString;?>">
-
 		<div class="portfolio-item <?php echo esc_attr( $row_gap ); ?>">
 			<div class="portfolio-item-image portfolio-image-overlay-gradient">
 				<!-- icon with popup image -->
@@ -106,10 +105,7 @@
 			<?php endif; ?>
 
 		</div>
-
-
     </div>
-	        
 	<?php
 	$x++;	
 	endwhile;

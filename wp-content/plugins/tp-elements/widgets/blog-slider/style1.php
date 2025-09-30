@@ -30,13 +30,13 @@ while ($best_wp->have_posts()): $best_wp->the_post();
     // $comment_ccount = wp_count_comments()->total_comments;
     $comment_ccount = get_comments_number(get_the_ID());
 ?>
-    <div class="align-items-center no-gutter blog-item themephi-blog-grid1 swiper-slide">
+    <div class="blog-item swiper-slide">
         <div class="col-top">
             <div class="image-part">
                 <a href="<?php the_permalink(); ?>">
                     <?php the_post_thumbnail($settings['thumbnail_size']); ?>
                 </a>
-                <?php if (($settings['blog_meta_show_hide'] == 'yes')) { ?>
+                <?php if (($settings['blog_date_show_hide'] == 'yes')) { ?>
                     <?php if (!empty($blog_date || $blog_month)) { ?>
                         <div class="blog-badge">
                             <span class="b-date"><?php echo esc_html($blog_date); ?></span>
@@ -48,7 +48,7 @@ while ($best_wp->have_posts()): $best_wp->the_post();
         </div>
         <div class="col-bottom">
             <div class="blog-content">
-                <?php if (!empty($settings['blog_meta_show_hide']) || !empty($settings['blog_avatar_show_hide'])) { ?>
+                <?php if (!empty($settings['blog_meta_show_hide']) && $settings['blog_meta_show_hide'] == 'yes') { ?>
                     <ul class="blog-meta">
                         <?php if (($settings['blog_cat_show_hide'] == 'yes') && !empty($category)) { ?>
                             <li><span class="meta_category"><i class="tp tp-tags"></i> <?php echo esc_html($category[0]->cat_name); ?></span></li>
@@ -66,8 +66,22 @@ while ($best_wp->have_posts()): $best_wp->the_post();
                 <<?php echo $settings['title_tag'] ?> class="title dd">
                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </<?php echo $settings['title_tag'] ?>>
-                <?php if ($settings['blog_readmore_text']) : ?>
-                    <a class="tps-read-more" href="<?php the_permalink(); ?>"><?php echo $settings['blog_readmore_text']; ?> <i class="tp tp-arrow-right"></i></a>
+
+                <?php if ($settings['blog_readmore_text'] || $settings['blog_readmore_icon']) : ?>
+                    <a class="tps-read-more " href="<?php the_permalink(); ?>">
+                        <?php if ($settings['blog_readmore_icon'] && $settings['blog_readmore_icon_position'] == 'left') : ?>
+                            <span class="icon <?php echo esc_attr($settings['blog_readmore_icon_position']); ?>">
+                                <i class="<?php echo esc_attr($settings['blog_readmore_icon']); ?>"></i>
+                            </span>
+                        <?php endif; ?>
+                        <?php echo $settings['blog_readmore_text']; ?>
+
+                        <?php if ($settings['blog_readmore_icon'] && $settings['blog_readmore_icon_position'] == 'right') : ?>
+                            <span class="icon <?php echo esc_attr($settings['blog_readmore_icon_position']); ?>">
+                                <i class="<?php echo esc_attr($settings['blog_readmore_icon']); ?>"></i>
+                            </span>
+                        <?php endif; ?>
+                    </a>
                 <?php endif; ?>
 
             </div>

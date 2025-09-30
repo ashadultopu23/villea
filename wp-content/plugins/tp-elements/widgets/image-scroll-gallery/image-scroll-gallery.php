@@ -232,7 +232,7 @@ class Themephi_Image_Scroll_Gallery_Widget extends \Elementor\Widget_Base
 					'unit' => 'px',
 				],
 				'selectors'  => [
-					'{{WRAPPER}} .gallery-item' => 'width: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .scroll-gallery-item' => 'width: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
@@ -248,7 +248,7 @@ class Themephi_Image_Scroll_Gallery_Widget extends \Elementor\Widget_Base
 					'unit' => 'px',
 				],
 				'selectors'  => [
-					'{{WRAPPER}} .gallery-item' => 'height: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .scroll-gallery-item' => 'height: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
@@ -257,7 +257,7 @@ class Themephi_Image_Scroll_Gallery_Widget extends \Elementor\Widget_Base
 			Group_Control_Border::get_type(),
 			[
 				'name'     => 'item_border',
-				'selector' => '{{WRAPPER}} .gallery-item',
+				'selector' => '{{WRAPPER}} .scroll-gallery-item',
 			]
 		);
 
@@ -267,7 +267,7 @@ class Themephi_Image_Scroll_Gallery_Widget extends \Elementor\Widget_Base
 				'label'      => __('Border Radius', 'tp-elements'),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'selectors'  => [
-					'{{WRAPPER}} .gallery-item' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .scroll-gallery-item' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -276,7 +276,7 @@ class Themephi_Image_Scroll_Gallery_Widget extends \Elementor\Widget_Base
 			Group_Control_Box_Shadow::get_type(),
 			[
 				'name'     => 'item_shadow',
-				'selector' => '{{WRAPPER}} .gallery-item',
+				'selector' => '{{WRAPPER}} .scroll-gallery-item',
 			]
 		);
 
@@ -425,8 +425,8 @@ class Themephi_Image_Scroll_Gallery_Widget extends \Elementor\Widget_Base
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '#ffffff',
 				'selectors' => [
-					'{{WRAPPER}} .gallery-item .hover-icon' => 'color: {{VALUE}};',
-					'{{WRAPPER}} .gallery-item .hover-icon svg' => 'fill: {{VALUE}};',
+					'{{WRAPPER}} .scroll-gallery-item .hover-icon' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .scroll-gallery-item .hover-icon svg' => 'fill: {{VALUE}};',
 				],
 			]
 		);
@@ -438,7 +438,7 @@ class Themephi_Image_Scroll_Gallery_Widget extends \Elementor\Widget_Base
 				'type'      => Controls_Manager::COLOR,
 				'default'   => 'rgba(0, 0, 0, 0.5)',
 				'selectors' => [
-					'{{WRAPPER}} .gallery-item .hover-icon' => 'background-color: {{VALUE}};',
+					'{{WRAPPER}} .scroll-gallery-item .hover-icon' => 'background-color: {{VALUE}};',
 				],
 			]
 		);
@@ -458,8 +458,8 @@ class Themephi_Image_Scroll_Gallery_Widget extends \Elementor\Widget_Base
 					'size' => 30,
 				],
 				'selectors' => [
-					'{{WRAPPER}} .gallery-item .hover-icon' => 'font-size: {{SIZE}}{{UNIT}};',
-					'{{WRAPPER}} .gallery-item .hover-icon svg' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .scroll-gallery-item .hover-icon' => 'font-size: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .scroll-gallery-item .hover-icon svg' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
@@ -502,11 +502,12 @@ class Themephi_Image_Scroll_Gallery_Widget extends \Elementor\Widget_Base
 
 ?>
 
-		<div class="gallery-container gallery-container-<?php echo $this->get_id(); ?>">
+		<div class="scroll-gallery-container scroll-gallery-container-<?php echo $this->get_id(); ?>">
+
 			<!-- Top Row -->
-			<div class="gallery-row top-row" id="topRow-<?php echo $this->get_id(); ?>">
+			<div class="scroll-gallery-row top-row" id="topRow-<?php echo $this->get_id(); ?>">
 				<?php foreach ($top_items as $item) : ?>
-					<div class="gallery-item" data-src="<?php echo esc_url($item['top_row_image']['url']); ?>">
+					<div class="scroll-gallery-item" data-src="<?php echo esc_url($item['top_row_image']['url']); ?>">
 						<img src="<?php echo esc_url($item['top_row_image']['url']); ?>" alt="<?php echo esc_attr($item['top_row_alt_text']); ?>">
 						<a href="<?php echo esc_url($item['top_row_link']['url']); ?>" class="hover-icon">
 							<?php \Elementor\Icons_Manager::render_icon($item['top_row_icon'], ['aria-hidden' => 'true']); ?>
@@ -516,9 +517,9 @@ class Themephi_Image_Scroll_Gallery_Widget extends \Elementor\Widget_Base
 			</div>
 
 			<!-- Bottom Row -->
-			<div class="gallery-row bottom-row" id="bottomRow-<?php echo $this->get_id(); ?>">
+			<div class="scroll-gallery-row bottom-row" id="bottomRow-<?php echo $this->get_id(); ?>">
 				<?php foreach ($bottom_items as $item) : ?>
-					<div class="gallery-item" data-src="<?php echo esc_url($item['bottom_row_image']['url']); ?>">
+					<div class="scroll-gallery-item" data-src="<?php echo esc_url($item['bottom_row_image']['url']); ?>">
 						<img src="<?php echo esc_url($item['bottom_row_image']['url']); ?>" alt="<?php echo esc_attr($item['bottom_row_alt_text']); ?>">
 						<a href="<?php echo esc_url($item['bottom_row_link']['url']); ?>" class="hover-icon">
 							<?php \Elementor\Icons_Manager::render_icon($item['bottom_row_icon'], ['aria-hidden' => 'true']); ?>
@@ -548,14 +549,14 @@ class Themephi_Image_Scroll_Gallery_Widget extends \Elementor\Widget_Base
 
 
 		<script>
-			document.querySelectorAll(".gallery-container").forEach(function(container) {
+			document.querySelectorAll(".scroll-gallery-container").forEach(function(container) {
 				const topRow = container.querySelector(".top-row");
 				const bottomRow = container.querySelector(".bottom-row");
-				const counter = container.closest(".gallery-container").querySelector(".counter-circle span");
-				const popupOverlay = container.closest(".gallery-container").querySelector(".popup-overlay");
-				const popupImage = container.closest(".gallery-container").querySelector(".popup-overlay img");
-				const closeBtn = container.closest(".gallery-container").querySelector(".popup-overlay .close-btn");
-				const galleryItems = container.querySelectorAll(".gallery-item");
+				const counter = container.closest(".scroll-gallery-container").querySelector(".counter-circle span");
+				const popupOverlay = container.closest(".scroll-gallery-container").querySelector(".popup-overlay");
+				const popupImage = container.closest(".scroll-gallery-container").querySelector(".popup-overlay img");
+				const closeBtn = container.closest(".scroll-gallery-container").querySelector(".popup-overlay .close-btn");
+				const galleryItems = container.querySelectorAll(".scroll-gallery-item");
 
 				const svg = container.querySelector(".progress-ring");
 				let circle, backgroundCircle;

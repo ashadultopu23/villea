@@ -431,7 +431,7 @@ class Themephi_Portfolio_List_Widget extends \Elementor\Widget_Base {
 	$popup_port_info_color = !empty( $settings['popup_port_info_color']) ? 'style="color: '.$settings['popup_port_info_color'].'"' : '';
 	$popup_port_background = !empty( $settings['popup_port_background']) ? 'style="background: '.$settings['popup_port_background'].'"' : '';
 	if($settings['show_filter'] == 'filter_show') : ?>	
-		<div class="portfolio-filter">
+		<div class="portfolio-filter isotope-filter">
 			<button class="active" data-filter="*"><?php echo esc_html($settings['filter_title']);?></button>
 			<?php $taxonomy = "portfolio-category";
 				$select_cat = $settings['portfolio_category'];
