@@ -1,0 +1,189 @@
+/* estatik - Real Estate Plugin */
+/* estatik - search bar style */
+.customiz-search-field .es-search {
+  padding: 0 !important;
+}
+.customiz-search-field .es-search.es-search--main form input,
+.customiz-search-field .es-search.es-search--main form button {
+  height: 52px !important;
+  margin-bottom: 0 !important;
+}
+.customiz-search-field .es-search.es-search--main form input::-moz-placeholder, .customiz-search-field .es-search.es-search--main form button::-moz-placeholder {
+  color: var(--bodyColor) !important;
+  opacity: 1 !important;
+  font-size: 16px !important;
+}
+.customiz-search-field .es-search.es-search--main form input::placeholder,
+.customiz-search-field .es-search.es-search--main form button::placeholder {
+  color: var(--bodyColor) !important;
+  opacity: 1 !important;
+  font-size: 16px !important;
+}
+.customiz-search-field .es-search.es-search--main form .es-search__address {
+  position: relative;
+  z-index: 10;
+  padding: 8px !important;
+  border-radius: 8px;
+  border: 1px solid #dfe0e4;
+  background: #f5f6f7;
+  font-size: 16px !important;
+  color: var(--bodyColor);
+  font-family: var(--bodyFont);
+}
+.customiz-search-field .es-search.es-search--main form .es-search-nav {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.customiz-search-field .es-search.es-search--main form .js-es-search-nav__single-item {
+  z-index: 10;
+  border-radius: 8px;
+  border: 1px solid #dfe0e4;
+  background: #f5f6f7;
+  font-size: 16px !important;
+  color: var(--bodyColor);
+  font-family: var(--bodyFont);
+  flex: 1;
+}
+.customiz-search-field .es-search.es-search--main form .js-es-search-nav__single-item a {
+  position: relative;
+  z-index: 10;
+  height: 52px !important;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px !important;
+  color: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  font-family: inherit !important;
+  line-height: 1 !important;
+}
+.customiz-search-field .es-search.es-search--main form .es-search-nav__content {
+  z-index: 30;
+}
+.customiz-search-field .es-search.es-search--main form .es-search-nav__content .es-field__label {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: var(--bodyColor) !important;
+}
+.customiz-search-field .es-search.es-search--main form .es-search-nav__content .select2-selection--single {
+  height: 36px !important;
+}
+.customiz-search-field .es-search.es-search--main form .es-search-nav__content .select2-selection--single .select2-selection__rendered {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: var(--bodyColor) !important;
+  font-family: var(--bodyFont);
+}
+.customiz-search-field .es-search.es-search--main form .es-search-nav__content .select2-selection--single .select2-selection__arrow b {
+  font-size: 16px !important;
+}
+.customiz-search-field .es-search.es-search--main form .es-search-nav__content .es-field .label {
+  height: unset !important;
+  margin-bottom: 0 !important;
+}
+.customiz-search-field .es-search.es-search--main form .es-search-nav__content .es-field .label .es-field__label {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: var(--bodyColor) !important;
+  font-family: var(--bodyFont);
+  line-height: 1.2 !important;
+}
+.customiz-search-field .es-search.es-search--simple form input,
+.customiz-search-field .es-search.es-search--simple form button {
+  height: 52px !important;
+  margin-bottom: 0 !important;
+}
+.customiz-search-field .es-search.es-search--simple form input::-moz-placeholder, .customiz-search-field .es-search.es-search--simple form button::-moz-placeholder {
+  color: var(--bodyColor) !important;
+  opacity: 1 !important;
+  font-size: 16px !important;
+}
+.customiz-search-field .es-search.es-search--simple form input::placeholder,
+.customiz-search-field .es-search.es-search--simple form button::placeholder {
+  color: var(--bodyColor) !important;
+  opacity: 1 !important;
+  font-size: 16px !important;
+}
+.customiz-search-field .es-search.es-search--simple form .es-search-nav {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.customiz-search-field .es-search.es-search--simple form .js-es-search-nav__single-item {
+  z-index: 10;
+  border-radius: 8px;
+  border: 1px solid #dfe0e4;
+  background: #f5f6f7;
+  font-size: 16px !important;
+  color: var(--bodyColor);
+  font-family: var(--bodyFont);
+  flex: 1;
+}
+.customiz-search-field .es-search.es-search--simple form .js-es-search-nav__single-item a {
+  position: relative;
+  z-index: 10;
+  height: 40px !important;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  font-family: inherit !important;
+  line-height: 1 !important;
+}
+.customiz-search-field .es-search.es-search--simple form .es-search-nav__content {
+  z-index: 30;
+}
+.customiz-search-field .es-search.es-search--simple form .es-search-nav__content .es-field__label {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: var(--bodyColor) !important;
+}
+.customiz-search-field .es-search.es-search--simple form .es-search-nav__content .select2-selection--single {
+  height: 36px !important;
+}
+.customiz-search-field .es-search.es-search--simple form .es-search-nav__content .select2-selection--single .select2-selection__rendered {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: var(--bodyColor) !important;
+  font-family: var(--bodyFont);
+}
+.customiz-search-field .es-search.es-search--simple form .es-search-nav__content .select2-selection--single .select2-selection__arrow b {
+  font-size: 16px !important;
+}
+.customiz-search-field .es-search.es-search--simple form .es-search-nav__content .es-field .label {
+  height: unset !important;
+  margin-bottom: 0 !important;
+}
+.customiz-search-field .es-search.es-search--simple form .es-search-nav__content .es-field .label .es-field__label {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: var(--bodyColor) !important;
+  font-family: var(--bodyFont);
+  line-height: 1.2 !important;
+}
+
+/* estatik - property single style */
+/* estatik - property list style */
+/* estatik - agent style */
+/* estatik - compare style */
+/* estatik - favorites style */
+/* estatik - login style */
+/* estatik - submit property style */
+/* estatik - profile style */
+/* estatik - dashboard style */
+/* estatik - membership style */
+/* estatik - invoice style */
+/* estatik - payment style */
+/* estatik - review style */
+/* estatik - email template style *//*# sourceMappingURL=plugin-style.css.map */

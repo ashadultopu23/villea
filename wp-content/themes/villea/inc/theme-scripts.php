@@ -26,6 +26,12 @@ function villea_scripts()
 	if (is_rtl()) {
 		$enqueue_with_version('villea-rtl', '/assets/scss/rtl.css');
 	}
+
+	// Enqueue plugin styles conditionally
+	if (class_exists('estatik')) {
+		$enqueue_with_version('plugin-style', '/assets/scss/plugin-style.css');
+	}
+
 	$enqueue_with_version('villea-style', '/style.css');
 
 	//register scripts

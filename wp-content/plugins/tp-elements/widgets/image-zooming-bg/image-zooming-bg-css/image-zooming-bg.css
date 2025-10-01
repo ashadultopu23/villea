@@ -1,6 +1,5 @@
 .image-zooming-section {
   position: relative;
-  min-height: 100vh;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -11,5 +10,5 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  transition: transform 0.1s linear; /* smooth update */
+  transition: transform 0.1s linear;
 }/*# sourceMappingURL=image-zooming-bg.css.map */

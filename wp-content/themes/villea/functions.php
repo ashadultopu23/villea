@@ -552,7 +552,7 @@ function tp_custom_tag_archives($query)
 		), 'names');
 
 		// Remove Tutor LMS course CPT from the list
-		unset($post_types['courses']);
+		// unset($post_types['courses']);
 
 		// Apply the filtered post types
 		$query->set('post_type', array_values($post_types));

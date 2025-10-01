@@ -1,0 +1,215 @@
+/* estatik - Real Estate Plugin */
+
+/* estatik - search bar style */
+.customiz-search-field {
+  .es-search {
+    padding: 0 !important;
+
+    &.es-search--main {
+      form {
+        input,
+        button {
+          height: 52px !important;
+          margin-bottom: 0 !important;
+          &::placeholder {
+            color: var(--bodyColor) !important;
+            opacity: 1 !important;
+            font-size: 16px !important;
+          }
+        }
+
+        .es-search__address {
+          position: relative;
+          z-index: 10;
+          padding: 8px !important;
+          border-radius: 8px;
+          border: 1px solid #dfe0e4;
+          background: #f5f6f7;
+          font-size: 16px !important;
+          color: var(--bodyColor);
+          font-family: var(--bodyFont);
+        }
+        .es-search-nav {
+          position: relative;
+          z-index: 20;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+        }
+        .js-es-search-nav__single-item {
+          z-index: 10;
+          border-radius: 8px;
+          border: 1px solid #dfe0e4;
+          background: #f5f6f7;
+          font-size: 16px !important;
+          color: var(--bodyColor);
+          font-family: var(--bodyFont);
+          flex: 1;
+
+          a {
+            position: relative;
+            z-index: 10;
+            height: 52px !important;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 8px !important;
+            color: inherit !important;
+            font-size: inherit !important;
+            font-weight: inherit !important;
+            font-family: inherit !important;
+            line-height: 1 !important;
+          }
+        }
+
+        .es-search-nav__content {
+          z-index: 30;
+
+          .es-field__label {
+            font-size: 16px !important;
+            font-weight: 600 !important;
+            color: var(--bodyColor) !important;
+          }
+          .select2-selection--single {
+            height: 36px !important;
+            .select2-selection__rendered {
+              font-size: 16px !important;
+              font-weight: 500 !important;
+              color: var(--bodyColor) !important;
+              font-family: var(--bodyFont);
+            }
+            .select2-selection__arrow b {
+              font-size: 16px !important;
+            }
+          }
+          .es-field {
+            .label {
+              height: unset !important;
+              margin-bottom: 0 !important;
+              .es-field__label {
+                font-size: 16px !important;
+                font-weight: 500 !important;
+                color: var(--bodyColor) !important;
+                font-family: var(--bodyFont);
+                line-height: 1.2 !important;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.es-search--simple {
+      form {
+        input,
+        button {
+          height: 52px !important;
+          margin-bottom: 0 !important;
+          &::placeholder {
+            color: var(--bodyColor) !important;
+            opacity: 1 !important;
+            font-size: 16px !important;
+          }
+        }
+
+        // .es-search__address {
+        //   position: relative;
+        //   z-index: 10;
+        //   padding: 8px !important;
+        //   border-radius: 8px;
+        //   border: 1px solid #dfe0e4;
+        //   background: #f5f6f7;
+        //   font-size: 16px !important;
+        //   color: var(--bodyColor);
+        //   font-family: var(--bodyFont);
+        // }
+        .es-search-nav {
+          position: relative;
+          z-index: 20;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .js-es-search-nav__single-item {
+          z-index: 10;
+          border-radius: 8px;
+          border: 1px solid #dfe0e4;
+          background: #f5f6f7;
+          font-size: 16px !important;
+          color: var(--bodyColor);
+          font-family: var(--bodyFont);
+          flex: 1;
+
+          a {
+            position: relative;
+            z-index: 10;
+            height: 40px !important;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            // padding: 0 8px !important;
+            color: inherit !important;
+            font-size: inherit !important;
+            font-weight: inherit !important;
+            font-family: inherit !important;
+            line-height: 1 !important;
+          }
+        }
+
+        .es-search-nav__content {
+          z-index: 30;
+        //   position: fixed;
+
+          .es-field__label {
+            font-size: 16px !important;
+            font-weight: 600 !important;
+            color: var(--bodyColor) !important;
+          }
+          .select2-selection--single {
+            height: 36px !important;
+            .select2-selection__rendered {
+              font-size: 16px !important;
+              font-weight: 500 !important;
+              color: var(--bodyColor) !important;
+              font-family: var(--bodyFont);
+            }
+            .select2-selection__arrow b {
+              font-size: 16px !important;
+            }
+          }
+          .es-field {
+            .label {
+              height: unset !important;
+              margin-bottom: 0 !important;
+              .es-field__label {
+                font-size: 16px !important;
+                font-weight: 500 !important;
+                color: var(--bodyColor) !important;
+                font-family: var(--bodyFont);
+                line-height: 1.2 !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* estatik - property single style */
+/* estatik - property list style */
+/* estatik - agent style */
+/* estatik - compare style */
+/* estatik - favorites style */
+/* estatik - login style */
+/* estatik - submit property style */
+/* estatik - profile style */
+/* estatik - dashboard style */
+/* estatik - membership style */
+/* estatik - invoice style */
+/* estatik - payment style */
+/* estatik - review style */
+/* estatik - email template style */

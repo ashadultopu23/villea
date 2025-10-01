@@ -62,17 +62,6 @@ if (class_exists('WooCommerce')) {
 	}
 }
 
-// Tutor LMS
-if (function_exists('tutor')) {
-	if (is_post_type_archive('courses') || is_tax('courses-category')) {
-		get_template_part('inc/page-header/breadcrumbs-course');
-		return;
-	}
-	if (is_singular('courses')) { // leave it empty for not to show the breadcrumbs
-		return;
-	}
-}
-
 // Archives (catch-all fallback, only runs if none of the above matched)
 if (is_archive()) {
 	get_template_part('inc/page-header/breadcrumbs-archive');

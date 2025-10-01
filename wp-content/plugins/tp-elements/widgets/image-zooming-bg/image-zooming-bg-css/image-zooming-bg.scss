@@ -1,6 +1,5 @@
 .image-zooming-section {
   position: relative;
-  min-height: 100vh;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -10,7 +9,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    // transform: scale(0.5); /* initial scale */
-    transition: transform 0.1s linear; /* smooth update */
+    transition: transform 0.1s linear;
   }
 }
