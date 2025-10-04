@@ -44,6 +44,7 @@ function villea_scripts()
 	wp_enqueue_script('jquery-counterup', get_template_directory_uri() . '/assets/js/jquery.counterup.min.js', array('jquery'), '1.0', true);
 	wp_enqueue_script('jquery-magnific-popup', get_template_directory_uri() . '/assets/js/jquery.magnific-popup.min.js', array('jquery'), '1.0', true);
 	wp_enqueue_script('isotope-tp', get_template_directory_uri() . '/assets/js/isotope-tp.js', array('jquery', 'imagesloaded'), '20151215', true);
+
 	wp_enqueue_script('villea-main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), wp_get_theme()->get('Version'), true);
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
@@ -51,6 +52,17 @@ function villea_scripts()
 	}
 }
 add_action('wp_enqueue_scripts', 'villea_scripts');
+
+// Compare scripts
+function compare_enqueue_scripts()
+{
+	wp_enqueue_script('compare-js', get_stylesheet_directory_uri() . '/assets/js/compare.js', array('jquery'), '1.0', true);
+
+	wp_localize_script('compare-js', 'myTheme', array(
+		'siteUrl' => get_site_url()
+	));
+}
+add_action('wp_enqueue_scripts', 'compare_enqueue_scripts');
 
 add_action('admin_enqueue_scripts', 'villea_load_admin_styles');
 function villea_load_admin_styles($screen)

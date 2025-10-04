@@ -702,61 +702,6 @@ class Themephi_Elementor_Team_Slider_Widget extends \Elementor\Widget_Base
             ]
         );
 
-        // $this->add_responsive_control(
-        //     'content_position_bottom',
-        //     [
-        //         'label' => esc_html__('Content Position Bottom', 'plugin-name'),
-        //         'type' => \Elementor\Controls_Manager::SLIDER,
-        //         'size_units' => ['px', '%'],
-        //         'range' => [
-        //             'px' => [
-        //                 'min' => -100,
-        //                 'max' => 100,
-        //                 'step' => 1,
-        //             ],
-        //             '%' => [
-        //                 'min' => -100,
-        //                 'max' => 100,
-        //             ],
-        //         ],
-        //         'selectors' => [
-        //             '{{WRAPPER}} .team-item .team-content' => 'bottom: {{SIZE}}{{UNIT}};',
-        //         ],
-        //     ]
-        // );
-
-        // $this->add_control(
-        //     'content_opacity',
-        //     [
-        //         'label' => esc_html__('Content Initial Opacity', 'plugin-name'),
-        //         'type' => \Elementor\Controls_Manager::SLIDER,
-        //         'range' => [
-        //             'min' => 0,
-        //             'max' => 1,
-        //             'step' => 0.01,
-        //         ],
-        //         'selectors' => [
-        //             '{{WRAPPER}} .team-item .team-content' => 'opacity: {{SIZE}}',
-        //         ],
-        //     ]
-        // );
-
-        // $this->add_control(
-        //     'content_hover_opacity',
-        //     [
-        //         'label' => esc_html__('Content Initial Opacity', 'plugin-name'),
-        //         'type' => \Elementor\Controls_Manager::SLIDER,
-        //         'range' => [
-        //             'min' => 0,
-        //             'max' => 1,
-        //             'step' => 0.01,
-        //         ],
-        //         'selectors' => [
-        //             '{{WRAPPER}} .team-item:hover .team-content' => 'opacity: {{SIZE}}',
-        //         ],
-        //     ]
-        // );
-
 
         $this->add_group_control(
             \Elementor\Group_Control_Border::get_type(),
@@ -788,6 +733,34 @@ class Themephi_Elementor_Team_Slider_Widget extends \Elementor\Widget_Base
                 'selectors' => [
                     '{{WRAPPER}} .team-item .team-content' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
+            ]
+        );
+
+        $this->add_group_control(
+            \Elementor\Group_Control_Border::get_type(),
+            [
+                'name' => 'content_border',
+                'label' => esc_html__('Border', 'plugin-name'),
+                'selector' => '{{WRAPPER}} .team-item .team-content',
+                'fields_options' => [
+                    'label' => [
+                        'default' => esc_html__('Border', 'plugin-name'),
+                    ],
+                ]
+            ]
+        );
+
+        $this->add_group_control(
+            \Elementor\Group_Control_Border::get_type(),
+            [
+                'name' => 'content_hover_border',
+                'label' => esc_html__('Border', 'plugin-name'),
+                'selector' => '{{WRAPPER}} .team-item:hover .team-content',
+                'fields_options' => [
+                    'label' => [
+                        'default' => esc_html__('Hover Border', 'plugin-name'),
+                    ],
+                ]
             ]
         );
 
@@ -901,9 +874,6 @@ class Themephi_Elementor_Team_Slider_Widget extends \Elementor\Widget_Base
             [
                 'label' => esc_html__('Content Hover Background', 'tp-elements'),
                 'type' => Controls_Manager::COLOR,
-                'condition' => [
-                    'team_slider_style' => 'style5',
-                ],
                 'selectors' => [
                     '{{WRAPPER}} .team-inner-wrap:hover .team-content' => 'background: {{VALUE}};',
 
@@ -917,9 +887,6 @@ class Themephi_Elementor_Team_Slider_Widget extends \Elementor\Widget_Base
             [
                 'label' => esc_html__('Content Hover Text Color', 'tp-elements'),
                 'type' => Controls_Manager::COLOR,
-                'condition' => [
-                    'team_slider_style' => 'style5',
-                ],
                 'selectors' => [
                     '{{WRAPPER}} .team-inner-wrap:hover .team-content .member-desc .team-name a' => 'color: {{VALUE}};',
                     '{{WRAPPER}} .team-inner-wrap:hover .team-content .member-desc .team-title' => 'color: {{VALUE}};',
@@ -973,6 +940,14 @@ class Themephi_Elementor_Team_Slider_Widget extends \Elementor\Widget_Base
             ]
         );
 
+        $this->add_group_control(
+            Group_Control_Box_Shadow::get_type(),
+            [
+                'name' => 'content_box_shadow',
+                'label' => esc_html__('Box Shadow', 'tp-elements'),
+                'selector' => '{{WRAPPER}} .team-item .team-content',
+            ]
+        );
 
 
         $this->end_controls_section();

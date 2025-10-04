@@ -109,8 +109,7 @@
 .swiper.team-slider-style1 .team-item .team-content .team-name a:hover {
   color: #c4c4c4;
 }
-.swiper.team-slider-style1 .team-item .team-content p.team-title {
-  text-transform: uppercase;
+.swiper.team-slider-style1 .team-item .team-content .team-title {
   font-size: 14px;
   color: var(--whiteColor);
   font-weight: 400;

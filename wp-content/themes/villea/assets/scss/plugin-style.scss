@@ -161,7 +161,7 @@
 
         .es-search-nav__content {
           z-index: 30;
-        //   position: fixed;
+          //   position: fixed;
 
           .es-field__label {
             font-size: 16px !important;
@@ -213,3 +213,72 @@
 /* estatik - payment style */
 /* estatik - review style */
 /* estatik - email template style */
+
+/** -----------------------------------------------------------------------------*/
+/* comparison style */
+
+.property-compare-wrapper {
+  margin: 20px 0;
+}
+
+.property-compare-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+}
+
+.property-compare {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* ensure horizontal scroll for small screens */
+}
+
+.property-compare th,
+.property-compare td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.property-compare th {
+  background: #2c3e50;
+  color: #fff;
+  font-weight: 600;
+}
+
+.property-compare tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.property-compare img {
+  max-width: 120px;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .property-compare th,
+  .property-compare td {
+    padding: 8px;
+    font-size: 14px;
+  }
+  .property-compare img {
+    max-width: 80px;
+  }
+}
+
+.remove-compare-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 8px;
+  font-size: 12px;
+  color: #fff;
+  background: #e74c3c;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.remove-compare-btn:hover {
+  background: #c0392b;
+}

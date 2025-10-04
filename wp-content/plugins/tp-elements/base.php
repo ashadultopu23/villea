@@ -267,6 +267,9 @@ final class TPelements_Elementor_Extension
 
 		// image zooming
 		$enqueue_with_version('at-image-zooming-css', 'widgets/image-zooming-bg/image-zooming-bg-css/image-zooming-bg.css');
+
+		// property grid
+		$enqueue_with_version('tpelements-property-grid-css', 'widgets/estatik/property-grid/property-grid-css/property-grid.css');
 	}
 
 	public function tpaddon_register_plugin_styles()
@@ -884,6 +887,12 @@ final class TPelements_Elementor_Extension
 		// image zooming
 		require_once(__DIR__ . '/widgets/image-zooming-bg/image-zooming-bg.php');
 		\Elementor\Plugin::instance()->widgets_manager->register(new \AT_Image_Zooming_Widget());
+
+
+		// property grid
+		require_once(__DIR__ . '/widgets/estatik/property-grid/property-grid.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \TP_Est_Property_Grid());
+
 
 
 		// Register widget				
