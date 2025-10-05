@@ -9706,3 +9706,69 @@
 [2025-10-04 11:44:56 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "compare" has been purged, triggered by action: save_post 
 [2025-10-04 11:45:04 : INFO] - Cache for URL: http://localhost/wp/villea/compare/ has been purged, triggered by action: save_post 
 [2025-10-04 11:45:04 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "compare" has been purged, triggered by action: save_post 
+[2025-10-05 08:10:46 : INFO] - Cache for URL: http://localhost/wp/villea/properties-home/ has been purged, triggered by action: save_post 
+[2025-10-05 08:10:46 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Properties" has been purged, triggered by action: save_post 
+[2025-10-05 08:35:33 : INFO] - Cache for URL: http://localhost/wp/villea/properties/ has been purged, triggered by action: save_post 
+[2025-10-05 08:35:33 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Properties" has been purged, triggered by action: save_post 
+[2025-10-05 08:36:08 : INFO] - Cache for URL: http://localhost/wp/villea/properties/ has been purged, triggered by action: save_post 
+[2025-10-05 08:36:08 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Properties" has been purged, triggered by action: save_post 
+[2025-10-05 08:40:24 : INFO] - Cache for URL: http://localhost/wp/villea/property/ has been purged, triggered by action: save_post 
+[2025-10-05 08:40:24 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Property" has been purged, triggered by action: save_post 
+[2025-10-05 08:40:38 : INFO] - Cache for URL: http://localhost/wp/villea/property/ has been purged, triggered by action: wp_trash_post 
+[2025-10-05 08:42:04 : INFO] - Cache for URL: http://localhost/wp/villea/properties/ has been purged, triggered by action: save_post 
+[2025-10-05 08:42:04 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Properties" has been purged, triggered by action: save_post 
+[2025-10-05 08:52:16 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:52:16 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:52:16 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:52:16 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:52:16 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:52:16 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:52:16 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:52:16 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:52:16 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:52:16 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:52:16 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:52:16 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:52:16 : INFO] - Cache for URL: http://localhost/wp/villea/property/multifamily-residential/ has been purged, triggered by action: save_post 
+[2025-10-05 08:52:16 : INFO] - Cache for archive page associated with post_type: properties and Title: "Multifamily Residential" has been purged, triggered by action: save_post 
+[2025-10-05 08:52:16 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: properties and Title: "Multifamily Residential" has been purged, triggered by action: save_post 
+[2025-10-05 08:54:37 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:54:37 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:54:37 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:54:37 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:54:37 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:54:37 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:54:37 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:54:37 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:54:37 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:54:37 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:54:37 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:54:37 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:54:37 : INFO] - Cache for URL: http://localhost/wp/villea/property/multifamily-residential/ has been purged, triggered by action: save_post 
+[2025-10-05 08:54:37 : INFO] - Cache for archive page associated with post_type: properties and Title: "Multifamily Residential" has been purged, triggered by action: save_post 
+[2025-10-05 08:54:37 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: properties and Title: "Multifamily Residential" has been purged, triggered by action: save_post 
+[2025-10-05 08:55:25 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:55:25 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:55:25 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:55:25 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:55:25 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:55:25 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:55:25 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:55:25 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:55:25 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:55:25 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:55:25 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:55:25 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:55:26 : INFO] - Cache for URL: http://localhost/wp/villea/property/multifamily-residential/ has been purged, triggered by action: save_post 
+[2025-10-05 08:55:26 : INFO] - Cache for archive page associated with post_type: properties and Title: "Multifamily Residential" has been purged, triggered by action: save_post 
+[2025-10-05 08:55:26 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: properties and Title: "Multifamily Residential" has been purged, triggered by action: save_post 
+[2025-10-05 08:57:51 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:57:51 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:57:51 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:57:51 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:57:51 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:57:51 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:57:51 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-05 08:57:51 : INFO] - Cache for URL: http://localhost/wp/villea/property/multifamily-residential/ has been purged, triggered by action: save_post 
+[2025-10-05 08:57:51 : INFO] - Cache for archive page associated with post_type: properties and Title: "Multifamily Residential" has been purged, triggered by action: save_post 
+[2025-10-05 08:57:51 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: properties and Title: "Multifamily Residential" has been purged, triggered by action: save_post 

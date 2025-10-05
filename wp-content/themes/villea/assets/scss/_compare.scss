@@ -1,0 +1,147 @@
+/** -----------------------------------------------------------------------------*/
+/* comparison style */
+
+.at-compare-table-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.at-compare-table-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+}
+
+.at-compare-table {
+  border-collapse: collapse;
+  width: 100%;
+  // table-layout: fixed;
+  min-width: 800px; /* ensure horizontal scroll for small screens */
+}
+
+.at-compare-table th,
+.at-compare-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  vertical-align: middle;
+  // max-width: 400px;
+  // width: 100%;
+
+  // width: calc(100% / 4); /* Adjust based on number of columns */
+  // width: clamp(150px, 25%, 300px); /* Responsive width */
+  // white-space: normal; /* Allows text wrapping */
+  // white-space: nowrap; /* Prevents text wrapping */
+  // overflow-wrap: break-word; /* Modern version of word-wrap */
+  // word-break: break-word; /* Ensures long words break */
+  // hyphens: auto; /* Adds hyphenation where possible */
+}
+
+.at-compare-table td:not(.at-sticky-col) {
+  min-width: 400px;
+}
+
+.at-compare-table th {
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+  font-weight: 600;
+}
+
+.at-compare-table tr .at-compare-active {
+  background: #f9f9f9;
+}
+
+/* Sticky (Frozen) first column */
+.at-sticky-col {
+  position: sticky;
+  left: 0;
+  background: #fff;
+  z-index: 2;
+  min-width: 200px;
+  max-width: 200px;
+  font-weight: 600;
+  text-align: left;
+  border-right: 2px solid #ccc;
+}
+
+.at-compare-table img {
+  max-width: 400px;
+  width: 100%;
+  max-height: 300px;
+  height: auto;
+  border-radius: 6px;
+}
+
+.at-compare-terms {
+  white-space: normal;
+  // overflow-wrap: break-word;
+  // word-break: break-word;
+  // hyphens: auto;
+  // display: flex;
+  // gap: 4px;
+  // flex-wrap: wrap;
+  // justify-content: center;
+}
+
+/* Smooth horizontal scrolling */
+.at-compare-table-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+.at-compare-table-scroll::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+/* Mobile tweaks */
+@media (max-width: 991px) {
+  .at-sticky-col {
+    min-width: 140px;
+  }
+  .at-compare-table img {
+    max-width: 300px;
+  }
+  .at-compare-table th,
+  .at-compare-table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .at-sticky-col {
+    min-width: 120px;
+  }
+  .at-compare-table img {
+    max-width: 200px;
+  }
+}
+
+.compare-btn {
+  display: inline-block;
+  padding: 6px 12px;
+  color: var(--whiteColor);
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 4px 2px;
+  border: none;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.view-compare-btn {
+  background: var(--primaryColor);
+}
+.view-compare-btn:hover {
+  background: #1a252f;
+  color: var(--whiteColor);
+}
+.remove-compare-btn {
+  background: #e74c3c;
+}
+.remove-compare-btn:hover {
+  background: #c0392b;
+}
