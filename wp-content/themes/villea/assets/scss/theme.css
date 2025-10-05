@@ -8896,6 +8896,7 @@ div.wpcf7-acceptance-missing {
 
 .at-compare-table td:not(.at-sticky-col) {
   min-width: 400px;
+  max-width: 400px;
 }
 
 .at-compare-table th {
@@ -8914,8 +8915,7 @@ div.wpcf7-acceptance-missing {
   left: 0;
   background: #fff;
   z-index: 2;
-  min-width: 200px;
-  max-width: 200px;
+  width: auto;
   font-weight: 600;
   text-align: left;
   border-right: 2px solid #ccc;
@@ -8929,8 +8929,13 @@ div.wpcf7-acceptance-missing {
   border-radius: 6px;
 }
 
+.at-compare-table-title,
 .at-compare-terms {
   white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+          hyphens: auto;
 }
 
 /* Smooth horizontal scrolling */
@@ -8943,10 +8948,17 @@ div.wpcf7-acceptance-missing {
   border-radius: 4px;
 }
 
+@media (max-width: 1200px) {
+  .at-compare-table td:not(.at-sticky-col) {
+    max-width: 300px;
+    min-width: 300px;
+  }
+}
 /* Mobile tweaks */
 @media (max-width: 991px) {
-  .at-sticky-col {
-    min-width: 140px;
+  .at-compare-table td:not(.at-sticky-col) {
+    max-width: 250px;
+    min-width: 250px;
   }
   .at-compare-table img {
     max-width: 300px;
@@ -8958,9 +8970,6 @@ div.wpcf7-acceptance-missing {
   }
 }
 @media (max-width: 767px) {
-  .at-sticky-col {
-    min-width: 120px;
-  }
   .at-compare-table img {
     max-width: 200px;
   }
@@ -9018,7 +9027,8 @@ div.wpcf7-acceptance-missing {
 .compare-toast a.go-to-compare-btn {
   display: inline-block;
   padding: 6px 12px;
-  background: #27ae60;
+  background: var(--primaryColor);
+  opacity: 0.9;
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
@@ -9026,7 +9036,8 @@ div.wpcf7-acceptance-missing {
 }
 
 .compare-toast a.go-to-compare-btn:hover {
-  background: #2ecc71;
+  background: var(--primaryColor);
+  opacity: 1;
 }
 
 @keyframes fadeIn {

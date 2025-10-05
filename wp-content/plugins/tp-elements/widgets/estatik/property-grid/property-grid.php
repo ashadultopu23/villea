@@ -696,6 +696,8 @@ class TP_Est_Property_Grid extends Widget_Base
                 ));
             }
 
+            // var_dump($queried_post);
+
             // Render property grid layout
 ?>
 
@@ -705,7 +707,7 @@ class TP_Est_Property_Grid extends Widget_Base
                     <?php
                     while ($queried_post->have_posts()):
                         $queried_post->the_post();
-
+                        // var_dump($queried_post);
                         $post_id = get_the_ID();
 
                         $att = get_post_thumbnail_id();
@@ -718,17 +720,28 @@ class TP_Est_Property_Grid extends Widget_Base
                         $address = get_the_terms($post_id, 'es_property_address');
                         $type = get_the_terms($post_id, 'es_type');
                         $label = get_the_terms($post_id, 'es_label');
-                        $parking = get_post_meta($post_id, 'es_parking');
+                        $parking = get_post_meta($post_id, 'es_property_garage-spaces', false);
                         $area = get_post_meta($post_id, 'es_property_lot_size');
+                        // $area = es_the_property_area($post_id);
+
                         $bedrooms = get_post_meta($post_id, 'es_property_bedrooms');
                         $bathrooms = get_post_meta($post_id, 'es_property_bathrooms', false);
-                        $price = get_post_meta($post_id, 'es_property_price');
+
+                        // $price = get_post_meta($post_id, 'es_property_price');
+                        // $price = es_the_price($post_id);
+
                         $property_type = get_post_meta($post_id, 'es_property_type', false);
                         $images = get_post_meta($post_id, 'es_property_gallery', false);
                         $videos = get_post_meta($post_id, 'es_property_video', false);
 
                         $property_rent_type = get_post_meta($post_id, 'es_property_property-rent-type', false);
 
+                        // $currency =  get_post_meta($post_id, 'currency_sign');
+                        // var_dump($currency);
+
+                        $currency =  get_post_meta($post_id, 'es_currency_sign');
+                        // $currency = get_option('es_currency_sign'); // Usually $ or €
+                        var_dump($currency);
 
                         if ($settings['property_layout'] == 'style1') {
                             include dirname(__FILE__) . '/style1.php';

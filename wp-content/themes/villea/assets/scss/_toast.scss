@@ -19,14 +19,16 @@
 .compare-toast a.go-to-compare-btn {
   display: inline-block;
   padding: 6px 12px;
-  background: #27ae60;
+  background: var(--primaryColor);
+  opacity: 0.9;
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
   font-size: 14px;
 }
 .compare-toast a.go-to-compare-btn:hover {
-  background: #2ecc71;
+  background: var(--primaryColor);
+  opacity: 1;
 }
 @keyframes fadeIn {
   from {

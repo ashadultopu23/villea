@@ -52,11 +52,25 @@
             </div>
             <div class="property-price">
                 <span class="property-price-value">
-                    <?php echo !empty($price) && isset($price[0]) ? esc_html($price[0]) : ''; ?>
+                    <?php //echo es_get_the_price($post_id); 
+                    ?>
+
+                    <!-- <?php // echo !empty($price) && isset($price[0]) ? esc_html($price[0]) : ''; 
+                            ?> -->
+                    <?php //!empty(es_the_price($post_id)) ? esc_html(es_the_price($post_id)) : '';
+                    // $x = es_the_price(get_the_ID());
+                    $x =  es_get_the_formatted_field('price');
+                    var_dump($x);
+                    ?>
+
+                    <!-- <?php //echo !empty(es_the_price($post_id)) ? esc_html(es_the_price($post_id)) : ''; 
+                            ?> -->
                 </span>
-                <?php if ($property_rent_type == 'For Rent') : ?>
+                <!-- <?php // if ($property_rent_type == 'For Rent') : 
+                        ?>
                     <span class="property-price-unit">/ per day</span>
-                <?php endif; ?>
+                <?php // endif; 
+                ?> -->
             </div>
             <?php if (!empty($address) && is_array($address)) : ?>
                 <p class="property-address">
