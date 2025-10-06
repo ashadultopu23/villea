@@ -719,7 +719,6 @@ class TP_Est_Property_Grid extends Widget_Base
                         $category = get_the_terms($post_id, 'es_category');
                         // $address = get_the_terms($post_id, 'es_property_address');
                         $address = get_post_meta($post_id, 'es_property_address');
-                        // $address_full = get_the_terms($post_id, 'es_property_address_components');
                         $address_full = get_post_meta($post_id, 'es_property_address_components');
                         // $type = get_the_terms($post_id, 'es_type');
                         // $label = get_the_terms($post_id, 'es_label');
@@ -730,74 +729,52 @@ class TP_Est_Property_Grid extends Widget_Base
                         $bedrooms = get_post_meta($post_id, 'es_property_bedrooms');
                         $bathrooms = get_post_meta($post_id, 'es_property_bathrooms', false);
 
-                        // $price = get_post_meta($post_id, 'es_property_price');
-                        // $price = es_the_price($post_id);
-
                         $property_type = get_post_meta($post_id, 'es_property_type', false);
                         $images = get_post_meta($post_id, 'es_property_gallery', false);
                         $videos = get_post_meta($post_id, 'es_property_video', false);
 
                         $property_rent_type = get_post_meta($post_id, 'es_property_property-rent-type', false);
 
-                        // $currency =  get_post_meta($post_id, 'currency_sign');
-                        // var_dump($currency);
+                        // Decode the JSON address components
+                        if (isset($address_full[0]) && !empty($address_full[0])) {
+                            $decoded = json_decode($address_full[0], true);
+                            if ($decoded !== null) {
+                                // Get street number
+                                $street_number = '';
+                                $route = '';
+                                $city = '';
+                                $state = '';
+                                $country = '';
+                                $postal_code = '';
 
-                        // $currency =  get_post_meta($post_id, 'es_currency_sign');
-                        // $currency = get_option('es_currency_sign'); // Usually $ or €
-                        // var_dump($currency);
+                                foreach ($decoded as $component) {
+                                    if (in_array('street_number', $component['types'])) {
+                                        $street_number = $component['long_name'];
+                                    }
+                                    if (in_array('route', $component['types'])) {
+                                        $route = $component['long_name'];
+                                    }
+                                    if (in_array('locality', $component['types'])) {
+                                        $city = $component['long_name'];
+                                    }
+                                    if (in_array('administrative_area_level_1', $component['types'])) {
+                                        $state = $component['short_name'];
+                                    }
+                                    if (in_array('country', $component['types'])) {
+                                        $country = $component['long_name'];
+                                    }
+                                    if (in_array('postal_code', $component['types'])) {
+                                        $postal_code = $component['long_name'];
+                                    }
+                                }
 
-                        // var_dump($address);
-                    ?>
-
-                        <pre>
-<?php
-                        // Since $address_full is already an array, just decode the first element
-                        $decoded = json_decode($address_full[0], true);
-
-                        // Now display it nicely
-                        echo json_encode($decoded, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
-?>
-</pre>
-
-                        <?php
-                        $decoded = json_decode($address_full[0], true);
-
-                        // Get street number
-                        $street_number = '';
-                        $route = '';
-                        $city = '';
-                        $state = '';
-                        $country = '';
-                        $postal_code = '';
-
-                        foreach ($decoded as $component) {
-                            if (in_array('street_number', $component['types'])) {
-                                $street_number = $component['long_name'];
-                            }
-                            if (in_array('route', $component['types'])) {
-                                $route = $component['long_name'];
-                            }
-                            if (in_array('locality', $component['types'])) {
-                                $city = $component['long_name'];
-                            }
-                            if (in_array('administrative_area_level_1', $component['types'])) {
-                                $state = $component['short_name'];
-                            }
-                            if (in_array('country', $component['types'])) {
-                                $country = $component['long_name'];
-                            }
-                            if (in_array('postal_code', $component['types'])) {
-                                $postal_code = $component['long_name'];
+                                // Display formatted address
+                                // echo "Full Address: $street_number $route, $city, $state $postal_code, $country";
+                                // Output: Full Address: 725 Northeast 166th Street, Miami, FL 33162, United States
                             }
                         }
 
-                        // Display formatted address
-                        echo "Full Address: $street_number $route, $city, $state $postal_code, $country";
-                        // Output: Full Address: 725 Northeast 166th Street, Miami, FL 33162, United States
-                        ?>
-
-
-                    <?php
+                        // Load styles
                         if ($settings['property_layout'] == 'style1') {
                             include dirname(__FILE__) . '/style1.php';
                         }
