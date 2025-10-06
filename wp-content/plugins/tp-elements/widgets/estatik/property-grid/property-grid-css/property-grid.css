@@ -105,7 +105,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 32px;
 }
 .property-listing-card .property-features .property-feature-item {
   display: flex;
@@ -121,17 +120,26 @@
   color: var(--bodyColor);
   font-weight: 500;
 }
+.property-listing-card .property-description,
+.property-listing-card .property-address {
+  font-size: 16px;
+  color: var(--bodyColor);
+  font-weight: 400;
+  margin-top: 32px;
+}
 .property-listing-card .property-actions {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  margin-top: 32px;
 }
 .property-listing-card .action-button {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   font-size: 16px;
   padding: 12px 24px;
   border: none;

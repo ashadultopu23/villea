@@ -9,7 +9,6 @@
  * custom property grid style1 file
  */
 
-use  \Elementor\Icons_Manager;
 ?>
 
 
@@ -49,40 +48,28 @@ use  \Elementor\Icons_Manager;
             <div class="property-title-compare-wrapper">
                 <!-- Title -->
                 <<?php echo esc_attr($title_tag); ?> class="property-title">
-                    <?php
-                    $title = get_the_title();
-                    if ($settings['title_char_count'] > 0 && strlen($title) > $settings['title_char_count']) {
-                        $title = substr($title, 0, $settings['title_char_count']) . '...';
-                    }
-                    $link = $settings['title_link_open'] == 'yes' ? '_blank' : '_self';
-                    ?>
-                    <a href="<?php the_permalink(); ?>" target="<?php echo esc_attr($link); ?>">
-                        <?php echo esc_html($title); ?>
+                    <a href="<?php the_permalink(); ?>">
+                        <?php the_title(); ?>
                     </a>
                 </<?php echo esc_attr($title_tag); ?>>
-
-                <?php if (!empty($settings['property_compare_show_hide']) && $settings['property_compare_show_hide'] == 'yes') : ?>
-                    <!-- Compare Button -->
-                    <a href="javascript:void(0);" class="property-compare-button add-to-compare" data-id="<?php echo get_the_ID(); ?>" title="Compare">
-                        <i class="fas fa-balance-scale-right"></i>
-                    </a>
-                <?php endif; ?>
+                <!-- Compare Button -->
+                <a href="javascript:void(0);" class="property-compare-button add-to-compare" data-id="<?php echo get_the_ID(); ?>" title="Compare">
+                    <i class="fas fa-balance-scale-right"></i>
+                </a>
             </div>
 
             <!-- Price & Location -->
             <div class="property-price-location-wrapper">
                 <!-- Price -->
-                <?php if (!empty($settings['property_price_show_hide']) && $settings['property_price_show_hide'] == 'yes') : ?>
-                    <div class="property-price">
-                        <?php
-                        $price =  es_get_the_formatted_field('price');
-                        echo !empty($price) ? esc_html($price) : '';
-                        ?>
-                    </div>
-                <?php endif; ?>
+                <div class="property-price">
+                    <?php
+                    $price =  es_get_the_formatted_field('price');
+                    echo !empty($price) ? esc_html($price) : '';
+                    ?>
+                </div>
                 <!-- City -->
                 <?php
-                if ((!empty($settings['property_location_show_hide']) && $settings['property_location_show_hide'] == 'yes') && !empty($address)): ?>
+                if (!empty($address)) : ?>
                     <div class="property-address-city">
                         <span class="property-address-city-icon icon">
                             <i class="fas fa-map-marker-alt"></i>
@@ -99,10 +86,10 @@ use  \Elementor\Icons_Manager;
                 <?php endif; ?>
             </div>
 
-            <?php if (($settings['property_meta_show_hide'] == 'yes') && (!empty($bedrooms) || !empty($bathrooms) || !empty($area) || !empty($parking))): ?>
+            <?php if (!empty($bedrooms) || !empty($bathrooms) || !empty($area) || !empty($parking)) : ?>
 
                 <div class="property-features">
-                    <?php if ((!empty($settings['property_bedroom_show_hide']) && $settings['property_bedroom_show_hide'] == 'yes') && !empty($bedrooms)) : ?>
+                    <?php if (!empty($bedrooms)) : ?>
                         <span class="property-feature-item bedrooms">
                             <span class="property-feature-icon icon">
                                 <i class="fas fa-bed"></i>
@@ -113,7 +100,7 @@ use  \Elementor\Icons_Manager;
                         </span>
                     <?php endif; ?>
 
-                    <?php if ((!empty($settings['property_bathroom_show_hide']) && $settings['property_bathroom_show_hide'] == 'yes') && !empty($bathrooms)) : ?>
+                    <?php if (!empty($bathrooms)) : ?>
                         <span class="property-feature-item bathrooms">
                             <span class="property-feature-icon icon">
                                 <i class="fas fa-bath"></i>
@@ -124,7 +111,7 @@ use  \Elementor\Icons_Manager;
                         </span>
                     <?php endif; ?>
 
-                    <?php if ((!empty($settings['property_area_show_hide']) && $settings['property_area_show_hide'] == 'yes') && !empty($area)) : ?>
+                    <?php if (!empty($area)) : ?>
                         <span class="property-feature-item area">
                             <span class="property-feature-icon icon">
                                 <i class="fas fa-vector-square"></i>
@@ -135,7 +122,7 @@ use  \Elementor\Icons_Manager;
                         </span>
                     <?php endif; ?>
 
-                    <?php if ((!empty($settings['property_parking_show_hide']) && $settings['property_parking_show_hide'] == 'yes') && !empty($parking)) : ?>
+                    <?php if (!empty($parking)) : ?>
                         <span class="property-feature-item parking">
                             <span class="property-feature-icon icon">
                                 <i class="fas fa-car"></i>
@@ -146,47 +133,49 @@ use  \Elementor\Icons_Manager;
                         </span>
                     <?php endif; ?>
                 </div>
+
             <?php endif; ?>
 
-            <?php if (!empty($settings['property_text_show_hide']) && $settings['property_text_show_hide'] == 'yes') : ?>
-                <div class="property-description">
-                    <?php echo wp_trim_words(get_the_excerpt(), 15); ?>
-                </div>
-            <?php endif; ?>
+            <!-- <div class="property-excerpt">
+                <?php echo wp_trim_words(get_the_excerpt(), 15); ?>
+            </div> -->
 
-            <?php if (!empty($address) && is_array($address) && !empty($settings['property_address_show_hide']) && $settings['property_address_show_hide'] == 'yes') : ?>
+
+
+            <!-- <?php if (!empty($address) && is_array($address)) : ?>
                 <p class="property-address">
                     <?php
-                    echo !empty($address[0]) ? esc_html($address[0]) : '';
+                        echo !empty($address[0]) ? esc_html($address[0]) : '';
                     ?>
                 </p>
-            <?php endif; ?>
+            <?php endif; ?> -->
 
-            <?php if (!empty($settings['property_btn_show_hide']) && $settings['property_btn_show_hide'] == 'yes') : ?>
-                <div class="property-actions">
+
+            <div class="property-actions">
+
+                <!-- <?php if (!empty($property_rent_type)) :
+                            $rent_type = is_array($property_rent_type) ? $property_rent_type[0] : $property_rent_type;
+                            $rent_type_formatted = strtolower(str_replace(' ', '-', $rent_type));
+                            if ($rent_type_formatted == 'for-sale') {
+                        ?>
+                        <button class="action-button sale-button">
+                            <?php echo esc_html__('Buy Now', 'tp-elements'); ?>
+                        </button>
                     <?php
-                    $target_link = !empty($settings['property_btn_link_open']) && $settings['property_btn_link_open'] == 'yes' ? '_blank' : '_self';
+                            } elseif ($rent_type_formatted == 'for-rent') {
                     ?>
-                    <a href="<?php the_permalink(); ?>" target="<?php echo esc_attr($target_link); ?>" class="action-button view-all-button">
+                        <button class="action-button rent-button">
+                            <?php echo esc_html__('Book Now', 'tp-elements'); ?>
+                        </button>
+                    <?php
+                            }
+                    ?>
+                <?php endif; ?> -->
 
-                        <?php
-                        if ((!empty($settings['property_btn_icon_show_hide']) && $settings['property_btn_icon_show_hide'] == 'yes') && (!empty($settings['property_btn_icon_position']) && $settings['property_btn_icon_position'] == 'before')
-                        ) :
-                            \Elementor\Icons_Manager::render_icon($settings['property_btn_icon'], ['aria-hidden' => 'true']);
-                        endif; ?>
-
-                        <?php echo esc_html($settings['property_btn_text']); ?>
-
-                        <?php
-                        if ((!empty($settings['property_btn_icon_show_hide']) && $settings['property_btn_icon_show_hide'] == 'yes') && (!empty($settings['property_btn_icon_position']) && $settings['property_btn_icon_position'] == 'after')
-                        ) :
-                            \Elementor\Icons_Manager::render_icon($settings['property_btn_icon'], ['aria-hidden' => 'true']);
-                        endif; ?>
-
-                    </a>
-                </div>
-            <?php endif; ?>
-
+                <a href="<?php the_permalink(); ?>" class="action-button view-all-button">
+                    <?php echo esc_html__('View Details', 'tp-elements'); ?>
+                </a>
+            </div>
         </div>
 
     </div>

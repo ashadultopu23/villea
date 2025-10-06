@@ -146,24 +146,47 @@ use  \Elementor\Icons_Manager;
                         </span>
                     <?php endif; ?>
                 </div>
+
             <?php endif; ?>
 
             <?php if (!empty($settings['property_text_show_hide']) && $settings['property_text_show_hide'] == 'yes') : ?>
-                <div class="property-description">
+                <div class="property-excerpt">
                     <?php echo wp_trim_words(get_the_excerpt(), 15); ?>
                 </div>
             <?php endif; ?>
 
-            <?php if (!empty($address) && is_array($address) && !empty($settings['property_address_show_hide']) && $settings['property_address_show_hide'] == 'yes') : ?>
+
+
+            <!-- <?php if (!empty($address) && is_array($address)) : ?>
                 <p class="property-address">
                     <?php
-                    echo !empty($address[0]) ? esc_html($address[0]) : '';
+                        echo !empty($address[0]) ? esc_html($address[0]) : '';
                     ?>
                 </p>
-            <?php endif; ?>
+            <?php endif; ?> -->
 
             <?php if (!empty($settings['property_btn_show_hide']) && $settings['property_btn_show_hide'] == 'yes') : ?>
                 <div class="property-actions">
+
+                    <!-- <?php if (!empty($property_rent_type)) :
+                                $rent_type = is_array($property_rent_type) ? $property_rent_type[0] : $property_rent_type;
+                                $rent_type_formatted = strtolower(str_replace(' ', '-', $rent_type));
+                                if ($rent_type_formatted == 'for-sale') {
+                            ?>
+                        <button class="action-button sale-button">
+                            <?php echo esc_html__('Buy Now', 'tp-elements'); ?>
+                        </button>
+                    <?php
+                                } elseif ($rent_type_formatted == 'for-rent') {
+                    ?>
+                        <button class="action-button rent-button">
+                            <?php echo esc_html__('Book Now', 'tp-elements'); ?>
+                        </button>
+                    <?php
+                                }
+                    ?>
+                <?php endif; ?> -->
+
                     <?php
                     $target_link = !empty($settings['property_btn_link_open']) && $settings['property_btn_link_open'] == 'yes' ? '_blank' : '_self';
                     ?>

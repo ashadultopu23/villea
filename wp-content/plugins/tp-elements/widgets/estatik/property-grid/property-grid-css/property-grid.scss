@@ -111,7 +111,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 32px;
     .property-feature-item {
       display: flex;
       align-items: center;
@@ -129,19 +128,13 @@
     }
   }
 
-  // .property-excerpt {
-  //   font-size: 16px;
-  //   color: var(--bodyColor);
-  //   font-weight: 400;
-  //   margin-bottom: 32px;
-  // }
-
-  // .property-address {
-  //   font-size: 16px;
-  //   color: var(--bodyColor);
-  //   font-weight: 400;
-  //   margin-bottom: 24px;
-  // }
+  .property-description,
+  .property-address {
+    font-size: 16px;
+    color: var(--bodyColor);
+    font-weight: 400;
+    margin-top: 32px;
+  }
 
   .property-actions {
     display: flex;
@@ -149,12 +142,14 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    margin-top: 32px;
   }
 
   .action-button {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 8px;
     font-size: 16px;
     padding: 12px 24px;
     border: none;
