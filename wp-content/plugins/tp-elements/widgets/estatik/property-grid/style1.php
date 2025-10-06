@@ -50,33 +50,35 @@
                     <i class="fas fa-balance-scale-right"></i>
                 </a>
             </div>
-            <div class="property-price">
-                <span class="property-price-value">
-                    <?php //echo es_get_the_price($post_id); 
+            <div class="property-price-location-wrapper">
+                <div class="property-price">
+                    <?php
+                    $price =  es_get_the_formatted_field('price');
+                    echo !empty($price) ? esc_html($price) : '';
                     ?>
+                </div>
 
-                    <!-- <?php // echo !empty($price) && isset($price[0]) ? esc_html($price[0]) : ''; 
-                            ?> -->
-                    <?php //!empty(es_the_price($post_id)) ? esc_html(es_the_price($post_id)) : '';
-                    // $x = es_the_price(get_the_ID());
-                    $x =  es_get_the_formatted_field('price');
-                    var_dump($x);
-                    ?>
+                <?php
+                // $address = es_the_address();
+                // var_dump($address);
+                ?>
 
-                    <!-- <?php //echo !empty(es_the_price($post_id)) ? esc_html(es_the_price($post_id)) : ''; 
-                            ?> -->
-                </span>
-                <!-- <?php // if ($property_rent_type == 'For Rent') : 
+                <?php
+
+                // $address = es_the_address();
+                // var_dump($address);
+
+                if (!empty($address)) : ?>
+                    <p class="property-address">
+                        <?php
+                        //echo esc_html($address[0]->name);
+                        // echo $address;
+
                         ?>
-                    <span class="property-price-unit">/ per day</span>
-                <?php // endif; 
-                ?> -->
+                    </p>
+                <?php endif; ?>
+
             </div>
-            <?php if (!empty($address) && is_array($address)) : ?>
-                <p class="property-address">
-                    <?php echo esc_html($address[0]->name); ?>
-                </p>
-            <?php endif; ?>
 
             <?php if (!empty($bedrooms) || !empty($bathrooms) || !empty($area) || !empty($parking)) : ?>
 
@@ -119,9 +121,20 @@
                 </div>
 
             <?php endif; ?>
+
             <div class="property-excerpt">
                 <?php echo wp_trim_words(get_the_excerpt(), 15); ?>
             </div>
+
+
+
+            <!-- <?php if (!empty($address) && is_array($address)) : ?>
+                <p class="property-address">
+                    <?php echo esc_html($address[0]->name); ?>
+                </p>
+            <?php endif; ?> -->
+
+
             <div class="property-actions">
                 <button class="action-button rent-button">Booking Now</button>
                 <a href="<?php the_permalink(); ?>" class="view-all-button ">

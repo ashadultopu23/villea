@@ -74,21 +74,23 @@
       //   font-weight: 600;
       //   margin-bottom: 1.5rem;
       color: var(--primaryColor);
+      font-size: 24px;
+      font-weight: 600;
       //   padding-bottom: 0.5rem;
     }
 
     .property-price {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--accentColor);
-      margin-bottom: 0.5rem;
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--secondaryColor);
+      // margin-bottom: 0.5rem;
     }
 
-    .property-price-unit {
-      font-size: 0.9rem;
-      color: var(--textLight);
-      font-weight: 400;
-    }
+    // .property-price-unit {
+    //   font-size: 0.9rem;
+    //   color: var(--textLight);
+    //   font-weight: 400;
+    // }
   }
 
   .property-features {
@@ -100,10 +102,10 @@
   }
 
   .property-feature-item {
-    background-color: var(--lightGray);
-    padding: 5px 10px;
-    border-radius: 4px;
-    color: var(--textColor);
+    // background-color: var(--lightGray);
+    // padding: 5px 10px;
+    // border-radius: 4px;
+    // color: var(--textColor);
   }
 
   .property-actions {

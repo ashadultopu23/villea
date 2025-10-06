@@ -717,9 +717,12 @@ class TP_Est_Property_Grid extends Widget_Base
                         }
 
                         $category = get_the_terms($post_id, 'es_category');
-                        $address = get_the_terms($post_id, 'es_property_address');
-                        $type = get_the_terms($post_id, 'es_type');
-                        $label = get_the_terms($post_id, 'es_label');
+                        // $address = get_the_terms($post_id, 'es_property_address');
+                        $address = get_post_meta($post_id, 'es_property_address');
+                        // $address_full = get_the_terms($post_id, 'es_property_address_components');
+                        $address_full = get_post_meta($post_id, 'es_property_address_components');
+                        // $type = get_the_terms($post_id, 'es_type');
+                        // $label = get_the_terms($post_id, 'es_label');
                         $parking = get_post_meta($post_id, 'es_property_garage-spaces', false);
                         $area = get_post_meta($post_id, 'es_property_lot_size');
                         // $area = es_the_property_area($post_id);
@@ -739,10 +742,62 @@ class TP_Est_Property_Grid extends Widget_Base
                         // $currency =  get_post_meta($post_id, 'currency_sign');
                         // var_dump($currency);
 
-                        $currency =  get_post_meta($post_id, 'es_currency_sign');
+                        // $currency =  get_post_meta($post_id, 'es_currency_sign');
                         // $currency = get_option('es_currency_sign'); // Usually $ or €
-                        var_dump($currency);
+                        // var_dump($currency);
 
+                        // var_dump($address);
+                    ?>
+
+                        <pre>
+<?php
+                        // Since $address_full is already an array, just decode the first element
+                        $decoded = json_decode($address_full[0], true);
+
+                        // Now display it nicely
+                        echo json_encode($decoded, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+?>
+</pre>
+
+                        <?php
+                        $decoded = json_decode($address_full[0], true);
+
+                        // Get street number
+                        $street_number = '';
+                        $route = '';
+                        $city = '';
+                        $state = '';
+                        $country = '';
+                        $postal_code = '';
+
+                        foreach ($decoded as $component) {
+                            if (in_array('street_number', $component['types'])) {
+                                $street_number = $component['long_name'];
+                            }
+                            if (in_array('route', $component['types'])) {
+                                $route = $component['long_name'];
+                            }
+                            if (in_array('locality', $component['types'])) {
+                                $city = $component['long_name'];
+                            }
+                            if (in_array('administrative_area_level_1', $component['types'])) {
+                                $state = $component['short_name'];
+                            }
+                            if (in_array('country', $component['types'])) {
+                                $country = $component['long_name'];
+                            }
+                            if (in_array('postal_code', $component['types'])) {
+                                $postal_code = $component['long_name'];
+                            }
+                        }
+
+                        // Display formatted address
+                        echo "Full Address: $street_number $route, $city, $state $postal_code, $country";
+                        // Output: Full Address: 725 Northeast 166th Street, Miami, FL 33162, United States
+                        ?>
+
+
+                    <?php
                         if ($settings['property_layout'] == 'style1') {
                             include dirname(__FILE__) . '/style1.php';
                         }
