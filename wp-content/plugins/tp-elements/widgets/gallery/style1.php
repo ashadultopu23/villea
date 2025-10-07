@@ -1,5 +1,5 @@
 		<!-- Gallery style 1 -->
-		<div class="row rs-galleys elementor-image-gallery g-0 <?php echo esc_html($settings['gallery_column_gap']); ?> rs-gallery-<?php echo esc_attr($id) ?>" id="rs-gallery-<?php echo esc_attr($id) ?>" data-masonry='{ "columnWidth": ".gallery-masonry-item", "percentPosition": false }'>
+		<div class="row rs-galleys rs-galleys-<?php echo esc_attr($id); ?> elementor-image-gallery g-0 <?php echo esc_html($settings['gallery_column_gap']); ?> rs-gallery-<?php echo esc_attr($id) ?>" id="rs-gallery-<?php echo esc_attr($id) ?>" data-masonry='{ "columnWidth": ".gallery-masonry-item", "percentPosition": false }'>
 			<?php
 			foreach ($settings['rs-gallery'] as $image) {
 				$gallery_item = wp_get_attachment_image_url($image['id'], $settings['thumbnail_size']);

@@ -1,4 +1,4 @@
-<div class="circle-text second cus-border border-1 b-second d-center cus-z1 tp-el-text-wrapper">
+<div class="circle-text second d-center cus-z1 tp-el-text-wrapper">
     <?php if (!empty($settings['experience_text'])) : ?>
         <div class="text">
             <p class="fs-nine text-uppercase p2-color tp-el-text"><?php echo esc_html($settings['experience_text']); ?></p>

@@ -129,6 +129,32 @@ class Themephi_Elementor_Heading_Widget extends \Elementor\Widget_Base
 		);
 
 		$this->add_control(
+			'show_subtitle',
+			[
+				'label' => esc_html__('Show Sub Title', 'tp-elements'),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__('Yes', 'tp-elements'),
+				'label_off' => esc_html__('No', 'tp-elements'),
+				'return_value' => 'yes',
+				'default' => 'yes',
+			]
+		);
+
+		$this->add_control(
+			'subtitle',
+			[
+				'label'     => esc_html__('Sub Heading Text', 'tp-elements'),
+				'type'      => Controls_Manager::TEXT,
+				'default'   => esc_html__('Sub Heading', 'tp-elements'),
+				'condition' => [
+					'show_subtitle' => 'yes',
+				],
+				'label_block' => true,
+				'separator' => 'before',
+			]
+		);
+
+		$this->add_control(
 			'title',
 			[
 				'label' => esc_html__('Heading Text', 'tp-elements'),
@@ -229,32 +255,6 @@ class Themephi_Elementor_Heading_Widget extends \Elementor\Widget_Base
 					'style' => 'style13',
 				],
 
-				'separator' => 'before',
-			]
-		);
-
-		$this->add_control(
-			'show_subtitle',
-			[
-				'label' => esc_html__('Show Sub Title', 'tp-elements'),
-				'type' => \Elementor\Controls_Manager::SWITCHER,
-				'label_on' => esc_html__('Yes', 'tp-elements'),
-				'label_off' => esc_html__('No', 'tp-elements'),
-				'return_value' => 'yes',
-				'default' => 'yes',
-			]
-		);
-
-		$this->add_control(
-			'subtitle',
-			[
-				'label'     => esc_html__('Sub Heading Text', 'tp-elements'),
-				'type'      => Controls_Manager::TEXT,
-				'default'   => esc_html__('Sub Heading', 'tp-elements'),
-				'condition' => [
-					'show_subtitle' => 'yes',
-				],
-				'label_block' => true,
 				'separator' => 'before',
 			]
 		);
@@ -391,6 +391,7 @@ class Themephi_Elementor_Heading_Widget extends \Elementor\Widget_Base
 				'label_off' => esc_html__('No', 'tp-elements'),
 				'return_value' => 'yes',
 				'default' => 'yes',
+				'separator' => 'before',
 			]
 		);
 
@@ -1172,7 +1173,8 @@ class Themephi_Elementor_Heading_Widget extends \Elementor\Widget_Base
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .sub-text.sub-text-has-icon .sub-text-icon' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}}; font-size: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .sub-text.sub-text-has-icon .sub-text-icon svg' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .sub-text.sub-text-has-icon .sub-text-icon' => 'font-size: {{SIZE}}{{UNIT}};',
 				],
 				'condition' => [
 					'style' => 'style16',

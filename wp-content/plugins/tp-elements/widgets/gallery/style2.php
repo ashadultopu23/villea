@@ -1,5 +1,5 @@
 <!-- Gallery style 2 -->
-<div class="rs-galleys elementor-image-gallery rs-gallery-<?php echo esc_attr($id) ?>" id="rs-gallery-<?php echo esc_attr($id) ?>">
+<div class="rs-galleys rs-galleys-<?php echo esc_attr($id); ?> elementor-image-gallery rs-gallery-<?php echo esc_attr($id) ?>" id="rs-gallery-<?php echo esc_attr($id) ?>">
     <?php
     if (!empty($settings['gallery_image_single']['id'])) :
         $gallery_item   = wp_get_attachment_image_url($settings['gallery_image_single']['id'], $settings['thumbnail_size']);

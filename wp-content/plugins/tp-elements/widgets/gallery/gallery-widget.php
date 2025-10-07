@@ -403,7 +403,7 @@ class Themephi_Elementor_pro_Gallery_Widget extends \Elementor\Widget_Base
 				],
 
 				'selectors' => [
-					'{{WRAPPER}}  .rs-galleys .galley-img .p-zoom i:before, .rs-galleys .galley-img .zoom-icon i:before' => 'font-size: {{SIZE}}{{UNIT}}'
+					'{{WRAPPER}} .rs-galleys .galley-img .zoom-icon i:before' => 'font-size: {{SIZE}}{{UNIT}}'
 				],
 			]
 		);

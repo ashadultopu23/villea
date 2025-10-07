@@ -165,7 +165,7 @@ class Themephi_Image_Showcase_Widget extends \Elementor\Widget_Base
             'tp_image_size',
             [
 
-                'label' => esc_html__('Image Size', 'tp-elements'),
+                'label' => esc_html__('Image Width', 'tp-elements'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'range' => [
@@ -181,6 +181,31 @@ class Themephi_Image_Showcase_Widget extends \Elementor\Widget_Base
                 ],
                 'selectors' => [
                     '{{WRAPPER}} img.themephi-multi-image' => 'width: {{SIZE}}{{UNIT}};',
+                ],
+
+            ]
+        );
+
+        $this->add_responsive_control(
+            'tp_image_height',
+            [
+
+                'label' => esc_html__('Image Height', 'tp-elements'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', '%'],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 1000,
+                        'step' => 5,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} img.themephi-multi-image' => 'height: {{SIZE}}{{UNIT}};',
                 ],
 
             ]
