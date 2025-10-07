@@ -133,11 +133,11 @@
         }
       }
       .tp-accordion-body {
-        // background: var(--primaryColor);
         padding: 15px 30px 0px 20px;
       }
     }
   }
+
   &.style3 {
     .tp-accordion-item
       .tp-accordion-header
@@ -145,8 +145,6 @@
       box-shadow: none;
     }
     .tp-accordion-item {
-      margin-bottom: 30px;
-      box-shadow: 0px 7px 18px rgba(24, 16, 16, 0.05);
       margin-bottom: 20px;
       border: none;
       .tp-accordion-header {
@@ -154,42 +152,70 @@
           font-size: 18px;
           color: #1c2539;
           font-weight: 700;
-          padding: 24px 40px;
           background: none;
           font-family: var(--titleFont);
-          span {
-            color: var(--primaryColor);
-            margin-right: 10px;
+          text-align: left;
+          padding: 0;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          .accordion-icon {
+            font-size: 16px;
+            display: block;
+            margin-left: 8px;
+            margin-right: 0;
+            i {
+              background: var(--primaryColor);
+              width: 24px;
+              height: 24px;
+              line-height: 24px;
+              text-align: center;
+              display: inline-block;
+              color: var(--whiteColor);
+              border-radius: 50%;
+            }
           }
-          &:after {
-            content: "\f078";
-            font-family: "Font Awesome 5 Pro" !important;
-            background-image: none;
-            top: 0px;
-            position: relative;
-            transform: none;
-            color: var(--primaryColor);
+          .accordion-icon-active {
+            display: none;
+            margin-left: 8px;
+            margin-right: 0;
+            i {
+              background: var(--secondaryColor);
+              color: var(--whiteColor);
+              width: 24px;
+              height: 24px;
+              line-height: 24px;
+              text-align: center;
+              display: inline-block;
+              border-radius: 50%;
+            }
+          }
+          .accordion-icon.after,
+          .accordion-icon-active.after {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translate(0px, -50%);
+            min-width: 12px;
           }
         }
         button[aria-expanded="true"] {
-          border: 1px solid transparent;
-          background: var(--primaryColor);
-          color: #fff;
-          border-radius: 5px 5px 0 0;
-          &:after {
-            content: "\f077";
-            font-family: "Font Awesome 5 Pro" !important;
-            background-image: none;
-            top: 0px;
-            position: relative;
+          padding-bottom: 20px;
+          .accordion-icon {
+            display: none;
+          }
+          .accordion-icon-active {
+            display: block;
+            font-size: 16px;
           }
         }
       }
-      .tp-accordion-body {
-        background: var(--primaryColor);
-        border-radius: 0 0 5px 5px;
-        padding: 0px 35px 35px 35px;
-      }
+    }
+    .tp-accordion-body {
+      color: var(--bodyColor);
+      padding-left: 32px;
+      padding-right: 32px;
     }
   }
 }
@@ -217,17 +243,17 @@
 }
 
 //Engineer Accordion Style 2
-.engineer_accordion
-  .tps-accordion.style2
-  .tp-accordion-item
-  .tp-accordion-header
-  button {
-  padding: 20px !important;
-}
-.engineer_accordion
-  .tps-accordion.style2
-  .tp-accordion-item
-  .tp-accordion-body {
-  background: var(--primaryColor) !important;
-  padding: 0px 20px 10px 20px !important;
-}
+// .engineer_accordion
+//   .tps-accordion.style2
+//   .tp-accordion-item
+//   .tp-accordion-header
+//   button {
+//   padding: 20px !important;
+// }
+// .engineer_accordion
+//   .tps-accordion.style2
+//   .tp-accordion-item
+//   .tp-accordion-body {
+//   background: var(--primaryColor) !important;
+//   padding: 0px 20px 10px 20px !important;
+// }

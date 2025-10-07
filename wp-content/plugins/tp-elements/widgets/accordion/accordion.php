@@ -127,6 +127,28 @@ class Themephi_Widget_Accordion extends \Elementor\Widget_Base
                 'separator' => 'before',
             ]
         );
+
+        $this->add_control(
+            'accordion_icon_position',
+            [
+                'label' => esc_html__('Icon Position', 'tp-elements'),
+                'type' => Controls_Manager::CHOOSE,
+                'label_block' => false,
+                'options' => [
+                    'before' => [
+                        'title' => esc_html__('Before', 'tp-elements'),
+                        'icon' => 'eicon-h-align-left',
+                    ],
+                    'after' => [
+                        'title' => esc_html__('After', 'tp-elements'),
+                        'icon' => 'eicon-h-align-right',
+                    ],
+                ],
+                'default' => 'after',
+                'toggle' => false,
+            ]
+        );
+
         $this->add_control(
             'accordion_style',
             [
@@ -506,14 +528,36 @@ class Themephi_Widget_Accordion extends \Elementor\Widget_Base
                             </div>
                         </div>
                     </div>
+
                 <?php else : ?>
                     <div class="tp-accordion-item">
                         <div class="tp-accordion-header" id="heading-<?php echo $dataUnique; ?>">
                             <button class="tp-accordion-button w-100 <?php echo $collapse; ?>" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $dataUnique; ?>" aria-expanded="<?php echo $true; ?>" aria-controls="collapse<?php echo $dataUnique; ?>">
 
-                                <?php if ($settings['show_title_count']) : ?><span><?php echo '0' . $x . '.'; ?></span><?php endif; ?>
-                                <?php echo wp_kses_post($title); ?> <span class="accordion-icon"><?php \Elementor\Icons_Manager::render_icon($settings['accordion_icon'], ['aria-hidden' => 'true']); ?></span>
-                                <span class="accordion-icon-active"> <?php \Elementor\Icons_Manager::render_icon($settings['accordion_active_icon'], ['aria-hidden' => 'true']); ?></span>
+                                <?php if (!empty($settings['accordion_icon_position'] && $settings['accordion_icon_position'] == 'before')) : ?>
+                                    <span class="accordion-icon <?php echo $settings['accordion_icon_position']; ?>">
+                                        <?php \Elementor\Icons_Manager::render_icon($settings['accordion_icon'], ['aria-hidden' => 'true']); ?>
+                                    </span>
+                                    <span class="accordion-icon-active <?php echo $settings['accordion_icon_position']; ?>">
+                                        <?php \Elementor\Icons_Manager::render_icon($settings['accordion_active_icon'], ['aria-hidden' => 'true']); ?>
+                                    </span>
+                                <?php endif; ?>
+
+                                <?php if ($settings['show_title_count']) : ?>
+                                    <span><?php echo '0' . $x . '.'; ?></span>
+                                <?php endif; ?>
+
+                                <?php echo wp_kses_post($title); ?>
+
+                                <?php if (!empty($settings['accordion_icon_position'] && $settings['accordion_icon_position'] == 'after')) : ?>
+                                    <span class="accordion-icon <?php echo $settings['accordion_icon_position']; ?>">
+                                        <?php \Elementor\Icons_Manager::render_icon($settings['accordion_icon'], ['aria-hidden' => 'true']); ?>
+                                    </span>
+                                    <span class="accordion-icon-active <?php echo $settings['accordion_icon_position']; ?>">
+                                        <?php \Elementor\Icons_Manager::render_icon($settings['accordion_active_icon'], ['aria-hidden' => 'true']); ?>
+                                    </span>
+                                <?php endif; ?>
+
                             </button>
                         </div>
                         <div id="collapse<?php echo $dataUnique; ?>" class="accordion-collapse collapse <?php echo $show; ?>" aria-labelledby="heading<?php echo $dataUnique; ?>" data-bs-parent="#accordionExample<?php echo $unique; ?>">
