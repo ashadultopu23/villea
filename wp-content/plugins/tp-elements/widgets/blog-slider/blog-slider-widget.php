@@ -1373,14 +1373,70 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
             ]
         );
 
+        $this->add_group_control(
+            \Elementor\Group_Control_Typography::get_type(),
+            [
+                'name' => 'icon_typography',
+                'selector' => '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a i, .tp-blog-slider .tps-read-more i',
+            ]
+        );
+
+        $this->add_responsive_control(
+            'icon_width',
+            [
+                'label' => esc_html__('Width', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => ['px', '%', 'custom'],
+                'range' => [
+                    'px' => [
+                        'min' => 1,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 1,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a i, .tp-blog-slider .tps-read-more i' => 'width: {{SIZE}}{{UNIT}} !important;',
+                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a svg, .tp-blog-slider .tps-read-more svg' => 'width: {{SIZE}}{{UNIT}} !important;',
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'icon_height',
+            [
+                'label' => esc_html__('Height', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => ['px', '%', 'custom'],
+                'range' => [
+                    'px' => [
+                        'min' => 1,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 1,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a i, .tp-blog-slider .tps-read-more i' => 'height: {{SIZE}}{{UNIT}} !important;',
+                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a svg, .tp-blog-slider .tps-read-more svg' => 'height: {{SIZE}}{{UNIT}} !important;',
+                ],
+            ]
+        );
+
         $this->add_control(
             'button_icon_color',
             [
                 'label' => esc_html__('Icon Color', 'tp-elements'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a i, .tp-blog-slider .tps-read-more i' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a svg, .tp-blog-slider .tps-read-more svg' => 'fill: {{VALUE}};',
+                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a i, .tp-blog-slider .tps-read-more i' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a svg, .tp-blog-slider .tps-read-more svg' => 'fill: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -1391,8 +1447,8 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                 'label' => esc_html__('Icon Hover Color', 'tp-elements'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a:hover i, .tp-blog-slider .tps-read-more:hover i' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a:hover svg, .tp-blog-slider .tps-read-more:hover svg' => 'fill: {{VALUE}};',
+                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a:hover i, .tp-blog-slider .tps-read-more:hover i' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a:hover svg, .tp-blog-slider .tps-read-more:hover svg' => 'fill: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -1402,8 +1458,8 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                 'label' => esc_html__('Icon BG Color', 'tp-elements'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a i, .tp-blog-slider .tps-read-more i' => 'background: {{VALUE}};',
-                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a svg, .tp-blog-slider .tps-read-more svg' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a i, .tp-blog-slider .tps-read-more i' => 'background: {{VALUE}} !important;',
+                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a svg, .tp-blog-slider .tps-read-more svg' => 'background: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -1414,8 +1470,8 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                 'label' => esc_html__('Icon BG Hover Color', 'tp-elements'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a:hover i, .tp-blog-slider .tps-read-more:hover i' => 'background: {{VALUE}};',
-                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a:hover svg, .tp-blog-slider .tps-read-more:hover svg' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a:hover i, .tp-blog-slider .tps-read-more:hover i' => 'background: {{VALUE}} !important;',
+                    '{{WRAPPER}} .tp-blog-slider .blog-btn.themephi-button a:hover svg, .tp-blog-slider .tps-read-more:hover svg' => 'background: {{VALUE}} !important;',
                 ],
             ]
         );

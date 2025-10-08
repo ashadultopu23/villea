@@ -71,13 +71,13 @@
         </div>
 
         <div class="d-flex align-items-center justify-content-between review-footer">
-            <div class="content--box">
+            <div class="user-info-wrapper">
                 <?php if (!empty($settings['show_user_img']) && $settings['show_user_img'] == 'yes') : ?>
                     <div class="banner-image">
                         <img class="banner-img" src="<?php echo esc_url($image); ?>" alt="image">
                     </div>
                 <?php endif; ?>
-                <div class="description">
+                <div class="user-info-content">
                     <?php if (!empty($title)): ?>
                         <h5 class="slider-title tp-el-title"><?php echo wp_kses_post($title); ?></h5>
                     <?php endif; ?>

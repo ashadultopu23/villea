@@ -103,6 +103,80 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
         );
 
         $this->add_control(
+            'slider_direction',
+            [
+                'label' => esc_html__('Slider Direction', 'text-domain'),
+                'type' => Controls_Manager::SELECT,
+                'default' => 'horizontal',
+                'options' => [
+                    'horizontal' => esc_html__('Horizontal', 'text-domain'),
+                    'vertical' => esc_html__('vertical', 'text-domain'),
+                ],
+            ]
+        );
+
+
+        // $this->add_control(
+        //     'sliding_direction',
+        //     [
+        //         'label' => esc_html__('Sliding Direction', 'text-domain'),
+        //         'type' => Controls_Manager::SELECT,
+        //         'default' => 'ltr',
+        //         'options' => [
+        //             'rtl' => esc_html__('Right to Left', 'text-domain'),
+        //             'ltr' => esc_html__('Left to Right', 'text-domain'),
+        //         ],
+        //     ]
+        // );
+
+        $this->add_control(
+            'reverse_sliding_direction',
+            [
+                'label' => esc_html__('Reverse Sliding Direction', 'text-domain'),
+                'type' => Controls_Manager::SELECT,
+                'default' => 'false',
+                'options' => [
+                    'false' => esc_html__('False', 'text-domain'),
+                    'true' => esc_html__('True', 'text-domain'),
+                ],
+                'description' => esc_html__('Enable this to reverse the sliding direction (e.g., top to bottom for vertical)', 'text-domain'),
+            ]
+        );
+
+
+
+        $this->add_responsive_control(
+            'slider_height',
+            [
+                'label' => esc_html__('Slider Height', 'tp-elements'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', 'vh', '%'],
+                'range' => [
+                    'px' => [
+                        'min' => 100,
+                        'max' => 1000,
+                        'step' => 10,
+                    ],
+                    'vh' => [
+                        'min' => 10,
+                        'max' => 100,
+                    ],
+                    '%' => [
+                        'min' => 10,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .themephi-addon-slider.swiper' => 'height: {{SIZE}}{{UNIT}} !important;',
+                ],
+                'condition' => [
+                    'slider_direction' => 'vertical',
+                ],
+            ]
+        );
+
+
+        $this->add_control(
             'add_overlay_mobile',
             [
                 'label'   => esc_html__('Add Overlay on Mobile', 'tp-elements'),
@@ -189,9 +263,33 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
             [
                 'label' => esc_html__('Description', 'tp-elements'),
                 'type' => Controls_Manager::WYSIWYG,
-                'default' => __('Thanks to Hyperai, I\'m in the best shape of my life. The training sessions are challenging but rewarding.', 'tp-elements'),
+                'default' => __('"Villea made finding my dream apartment so easy. The design, space, and comfort are beyond expectations. Living at Villea feels like living in luxury every day. The apartments are modern and spacious."', 'tp-elements'),
                 'label_block' => true,
                 'placeholder' => esc_html__('Description', 'tp-elements'),
+                'separator'   => 'before',
+            ]
+        );
+
+        $repeater->add_control(
+            'user_name',
+            [
+                'label' => esc_html__('User Name', 'tp-elements'),
+                'type' => Controls_Manager::TEXT,
+                'default' => esc_html__('-Dianne Russell (@Dianne125)', 'tp-elements'),
+                'label_block' => true,
+                'placeholder' => esc_html__('User Name', 'tp-elements'),
+                'separator'   => 'before',
+            ]
+        );
+
+        $repeater->add_control(
+            'post_date',
+            [
+                'label' => esc_html__('Post Date', 'tp-elements'),
+                'type' => Controls_Manager::TEXT,
+                'default' => esc_html__('01 Jan 2022', 'tp-elements'),
+                'label_block' => true,
+                'placeholder' => esc_html__('Post Date', 'tp-elements'),
                 'separator'   => 'before',
             ]
         );
@@ -428,6 +526,7 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
                     '4.5' => esc_html__('4.5 Column', 'tp-elements'),
                     '5' => esc_html__('5 Column', 'tp-elements'),
                     '6' => esc_html__('6 Column', 'tp-elements'),
+                    'auto' => esc_html__('Auto', 'tp-elements'),
                 ],
                 'separator' => 'before',
 
@@ -448,6 +547,7 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
                     '4' => esc_html__('4 Column', 'tp-elements'),
                     '5' => esc_html__('5 Column', 'tp-elements'),
                     '6' => esc_html__('6 Column', 'tp-elements'),
+                    'auto' => esc_html__('Auto', 'tp-elements'),
                 ],
                 'separator' => 'before',
 
@@ -468,6 +568,7 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
                     '4' => esc_html__('4 Column', 'tp-elements'),
                     '5' => esc_html__('5 Column', 'tp-elements'),
                     '6' => esc_html__('6 Column', 'tp-elements'),
+                    'auto' => esc_html__('Auto', 'tp-elements'),
                 ],
                 'separator' => 'before',
 
@@ -488,6 +589,7 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
                     '4' => esc_html__('4 Column', 'tp-elements'),
                     '5' => esc_html__('5 Column', 'tp-elements'),
                     '6' => esc_html__('6 Column', 'tp-elements'),
+                    'auto' => esc_html__('Auto', 'tp-elements'),
                 ],
                 'separator' => 'before',
 
@@ -508,6 +610,7 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
                     '4' => esc_html__('4 Column', 'tp-elements'),
                     '5' => esc_html__('5 Column', 'tp-elements'),
                     '6' => esc_html__('6 Column', 'tp-elements'),
+                    'auto' => esc_html__('Auto', 'tp-elements'),
                 ],
                 'separator' => 'before',
 
@@ -1159,6 +1262,7 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
             ]
         );
 
+
         $this->start_controls_tabs('_tabs_item');
 
         $this->start_controls_tab(
@@ -1206,6 +1310,17 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .single--item:hover .slider-title, {{WRAPPER}} .single--item:hover .slider-subtitle, {{WRAPPER}} .single--item:hover .desc, {{WRAPPER}} .single--item:hover .rating-portion i' => 'color: {{VALUE}} !important',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'item_hover_border_color',
+            [
+                'label' => esc_html__('Border Color', 'tp-elements'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .swiper-slide .single--item:hover' => 'border-color: {{VALUE}}',
                 ],
             ]
         );
@@ -1274,8 +1389,8 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
                 'label' => esc_html__('Title Color', 'tp-elements'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .tp--slider .single--item .content--box .slider-title' => 'color: {{VALUE}}',
-                    '{{WRAPPER}} .tp--slider.slider-style5 .slider-content-area .content--box .slider-title' => 'color: {{VALUE}}',
+                    '{{WRAPPER}} .tp--slider .single--item .user-info-wrapper .slider-title' => 'color: {{VALUE}}',
+                    '{{WRAPPER}} .tp--slider.slider-style5 .slider-content-area .user-info-wrapper .slider-title' => 'color: {{VALUE}}',
                     '{{WRAPPER}} .tp-el-title' => 'color: {{VALUE}}',
                     '{{WRAPPER}} .slider-inner-wrapper .tp-el-title' => 'color: {{VALUE}}',
                 ],
@@ -1286,7 +1401,7 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
             \Elementor\Group_Control_Typography::get_type(),
             [
                 'name' => 'title_typography',
-                'selector' => '{{WRAPPER}} .tp--slider.slider-style5 .slider-content-area .content--box .slider-title, {{WRAPPER}} .slider-inner-wrapper .tp-el-title',
+                'selector' => '{{WRAPPER}} .tp--slider.slider-style5 .slider-content-area .user-info-wrapper .slider-title, {{WRAPPER}} .slider-inner-wrapper .tp-el-title',
             ]
         );
 
@@ -1296,8 +1411,8 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
                 'label' => esc_html__('Sub Title Color', 'tp-elements'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .tp--slider .single--item .content--box .slider-subtitle' => 'color: {{VALUE}}',
-                    '{{WRAPPER}} .tp--slider.slider-style5 .slider-content-area .content--box .slider-subtitle' => 'color: {{VALUE}}',
+                    '{{WRAPPER}} .tp--slider .single--item .user-info-wrapper .slider-subtitle' => 'color: {{VALUE}}',
+                    '{{WRAPPER}} .tp--slider.slider-style5 .slider-content-area .user-info-wrapper .slider-subtitle' => 'color: {{VALUE}}',
                     '{{WRAPPER}} .slider-inner-wrapper .tp-el-subtitle' => 'color: {{VALUE}}',
                 ],
             ]
@@ -1307,7 +1422,7 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
             \Elementor\Group_Control_Typography::get_type(),
             [
                 'name' => 'subtitle_typography',
-                'selector' => '{{WRAPPER}} .tp--slider.slider-style5 .slider-content-area .content--box .slider-subtitle, {{WRAPPER}} .slider-inner-wrapper .tp-el-subtitle',
+                'selector' => '{{WRAPPER}} .tp--slider.slider-style5 .slider-content-area .user-info-wrapper .slider-subtitle, {{WRAPPER}} .slider-inner-wrapper .tp-el-subtitle',
             ]
         );
 
@@ -1628,25 +1743,22 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
         $item_gap        = !empty($item_gap) ? $item_gap : '30';
         $prev_text       = !empty($prev_text) ? $prev_text : '';
         $next_text       = !empty($next_text) ? $next_text : '';
+        $slider_direction = !empty($settings['slider_direction']) ? $settings['slider_direction'] : 'horizontal';
+        // $sliding_direction = $settings['sliding_direction'] == 'rtl' ? 'rtl' : 'ltr';
+        $reverse_sliding_direction = $settings['reverse_sliding_direction'] == 'true' ? 'true' : 'false';
         $unique          = rand(2012, 35120);
 
         if ($slider_autoplay == 'true') {
             $slider_autoplay = 'autoplay: { ';
             $slider_autoplay .= 'delay: ' . $interval;
-            if ($pauseOnHover == 'true') {
-                $slider_autoplay .= ', pauseOnMouseEnter: true';
-            } else {
-                $slider_autoplay .= ', pauseOnMouseEnter: false';
-            }
-            if ($pauseOnInter == 'true') {
-                $slider_autoplay .= ', disableOnInteraction: true';
-            } else {
-                $slider_autoplay .= ', disableOnInteraction: false';
-            }
+            $slider_autoplay .= ', reverseDirection: ' . $settings['reverse_sliding_direction'];
+            $slider_autoplay .= ', pauseOnMouseEnter: ' . ($pauseOnHover == 'true' ? 'true' : 'false');
+            $slider_autoplay .= ', disableOnInteraction: ' . ($pauseOnInter == 'true' ? 'true' : 'false');
             $slider_autoplay .= ' }';
         } else {
             $slider_autoplay = 'autoplay: false';
         }
+
 
         $effect = $settings['rt_pslider_effect'];
 
@@ -1711,6 +1823,8 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
                         $top_title    = !empty($item['top_title']) ? $item['top_title'] : '';
                         $description  = !empty($item['description']) ? $item['description'] : '';
                         $tp_rating  = !empty($item['tp_rating']) ? $item['tp_rating'] : '5';
+                        $user_name    = !empty($item['user_name']) ? $item['user_name'] : '';
+                        $post_date    = !empty($item['post_date']) ? $item['post_date'] : '';
                         $img_gap = $item['img_margin'];
 
                         if ($sstyle) {
@@ -1734,6 +1848,8 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
             jQuery(document).ready(function() {
                 var swiper<?php echo esc_attr($unique); ?><?php echo esc_attr($unique); ?> = new Swiper(".tp_slider-<?php echo esc_attr($unique); ?>", {
                     slidesPerView: 1,
+                    direction: '<?php echo esc_attr($slider_direction); ?>',
+                    reverseDirection: '<?php echo esc_attr($reverse_sliding_direction); ?>',
                     <?php echo $seffect; ?>
                     speed: <?php echo esc_attr($autoplaySpeed); ?>,
                     slidesPerGroup: 1,
@@ -1751,13 +1867,13 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
                     },
                     breakpoints: {
                         <?php
-                        echo (!empty($col_xs)) ?  '575: { slidesPerView: ' . $col_xs . ' },' : '';
-                        echo (!empty($col_sm)) ?  '767: { slidesPerView: ' . $col_sm . ' },' : '';
-                        echo (!empty($col_md)) ?  '991: { slidesPerView: ' . $col_md . ' },' : '';
-                        echo (!empty($col_lg)) ?  '1199: { slidesPerView: ' . $col_lg . ' },' : '';
+                        echo  '575: { slidesPerView: ' . (($col_xs === 'auto') ? "'auto'" : $col_xs) . ' },';
+                        echo '767: { slidesPerView: ' . (($col_sm === 'auto') ? "'auto'" : $col_sm) . ' },';
+                        echo '991: { slidesPerView: ' . (($col_md === 'auto') ? "'auto'" : $col_md) . ' },';
+                        echo '1199: { slidesPerView: ' . (($col_lg === 'auto') ? "'auto'" : $col_lg) . ' },';
                         ?>
                         1399: {
-                            slidesPerView: <?php echo esc_attr($col_xl); ?>,
+                            slidesPerView: <?php echo ($col_xl === 'auto') ? "'auto'" : esc_attr($col_xl); ?>,
                             spaceBetween: <?php echo esc_attr($item_gap); ?>
                         }
                     }

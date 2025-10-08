@@ -36,11 +36,11 @@
         </div>
 
         <div class="d-flex align-items-center justify-content-between review-footer">
-            <div class="content--box">
+            <div class="user-info-wrapper">
                 <div class="banner-image">
                     <img class="banner-img" src="<?php echo esc_url($image); ?>" alt="image">
                 </div>
-                <div class="description">
+                <div class="user-info-content">
                     <?php if (!empty($title)): ?>
                         <h5 class="slider-title tp-el-title"><?php echo wp_kses_post($title); ?></h5>
                     <?php endif; ?>

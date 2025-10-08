@@ -750,17 +750,14 @@ class Themephi_Elementor_Team_Slider_Widget extends \Elementor\Widget_Base
             ]
         );
 
-        $this->add_group_control(
-            \Elementor\Group_Control_Border::get_type(),
+        $this->add_control(
+            'content_hover_border',
             [
-                'name' => 'content_hover_border',
-                'label' => esc_html__('Border', 'plugin-name'),
-                'selector' => '{{WRAPPER}} .team-item:hover .team-content',
-                'fields_options' => [
-                    'label' => [
-                        'default' => esc_html__('Hover Border', 'plugin-name'),
-                    ],
-                ]
+                'label' => esc_html__('Hover Border Color', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .team-item:hover .team-content' => 'border-color: {{VALUE}} !important',
+                ],
             ]
         );
 

@@ -1,56 +1,3 @@
-<!-- <div class="swiper-slide tp-slide-item">
-    <div  class="single--item" style="background-image: url( <?php echo esc_attr($image); ?> );">
-        <div class="content--box">
-            <?php if (!empty($sub_title)): ?>
-                <p class="slider-subtitle">
-                    <?php if (!empty($sub_img_link)): ?>
-                        <img src="<?php echo esc_attr($sub_img_link); ?>" alt="Icon">
-                    <?php endif; ?>
-                    <?php echo wp_kses_post($sub_title); ?>
-                </p>
-            <?php endif; ?>
-            <?php if (!empty($title)): ?>
-                <h2 class="slider-title"><?php echo wp_kses_post($title); ?></h2>
-            <?php endif; ?>
-            <?php if (!empty($description)): ?>
-                <div class="slider-description"><?php echo wp_kses_post($description); ?></div>
-            <?php endif; ?>
-        </div>
-    
-    </div>
-</div> -->
-
-<!-- <div class="swiper-slide tp-slide-item">
-    <div class="vision-main-wrapper">
-        <div class="row align-items-center">
-            <div class="col-lg-5 col-md-6 col-sm-12">
-                <div class="side-sticky">
-                    <div class="sticky-inner">
-                        <div class="thumbnail-area-about">
-                            <img class="banner-img" src="<?php echo esc_url($image); ?>" alt="image">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-7 about-a-p-cont col-md-6">
-                <div class="about-inner-wrapper-inner">
-                    <div class="title-three-left">
-                        <h2 class="slider-title">
-                            <?php echo wp_kses_post($title); ?>
-                        </h2>
-                    </div>
-                    <div class="main-content-area-about-p">
-                        <div class="disc">
-                        <?php echo wp_kses_post($description); ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-
 <div class="swiper-slide tp-slide-item">
     <div class="single--item">
 
@@ -95,11 +42,11 @@
             </div>
         </div>
 
-        <div class="content--box">
+        <div class="user-info-wrapper">
             <div class="banner-image">
                 <img class="banner-img" src="<?php echo esc_url($image); ?>" alt="image">
             </div>
-            <div class="description">
+            <div class="user-info-content">
                 <?php if (!empty($title)): ?>
                     <h5 class="slider-title tp-el-title"><?php echo wp_kses_post($title); ?></h5>
                 <?php endif; ?>
