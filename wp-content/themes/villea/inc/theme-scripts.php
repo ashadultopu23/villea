@@ -18,7 +18,7 @@ function villea_scripts()
 	$enqueue_with_version('swiper', '/assets/css/swiper-bundle.min.css');
 	$enqueue_with_version('global-css', '/assets/css/global.css');
 	$enqueue_with_version('animate-css', '/assets/css/animate.css');
-	$enqueue_with_version('select2-css', '/assets/css/select2.min.css');
+	// $enqueue_with_version('select2-css', '/assets/css/select2.min.css');
 	$enqueue_with_version('splitting-css', '/assets/css/splitting.min.css');
 	$enqueue_with_version('cus_fontawesome', '/assets/css/fontawesome/css/fontawesome.min.css');
 	$enqueue_with_version('villea-style-default', '/assets/scss/theme.css');

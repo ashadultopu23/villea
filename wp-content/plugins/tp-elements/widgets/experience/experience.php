@@ -176,7 +176,7 @@ class Themephi_Elementor_Experience_Widget extends \Elementor\Widget_Base
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .tp-el-text-wrapper' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .tp-el-text-wrapper' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}}; max-width: {{SIZE}}{{UNIT}}; max-height: {{SIZE}}{{UNIT}}; min-width: {{SIZE}}{{UNIT}}; min-height: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);

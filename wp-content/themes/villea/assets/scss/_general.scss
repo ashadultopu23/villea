@@ -1961,79 +1961,79 @@ a:active {
     Nice Select Style
   ---------------------------------------*/
 
-.nice-select {
-  float: unset;
-  background: transparent;
-  border: 1px solid var(--borderColor);
-  padding: 10px 16px;
-  padding-right: 32px;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: auto !important;
-  // min-width: 200px;
+// .nice-select {
+//   float: unset;
+//   background: transparent;
+//   border: 1px solid var(--borderColor);
+//   padding: 10px 16px;
+//   padding-right: 32px;
+//   display: flex;
+//   align-items: center;
+//   width: 100%;
+//   height: auto !important;
+//   // min-width: 200px;
 
-  &:after {
-    border-color: var(--titleColor);
-    right: 15px;
-  }
+//   &:after {
+//     border-color: var(--titleColor);
+//     right: 15px;
+//   }
 
-  &:hover,
-  &:active,
-  &.open,
-  &:focus {
-    border-color: var(--primaryColor);
-  }
+//   &:hover,
+//   &:active,
+//   &.open,
+//   &:focus {
+//     border-color: var(--primaryColor);
+//   }
 
-  .current {
-    color: var(--titleColor);
-    text-transform: capitalize;
-    height: auto;
-    display: inline-block;
-    line-height: 1.3;
-    white-space: normal;
-  }
+//   .current {
+//     color: var(--titleColor);
+//     text-transform: capitalize;
+//     height: auto;
+//     display: inline-block;
+//     line-height: 1.3;
+//     white-space: normal;
+//   }
 
-  .list {
-    margin: 0;
-    width: 100%;
-    background: var(--body_bg);
-    color: var(--titleColor);
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    overflow-y: auto;
-    white-space: normal;
-    max-height: 400px;
-    padding: 8px 0;
-  }
+//   .list {
+//     margin: 0;
+//     width: 100%;
+//     background: var(--body_bg);
+//     color: var(--titleColor);
+//     border-top-left-radius: 0;
+//     border-top-right-radius: 0;
+//     overflow-y: auto;
+//     white-space: normal;
+//     max-height: 400px;
+//     padding: 8px 0;
+//   }
 
-  .option {
-    line-height: 1.5;
-    min-height: auto;
-    padding: 8px 20px !important;
-    margin: 0 !important;
-    border: none !important;
-    border-top: 1px solid var(--borderColor) !important;
+//   .option {
+//     line-height: 1.5;
+//     min-height: auto;
+//     padding: 8px 20px !important;
+//     margin: 0 !important;
+//     border: none !important;
+//     border-top: 1px solid var(--borderColor) !important;
 
-    &.selected {
-      color: var(--titleColor) !important;
+//     &.selected {
+//       color: var(--titleColor) !important;
 
-      &.focus {
-        background-color: var(--btnBgColor) !important;
-        color: var(--btnColor) !important;
-      }
-    }
+//       &.focus {
+//         background-color: var(--btnBgColor) !important;
+//         color: var(--btnColor) !important;
+//       }
+//     }
 
-    &:hover {
-      background-color: var(--btnBgColor) !important;
-      color: var(--btnColor) !important;
-    }
-  }
+//     &:hover {
+//       background-color: var(--btnBgColor) !important;
+//       color: var(--btnColor) !important;
+//     }
+//   }
 
-  .list:hover .option:not(:hover) {
-    color: var(--titleColor) !important;
-  }
-}
+//   .list:hover .option:not(:hover) {
+//     color: var(--titleColor) !important;
+//   }
+// }
 
 /* -----------------------
     video btn

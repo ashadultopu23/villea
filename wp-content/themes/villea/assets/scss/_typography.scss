@@ -262,6 +262,9 @@ table thead tr th {
 }
 
 @media (max-width: 767px) {
+  .display-one {
+    font-size: 64px;
+  }
   .display-four {
     font-size: 42px !important;
   }
@@ -297,6 +300,12 @@ table thead tr th {
   }
   .pb-120 {
     padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .display-one {
+    font-size: 48px;
   }
 }
 

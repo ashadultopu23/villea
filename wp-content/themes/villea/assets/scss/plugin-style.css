@@ -19,49 +19,81 @@
   opacity: 1 !important;
   font-size: 16px !important;
 }
-.customiz-search-field .es-search.es-search--main form .es-search__address {
-  position: relative;
-  z-index: 10;
-  padding: 8px !important;
-  border-radius: 8px;
-  border: 1px solid #dfe0e4;
-  background: #f5f6f7;
-  font-size: 16px !important;
-  color: var(--bodyColor);
-  font-family: var(--bodyFont);
+@media (max-width: 767px) {
+  .customiz-search-field .es-search.es-search--main form input,
+  .customiz-search-field .es-search.es-search--main form button {
+    padding: 8px 12px !important;
+  }
+}
+@media (max-width: 480px) {
+  .customiz-search-field .es-search.es-search--main form input,
+  .customiz-search-field .es-search.es-search--main form button {
+    padding: 8px !important;
+  }
+}
+@media (min-width: 568px) {
+  .customiz-search-field .es-search.es-search--main form .es-search__address {
+    position: relative;
+    z-index: 10;
+    padding: 8px !important;
+    border-radius: 8px;
+    border: 1px solid #dfe0e4;
+    background: #f5f6f7;
+    font-size: 16px !important;
+    color: var(--bodyColor);
+    font-family: var(--bodyFont);
+  }
 }
 .customiz-search-field .es-search.es-search--main form .es-search-nav {
   position: relative;
   z-index: 20;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
 }
+@media (min-width: 768px) {
+  .customiz-search-field .es-search.es-search--main form .es-search-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media (max-width: 767px) {
+  .customiz-search-field .es-search.es-search--main form .js-es-search__collapse-link {
+    margin-top: 10px;
+  }
+}
 .customiz-search-field .es-search.es-search--main form .js-es-search-nav__single-item {
-  z-index: 10;
   border-radius: 8px;
   border: 1px solid #dfe0e4;
   background: #f5f6f7;
   font-size: 16px !important;
   color: var(--bodyColor);
   font-family: var(--bodyFont);
-  flex: 1;
 }
-.customiz-search-field .es-search.es-search--main form .js-es-search-nav__single-item a {
-  position: relative;
-  z-index: 10;
-  height: 52px !important;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 8px !important;
-  color: inherit !important;
-  font-size: inherit !important;
-  font-weight: inherit !important;
-  font-family: inherit !important;
-  line-height: 1 !important;
+@media (min-width: 768px) {
+  .customiz-search-field .es-search.es-search--main form .js-es-search-nav__single-item {
+    flex: 1;
+  }
+  .customiz-search-field .es-search.es-search--main form .js-es-search-nav__single-item a {
+    position: relative;
+    z-index: 10;
+    height: 52px !important;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px !important;
+    color: inherit !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    font-family: inherit !important;
+    line-height: 1 !important;
+  }
+}
+@media (max-width: 767px) {
+  .customiz-search-field .es-search.es-search--main form .js-es-search-nav__single-item {
+    margin-top: 10px;
+    padding: 8px !important;
+  }
 }
 .customiz-search-field .es-search.es-search--main form .es-search-nav__content {
   z-index: 30;
@@ -94,6 +126,11 @@
   font-family: var(--bodyFont);
   line-height: 1.2 !important;
 }
+@media (max-width: 767px) {
+  .customiz-search-field .es-search.es-search--main form .es-search-nav__content {
+    margin-top: 0 !important;
+  }
+}
 .customiz-search-field .es-search.es-search--simple form input,
 .customiz-search-field .es-search.es-search--simple form button {
   height: 52px !important;
@@ -113,9 +150,18 @@
 .customiz-search-field .es-search.es-search--simple form .es-search-nav {
   position: relative;
   z-index: 20;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+}
+@media (min-width: 768px) {
+  .customiz-search-field .es-search.es-search--simple form .es-search-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media (max-width: 767px) {
+  .customiz-search-field .es-search.es-search--simple form .js-es-search__collapse-link {
+    margin-top: 10px;
+  }
 }
 .customiz-search-field .es-search.es-search--simple form .js-es-search-nav__single-item {
   z-index: 10;
@@ -125,21 +171,31 @@
   font-size: 16px !important;
   color: var(--bodyColor);
   font-family: var(--bodyFont);
-  flex: 1;
 }
-.customiz-search-field .es-search.es-search--simple form .js-es-search-nav__single-item a {
-  position: relative;
-  z-index: 10;
-  height: 40px !important;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: inherit !important;
-  font-size: inherit !important;
-  font-weight: inherit !important;
-  font-family: inherit !important;
-  line-height: 1 !important;
+@media (min-width: 768px) {
+  .customiz-search-field .es-search.es-search--simple form .js-es-search-nav__single-item {
+    flex: 1;
+  }
+  .customiz-search-field .es-search.es-search--simple form .js-es-search-nav__single-item a {
+    position: relative;
+    z-index: 10;
+    height: 40px !important;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: inherit !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    font-family: inherit !important;
+    line-height: 1 !important;
+  }
+}
+@media (max-width: 767px) {
+  .customiz-search-field .es-search.es-search--simple form .js-es-search-nav__single-item {
+    margin-top: 10px;
+    padding: 8px !important;
+  }
 }
 .customiz-search-field .es-search.es-search--simple form .es-search-nav__content {
   z-index: 30;
@@ -171,6 +227,11 @@
   color: var(--bodyColor) !important;
   font-family: var(--bodyFont);
   line-height: 1.2 !important;
+}
+@media (max-width: 767px) {
+  .customiz-search-field .es-search.es-search--simple form .es-search-nav__content {
+    margin-top: 0 !important;
+  }
 }
 
 /* estatik - property single style */

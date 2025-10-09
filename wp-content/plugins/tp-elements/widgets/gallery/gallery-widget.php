@@ -387,7 +387,7 @@ class Themephi_Elementor_pro_Gallery_Widget extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'icon_font_size',
 			[
 				'label' => esc_html__('Icon Font Size', 'tp-elements'),
