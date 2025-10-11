@@ -98,6 +98,7 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                     '3' => 'Style 3',
                     '4' => 'Style 4',
                     '5' => 'Style 5',
+                    '6' => 'Style 6',
                 ],
             ]
         );
@@ -757,6 +758,46 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
             ]
         );
 
+
+        $this->add_control(
+            'dynamic_nav_show_hide',
+            [
+                'label' => esc_html__('Show Dynamic Option Navigation', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::SWITCHER,
+                'label_on' => esc_html__('Show', 'plugin-name'),
+                'label_off' => esc_html__('Hide', 'plugin-name'),
+                'return_value' => 'yes',
+                'default' => 'yes',
+            ]
+        );
+
+        $this->add_control(
+            'dynamic_nav_prev_class',
+            [
+                'label' => esc_html__('Previous Button Class', 'text-domain'),
+                'type' => Controls_Manager::TEXT,
+                'default' => esc_html__('slide-prev-btn', 'text-domain'),
+                'label_block' => true,
+                'condition' => [
+                    'dynamic_nav_show_hide' => 'yes',
+                ]
+            ]
+        );
+
+        $this->add_control(
+            'dynamic_nav_next_class',
+            [
+                'label' => esc_html__('Next Button Class', 'text-domain'),
+                'type' => Controls_Manager::TEXT,
+                'default' => esc_html__('slide-next-btn', 'text-domain'),
+                'label_block' => true,
+                'condition' => [
+                    'dynamic_nav_show_hide' => 'yes',
+                ]
+            ]
+        );
+
+
         $this->end_controls_section();
 
 
@@ -1134,7 +1175,7 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
             [
                 'name' => 'category_typography',
                 'label' => esc_html__('Typography', 'tp-elements'),
-                'selector' => '{{WRAPPER}} .tp-blog-slider .post-categories li a',
+                'selector' => '{{WRAPPER}} .tp-blog-slider .post-categories li a, {{WRAPPER}} .tp-blog-slider .meta_category',
             ]
         );
 
@@ -1144,7 +1185,7 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                 'label' => esc_html__('Color', 'tp-elements'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .tp-blog-slider .post-categories li a' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .tp-blog-slider .post-categories li a, {{WRAPPER}} .tp-blog-slider .meta_category' => 'color: {{VALUE}};',
 
                 ],
             ]
@@ -1156,7 +1197,7 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                 'label' => esc_html__('Hover Color', 'tp-elements'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .tp-blog-slider .post-categories li a:hover' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .tp-blog-slider .post-categories li a:hover, {{WRAPPER}} .tp-blog-slider .meta_category:hover' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -1167,7 +1208,7 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                 'label' => esc_html__('Background Color', 'tp-elements'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .tp-blog-slider .post-categories li a' => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} .tp-blog-slider .post-categories li a, {{WRAPPER}} .tp-blog-slider .meta_category' => 'background-color: {{VALUE}};',
                 ],
             ]
         );
@@ -1178,7 +1219,7 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                 'label' => esc_html__('Hover Background Color', 'tp-elements'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .tp-blog-slider .post-categories li a:hover' => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} .tp-blog-slider .post-categories li a:hover, {{WRAPPER}} .tp-blog-slider .meta_category:hover' => 'background-color: {{VALUE}};',
                 ],
             ]
         );
@@ -1190,7 +1231,7 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
-                    '{{WRAPPER}} .tp-blog-slider .post-categories li a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .tp-blog-slider .post-categories li a, {{WRAPPER}} .tp-blog-slider .meta_category' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1202,7 +1243,7 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
-                    '{{WRAPPER}} .tp-blog-slider .post-categories li a' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .tp-blog-slider .post-categories li a, {{WRAPPER}} .tp-blog-slider .meta_category' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1214,7 +1255,7 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
-                    '{{WRAPPER}} .tp-blog-slider .post-categories li a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .tp-blog-slider .post-categories li a, {{WRAPPER}} .tp-blog-slider .meta_category' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1517,6 +1558,7 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
 
         $item_gap = $settings['item_gap_custom']['size'];
         $item_gap = !empty($item_gap) ? $item_gap : '30';
+
         $unique = rand(2012, 35120);
 
         if ($slider_autoplay == 'true') {
@@ -1572,6 +1614,10 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                         include plugin_dir_path(__FILE__) . "/style5.php";
                     }
 
+                    if ('6' == $settings['blog_slider_style']) {
+                        include plugin_dir_path(__FILE__) . "/style6.php";
+                    }
+
                     ?>
                 </div>
             </div>
@@ -1597,10 +1643,26 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                         clickable: true,
                     },
                     centeredSlides: <?php echo esc_attr($centerMode); ?>,
-                    navigation: {
-                        nextEl: ".tp-blog-nav-next",
-                        prevEl: ".tp-blog-nav-prev",
-                    },
+
+                    <?php
+                    if (!empty($settings['dynamic_nav_show_hide']) && $settings['dynamic_nav_show_hide'] == 'yes') {
+                    ?>
+                        navigation: {
+                            nextEl: ".<?php echo esc_attr(!empty($settings['dynamic_nav_next_class']) ? $settings['dynamic_nav_next_class'] : " "); ?>",
+                            prevEl: ".<?php echo esc_attr(!empty($settings['dynamic_nav_prev_class']) ? $settings['dynamic_nav_prev_class'] : " "); ?>",
+                        },
+                    <?php
+                    } else {
+                    ?>
+                        navigation: {
+                            nextEl: ".tp-blog-nav-next",
+                            prevEl: ".tp-blog-nav-prev",
+                        },
+                    <?php
+
+                    }
+                    ?>
+
                     breakpoints: {
                         0: {
                             slidesPerView: <?php echo esc_attr($col_xs); ?>,

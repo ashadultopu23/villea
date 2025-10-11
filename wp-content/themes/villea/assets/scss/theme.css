@@ -1156,6 +1156,10 @@ img.footer-logo-light {
   top: -50px;
 }
 
+.top-100px {
+  top: 100px !important;
+}
+
 .header-logo .logo-area h1.site-title a {
   line-height: 45px !important;
 }
@@ -3310,6 +3314,35 @@ html:has(.fixed-header) .themephi-breadcrumbs .breadcrumbs-inner {
 
 .writing-mode-horizontal-tb {
   writing-mode: horizontal-tb;
+}
+
+.hover-all-white {
+  transition: all 0.3s ease-in-out;
+}
+.hover-all-white * {
+  transition: all 0.3s ease-in-out;
+}
+.hover-all-white:hover * {
+  color: var(--whiteColor) !important;
+}
+
+.hover-icon-bg-white * {
+  transition: all 0.3s ease-in-out;
+}
+.hover-icon-bg-white:hover .elementor-icon {
+  background-color: var(--whiteColor) !important;
+}
+
+.hover-icon-primary * {
+  transition: all 0.3s ease-in-out;
+}
+.hover-icon-primary:hover .elementor-icon svg,
+.hover-icon-primary:hover .elementor-icon i {
+  fill: var(--primaryColor) !important;
+  color: var(--primaryColor) !important;
+}
+.hover-icon-primary:hover .elementor-icon path {
+  fill: var(--primaryColor) !important;
 }
 
 /* ---------------------------
