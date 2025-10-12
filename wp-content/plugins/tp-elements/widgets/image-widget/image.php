@@ -167,7 +167,7 @@ class Themephi_Image_Showcase_Widget extends \Elementor\Widget_Base
 
                 'label' => esc_html__('Image Width', 'tp-elements'),
                 'type' => Controls_Manager::SLIDER,
-                'size_units' => ['px', '%'],
+                'size_units' => ['px', '%', 'em', 'rem', 'custom'],
                 'range' => [
                     'px' => [
                         'min' => 0,
@@ -192,7 +192,7 @@ class Themephi_Image_Showcase_Widget extends \Elementor\Widget_Base
 
                 'label' => esc_html__('Image Height', 'tp-elements'),
                 'type' => Controls_Manager::SLIDER,
-                'size_units' => ['px', '%'],
+                'size_units' => ['px', '%', 'em', 'rem', 'custom'],
                 'range' => [
                     'px' => [
                         'min' => 0,

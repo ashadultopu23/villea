@@ -270,6 +270,9 @@ final class TPelements_Elementor_Extension
 
 		// property grid
 		$enqueue_with_version('tpelements-property-grid-css', 'widgets/estatik/property-grid/property-grid-css/property-grid.css');
+
+		// property list
+		$enqueue_with_version('tpelements-property-list-css', 'widgets/estatik/property-list/property-list-css/property-list.css');
 	}
 
 	public function tpaddon_register_plugin_styles()
@@ -892,6 +895,10 @@ final class TPelements_Elementor_Extension
 		// property grid
 		require_once(__DIR__ . '/widgets/estatik/property-grid/property-grid.php');
 		\Elementor\Plugin::instance()->widgets_manager->register(new \TP_Est_Property_Grid());
+
+		// property list
+		require_once(__DIR__ . '/widgets/estatik/property-list/property-list.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \TP_Est_Property_List());
 
 
 

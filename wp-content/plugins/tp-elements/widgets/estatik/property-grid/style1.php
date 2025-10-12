@@ -48,16 +48,12 @@ use  \Elementor\Icons_Manager;
             <!-- Title & Compare -->
             <div class="property-title-compare-wrapper">
                 <!-- Title -->
-                <<?php echo esc_attr($title_tag); ?> class="property-title">
+                <<?php echo esc_attr($title_tag); ?> class="property-title <?php echo !empty($settings['title_line_clamp']) ? esc_attr($settings['title_line_clamp']) : ''; ?>">
                     <?php
-                    $title = get_the_title();
-                    if ($settings['title_char_count'] > 0 && strlen($title) > $settings['title_char_count']) {
-                        $title = substr($title, 0, $settings['title_char_count']) . '...';
-                    }
                     $link = $settings['title_link_open'] == 'yes' ? '_blank' : '_self';
                     ?>
                     <a href="<?php the_permalink(); ?>" target="<?php echo esc_attr($link); ?>">
-                        <?php echo esc_html($title); ?>
+                        <?php echo esc_html(get_the_title()); ?>
                     </a>
                 </<?php echo esc_attr($title_tag); ?>>
 
@@ -149,8 +145,8 @@ use  \Elementor\Icons_Manager;
             <?php endif; ?>
 
             <?php if (!empty($settings['property_text_show_hide']) && $settings['property_text_show_hide'] == 'yes') : ?>
-                <div class="property-description">
-                    <?php echo wp_trim_words(get_the_excerpt(), 15); ?>
+                <div class="property-description <?php echo !empty($settings['text_line_clamp']) ? esc_attr($settings['text_line_clamp']) : ''; ?>">
+                    <?php echo get_the_excerpt(); ?>
                 </div>
             <?php endif; ?>
 

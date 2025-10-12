@@ -169,7 +169,6 @@ class TP_Est_Property_Grid extends Widget_Base
         $this->end_controls_section();
 
 
-
         $this->start_controls_section(
             'section_title',
             [
@@ -178,12 +177,26 @@ class TP_Est_Property_Grid extends Widget_Base
             ]
         );
 
-
         $this->add_control(
-            'title_char_count',
+            'title_line_clamp',
             [
-                'label' => esc_html__('Title Character Count', 'tp-elements'),
-                'type' => Controls_Manager::NUMBER,
+                'label' => esc_html__('Title Line Row', 'tp-element'),
+                'type' => Controls_Manager::SELECT,
+                'default' => 'line-clamp-2',
+                'options' => [
+                    'line-clamp-1' => esc_html__('One', 'tp-element'),
+                    'line-clamp-2' => esc_html__('Two', 'tp-element'),
+                    'line-clamp-3' => esc_html__('Three', 'tp-element'),
+                    'line-clamp-4' => esc_html__('Four', 'tp-element'),
+                    'line-clamp-5' => esc_html__('Five', 'tp-element'),
+                    'line-clamp-6' => esc_html__('Six', 'tp-element'),
+                    'line-clamp-7' => esc_html__('Seven', 'tp-element'),
+                    'line-clamp-8' => esc_html__('Eight', 'tp-element'),
+                    'line-clamp-9' => esc_html__('Nine', 'tp-element'),
+                    'line-clamp-10' => esc_html__('Ten', 'tp-element'),
+                    'line-clamp-11' => esc_html__('Eleven', 'tp-element'),
+                    'line-clamp-12' => esc_html__('Twelve', 'tp-element'),
+                ],
             ]
         );
 
@@ -249,16 +262,27 @@ class TP_Est_Property_Grid extends Widget_Base
                 'separator' => 'before',
             ]
         );
+
         $this->add_control(
-            'property_text_word_limit',
+            'text_line_clamp',
             [
-                'label' => esc_html__('Show Content Limit', 'tp-elements'),
-                'type' => Controls_Manager::TEXT,
-                'placeholder' => esc_html__('20', 'tp-elements'),
-                'separator' => 'before',
-                'condition' => [
-                    'property_text_show_hide' => 'yes',
-                ]
+                'label' => esc_html__('Content Line Row', 'tp-element'),
+                'type' => Controls_Manager::SELECT,
+                'default' => 'line-clamp-2',
+                'options' => [
+                    'line-clamp-1' => esc_html__('One', 'tp-element'),
+                    'line-clamp-2' => esc_html__('Two', 'tp-element'),
+                    'line-clamp-3' => esc_html__('Three', 'tp-element'),
+                    'line-clamp-4' => esc_html__('Four', 'tp-element'),
+                    'line-clamp-5' => esc_html__('Five', 'tp-element'),
+                    'line-clamp-6' => esc_html__('Six', 'tp-element'),
+                    'line-clamp-7' => esc_html__('Seven', 'tp-element'),
+                    'line-clamp-8' => esc_html__('Eight', 'tp-element'),
+                    'line-clamp-9' => esc_html__('Nine', 'tp-element'),
+                    'line-clamp-10' => esc_html__('Ten', 'tp-element'),
+                    'line-clamp-11' => esc_html__('Eleven', 'tp-element'),
+                    'line-clamp-12' => esc_html__('Twelve', 'tp-element'),
+                ],
             ]
         );
 
@@ -379,9 +403,6 @@ class TP_Est_Property_Grid extends Widget_Base
                     'no' => esc_html__('No', 'tp-elements'),
                 ],
                 'separator' => 'before',
-                // 'condition' => [
-                //     'property_meta_show_hide' => ['yes'],
-                // ],
             ]
         );
 
@@ -396,9 +417,6 @@ class TP_Est_Property_Grid extends Widget_Base
                     'no' => esc_html__('No', 'tp-elements'),
                 ],
                 'separator' => 'before',
-                // 'condition' => [
-                //     'property_meta_show_hide' => ['yes'],
-                // ],
             ]
         );
 
@@ -413,9 +431,6 @@ class TP_Est_Property_Grid extends Widget_Base
                     'no' => esc_html__('No', 'tp-elements'),
                 ],
                 'separator' => 'before',
-                // 'condition' => [
-                //     'property_meta_show_hide' => ['yes'],
-                // ],
             ]
         );
 
@@ -1216,9 +1231,6 @@ class TP_Est_Property_Grid extends Widget_Base
             [
                 'label' => esc_html__('Button Style', 'plugin-name'),
                 'tab'   => Controls_Manager::TAB_STYLE,
-                // 'condition' => [
-                //     'button_show_hide' => 'style1',
-                // ]
             ]
         );
 
@@ -1359,16 +1371,12 @@ class TP_Est_Property_Grid extends Widget_Base
                     'post_type'      => 'properties',
                     'posts_per_page' => $settings['post_per_page'],
                     'paged'          => $paged,
-                    // 'orderby'        => 'meta_value',
-                    // 'meta_key'       => '_EventStartDate',
                 ));
             } else {
                 $queried_post = new wp_Query(array(
                     'post_type'      => 'properties',
                     'posts_per_page' => $settings['post_per_page'],
                     'paged'          => $paged,
-                    // 'orderby'        => 'meta_value',
-                    // 'meta_key'       => '_EventStartDate',
                     'tax_query'      => array(
                         array(
                             'taxonomy' => 'es_category',
@@ -1384,7 +1392,7 @@ class TP_Est_Property_Grid extends Widget_Base
             // Render property grid layout
 ?>
 
-            <div class="property-listing-section property-grid-layout-<?php echo esc_attr($settings['property_layout']); ?>">
+            <div class="property-listing-section property-grid property-grid-layout-<?php echo esc_attr($settings['property_layout']); ?>">
                 <div class="row g-4">
 
                     <?php
@@ -1400,14 +1408,10 @@ class TP_Est_Property_Grid extends Widget_Base
                         }
 
                         $category = get_the_terms($post_id, 'es_category');
-                        // $address = get_the_terms($post_id, 'es_property_address');
                         $address = get_post_meta($post_id, 'es_property_address');
                         $address_full = get_post_meta($post_id, 'es_property_address_components');
-                        // $type = get_the_terms($post_id, 'es_type');
-                        // $label = get_the_terms($post_id, 'es_label');
                         $parking = get_post_meta($post_id, 'es_property_garage-spaces', false);
                         $area = get_post_meta($post_id, 'es_property_lot_size');
-                        // $area = es_the_property_area($post_id);
 
                         $bedrooms = get_post_meta($post_id, 'es_property_bedrooms');
                         $bathrooms = get_post_meta($post_id, 'es_property_bathrooms', false);

@@ -115,20 +115,6 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
             ]
         );
 
-
-        // $this->add_control(
-        //     'sliding_direction',
-        //     [
-        //         'label' => esc_html__('Sliding Direction', 'text-domain'),
-        //         'type' => Controls_Manager::SELECT,
-        //         'default' => 'ltr',
-        //         'options' => [
-        //             'rtl' => esc_html__('Right to Left', 'text-domain'),
-        //             'ltr' => esc_html__('Left to Right', 'text-domain'),
-        //         ],
-        //     ]
-        // );
-
         $this->add_control(
             'reverse_sliding_direction',
             [
@@ -142,6 +128,19 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
                 'description' => esc_html__('Enable this to reverse the sliding direction (e.g., top to bottom for vertical)', 'text-domain'),
             ]
         );
+
+        // $this->add_control(
+        //     'sliding_direction',
+        //     [
+        //         'label' => esc_html__('Sliding Direction', 'text-domain'),
+        //         'type' => Controls_Manager::SELECT,
+        //         'default' => 'ltr',
+        //         'options' => [
+        //             'rtl' => esc_html__('Right to Left', 'text-domain'),
+        //             'ltr' => esc_html__('Left to Right', 'text-domain'),
+        //         ],
+        //     ]
+        // );
 
 
 
@@ -1849,7 +1848,7 @@ class Themephi_Elementor_Testimonial_Slider_Widget  extends \Elementor\Widget_Ba
                 var swiper<?php echo esc_attr($unique); ?><?php echo esc_attr($unique); ?> = new Swiper(".tp_slider-<?php echo esc_attr($unique); ?>", {
                     slidesPerView: 1,
                     direction: '<?php echo esc_attr($slider_direction); ?>',
-                    reverseDirection: '<?php echo esc_attr($reverse_sliding_direction); ?>',
+                    // reverseDirection: '<?php echo esc_attr($reverse_sliding_direction); ?>',
                     <?php echo $seffect; ?>
                     speed: <?php echo esc_attr($autoplaySpeed); ?>,
                     slidesPerGroup: 1,

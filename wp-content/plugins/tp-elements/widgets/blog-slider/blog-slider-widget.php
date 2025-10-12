@@ -1659,7 +1659,6 @@ class Themephi_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base
                             prevEl: ".tp-blog-nav-prev",
                         },
                     <?php
-
                     }
                     ?>
 

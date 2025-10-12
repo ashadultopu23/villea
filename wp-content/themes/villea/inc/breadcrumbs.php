@@ -1,28 +1,10 @@
 <?php
 
-// 404 page
-if (is_404()) {
-	get_template_part('inc/page-header/breadcrumbs-404');
-	return;
-}
-
-// Pages
-if (is_page()) {
-	get_template_part('inc/page-header/breadcrumbs');
-	return;
-}
-
-// Single blog post
-if (is_singular('post')) {
-	get_template_part('inc/page-header/breadcrumbs-single');
-	return;
-}
-
 // Custom Post Types (teams, portfolios, services,  etc)
 // start custom post types here
 
 // Teams
-if (is_singular('teams') || is_post_type_archive('teams') || is_tax('team-category')) {
+if (is_singular('teams') || is_singular('team') || is_post_type_archive('teams') || is_post_type_archive('team') || is_tax('team-category')) {
 	get_template_part('inc/page-header/breadcrumbs-team');
 	return;
 }
@@ -60,6 +42,24 @@ if (class_exists('WooCommerce')) {
 		get_template_part('inc/page-header/breadcrumbs-shop');
 		return;
 	}
+}
+
+// 404 page
+if (is_404()) {
+	get_template_part('inc/page-header/breadcrumbs-404');
+	return;
+}
+
+// Pages / custom post types / taxonomies / common
+if (is_page()) {
+	get_template_part('inc/page-header/breadcrumbs');
+	return;
+}
+
+// Single blog post
+if (is_singular('post')) {
+	get_template_part('inc/page-header/breadcrumbs-single');
+	return;
 }
 
 // Archives (catch-all fallback, only runs if none of the above matched)

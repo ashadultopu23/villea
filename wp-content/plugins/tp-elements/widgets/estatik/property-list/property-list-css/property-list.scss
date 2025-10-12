@@ -1,0 +1,214 @@
+.property-listing-section.property-list {
+  .property-listing-card {
+    position: relative;
+    border-radius: 8px;
+    padding: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #dfe0e4;
+    background: #f4f3f1;
+    display: flex;
+    gap: 32px;
+
+    @media (max-width: 575px) {
+      flex-direction: column;
+    }
+
+    .property-image-wrapper {
+      flex: 1;
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+    }
+
+    .property-badge-wrapper {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      right: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      z-index: 2;
+    }
+
+    .property-badge {
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--primaryColor);
+      background: var(--whiteColor);
+      text-transform: capitalize;
+    }
+
+    .property-content {
+      flex: 1;
+      padding: 12px 12px 12px 0;
+    }
+    .property-title {
+      color: var(--primaryColor);
+      font-size: 24px;
+      font-weight: 600;
+    }
+    .property-price-location-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--borderColor);
+    }
+
+    .property-price {
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--secondaryColor);
+    }
+
+    .property-address-city {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      .property-address-city-icon {
+        color: var(--primaryColor);
+        font-size: 20px;
+      }
+      .property-address-city-text {
+        font-size: 18px;
+        color: var(--bodyColor);
+        font-weight: 400;
+      }
+    }
+
+    .property-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      .property-feature-item {
+        width: calc(50% - 10px);
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        .property-feature-icon {
+          color: var(--secondaryColor);
+          font-size: 16px;
+        }
+
+        .property-feature-text {
+          font-size: 16px;
+          color: var(--bodyColor);
+          font-weight: 500;
+        }
+      }
+    }
+
+    .property-description,
+    .property-address {
+      font-size: 16px;
+      color: var(--bodyColor);
+      font-weight: 400;
+      margin-top: 32px;
+    }
+
+    .property-button-wrapper {
+      margin-top: 32px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .property-compare-button {
+      display: inline-flex;
+      padding: 12px;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      color: var(--primaryColor);
+      border: 1px solid var(--primaryColor);
+      box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.04);
+    }
+
+    .property-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .action-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 16px;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .view-all-button {
+      color: var(--whiteColor);
+      background-color: var(--primaryColor);
+    }
+
+    .view-all-button:hover {
+      opacity: 0.8;
+    }
+
+    .rent-button,
+    .sale-button {
+      color: var(--whiteColor);
+      background: var(--primaryColor);
+    }
+
+    .rent-button:hover,
+    .sale-button:hover {
+      background-color: #1a252f;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      border: 1px solid var(--primaryColor);
+    }
+  }
+
+  @media (max-width: 768px) {
+    //   .listing-card {
+    //     margin-bottom: 1rem;
+    //   }
+
+    //   .property-details {
+    //     justify-content: space-between;
+    //   }
+  }
+  // @media (max-width: 480px) {
+  //   .property-name {
+  //     font-size: 1rem;
+  //   }
+
+  //   .price {
+  //     font-size: 1.25rem;
+  //   }
+  // }
+}

@@ -1,4 +1,4 @@
-.property-listing-card {
+.property-listing-section.property-grid .property-listing-card {
   position: relative;
   border-radius: 8px;
   padding: 12px;
@@ -7,20 +7,20 @@
   border: 1px solid #dfe0e4;
   background: #f4f3f1;
 }
-.property-listing-card .property-image-wrapper {
+.property-listing-section.property-grid .property-listing-card .property-image-wrapper {
   position: relative;
   width: 100%;
   height: 260px;
   overflow: hidden;
 }
-.property-listing-card .property-image-wrapper img {
+.property-listing-section.property-grid .property-listing-card .property-image-wrapper img {
   width: 100%;
   height: 100%;
   border-radius: 8px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.property-listing-card .property-badge-wrapper {
+.property-listing-section.property-grid .property-listing-card .property-badge-wrapper {
   position: absolute;
   top: 16px;
   left: 16px;
@@ -32,7 +32,7 @@
   gap: 12px;
   z-index: 2;
 }
-.property-listing-card .property-badge {
+.property-listing-section.property-grid .property-listing-card .property-badge {
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 0.8rem;
@@ -41,17 +41,17 @@
   background: var(--whiteColor);
   text-transform: capitalize;
 }
-.property-listing-card .property-content {
+.property-listing-section.property-grid .property-listing-card .property-content {
   padding: 12px;
   padding-top: 24px;
 }
-.property-listing-card .property-title-compare-wrapper {
+.property-listing-section.property-grid .property-listing-card .property-title-compare-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   gap: 8px;
 }
-.property-listing-card .property-title-compare-wrapper .property-compare-button {
+.property-listing-section.property-grid .property-listing-card .property-title-compare-wrapper .property-compare-button {
   display: flex;
   padding: 8px;
   justify-content: center;
@@ -65,12 +65,12 @@
   color: var(--primaryColor);
   box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.04);
 }
-.property-listing-card .property-title {
+.property-listing-section.property-grid .property-listing-card .property-title {
   color: var(--primaryColor);
   font-size: 24px;
   font-weight: 600;
 }
-.property-listing-card .property-price-location-wrapper {
+.property-listing-section.property-grid .property-listing-card .property-price-location-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -80,52 +80,52 @@
   padding-bottom: 20px;
   border-bottom: 1px solid var(--borderColor);
 }
-.property-listing-card .property-price {
+.property-listing-section.property-grid .property-listing-card .property-price {
   font-size: 24px;
   font-weight: 600;
   color: var(--secondaryColor);
 }
-.property-listing-card .property-address-city {
+.property-listing-section.property-grid .property-listing-card .property-address-city {
   display: flex;
   gap: 4px;
   align-items: center;
 }
-.property-listing-card .property-address-city .property-address-city-icon {
+.property-listing-section.property-grid .property-listing-card .property-address-city .property-address-city-icon {
   color: var(--primaryColor);
   font-size: 20px;
 }
-.property-listing-card .property-address-city .property-address-city-text {
+.property-listing-section.property-grid .property-listing-card .property-address-city .property-address-city-text {
   font-size: 18px;
   color: var(--bodyColor);
   font-weight: 400;
 }
-.property-listing-card .property-features {
+.property-listing-section.property-grid .property-listing-card .property-features {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
-.property-listing-card .property-features .property-feature-item {
+.property-listing-section.property-grid .property-listing-card .property-features .property-feature-item {
   display: flex;
   align-items: center;
   gap: 4px;
 }
-.property-listing-card .property-features .property-feature-item .property-feature-icon {
+.property-listing-section.property-grid .property-listing-card .property-features .property-feature-item .property-feature-icon {
   color: var(--secondaryColor);
   font-size: 16px;
 }
-.property-listing-card .property-features .property-feature-item .property-feature-text {
+.property-listing-section.property-grid .property-listing-card .property-features .property-feature-item .property-feature-text {
   font-size: 16px;
   color: var(--bodyColor);
   font-weight: 500;
 }
-.property-listing-card .property-description,
-.property-listing-card .property-address {
+.property-listing-section.property-grid .property-listing-card .property-description,
+.property-listing-section.property-grid .property-listing-card .property-address {
   font-size: 16px;
   color: var(--bodyColor);
   font-weight: 400;
   margin-top: 32px;
 }
-.property-listing-card .property-actions {
+.property-listing-section.property-grid .property-listing-card .property-actions {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
@@ -133,7 +133,7 @@
   justify-content: space-between;
   margin-top: 32px;
 }
-.property-listing-card .action-button {
+.property-listing-section.property-grid .property-listing-card .action-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -146,25 +146,23 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.property-listing-card .view-all-button {
-  background-color: transparent;
-  color: var(--primaryColor);
-  border: 1px solid var(--primaryColor);
-}
-.property-listing-card .view-all-button:hover {
-  background-color: var(--primaryColor);
+.property-listing-section.property-grid .property-listing-card .view-all-button {
   color: var(--whiteColor);
+  background-color: var(--primaryColor);
 }
-.property-listing-card .rent-button,
-.property-listing-card .sale-button {
+.property-listing-section.property-grid .property-listing-card .view-all-button:hover {
+  opacity: 0.8;
+}
+.property-listing-section.property-grid .property-listing-card .rent-button,
+.property-listing-section.property-grid .property-listing-card .sale-button {
   color: var(--whiteColor);
   background: var(--primaryColor);
 }
-.property-listing-card .rent-button:hover,
-.property-listing-card .sale-button:hover {
+.property-listing-section.property-grid .property-listing-card .rent-button:hover,
+.property-listing-section.property-grid .property-listing-card .sale-button:hover {
   background-color: #1a252f;
 }
-.property-listing-card:hover {
+.property-listing-section.property-grid .property-listing-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   border: 1px solid var(--primaryColor);
