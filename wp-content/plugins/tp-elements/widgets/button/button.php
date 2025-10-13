@@ -140,9 +140,22 @@ class Themephi_Button_Widget extends \Elementor\Widget_Base
 		$this->add_control(
 			'btn_link',
 			[
-				'label'       => esc_html__(' Button Link', 'tp-elements'),
+				'label'       => esc_html__('Button Link', 'tp-elements'),
 				'type'        => Controls_Manager::URL,
 				'label_block' => true,
+				'separator'   => 'before',
+			]
+		);
+
+		$this->add_control(
+			'is_downloadable',
+			[
+				'label' => esc_html__('Is Downloadable', 'plugin-name'),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__('Show', 'plugin-name'),
+				'label_off' => esc_html__('Hide', 'plugin-name'),
+				'return_value' => 'yes',
+				'default' => 'no',
 			]
 		);
 
@@ -683,11 +696,18 @@ class Themephi_Button_Widget extends \Elementor\Widget_Base
 		$settings = $this->get_settings_for_display();
 		$this->add_inline_editing_attributes('btn_text', 'basic');
 		$this->add_render_attribute('btn_text', 'class', 'btn_text');
-		$target = $settings['btn_link']['is_external'] ? 'target=_blank' : '';
+
+
+		$url = !empty($settings['btn_link']['url']) ? $settings['btn_link']['url'] : '#';
+		$target = !empty($settings['btn_link']['is_external']) ? 'target="_blank"' : '';
+		$is_downloadable = $settings['is_downloadable'] === 'yes';
+
 ?>
 		<div class="themephi-button <?php echo esc_attr($settings['button_style']); ?>">
 
-			<a class="themephi_button box-style " href="<?php echo esc_url($settings['btn_link']['url']); ?>" <?php echo esc_attr($target); ?>>
+			<a class="themephi_button box-style" href="<?php echo esc_url($url); ?>"
+				<?php if ($is_downloadable) echo 'download'; ?>
+				<?php echo $target; ?>>
 
 				<?php if (!empty($settings['btn_icon']) &&  ($settings['icon_position'] == 'before')) : ?>
 					<span class="icon d-inline-flex align-items-center justify-content-center">
