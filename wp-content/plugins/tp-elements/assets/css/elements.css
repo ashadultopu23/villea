@@ -58,15 +58,6 @@ Heading  css
   text-align: center;
 }
 
-.title-no-margin h4.title {
-  margin-bottom: 5px;
-}
-
-.title-no-margin h3.title {
-  margin-bottom: 3px !important;
-  font-size: 20px;
-}
-
 .list-style {
   padding: 0;
   margin: 0;
@@ -109,10 +100,6 @@ Heading  css
   font-size: 0;
 }
 
-.img-border-radius img {
-  border-radius: 15px !important;
-}
-
 .menu-area .navbar ul > li > a span {
   position: relative;
   transition: 0.5s;
@@ -125,45 +112,17 @@ Heading  css
   font-weight: 700;
 }
 
-.slider-style5 .slider-content-area {
-  display: block;
-  background: var(--whiteColor);
-  padding: 50px;
-  border-radius: 15px;
-  text-align: left;
-}
-.slider-style5 .slider-content-area .bottom--area {
-  display: flex;
-  align-items: center;
-}
-.slider-style5 .slider-content-area .bottom--area .single--item-img {
-  margin-right: 20px;
-}
-.slider-style5 .slider-content-area h5 {
-  margin-bottom: 0;
-}
-.slider-style5 .slider-content-area .slider-subtitle {
-  margin-bottom: 0;
-}
-
 .tps-btn {
-  padding: 17px 30px;
+  padding: 16px 32px;
   min-width: -moz-max-content;
   min-width: max-content;
   font-size: 16px;
-  line-height: 21px;
   font-weight: 700;
   background: var(--primaryColor);
   color: #fff;
 }
 .tps-btn:hover {
   background-color: var(--titleColor);
-}
-
-@media screen and (max-width: 575px) {
-  .tp-service-style-style2 .navigation-center-bottom {
-    display: none;
-  }
 }
 
 .pagination-arrow .swiper-pagination-fraction {
@@ -182,89 +141,8 @@ Heading  css
 /* -----------------------
 Team Member
 --------------------------*/
-.themephi-addon-slider {
-  margin: 0;
-}
-.themephi-addon-slider .team-item {
-  padding: 0 15px;
-}
-
 .tps-team .gray_yes .team-inner-wrap:hover img {
   filter: grayscale(100);
-}
-
-.content .elementor-widget-container:hover .themephi-heading .title {
-  color: #fff;
-}
-.content.left .elementor-widget-container {
-  transform: translateX(-60px);
-  animation: slide-one 10s linear infinite;
-}
-.content.left.one .elementor-widget-container {
-  transform: translateX(0px);
-  animation: slide-one1 10s linear infinite;
-}
-
-@keyframes slide-one {
-  0% {
-    transform: translate3d(-60px, 0, 0);
-  }
-  25% {
-    transform: translate3d(-30px, 0, 0);
-  }
-  50% {
-    transform: translate3d(0, 0, 0);
-  }
-  75% {
-    transform: translate3d(-30px, 0, 0);
-  }
-  100% {
-    transform: translate3d(-60px, 0, 0);
-  }
-}
-@keyframes slide-one1 {
-  0% {
-    transform: translate3d(0px, 0, 0);
-  }
-  25% {
-    transform: translate3d(-30px, 0, 0);
-  }
-  50% {
-    transform: translate3d(-60px, 0, 0);
-  }
-  75% {
-    transform: translate3d(-30px, 0, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-}
-@media (max-width: 1300px) {
-  .content.left .elementor-widget-container,
-  .content.left.one .elementor-widget-container {
-    animation: none;
-    transform: translateX(0);
-  }
-}
-.no-box-shadow .counter-top-area.style2 .tps-counter-list .count-text {
-  box-shadow: none;
-}
-
-.icon-button a {
-  background: var(--primaryColor);
-  color: #fff;
-  padding: 3px 17px;
-  display: inline-block;
-  font-size: 20px;
-  margin-bottom: 25px;
-  border-radius: 18px;
-}
-.icon-button a:hover {
-  color: #fff;
-  background: var(--secondaryColor);
-}
-.icon-button a i:before {
-  font-size: inherit;
 }
 
 .blogfull .icon-button a {
@@ -273,37 +151,6 @@ Team Member
 
 .bg-overflow-hidden {
   overflow: hidden;
-}
-
-.feature-one-wrapper .elementor-icon-list-item {
-  padding: 15px 29px !important;
-  background: #fff;
-  border: 1px solid #eeeeee;
-  border-radius: 15px;
-  max-width: -moz-max-content;
-  max-width: max-content;
-  margin-right: 17px !important;
-  margin-bottom: 20px !important;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.feature-one-wrapper .elementor-icon-list-item:hover {
-  box-shadow: 0px 9px 18px rgba(24, 16, 16, 0.0509803922);
-}
-
-.cta-input-arae {
-  position: relative;
-}
-.cta-input-arae input {
-  border-radius: 100px;
-  margin-bottom: 0 !important;
-}
-.cta-input-arae input[type=submit] {
-  position: absolute;
-  border-radius: 100px;
-  max-width: -moz-max-content;
-  max-width: max-content;
-  right: -2px;
 }
 
 .mfp-iframe-holder .mfp-close {
@@ -385,191 +232,6 @@ Team Member
 
 /******* RS Tab CSS  **********
 -----------------------------*/
-.tptab-main ul.nav {
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-}
-.tptab-main ul.nav.bubble li a.active {
-  position: relative;
-}
-.tptab-main ul.nav.bubble li a.active:after {
-  top: 100%;
-  left: 15%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-color: rgba(136, 183, 213, 0);
-  border-top-color: var(--primaryColor);
-  border-width: 12px;
-  margin-left: -30px;
-}
-.tptab-main ul.nav li a {
-  background: #f1f1f1;
-  padding: 10px;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  top: 1px;
-}
-.tptab-main ul.nav li a.active {
-  background: var(--primaryColor);
-  color: #fff;
-}
-.tptab-main ul.nav li a i {
-  margin-left: 50px;
-  color: var(--secondaryColor);
-}
-.tptab-main ul.nav li:first-child {
-  margin-left: 0 !important;
-}
-.tptab-main ul.nav li:last-child {
-  margin-right: 0 !important;
-}
-.tptab-main ul.nav li a:hover {
-  background: var(--primaryColor);
-}
-.tptab-main ul.nav.icon_top li a,
-.tptab-main ul.nav.icon_top li a img,
-.tptab-main ul.nav.icon_top li a i {
-  display: block;
-}
-.tptab-main .tab-content {
-  background: #f9f9f9;
-  padding: 10px;
-  overflow: hidden;
-}
-.tptab-main .tab-content p:last-child {
-  margin: 0;
-}
-.tptab-main.vertical {
-  display: flex;
-}
-.tptab-main.vertical ul.nav {
-  margin: 0 20px 0 0;
-  display: block;
-}
-.tptab-main.vertical ul.nav.bubble li a.active {
-  position: relative;
-}
-.tptab-main.vertical ul.nav.bubble li a.active:after {
-  top: 100%;
-  left: auto;
-  right: -24px;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-color: rgba(136, 183, 213, 0);
-  border-left-color: var(--primaryColor);
-  border-width: 12px;
-  margin-left: -30px;
-}
-.tptab-main .tab-pane.active {
-  animation: slide-down 2s ease-out;
-}
-.tptab-main.no_item_menu ul {
-  display: inline-flex;
-}
-.tptab-main.no_item_menu.left {
-  text-align: left;
-}
-.tptab-main.no_item_menu.center {
-  text-align: center;
-}
-.tptab-main.no_item_menu.right {
-  text-align: right;
-}
-.tptab-main.bottom {
-  display: flex;
-  flex-wrap: wrap;
-}
-.tptab-main.bottom ul.nav {
-  order: 2;
-  width: 100%;
-}
-.tptab-main.bottom ul.nav a {
-  box-shadow: 0px 30px 50px rgba(0, 14, 32, 0.1);
-  border-radius: 10px;
-}
-.tptab-main.bottom .tab-content {
-  order: 1;
-  box-shadow: 0px 30px 50px rgba(15, 18, 22, 0.14);
-}
-.tptab-main.bottom iframe {
-  width: 970px;
-  height: 576px;
-}
-@keyframes slide-down {
-  0% {
-    opacity: 0;
-    transform: translateY(50%);
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.tptab-main.style-2.vertical .row {
-  align-items: center;
-}
-.tptab-main.style-2.vertical ul.nav {
-  display: flex;
-  margin: 0;
-}
-.tptab-main.style-2.vertical ul.nav li {
-  margin-right: 0 !important;
-}
-.tptab-main.style-2.vertical ul.nav li a {
-  padding: 20px 0;
-}
-.tptab-main.style-2.vertical ul.nav li a i {
-  float: right;
-  margin-top: 10px !important;
-}
-.tptab-main.style-2.vertical ul.nav li img {
-  position: relative;
-  top: -3px;
-}
-.tptab-main.style-2 .tab-pane img.alignleft {
-  margin-right: 65px;
-}
-.tptab-main.style-2 .tab-pane .text-list {
-  margin: 0;
-  list-style: none;
-  float: left;
-}
-.tptab-main.style-2 .tab-pane .text-list li {
-  font-size: 16px;
-  font-weight: 500;
-  padding-left: 30px;
-  margin-bottom: 8px;
-  color: var(--primaryColor);
-  position: relative;
-  z-index: 1;
-  list-style: none;
-}
-.tptab-main.style-2 .tab-pane .text-list li:before {
-  content: "\f00c";
-  position: absolute;
-  font-family: "Font awesome 5 Pro";
-  font-size: 16px;
-  color: var(--primaryColor);
-  left: 0;
-  top: -7px;
-  z-index: 1;
-  line-height: 40px;
-  text-align: center;
-}
-.tptab-main.style-2 .tab-pane .text-list li:last-child {
-  border: none !important;
-}
-
 .rsaddon_pro_box.default .pointer-events {
   pointer-events: none;
 }
@@ -3243,4 +2905,109 @@ tp-grid-figure .logo-img.logo-gray a:hover img {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.writing-mode-vertical-lr {
+  writing-mode: vertical-lr;
+}
+
+.writing-mode-vertical-rl {
+  writing-mode: vertical-rl;
+}
+
+.writing-mode-sideways-rl {
+  writing-mode: sideways-rl;
+}
+
+.writing-mode-sideways-lr {
+  writing-mode: sideways-lr;
+}
+
+.writing-mode-horizontal-tb {
+  writing-mode: horizontal-tb;
+}
+
+/* Line Clamp Utility Classes */
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+
+.line-clamp-5 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+}
+
+.line-clamp-6 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  overflow: hidden;
+}
+
+.line-clamp-7 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+  overflow: hidden;
+}
+
+.line-clamp-8 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 8;
+  overflow: hidden;
+}
+
+.line-clamp-9 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 9;
+  overflow: hidden;
+}
+
+.line-clamp-10 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 10;
+  overflow: hidden;
+}
+
+.line-clamp-11 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 11;
+  overflow: hidden;
+}
+
+.line-clamp-12 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 12;
+  overflow: hidden;
 }/*# sourceMappingURL=elements.css.map */

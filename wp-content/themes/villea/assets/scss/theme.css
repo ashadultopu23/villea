@@ -4146,10 +4146,6 @@ html:has(#themephi-header.tps-default-header) .site-title a {
 /* ---------------------------
    07. Blog Style 
 ------------------------------*/
-.themephi-blog-grid .pagination-area {
-  padding-bottom: 84px;
-}
-
 .themephi-blog .cat_name {
   display: none;
 }
@@ -7514,10 +7510,22 @@ span.woocommerce-input-wrapper input:focus {
   align-items: center;
   margin-top: 60px;
 }
-@media (max-width: 991) {
+@media screen and (max-width: 1199px) {
+  .pagination-area,
+  .woocommerce-pagination {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 991px) {
   .pagination-area,
   .woocommerce-pagination {
     margin-top: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .pagination-area,
+  .woocommerce-pagination {
+    margin-top: 30px;
   }
 }
 .pagination-area .nav-links,

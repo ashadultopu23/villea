@@ -226,21 +226,21 @@
 
 	.themephi-blog .blog-slider .blog-meta .blog-title {
 		font-size: 16px;
-		font-weight: 700;
+		font-weight: 600;
 	}
 
 	.blogfull .blog-title {
 		min-height: auto;
 	}
 
-	.themephi-blog-grid .blog-item .blog-content h3.blog-name {
+	/* .themephi-blog-grid .blog-item .blog-content h3.blog-name {
 		font-size: 18px;
 		line-height: 1.6 !important;
-	}
+	} */
 
-	.themephi-blog-grid.blog--style3 .blog-content .blog-meta li {
+	/* .themephi-blog-grid.blog--style3 .blog-content .blog-meta li {
 		margin-right: 10px;
-	}
+	} */
 
 	.slider-call-area .icon i {
 		width: 45px;
@@ -765,17 +765,17 @@
 		padding-left: 0;
 	}
 
-	.themephi-blog .blog-item .blog-meta .blog-date {
+	/* .themephi-blog .blog-item .blog-meta .blog-date {
 		font-size: 12px;
 	}
 
 	.themephi-blog .blog-item .blog-meta .comments {
 		font-size: 12px;
-	}
+	} */
 
-	span.author {
+	/* span.author {
 		margin-left: 6px;
-	}
+	} */
 
 	.dynamic-sidebar,
 	.padding-left-sidebar .dynamic-sidebar {
@@ -818,9 +818,9 @@
 		left: -10.6%
 	}
 
-	.blog--style2 .blog-content .blog-meta li {
+	/* .blog--style2 .blog-content .blog-meta li {
 		font-size: 12px;
-	}
+	} */
 
 	.tp-portfolio-style6 .single-varticle-product {
 		flex-direction: column;

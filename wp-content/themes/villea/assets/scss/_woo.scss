@@ -487,8 +487,16 @@ span.woocommerce-input-wrapper {
   align-items: center;
   margin-top: 60px;
 
-  @media (max-width: 991) {
+  @media screen and (max-width: 1199px) {
+    margin-top: 50px;
+  }
+
+  @media screen and (max-width: 991px) {
     margin-top: 40px;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-top: 30px;
   }
 
   .nav-links,
@@ -647,7 +655,6 @@ span.woocommerce-input-wrapper {
 }
 
 // sidebar_flyout
-
 .layout-full-layout-left.sidebar_flyout,
 .layout-full-layout-right.sidebar_flyout {
   .contents-sticky {
@@ -842,9 +849,3 @@ html:has(.flyout_sidebar_overlay) {
     }
   }
 }
-
-// To apply CSS only when dark mode is enabled
-// .woocommerce form .show-password-input::before,
-// .woocommerce-page form .show-password-input::before {
-// 	filter: brightness(10);
-// }
