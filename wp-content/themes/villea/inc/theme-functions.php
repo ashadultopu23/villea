@@ -185,37 +185,37 @@ update_option('elementor_disable_typography_schemes', 'yes');
 
 
 
-function enqueue_related_products_slider_script()
-{
-  if (function_exists('is_product') && is_product()) {
-    global $product, $villea_option;
+// function enqueue_related_products_slider_script()
+// {
+//   if (function_exists('is_product') && is_product()) {
+//     global $product, $villea_option;
 
-    // Get number of columns from theme option or default to 3
-    $col = !empty($villea_option['single_releted_products_col']) ? $villea_option['single_releted_products_col'] : 3;
+//     // Get number of columns from theme option or default to 3
+//     $col = !empty($villea_option['single_releted_products_col']) ? $villea_option['single_releted_products_col'] : 3;
 
-    wp_enqueue_script('swiper'); // make sure swiper is enqueued
-    wp_add_inline_script('swiper', "
-			document.addEventListener('DOMContentLoaded', function() {
-				if(document.querySelector('.related-swiper')) {
-					new Swiper('.related-swiper', {
-						slidesPerView: {$col},
-						spaceBetween: 30,
-						navigation: {
-							nextEl: '.swiper-button-next',
-							prevEl: '.swiper-button-prev',
-						},
-						breakpoints: {
-							768: {
-								slidesPerView: 2
-							},
-							1024: {
-								slidesPerView: {$col}
-							}
-						}
-					});
-				}
-			});
-		");
-  }
-}
-add_action('wp_enqueue_scripts', 'enqueue_related_products_slider_script');
+//     wp_enqueue_script('swiper'); // make sure swiper is enqueued
+//     wp_add_inline_script('swiper', "
+// 			document.addEventListener('DOMContentLoaded', function() {
+// 				if(document.querySelector('.related-swiper')) {
+// 					new Swiper('.related-swiper', {
+// 						slidesPerView: {$col},
+// 						spaceBetween: 30,
+// 						navigation: {
+// 							nextEl: '.swiper-button-next',
+// 							prevEl: '.swiper-button-prev',
+// 						},
+// 						breakpoints: {
+// 							768: {
+// 								slidesPerView: 2
+// 							},
+// 							1024: {
+// 								slidesPerView: {$col}
+// 							}
+// 						}
+// 					});
+// 				}
+// 			});
+// 		");
+//   }
+// }
+// add_action('wp_enqueue_scripts', 'enqueue_related_products_slider_script');
