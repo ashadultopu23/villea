@@ -7273,12 +7273,19 @@ span.woocommerce-input-wrapper input:focus {
 .product_card {
   flex-direction: column;
   gap: 20px;
+  padding: 12px;
+  padding-bottom: 24px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  background: var(--globalColor);
 }
 .product_card .product_card_thumb {
   position: relative;
   overflow: hidden;
   z-index: 0;
   background: var(--globalColor);
+  border-radius: 8px;
 }
 .product_card .product_card_thumb img {
   width: 100%;
@@ -7344,7 +7351,10 @@ span.woocommerce-input-wrapper input:focus {
   gap: 8px;
   transition: var(--transition);
 }
-.product_card .product_icon_actions .product_icon a {
+.product_card .product_icon_actions .product_icon a,
+.product_card .product_icon_actions .product_icon .woosc-btn-icon-only,
+.product_card .product_icon_actions .product_icon .woosq-btn-icon-only,
+.product_card .product_icon_actions .product_icon .woosw-btn-icon-only {
   background: var(--body_bg);
   color: var(--titleColor);
   height: 40px;
@@ -7358,10 +7368,19 @@ span.woocommerce-input-wrapper input:focus {
   border: none;
 }
 .product_card .product_icon_actions .product_icon a i,
-.product_card .product_icon_actions .product_icon a span {
+.product_card .product_icon_actions .product_icon a span,
+.product_card .product_icon_actions .product_icon .woosc-btn-icon-only i,
+.product_card .product_icon_actions .product_icon .woosc-btn-icon-only span,
+.product_card .product_icon_actions .product_icon .woosq-btn-icon-only i,
+.product_card .product_icon_actions .product_icon .woosq-btn-icon-only span,
+.product_card .product_icon_actions .product_icon .woosw-btn-icon-only i,
+.product_card .product_icon_actions .product_icon .woosw-btn-icon-only span {
   font-size: 18px;
 }
-.product_card .product_icon_actions .product_icon a:hover {
+.product_card .product_icon_actions .product_icon a:hover,
+.product_card .product_icon_actions .product_icon .woosc-btn-icon-only:hover,
+.product_card .product_icon_actions .product_icon .woosq-btn-icon-only:hover,
+.product_card .product_icon_actions .product_icon .woosw-btn-icon-only:hover {
   background: var(--btnHoverBgColor2);
   color: var(--btnHoverColor2);
 }
@@ -7474,7 +7493,7 @@ span.woocommerce-input-wrapper input:focus {
   width: 5.7em;
 }
 .star-rating::before {
-  content: "\f005\f005\f005\f005\f005";
+  content: "\f005";
   color: #cfc8d8;
   top: 0;
   left: 0;
@@ -7492,7 +7511,7 @@ span.woocommerce-input-wrapper input:focus {
   gap: 8px;
 }
 .star-rating span::before {
-  content: "\f005\f005\f005\f005\f005";
+  content: "\f005";
   color: var(--primaryColor);
   top: 0;
   left: 0;
@@ -7536,6 +7555,7 @@ span.woocommerce-input-wrapper input:focus {
   justify-content: center;
   align-items: center;
   gap: 6px;
+  list-style: none;
 }
 .pagination-area .nav-links .page-numbers,
 .pagination-area ul .page-numbers,
@@ -7869,6 +7889,15 @@ html:has(.flyout_sidebar_overlay) {
 .woocommerce .woocommerce_info .woocommerce_others_info .product_color_options label {
   display: block;
   margin-bottom: 8px;
+}
+
+.woocommerce-product-attributes-item__label,
+.woocommerce-product-attributes-item__value {
+  border: unset;
+}
+.woocommerce-product-attributes-item__label p,
+.woocommerce-product-attributes-item__value p {
+  margin-bottom: 0;
 }
 
 /* ---------------------------

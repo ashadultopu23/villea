@@ -213,13 +213,19 @@ span.woocommerce-input-wrapper {
 .product_card {
   flex-direction: column;
   gap: 20px;
+  padding: 12px;
+  padding-bottom: 24px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  background: var(--globalColor);
 
   .product_card_thumb {
     position: relative;
     overflow: hidden;
     z-index: 0;
     background: var(--globalColor);
-
+    border-radius: 8px;
     img {
       width: 100%;
       transition: all 0.7s ease;
@@ -293,7 +299,10 @@ span.woocommerce-input-wrapper {
     transition: var(--transition);
 
     .product_icon {
-      a {
+      a,
+      .woosc-btn-icon-only,
+      .woosq-btn-icon-only,
+      .woosw-btn-icon-only {
         background: var(--body_bg);
         color: var(--titleColor);
         height: 40px;
@@ -446,7 +455,7 @@ span.woocommerce-input-wrapper {
   width: 5.7em;
 
   &::before {
-    content: "\f005 \f005 \f005 \f005 \f005";
+    content: "\f005";
     color: #cfc8d8;
     top: 0;
     left: 0;
@@ -465,7 +474,7 @@ span.woocommerce-input-wrapper {
     gap: 8px;
 
     &::before {
-      content: "\f005 \f005 \f005 \f005 \f005";
+      content: "\f005";
       color: var(--primaryColor);
       top: 0;
       left: 0;
@@ -505,6 +514,7 @@ span.woocommerce-input-wrapper {
     justify-content: center;
     align-items: center;
     gap: 6px;
+    list-style: none;
 
     .page-numbers {
       width: 50px;
@@ -847,5 +857,15 @@ html:has(.flyout_sidebar_overlay) {
         margin-bottom: 8px;
       }
     }
+  }
+}
+
+// // WooCommerce card buttons
+
+.woocommerce-product-attributes-item__label,
+.woocommerce-product-attributes-item__value {
+  border: unset;
+  p {
+    margin-bottom: 0;
   }
 }

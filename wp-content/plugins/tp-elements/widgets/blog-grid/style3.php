@@ -1,5 +1,5 @@
 <div class="grid-item col-xxl-<?php echo esc_attr($col_xxl); ?> col-xl-<?php echo esc_attr($col_xl); ?> col-lg-<?php echo esc_attr($col_lg); ?> col-md-<?php echo esc_attr($col_md); ?> col-sm-<?php echo esc_attr($col_sm); ?> col-<?php echo esc_attr($col_xs); ?> <?php echo esc_attr($termsString); ?>">
-    <div class="align-items-center no-gutter blog-item themephi-blog-grid3">
+    <div class="blog-item themephi-blog-grid3">
 
         <?php if ($settings['blog_image'] == 'yes') : ?>
             <div class="image-part <?php echo $settings['image_gray']; ?>">

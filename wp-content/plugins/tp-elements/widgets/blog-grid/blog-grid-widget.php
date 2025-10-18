@@ -2441,15 +2441,10 @@ class Themephi_Elementor_Blog_Grid_Widget extends \Elementor\Widget_Base
                     $full_date      = get_the_date();
                     $blog_date      = get_the_date();
                     $post_admin     = get_the_author();
-                    $comment_ccount = wp_count_comments()->total_comments;
+                    // $comment_ccount = wp_count_comments()->total_comments;
+                    $comment_ccount = get_comments_number(get_the_ID());
                     $category = get_the_category();
-
-
-                    // if (!empty($settings['blog_word_show'])) {
-                    //     $limit = $settings['blog_word_show'];
-                    // } else {
-                    //     $limit = 20;
-                    // }
+                    $post_admin_avatar = get_avatar(get_the_author_meta('ID'), 40);
 
                     $col_xxl         = $settings['col_xxl'];
                     $col_xl          = $settings['col_xl'];

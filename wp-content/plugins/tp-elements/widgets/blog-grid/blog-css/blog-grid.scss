@@ -266,84 +266,101 @@
   }
 
   &.blog--style4 {
-    .image-part {
-      overflow: visible !important;
-      position: relative;
-      a {
-        img {
-          border-radius: 7px 7px 0 0 !important;
-          transition: 0.3s;
-          &:hover {
-            transform: scale(1.2);
-          }
-        }
-      }
-      .meta-info {
-        background: var(--titleColor);
-        display: flex;
-        padding: 7px 30px;
-        ul {
-          margin: 0;
-        }
-        ul,
-        li {
-          list-style: none;
-        }
-        .author-info {
-          margin-right: 25px;
-          color: #fff;
-          i {
-            padding-right: 8px;
-          }
-        }
-      }
-      .date-full {
-        top: unset !important;
-        bottom: 20px;
-        background: #fff !important;
-        padding: 10px 20px !important;
-        text-align: center;
-        z-index: 15;
-        position: absolute;
-        right: 0;
-        border-radius: 15px;
-        font-family: var(--titleFont);
+    .themephi-blog-grid4 {
+      padding: 12px;
+      border-radius: 12px;
+      background: #f4f3f1;
+      border: 1px solid transparent;
+      transition: all 0.4s linear 0s;
 
-        .day {
+      .image-part {
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      ul.blog-meta {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+
+        li {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          gap: 8px;
+          padding-right: 16px;
+          margin-right: 16px;
+          position: relative;
+          &::after {
+            position: absolute;
+            content: "";
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 6px;
+            width: 6px;
+            border-radius: 50%;
+            background: var(--primaryColor);
+          }
+          &:last-child {
+            margin-right: 0;
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+      .meta_category {
+        padding: 8px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        background: #fff;
+        color: var(--primaryColor);
+        font-family: var(--bodyFont);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 150%;
+      }
+      .meta_author {
+        display: flex;
+        align-items: center;
+        .author-avatar {
+          display: inline-block;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          overflow: hidden;
+          margin-right: 10px;
+        }
+      }
+      .btn-part {
+        .icon {
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          background: transparent;
           color: var(--primaryColor);
           font-size: 20px;
-          font-weight: 700;
-          line-height: 24px;
-        }
-        .month {
-          color: var(--primaryColor);
-          font-size: 14px;
-          font-weight: 400;
-        }
-      }
-    }
-    .blog-meta i {
-      color: #fff;
-      margin-right: 7px;
-    }
-
-    .blog-content {
-      padding: 30px !important;
-      padding-top: 30px !important;
-      border: 1px solid #ebebeb;
-      border-top: 0px solid #000;
-      border-radius: 0 0 7px 7px;
-
-      .title {
-        font-size: 24px;
-        line-height: 32px;
-        margin-bottom: 0;
-        a {
-          color: var(--titleColor);
+          border: 1px solid var(--primaryColor);
+          transition: all 0.4s linear 0s;
           &:hover {
-            color: var(--primaryColor);
+            background: var(--primaryColor);
+            color: var(--whiteColor);
           }
         }
+      }
+
+      &:hover {
+        border: 1px solid var(--primaryColor);
       }
     }
   }
