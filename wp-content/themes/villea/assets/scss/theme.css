@@ -7736,6 +7736,18 @@ html:has(.flyout_sidebar_overlay) {
 .sidebar_default.sidebar_default_active .post_sidebar {
   transform: translateX(0);
 }
+.sidebar_default .cross_bar,
+.sidebar_default .btn-filter {
+  display: none;
+}
+@media screen and (max-width: 991px) {
+  .sidebar_default .cross_bar,
+  .sidebar_default .btn-filter {
+    padding: 8px 16px;
+    display: block;
+    height: auto;
+  }
+}
 
 .woocommerce .product_badge {
   position: absolute;
@@ -8366,17 +8378,6 @@ form.woocommerce-product-search button {
 @media screen and (max-width: 1200px) {
   form.woocommerce-product-search button {
     padding: 17px 16px;
-  }
-}
-
-.btn-filter {
-  display: none;
-}
-@media screen and (max-width: 991px) {
-  .btn-filter {
-    padding: 8px 16px;
-    display: block;
-    height: auto;
   }
 }
 

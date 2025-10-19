@@ -729,6 +729,16 @@ html:has(.flyout_sidebar_overlay) {
       transform: translateX(0);
     }
   }
+
+  .cross_bar,
+  .btn-filter {
+    display: none;
+    @media screen and (max-width: 991px) {
+      padding: 8px 16px;
+      display: block;
+      height: auto;
+    }
+  }
 }
 
 .woocommerce {
@@ -1475,15 +1485,6 @@ form.woocommerce-product-search {
     @media screen and (max-width: 1200px) {
       padding: 17px 16px;
     }
-  }
-}
-
-.btn-filter {
-  display: none;
-  @media screen and (max-width: 991px) {
-    padding: 8px 16px;
-    display: block;
-    height: auto;
   }
 }
 

@@ -1,5 +1,9 @@
 <div class="col-lg-4 post_sidebar">
-    <aside id="secondary" class="widget-area">
+    <aside id="secondary" class="widget-area post-revisions z-1">
+
+        <button class="cross_bar position-absolute top-0 end-0 z-2">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
         <?php
         if (class_exists('WooCommerce') && (is_shop() || is_product_category() || is_product_tag() || is_product())) {
 
