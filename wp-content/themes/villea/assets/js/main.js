@@ -55,6 +55,9 @@
     $(".sidebar_modern .tp_shop_top_portion_bar .sidebar_link").on("click", function () {
         $(".sidebar_modern").toggleClass("modern_sidebar_active");
     });
+    $(".sidebar_default .tp_shop_top_portion_bar .sidebar_link").on("click", function () {
+        $(".sidebar_default").toggleClass("sidebar_default_active");
+    });
 
     // user-profile
     $(".sidebar_flyout .tp_shop_top_portion_bar .sidebar_link").on("click", function () {
@@ -330,7 +333,7 @@
         });
 
     });
-    
+
     // Counter Up  
     $('.rs-counter').counterUp({
         delay: 20,

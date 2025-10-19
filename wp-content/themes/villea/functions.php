@@ -28,7 +28,7 @@ if (! function_exists('villea_setup')) :
 	 */
 		add_theme_support('title-tag');
 
-		if (class_exists('WooCommerce')) {
+		if (class_exists('WooCommerce')  && is_dir(get_stylesheet_directory() . '/woocommerce')) {
 
 			add_theme_support('woocommerce');
 			add_theme_support('wc-product-gallery-zoom');

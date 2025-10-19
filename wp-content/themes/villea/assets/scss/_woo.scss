@@ -2,6 +2,26 @@
   08. Woocommerce Style 
 ------------------------------*/
 
+// ==================================
+// shop archive page
+// ==================================
+.post-type-archive-product.woocommerce-shop {
+  .container-fluid {
+    .site-main {
+      max-width: 90%;
+      margin: 0 auto;
+
+      @media (max-width: 1200px) {
+        max-width: 95%;
+      }
+
+      @media (max-width: 767px) {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
 .related-slider-wrapper {
   position: relative;
 
@@ -348,48 +368,48 @@
 }
 
 // product star-rating
-.star-rating {
-  margin: 0;
-  font-size: 12px;
-  overflow: hidden;
-  position: relative;
-  height: 1em;
-  line-height: 1.1;
-  width: 5.7em;
+// .star-rating {
+//   margin: 0;
+//   font-size: 12px;
+//   overflow: hidden;
+//   position: relative;
+//   height: 1em;
+//   line-height: 1.1;
+//   width: 5.7em;
 
-  &::before {
-    content: "\e82b\e82b\e82b\e82b\e82b";
-    font-family: "tp-icons";
-    color: #cfc8d8;
-    top: 0;
-    left: 0;
-    position: absolute;
-  }
+//   &::before {
+//     content: "\e82b\e82b\e82b\e82b\e82b";
+//     font-family: "tp-icons";
+//     color: #cfc8d8;
+//     top: 0;
+//     left: 0;
+//     position: absolute;
+//   }
 
-  span {
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    padding-top: 1.5em;
-    font-size: 12px;
-    color: var(--woo-primary-color);
-    gap: 8px;
+//   span {
+//     position: absolute;
+//     overflow: hidden;
+//     top: 0;
+//     left: 0;
+//     padding-top: 1.5em;
+//     font-size: 12px;
+//     color: var(--woo-primary-color);
+//     gap: 8px;
 
-    &::before {
-      content: "\e821\e821\e821\e821\e821";
-      font-family: "tp-icons";
-      color: var(--primaryColor);
-      top: 0;
-      left: 0;
-      position: absolute;
-    }
+//     &::before {
+//       content: "\e821\e821\e821\e821\e821";
+//       font-family: "tp-icons";
+//       color: var(--primaryColor);
+//       top: 0;
+//       left: 0;
+//       position: absolute;
+//     }
 
-    strong {
-      display: block;
-    }
-  }
-}
+//     strong {
+//       display: block;
+//     }
+//   }
+// }
 
 // pagination
 .pagination-area,
@@ -519,7 +539,7 @@
   }
 }
 
-// // sidebar_modern
+// sidebar_modern
 .layout-full-layout-left.sidebar_modern,
 .layout-full-layout-right.sidebar_modern {
   display: grid;
@@ -568,10 +588,8 @@
     padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
     padding-left: calc(var(--bs-gutter-x) * 0.5) !important;
   }
-
   .post_sidebar {
     position: fixed;
-    overflow: hidden;
     transition: var(--transition);
     top: 0;
     max-width: 465px;
@@ -669,6 +687,47 @@ html:has(.flyout_sidebar_overlay) {
       transparent
     ) !important;
     z-index: 9;
+  }
+}
+
+// sidebar_default
+.sidebar_default {
+  .post_sidebar {
+    @media (max-width: 991px) {
+      position: fixed;
+      top: 10px;
+      left: 0;
+      // overflow: hidden;
+      transition: var(--transition);
+      max-width: 465px;
+      background: var(--body_bg);
+      z-index: 1000;
+      padding: 16px;
+      height: 100%;
+      min-height: 100vh;
+      overflow: auto;
+      transform: translateX(-100%);
+
+      &::-webkit-scrollbar {
+        width: 4px !important;
+        height: 5px !important;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--primaryColor);
+        visibility: hidden;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: var(--globalColor);
+      }
+    }
+  }
+
+  &.sidebar_default_active {
+    .post_sidebar {
+      transform: translateX(0);
+    }
   }
 }
 
@@ -1208,6 +1267,236 @@ html:has(.flyout_sidebar_overlay) {
     &.related-slider-wrapper .swiper-slide .product_card_grid {
       width: 100%;
     }
+  }
+}
+
+// widget woocommerce
+.widget.woocommerce {
+  &.widget_product_categories {
+    ul.product-categories {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li.cat-item {
+        position: relative;
+        margin: 0;
+        margin-bottom: 12px;
+        padding: 0;
+        list-style: none;
+        background: transparent;
+        a {
+          padding: 0;
+        }
+
+        .count {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+        &:hover {
+          color: var(--primaryColor);
+        }
+      }
+    }
+  }
+
+  &.widget_rating_filter {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      .wc-layered-nav-rating {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        border: none;
+
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
+
+        &.chosen {
+          a {
+            padding-left: 20px;
+
+            &::before {
+              position: absolute;
+              top: 0;
+              left: 0;
+              content: "\f057";
+              font-family: "Font Awesome 6 Free";
+              font-weight: 900;
+              margin-right: 5px;
+              text-decoration: none;
+              color: red;
+            }
+          }
+        }
+
+        a {
+          position: relative;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          justify-content: space-between;
+        }
+
+        .star-rating {
+          margin: 0;
+          font-size: 12px;
+          overflow: hidden;
+          position: relative;
+          height: 1em;
+          line-height: 1.1;
+          width: 5.7em;
+
+          &::before {
+            content: "\e82b\e82b\e82b\e82b\e82b";
+            font-family: "tp-icons";
+            color: #cfc8d8;
+            top: 0;
+            left: 0;
+            position: absolute;
+          }
+
+          span {
+            position: absolute;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            padding-top: 1.5em;
+            font-size: 12px;
+            gap: 8px;
+            color: var(--secondaryColor);
+
+            &::before {
+              content: "\e821\e821\e821\e821\e821";
+              font-family: "tp-icons";
+              top: 0;
+              left: 0;
+              position: absolute;
+            }
+
+            strong {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.widget_price_filter {
+    .price_slider_wrapper {
+      .ui-widget-content {
+        border-radius: 1em;
+        background-color: var(--whiteColor);
+        border: 0;
+      }
+
+      .ui-slider-horizontal {
+        height: 0.5em;
+
+        .ui-slider-range {
+          top: 0;
+          height: 100%;
+        }
+      }
+
+      .ui-slider {
+        position: relative;
+        text-align: left;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+
+        .ui-slider-range {
+          position: absolute;
+          z-index: 1;
+          font-size: 0.7em;
+          display: block;
+          border: 0;
+          border-radius: 1em;
+          background-color: var(--primaryColor);
+        }
+
+        .ui-slider-handle {
+          position: absolute;
+          z-index: 2;
+          width: 1em;
+          height: 1em;
+          background-color: var(--primaryColor);
+          border-radius: 1em;
+          cursor: ew-resize;
+          outline: 0;
+          top: -0.3em;
+          margin-left: -0.5em;
+        }
+      }
+
+      .price_slider {
+        margin-bottom: 1em;
+      }
+    }
+    .price_slider_amount {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8751em;
+
+      .button {
+        font-size: 1.15em;
+        padding: 8px 24px;
+      }
+
+      div.clear {
+        display: none;
+      }
+    }
+  }
+}
+
+// woocommerce product search
+
+form.woocommerce-product-search {
+  position: relative;
+  display: flex;
+  .search-field {
+    width: 100%;
+    border: unset;
+  }
+  button {
+    padding: 17px 32px;
+
+    @media screen and (max-width: 1200px) {
+      padding: 17px 16px;
+    }
+  }
+}
+
+.btn-filter {
+  display: none;
+  @media screen and (max-width: 991px) {
+    padding: 8px 16px;
+    display: block;
+    height: auto;
+  }
+}
+
+// woocommerce no products found / Empty state
+
+.woocommerce-no-products-found {
+  text-align: center;
+
+  .woocommerce-info {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--titleColor);
+    font-family: var(--titleFont);
   }
 }
 

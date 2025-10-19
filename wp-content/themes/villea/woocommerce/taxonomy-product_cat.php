@@ -133,6 +133,12 @@ if (in_array($shop_display, ['both', 'subcategories']) && !empty($categories)) :
 <?php endif; ?>
 
 <div class="row layout-<?php echo esc_attr($layout) ?> shop-layout-style-<?php echo esc_attr($shop_layout_style); ?> sidebar_<?php echo esc_attr($shop_sidebar_layout_style); ?>">
+
+    <?php if ($layout != 'full-layout' && $layout == 'full-layout-left'):
+        get_sidebar();
+    endif;
+    ?>
+
     <div class="contents-sticky col-lg<?php echo esc_attr($col); ?> <?php echo esc_attr($layout); ?>">
         <!-- new add tab style start -->
         <?php
@@ -187,7 +193,7 @@ if (in_array($shop_display, ['both', 'subcategories']) && !empty($categories)) :
                             <div class="layout_area d-flex align-center gap-3">
                                 <?php woocommerce_catalog_ordering(); ?>
                                 <div class="nav nav-tabs gap-2 gap-sm-3 flex-nowrap align-items-center layout " id="productTab" role="tablist">
-                                    <button class="nav-link border-0 p-0 lh-1 <?php echo esc_attr($grid_active_btn); ?>" id="grid-tab" data-bs-toggle="tab" data-bs-target="#grid-tab-pane" type="button" role="tab" aria-controls="grid-tab-pane" aria-selected="true">
+                                    <button class="nav-link border-0 p-0 lh-1 <?php echo esc_attr($grid_active_btn); ?>" id="grid-tab" data-bs-toggle="tab" data-bs-target="#grid-tab-pane" type="button" role="tab" title="Grid" aria-controls="grid-tab-pane" aria-selected="true">
                                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5.66667 1H1V5.66667H5.66667V1Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
                                             <path d="M12.9997 1H8.33301V5.66667H12.9997V1Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -195,7 +201,7 @@ if (in_array($shop_display, ['both', 'subcategories']) && !empty($categories)) :
                                             <path d="M5.66667 8.33337H1V13H5.66667V8.33337Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
                                         </svg>
                                     </button>
-                                    <button class="nav-link border-0 p-0 lh-1 <?php echo esc_attr($list_active_btn); ?>" id="list-tab" data-bs-toggle="tab" data-bs-target="#list-tab-pane" type="button" role="tab" aria-controls="list-tab-pane" aria-selected="true">
+                                    <button class="nav-link border-0 p-0 lh-1 <?php echo esc_attr($list_active_btn); ?>" id="list-tab" data-bs-toggle="tab" data-bs-target="#list-tab-pane" type="button" role="tab" title="List" aria-controls="list-tab-pane" aria-selected="true">
                                         <svg width="14" height="14" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M15 7.11108H1" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path>
                                             <path d="M15 1H1" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -271,10 +277,13 @@ if (in_array($shop_display, ['both', 'subcategories']) && !empty($categories)) :
                 </div>
             </div>
     </div>
-    <?php if ($layout != 'full-layout'):
+
+    <?php if ($layout != 'full-layout' && $layout == 'full-layout-right'):
         get_sidebar();
     endif;
+    ?>
 
+    <?php
     /**
      * Hook: woocommerce_after_main_content.
      *
