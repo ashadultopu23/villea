@@ -31,7 +31,7 @@ do_action('woocommerce_before_add_to_cart_form'); ?>
 	<?php do_action('woocommerce_before_variations_form'); ?>
 
 	<?php if (empty($available_variations) && false !== $available_variations) : ?>
-		<p class="stock out-of-stock"><?php echo esc_html(apply_filters('woocommerce_out_of_stock_message', __('This product is currently out of stock and unavailable.', 'tradexy'))); ?></p>
+		<p class="stock out-of-stock"><?php echo esc_html(apply_filters('woocommerce_out_of_stock_message', __('This product is currently out of stock and unavailable.', 'villea'))); ?></p>
 	<?php else : ?>
 		<div class="variations">
 			<?php foreach ($attributes as $attribute_name => $options) : ?>
@@ -43,29 +43,29 @@ do_action('woocommerce_before_add_to_cart_form'); ?>
 						$selected = isset($_REQUEST['attribute_' . sanitize_title($attribute_name)]) ? wc_clean(wp_unslash($_REQUEST['attribute_' . sanitize_title($attribute_name)])) : $product->get_variation_default_attribute($attribute_name);
 
 						// Display options as clickable buttons
-						if (!empty($options)) {
-							$terms = wc_get_product_terms($product->get_id(), $attribute_name, array('fields' => 'all'));
+						// if (!empty($options)) {
+						// 	// $terms = wc_get_product_terms($product->get_id(), $attribute_name, array('fields' => 'all'));
 
-							foreach ($terms as $term) {
-								if (in_array($term->slug, $options)) {
-									$class = sanitize_title($term->slug);
-									if ($selected == $term->slug) {
-										$class .= ' active';
-									}
+						// 	// foreach ($terms as $term) {
+						// 	// 	if (in_array($term->slug, $options)) {
+						// 	// 		$class = sanitize_title($term->slug);
+						// 	// 		if ($selected == $term->slug) {
+						// 	// 			$class .= ' active';
+						// 	// 		}
 
-									// For color variations, you might want to add additional styling
-									$color = get_term_meta($term->term_id, 'color', true);
-									$style = '';
-									if ($color) {
-										$style = 'style="background-color:' . esc_attr($color) . '"';
-									}
+						// 	// 		// For color variations, you might want to add additional styling
+						// 	// 		// $color = get_term_meta($term->term_id, 'color', true);
+						// 	// 		// $style = '';
+						// 	// 		// if ($color) {
+						// 	// 		// 	$style = 'style="background-color:' . esc_attr($color) . '"';
+						// 	// 		// }
 
-									echo '<button type="button" class="variation-option ' . esc_attr($class) . '" data-value="' . esc_attr($term->slug) . '" ' . $style . '>';
-									echo esc_html(apply_filters('woocommerce_variation_option_name', $term->name));
-									echo '</button>';
-								}
-							}
-						}
+						// 	// 		// echo '<button type="button" class="variation-option ' . esc_attr($class) . '" data-value="' . esc_attr($term->slug) . '" ' . $style . '>';
+						// 	// 		// echo esc_html(apply_filters('woocommerce_variation_option_name', $term->name));
+						// 	// 		// echo '</button>';
+						// 	// 	}
+						// 	// }
+						// }
 
 						// Add hidden select element for WC to work with
 						wc_dropdown_variation_attribute_options(
@@ -78,7 +78,7 @@ do_action('woocommerce_before_add_to_cart_form'); ?>
 						);
 
 						// Reset link
-						echo end($attribute_keys) === $attribute_name ? wp_kses_post(apply_filters('woocommerce_reset_variations_link', '<a class="reset_variations" href="#" aria-label="' . esc_attr__('Clear options', 'tradexy') . '">' . esc_html__('Clear', 'tradexy') . '</a>')) : '';
+						echo end($attribute_keys) === $attribute_name ? wp_kses_post(apply_filters('woocommerce_reset_variations_link', '<a class="reset_variations" href="#" aria-label="' . esc_attr__('Clear options', 'villea') . '">' . esc_html__('Clear', 'villea') . '</a>')) : '';
 						?>
 					</div>
 				</div>

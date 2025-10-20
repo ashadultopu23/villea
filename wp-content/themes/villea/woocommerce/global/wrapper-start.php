@@ -24,14 +24,30 @@ global $villea_option;
 $header_width_meta = get_post_meta(get_the_ID(), 'header_width_custom', true);
 
 $shop_container_class = (!empty($villea_option['shop_container_class'])) ? $villea_option['shop_container_class'] : '';
+$shop_single_container_class = (!empty($villea_option['shop_single_container_class'])) ? $villea_option['shop_single_container_class'] : '';
 $container_class = (!empty($villea_option['container_class'])) ? $villea_option['container_class'] : '';
 
-if (!empty($shop_container_class)) {
-	$header_width = ($shop_container_class == 'fluid') ? 'container-fluid' : 'container';
-} elseif (!empty($container_class)) {
-	$header_width = ($container_class == 'fluid') ? 'container-fluid' : 'container';
-} else {
-	$header_width = ($header_width_meta == 'full') ? 'container-fluid' : 'container';
+
+// shop page container class
+if (is_shop() || is_product_category() || is_product_tag()) {
+	if (!empty($shop_container_class)) {
+		$header_width = ($shop_container_class == 'fluid') ? 'container-fluid' : 'container';
+	} elseif (!empty($container_class)) {
+		$header_width = ($container_class == 'fluid') ? 'container-fluid' : 'container';
+	} else {
+		$header_width = ($header_width_meta == 'full') ? 'container-fluid' : 'container';
+	}
+}
+
+// shop single page container class
+if (is_product()) {
+	if (!empty($shop_single_container_class)) {
+		$header_width = ($shop_single_container_class == 'fluid') ? 'container-fluid' : 'container';
+	} elseif (!empty($container_class)) {
+		$header_width = ($container_class == 'fluid') ? 'container-fluid' : 'container';
+	} else {
+		$header_width = ($header_width_meta == 'full') ? 'container-fluid' : 'container';
+	}
 }
 
 $template = wc_get_theme_slug_for_templates();

@@ -32,7 +32,7 @@ global $product;
 
 	<?php if (wc_product_sku_enabled() && ($product->get_sku() || $product->is_type(ProductType::VARIABLE))) : ?>
 
-		<span class="sku_wrapper"><?php esc_html_e('SKU:', 'tradexy'); ?> <span class="sku"><?php echo esc_html($sku = $product->get_sku()) ? $sku : esc_html__('N/A', 'tradexy'); ?></span></span>
+		<span class="sku_wrapper"><?php esc_html_e('SKU:', 'villea'); ?> <span class="sku"><?php echo esc_html($sku = $product->get_sku()) ? $sku : esc_html__('N/A', 'villea'); ?></span></span>
 
 	<?php endif; ?>
 
@@ -40,7 +40,7 @@ global $product;
 	$categories = wc_get_product_category_list($product->get_id(), ', ', '', '');
 	if (!empty($categories)) : ?>
 		<div class="single_product_category_list">
-			<?php echo '<span class="fw-semibold">' . _n('Category:', 'Categories:', count($product->get_category_ids()), 'tradexy') . ' ' . $categories . '</span>'; ?>
+			<?php echo '<span class="fw-semibold">' . _n('Category:', 'Categories:', count($product->get_category_ids()), 'villea') . ' ' . $categories . '</span>'; ?>
 		</div>
 	<?php endif; ?>
 
@@ -48,7 +48,7 @@ global $product;
 	$tags = wc_get_product_tag_list($product->get_id(), ', ', '', '');
 	if (!empty($tags)) : ?>
 		<div class="single_product_tag_list">
-			<?php echo '<span class="fw-semibold">' . _n('Tag:', 'Tags:', count($product->get_tag_ids()), 'tradexy') . ' ' . $tags . '</span>'; ?>
+			<?php echo '<span class="fw-semibold">' . _n('Tag:', 'Tags:', count($product->get_tag_ids()), 'villea') . ' ' . $tags . '</span>'; ?>
 		</div>
 	<?php endif; ?>
 

@@ -60,7 +60,7 @@ $wrapper_classes   = apply_filters(
 			echo sprintf(
 				'<img src="%s" alt="%s" class="wp-post-image" />',
 				esc_url(wc_placeholder_img_src('woocommerce_single')),
-				esc_html__('Awaiting product image', 'tradexy')
+				esc_html__('Awaiting product image', 'villea')
 			);
 			echo '</div>';
 		}

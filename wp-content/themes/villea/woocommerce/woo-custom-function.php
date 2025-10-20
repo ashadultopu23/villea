@@ -37,7 +37,7 @@ if (class_exists('WooCommerce')) {
 	// remove_action('woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15);
 	// remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
 
-	add_action('woocommerce_product_thumbnails', 'woocommerce_show_product_thumbnails', 20);
+	// add_action('woocommerce_product_thumbnails', 'woocommerce_show_product_thumbnails', 20);
 	// remove_action( 'woocommerce_product_thumbnails', 'woocommerce_show_product_thumbnails', 20 );
 
 	// remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
@@ -46,8 +46,8 @@ if (class_exists('WooCommerce')) {
 
 
 // wc_num_product_per_page
-add_filter('loop_shop_per_page', 'tradexy_set_products_per_page', 12);
-function tradexy_set_products_per_page($cols)
+add_filter('loop_shop_per_page', 'villea_set_products_per_page', 12);
+function villea_set_products_per_page($cols)
 {
 	global $villea_option;
 	$product_per_page = isset($villea_option['wc_num_product_per_page']) ? $villea_option['wc_num_product_per_page'] : 9;
@@ -94,7 +94,7 @@ function cus_woo_product_item()
 			<?php custom_woocommerce_badges(); ?>
 
 			<?php $product_id = $product->get_id();
-			$success_message  = sprintf(__('“%s” has been added to your cart', 'tradexy'), $product->get_name());
+			$success_message  = sprintf(__('“%s” has been added to your cart', 'villea'), $product->get_name());
 			$product_classes  = implode(' ', array_map('esc_attr', $product->get_type() === 'simple' ? ['button', 'product_type_simple', 'add_to_cart_button', 'ajax_add_to_cart'] : wc_get_product_class('', $product))); ?>
 
 			<div class="product_icon_actions">
@@ -121,11 +121,15 @@ function cus_woo_product_item()
 			</div>
 
 			<!-- Color Options -->
-			<div class="product_color_options">
-				<?php foreach ($terms as $term_name) : ?>
-					<button class="variant_color" style="background-color: <?php echo esc_attr($term_name); ?> !important" title="<?php echo esc_attr($term_name); ?>"></button>
-				<?php endforeach; ?>
-			</div>
+			<!-- <div class="product_color_options">
+				<?php // foreach ($terms as $term_name) : 
+				?>
+					<button class="variant_color" style="background-color: <?php // echo esc_attr($term_name); 
+																			?> !important" title="<?php // echo esc_attr($term_name); 
+																									?>"></button>
+				<?php // endforeach; 
+				?>
+			</div> -->
 		</div>
 
 		<div class="product_info d-flex flex-column gap-1">
@@ -170,7 +174,7 @@ function cus_woo_product_item_list()
 			<?php custom_woocommerce_badges(); ?>
 
 			<?php $product_id = $product->get_id();
-			$success_message  = sprintf(__('“%s” has been added to your cart', 'tradexy'), $product->get_name());
+			$success_message  = sprintf(__('“%s” has been added to your cart', 'villea'), $product->get_name());
 			$product_classes  = implode(' ', array_map('esc_attr', $product->get_type() === 'simple' ? ['button', 'product_type_simple', 'add_to_cart_button', 'ajax_add_to_cart'] : wc_get_product_class('', $product))); ?>
 
 			<div class="product_icon_actions">
@@ -197,11 +201,15 @@ function cus_woo_product_item_list()
 			</div>
 
 			<!-- Color Options -->
-			<div class="product_color_options">
-				<?php foreach ($terms as $term_name) : ?>
-					<button class="variant_color" style="background-color: <?php echo esc_attr($term_name); ?> !important" title="<?php echo esc_attr($term_name); ?>"></button>
-				<?php endforeach; ?>
-			</div>
+			<!-- <div class="product_color_options">
+				<?php // foreach ($terms as $term_name) : 
+				?>
+					<button class="variant_color" style="background-color: <?php // echo esc_attr($term_name); 
+																			?> !important" title="<?php //  echo esc_attr($term_name); 
+																									?>"></button>
+				<?php // endforeach; 
+				?>
+			</div> -->
 		</div>
 
 		<div class="product_info d-flex flex-column gap-1">
@@ -224,7 +232,7 @@ function product_sale_percentage()
 {
 	global $product;
 	$output = '';
-	$icon = esc_html__("-", 'tradexy');
+	$icon = esc_html__("-", 'villea');
 
 	if ($product->is_on_sale() && $product->is_type('variable')) {
 		$percentage = ceil(100 - ($product->get_variation_sale_price() / $product->get_variation_regular_price('min')) * 100);
@@ -260,20 +268,20 @@ function single_product_image_and_badge()
 		$days_diff = (current_time('timestamp') - $post_date) / DAY_IN_SECONDS;
 		if (!empty($wc_show_new)) {
 			if ($days_diff <= $wc_new_product_days) {
-				echo '<span class="custom-badge new">' . esc_html__('New', 'tradexy') . '</span>';
+				echo '<span class="custom-badge new">' . esc_html__('New', 'villea') . '</span>';
 			}
 		}
 		// 👉 Sale Badge - if product is on sale
 		if (!empty($wc_show_sale)) {
 			if ($product->is_on_sale()) {
-				echo '<span class="custom-badge sale">' . esc_html__('Sale!', 'tradexy') . '</span>';
+				echo '<span class="custom-badge sale">' . esc_html__('Sale!', 'villea') . '</span>';
 			}
 		}
 		// 👉 Hot Badge - based on total_sales or custom field
 		if (!empty($wc_show_hot)) {
 			$total_sales = $product->get_total_sales(); // built-in WooCommerce
 			if ($total_sales >= $wc_hot_product_product) { // you can adjust the number
-				echo '<span class="custom-badge hot">' . esc_html__('Hot!', 'tradexy') .  '</span>';
+				echo '<span class="custom-badge hot">' . esc_html__('Hot!', 'villea') .  '</span>';
 			}
 		}
 		echo '</div>';
@@ -340,23 +348,31 @@ function single_product_info()
 
 		<!-- Color Options -->
 		<!-- <div class="product_color_options">
-			<label class="fs-5"><?php //echo esc_html__('Color', 'tradexy'); 
-								?></label>
+			<label class="fs-5">
+				<?php // echo esc_html__('Color', 'villea'); 
+				?>
+			</label>
 			<?php
 			// global $product;
 			// $terms = wc_get_product_terms($product->get_id(), 'pa_color', ['fields' => 'names']);
 
-			// foreach ($terms as $term_name) : 
+			// foreach ($terms as $term_name) :
 			?>
-			// 	<button class="variant_color" style="background-color: <?php //echo esc_attr($term_name); 
-																			?> !important" title="<?php //echo esc_attr($term_name); 
-																									?>"></button>
-			// <?php //endforeach; 
+				<button class="variant_color" style="background-color: <?php //echo esc_attr($term_name);  
+																		?> !important" title="<?php // echo esc_attr($term_name); 
+																								?>"></button>
+			<?php
+			//  endforeach; 
+			?>
+		</div> -->
+
+		<!-- Size Options -->
+		<!-- <div class="product_size_options">
+			<label class="fs-5">
+				<?php
+				//  echo esc_html__('Size', 'villea'); 
 				?>
-		</div>
-		<div class="product_size_options">
-			<label class="fs-5"><?php //echo esc_html__('Size', 'tradexy'); 
-								?></label>
+			</label>
 			<?php
 			// $size_terms = wc_get_product_terms($product->get_id(), 'pa_size', ['fields' => 'names']);
 
@@ -365,7 +381,7 @@ function single_product_info()
 			// 		echo '<span class="size-btn me-2">' . esc_html($size) . '</span>';
 			// 	}
 			// } else {
-			// 	echo '<span class="text-muted">' . esc_html__('No sizes available', 'tradexy') . '</span>';
+			// 	echo '<span class="text-muted">' . esc_html__('No sizes available', 'villea') . '</span>';
 			// }
 			?>
 		</div> -->
@@ -384,7 +400,7 @@ function custom_woocommerce_badges()
 {
 	global $product;
 	global $villea_option;
-	$icon = esc_html__("-", 'tradexy');
+	$icon = esc_html__("-", 'villea');
 	$wc_show_new = !empty($villea_option['wc_show_new']) ? $villea_option['wc_show_new'] : '';
 	$wc_new_product_days = !empty($villea_option['wc_new_product_days']) ? $villea_option['wc_new_product_days'] : '';
 	$wc_show_hot = !empty($villea_option['wc_show_hot']) ? $villea_option['wc_show_hot'] : '';
@@ -400,14 +416,14 @@ function custom_woocommerce_badges()
 
 	if (!empty($wc_show_new)) {
 		if ($days_diff <= $wc_new_product_days) {
-			echo '<span class="custom-badge new">' . esc_html__('New', 'tradexy') . '</span>';
+			echo '<span class="custom-badge new">' . esc_html__('New', 'villea') . '</span>';
 		}
 	}
 
 	// 👉 Sale Badge - if product is on sale
 	if (!empty($wc_show_sale)) {
 		if ($product->is_on_sale()) {
-			echo '<span class="custom-badge sale">' . esc_html__('Sale!', 'tradexy') . '</span>';
+			echo '<span class="custom-badge sale">' . esc_html__('Sale!', 'villea') . '</span>';
 		}
 	}
 
@@ -415,7 +431,7 @@ function custom_woocommerce_badges()
 	if (!empty($wc_show_hot)) {
 		$total_sales = $product->get_total_sales(); // built-in WooCommerce
 		if ($total_sales >= $wc_hot_product_product) { // you can adjust the number
-			echo '<span class="custom-badge hot">' . esc_html__('Hot!', 'tradexy') .  '</span>';
+			echo '<span class="custom-badge hot">' . esc_html__('Hot!', 'villea') .  '</span>';
 		}
 	}
 
@@ -525,31 +541,31 @@ function woosc_btn_single_product()
 // }
 
 
-remove_action('woocommerce_product_thumbnails', 'woocommerce_show_product_thumbnails', 20);
+// remove_action('woocommerce_product_thumbnails', 'woocommerce_show_product_thumbnails', 20);
 
-add_action('woocommerce_product_thumbnails', 'custom_woocommerce_product_thumbnails_swiper', 20);
-function custom_woocommerce_product_thumbnails_swiper()
-{
-	global $product;
+// add_action('woocommerce_product_thumbnails', 'custom_woocommerce_product_thumbnails_swiper', 20);
+// function custom_woocommerce_product_thumbnails_swiper()
+// {
+// 	global $product;
 
-	$attachment_ids = $product->get_gallery_image_ids();
-	if (empty($attachment_ids)) return;
+// 	$attachment_ids = $product->get_gallery_image_ids();
+// 	if (empty($attachment_ids)) return;
 
-	echo '<div class="swiper swiper-thumbnail-slider">';
-	echo '<div class="swiper-wrapper">';
+// 	echo '<div class="swiper swiper-thumbnail-slider">';
+// 	echo '<div class="swiper-wrapper">';
 
-	foreach ($attachment_ids as $attachment_id) {
-		$thumbnail_url = wp_get_attachment_image_url($attachment_id, 'woocommerce_thumbnail');
-		$large_url     = wp_get_attachment_image_url($attachment_id, 'woocommerce_single');
-		$alt           = get_post_meta($attachment_id, '_wp_attachment_image_alt', true);
+// 	foreach ($attachment_ids as $attachment_id) {
+// 		$thumbnail_url = wp_get_attachment_image_url($attachment_id, 'woocommerce_thumbnail');
+// 		$large_url     = wp_get_attachment_image_url($attachment_id, 'woocommerce_single');
+// 		$alt           = get_post_meta($attachment_id, '_wp_attachment_image_alt', true);
 
-		echo '<div class="swiper-slide">';
-		echo '<img class="product-thumb" src="' . esc_url($thumbnail_url) . '" data-large="' . esc_url($large_url) . '" alt="' . esc_attr($alt) . '">';
-		echo '</div>';
-	}
+// 		echo '<div class="swiper-slide">';
+// 		echo '<img class="product-thumb" src="' . esc_url($thumbnail_url) . '" data-large="' . esc_url($large_url) . '" alt="' . esc_attr($alt) . '">';
+// 		echo '</div>';
+// 	}
 
-	echo '</div></div>';
-}
+// 	echo '</div></div>';
+// }
 
 // related products slider
 function enqueue_related_products_slider_script()

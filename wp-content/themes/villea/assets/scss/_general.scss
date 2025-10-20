@@ -1302,9 +1302,10 @@ body.page blockquote.style2:before {
 
 mark,
 ins {
-  color: var(--titleColor);
+  color: var(--whiteColor);
   padding: 0 4px;
   font-weight: 400;
+  background: var(--primaryColor);
 }
 
 .price ins {

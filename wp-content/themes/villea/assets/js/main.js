@@ -489,4 +489,10 @@ Box Style Start
     });
 
 
+    // woocommerce account navigation show hide
+    $(".woocommerce-MyAccount-navigation-toggle").on("click", function () {
+        $(".woocommerce-MyAccount-navigation").toggleClass("woocommerce-MyAccount-navigation_active");
+    });
+
+
 })(jQuery);

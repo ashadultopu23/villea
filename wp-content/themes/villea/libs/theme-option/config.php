@@ -206,7 +206,7 @@ Redux::setSection(
                 'id'       => 'container_class',
                 'type'     => 'image_select',
                 'title'    => esc_html__('Container Layout', 'villea'),
-                'subtitle' => esc_html__('Select your shop layout', 'villea'),
+                'subtitle' => esc_html__('Select your container layout', 'villea'),
                 'options'  => array(
                     'container' => array(
                         'alt'   => esc_html__('Container', 'villea'),
@@ -903,7 +903,7 @@ if (class_exists('WooCommerce')) {
                 array(
                     'id'        => 'shop_banner_bg_color',
                     'type'      => 'color',
-                    'title'     => esc_html__('Shop Banner Backgroud Color', 'villea'),
+                    'title'     => esc_html__('Shop Banner Background Color', 'villea'),
                     'subtitle'  => esc_html__('Pick banner background color', 'villea'),
                     'validate'  => 'color',
                 ),
@@ -934,7 +934,7 @@ if (class_exists('WooCommerce')) {
                     'id'       => 'shop_container_class',
                     'type'     => 'image_select',
                     'title'    => esc_html__('Container Layout', 'villea'),
-                    'subtitle' => esc_html__('Select your shop layout', 'villea'),
+                    'subtitle' => esc_html__('Select your shop container layout', 'villea'),
                     'options'  => array(
                         'container' => array(
                             'alt'   => esc_html__('Container', 'villea'),
@@ -1246,10 +1246,29 @@ if (class_exists('WooCommerce')) {
                 //     'type'     => 'text',
                 // ),
 
+
+                array(
+                    'id'       => 'shop_single_container_class',
+                    'type'     => 'image_select',
+                    'title'    => esc_html__('Container Layout', 'villea'),
+                    'subtitle' => esc_html__('Select your shop single container layout', 'villea'),
+                    'options'  => array(
+                        'container' => array(
+                            'alt'   => esc_html__('Container', 'villea'),
+                            'img'   => get_template_directory_uri() . '/libs/img/2c.png'
+                        ),
+                        'fluid'      => array(
+                            'alt'   => esc_html__('Container Fluid', 'villea'),
+                            'img'   => get_template_directory_uri() . '/libs/img/1c.png'
+                        ),
+                    ),
+                    'default' => 'container'
+                ),
+
                 array(
                     'id'       => 'single_releted_products_col',
                     'type'     => 'slider',
-                    'title'    => esc_html__('Coloumn Number of Releted Products in Product detail Page', 'villea'),
+                    'title'    => esc_html__('Column Number of Related Products in Product detail Page', 'villea'),
                     'default'  => 4,
                     'min'      => 1,
                     'step'     => 1,
