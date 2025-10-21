@@ -1322,8 +1322,9 @@ html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   color: var(--btnColor);
-  padding: 17px 30px;
-  font-size: 14px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
   text-transform: capitalize;
   outline: none;
   transition: all 0.5s ease;
