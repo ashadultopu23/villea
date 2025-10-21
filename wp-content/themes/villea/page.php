@@ -1,7 +1,6 @@
 <?php
-get_header(); ?>
+get_header();
 
-<?php
 global $villea_option;
 $header_width_meta = get_post_meta(get_the_ID(), 'header_width_custom', true);
 $container_class = (!empty($villea_option['container_class'])) ? $villea_option['container_class'] : '';
@@ -10,18 +9,17 @@ $container_class = (!empty($villea_option['container_class'])) ? $villea_option[
 //checking page layout 
 $page_layout = get_post_meta(get_the_ID(), 'layout', true);
 $col_side = '';
-$col_letf = '';
+$col_left = '';
 if ($page_layout == '2left') {
     $col_side = '8';
-    $col_letf = 'left-sidebar';
+    $col_left = 'left-sidebar';
 } else if ($page_layout == '2right') {
     $col_side = '8';
 } else {
     $col_side = '12';
 }
-?>
 
-<?php
+
 if (
     class_exists('\Elementor\Plugin') &&
     is_a(\Elementor\Plugin::$instance, '\Elementor\Plugin') &&
@@ -46,8 +44,8 @@ if (
 ?>
 
 <div class="<?php echo esc_attr($header_width); ?> page-section">
-    <div class="row padding-<?php echo esc_attr($col_letf) ?>">
-        <div class="col-lg-<?php echo esc_attr($col_side) . ' ' . esc_attr($col_letf) ?>">
+    <div class="row padding-<?php echo esc_attr($col_left) ?>">
+        <div class="col-lg-<?php echo esc_attr($col_side) . ' ' . esc_attr($col_left) ?>">
             <?php
             while (have_posts()) : the_post();
                 get_template_part('template-parts/content', 'page');

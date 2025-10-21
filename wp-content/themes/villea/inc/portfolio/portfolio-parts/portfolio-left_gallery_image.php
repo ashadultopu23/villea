@@ -11,28 +11,28 @@ $gallery_images = get_post_meta(get_the_ID(), 'tp_gallery_images', true);
 $page_layout = get_post_meta($post->ID, 'layout', true);
 $col_side = '';
 $col_side2 = '';
-$col_letf = '';
+$col_left = '';
 
 
 if ($page_layout == '2left' && is_active_sidebar('sidebar-portfolio')) {
     $col_side = '12';
     $col_side2 = '12';
-    $col_letf = 'left-sidebar';
+    $col_left = 'left-sidebar';
 } else if ($page_layout == '2right' && is_active_sidebar('sidebar-portfolio')) {
     $col_side = '12';
     $col_side2 = '12';
-    $col_letf = 'right-sidebar';
+    $col_left = 'right-sidebar';
 } else {
     $col_side = '8';
     $col_side2 = '4';
-    $col_letf = 'full-width';
+    $col_left = 'full-width';
 }
 
 
 ?>
 <div class="tp-portfolio-inner-content ">
     <div class="tp-portfolio-inner-content-text">
-        <div class="row <?php echo esc_attr($col_letf); ?>">
+        <div class="row <?php echo esc_attr($col_left); ?>">
 
             <div class="col-lg-<?php echo esc_attr($col_side); ?>">
 

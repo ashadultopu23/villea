@@ -44,6 +44,14 @@ if (class_exists('WooCommerce')) {
 	}
 }
 
+// if (class_exists('estatik')) {
+// 	// properties
+// 	if (is_singular('properties') || is_post_type_archive('properties') || is_tax('properties-category')) {
+// 		get_template_part('inc/page-header/breadcrumbs');
+// 		return;
+// 	}
+// }
+
 // 404 page
 if (is_404()) {
 	get_template_part('inc/page-header/breadcrumbs-404');

@@ -17,13 +17,13 @@ $container_class = (!empty($villea_option['container_class'])) ? $villea_option[
 $page_layout = get_post_meta($post->ID, 'layout', true);
 $page_sidebar = get_post_meta($post->ID, 'custom_sidebar', true);
 $col_side = '';
-$col_letf = '';
+$col_left = '';
 if ($page_layout == '2left') {
     $col_side = '8';
-    $col_letf = 'left-sidebar';
+    $col_left = 'left-sidebar';
 } else if ($page_layout == '2right') {
     $col_side = '8';
-    $col_letf = 'right-sidebar';
+    $col_left = 'right-sidebar';
 } else {
     $col_side = '12';
 }
@@ -55,13 +55,13 @@ if (
 <!--service details-->
 <div class="themephi-blog-details service-details">
     <div class="<?php echo esc_attr($header_width); ?>">
-        <div class="row padding-<?php echo esc_attr($col_letf) ?>">
+        <div class="row padding-<?php echo esc_attr($col_left) ?>">
             <?php
             if (($page_layout == '2left')):
                 get_sidebar('single');
             endif;
             ?>
-            <div class="col-lg-<?php echo esc_attr($col_side); ?> <?php echo esc_attr($col_letf); ?> ">
+            <div class="col-lg-<?php echo esc_attr($col_side); ?> <?php echo esc_attr($col_left); ?> ">
                 <div class="blog-post-details-inner service-post-details-inner mb-40">
                     <?php while (have_posts()) : the_post(); ?>
 

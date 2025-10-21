@@ -11,10 +11,10 @@ get_header();
 $page_layout = get_post_meta($post->ID, 'layout', true);
 
 $col_side = '';
-$col_letf = '';
+$col_left = '';
 if ($page_layout == '2left') {
     $col_side = '8';
-    $col_letf = 'left-sidebar';
+    $col_left = 'left-sidebar';
 } else if ($page_layout == '2right') {
     $col_side = '8';
 } else {
@@ -29,7 +29,7 @@ if ($page_layout == '2left') {
     }
     ?>
 
-    <div class="col-md-<?php echo esc_attr($col_side) . ' ' . esc_attr($col_letf) ?>">
+    <div class="col-md-<?php echo esc_attr($col_side) . ' ' . esc_attr($col_left) ?>">
         <?php
         while (have_posts()) : the_post();
             get_template_part('template-parts/content', 'page');

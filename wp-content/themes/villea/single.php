@@ -14,13 +14,13 @@ $display_name = get_the_author_meta('display_name', $author_id);
 $page_layout = get_post_meta($post->ID, 'layout', true);
 $page_sidebar = get_post_meta($post->ID, 'custom_sidebar', true);
 $col_side = '';
-$col_letf = '';
+$col_left = '';
 if ($page_layout == '2left') {
     $col_side = '8';
-    $col_letf = 'left-sidebar';
+    $col_left = 'left-sidebar';
 } else if ($page_layout == '2right') {
     $col_side = '8';
-    $col_letf = 'right-sidebar';
+    $col_left = 'right-sidebar';
 } else {
     $col_side = '12';
 }
@@ -50,7 +50,7 @@ if (
 <!-- Blog Detail Start -->
 <div class="themephi-blog-details">
     <div class="<?php echo esc_attr($header_width); ?>">
-        <div class="row padding-<?php echo esc_attr($col_letf) ?>">
+        <div class="row padding-<?php echo esc_attr($col_left) ?>">
 
             <!-- Sidebar Left -->
             <?php
@@ -60,7 +60,7 @@ if (
             ?>
 
             <!-- Content -->
-            <div class="col-lg-<?php echo esc_attr($col_side); ?> <?php echo esc_attr($col_letf); ?> ">
+            <div class="col-lg-<?php echo esc_attr($col_side); ?> <?php echo esc_attr($col_left); ?> ">
                 <div class="blog-post-details-inner">
                     <?php
                     while (have_posts()) : the_post();

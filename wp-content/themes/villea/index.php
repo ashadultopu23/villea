@@ -1,7 +1,6 @@
 <?php
-get_header(); ?>
+get_header(); 
 
-<?php
 global $villea_option;
 $header_width_meta = get_post_meta(get_the_ID(), 'header_width_custom', true);
 $container_class = (!empty($villea_option['container_class'])) ? $villea_option['container_class'] : '';

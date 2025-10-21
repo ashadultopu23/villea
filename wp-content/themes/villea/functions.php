@@ -551,11 +551,22 @@ function tp_custom_tag_archives($query)
 			'public' => true,
 		), 'names');
 
-		// Remove Tutor LMS course CPT from the list
-		// unset($post_types['courses']);
-
 		// Apply the filtered post types
 		$query->set('post_type', array_values($post_types));
 	}
 }
 add_action('pre_get_posts', 'tp_custom_tag_archives');
+
+
+
+if (class_exists('estatik')) {
+	add_filter('template_include', function ($template) {
+		if (is_singular('properties')) {
+			$custom_template = get_stylesheet_directory() . '/estatik/front/property/single.php';
+			if (file_exists($custom_template)) {
+				return $custom_template;
+			}
+		}
+		return $template;
+	});
+}

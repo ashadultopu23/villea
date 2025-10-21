@@ -54,7 +54,6 @@
           }
         }
         .js-es-search-nav__single-item {
-          // z-index: 10;
           border-radius: 8px;
           border: 1px solid #dfe0e4;
           background: #f5f6f7;
@@ -252,3 +251,98 @@
 /* estatik - payment style */
 /* estatik - review style */
 /* estatik - email template style */
+
+/* estatik - single style */
+.es-custom-single-wrapper {
+  .js-es-single-property-layout {
+    .es-gallery {
+      .es-gallery__image {
+        .es-gallery__image-background {
+          border-radius: 8px;
+        }
+      }
+      .es-gallery__thumb {
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .es-badge {
+        border-radius: 8px;
+        overflow: hidden;
+        padding: 12px 24px;
+        font-size: 14px;
+        a {
+          font-weight: normal !important;
+          &:hover {
+            color: unset;
+          }
+        }
+      }
+
+      .es-control__item {
+        .es-btn {
+          border-radius: 8px;
+          overflow: hidden;
+          padding: 12px 24px;
+          font-size: 14px;
+          height: unset !important;
+          line-height: 1 !important;
+
+          .es-icon {
+            color: inherit !important;
+          }
+
+          span {
+            font-weight: normal !important;
+            line-height: 1 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+          }
+
+          &:hover {
+            background: var(--primaryColor);
+            color: var(--whiteColor);
+          }
+        }
+      }
+    }
+
+    .es-single__header,
+    .es-single__header-content {
+      border-radius: 12px;
+      background: #f4f3f1;
+      padding: 32px;
+
+      .es-single__basic {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+    }
+
+    ul.es-listing__terms,
+    ul.es-listing__meta {
+      li {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 16px;
+        line-height: 1.2;
+        color: var(--bodyColor);
+        font-weight: 500;
+        font-family: var(--bodyFont);
+
+        svg,
+        i {
+          color: var(--secondaryColor);
+          fill: var(--secondaryColor);
+          stroke: var(--secondaryColor);
+          font-size: 16px;
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}

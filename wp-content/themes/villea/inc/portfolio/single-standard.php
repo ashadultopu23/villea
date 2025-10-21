@@ -13,17 +13,17 @@ $post_id      = get_the_id();
 //checking page layout 
 $page_layout = get_post_meta($post->ID, 'layout', true);
 $col_side = '';
-$col_letf = '';
+$col_left = '';
 
 if ($page_layout == '2left' && is_active_sidebar('sidebar-portfolio')) {
     $col_side = '8';
-    $col_letf = 'left-sidebar';
+    $col_left = 'left-sidebar';
 } else if ($page_layout == '2right' && is_active_sidebar('sidebar-portfolio')) {
     $col_side = '8';
-    $col_letf = 'right-sidebar';
+    $col_left = 'right-sidebar';
 } else {
     $col_side = '12';
-    $col_letf = 'full-width';
+    $col_left = 'full-width';
 }
 
 $selected_layout = get_post_meta(get_the_ID(), 'custom_sidebar', true);
@@ -40,8 +40,8 @@ if ($selected_layout == 'top_carousel_center' && !is_active_sidebar('sidebar-por
 
 <div class="<?php echo esc_attr($container_class); ?>">
     <div class="themephi-portfolio-details">
-        <div class="row layout-<?php echo esc_attr($col_letf) ?>">
-            <div class="col-lg-<?php echo esc_attr($col_side); ?> <?php echo esc_attr($col_letf); ?> ">
+        <div class="row layout-<?php echo esc_attr($col_left) ?>">
+            <div class="col-lg-<?php echo esc_attr($col_side); ?> <?php echo esc_attr($col_left); ?> ">
                 <div class="themephi-portfolio-details-inner-left <?php echo esc_attr($selected_layout); ?> ">
                     <?php while (have_posts()) : the_post();
 
