@@ -15074,3 +15074,97 @@
 [2025-10-22 11:15:17 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
 [2025-10-22 11:15:19 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
 [2025-10-22 11:15:22 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-10-22 12:07:27 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:08:20 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:08:20 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:08:20 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:08:40 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:08:40 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:08:40 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:09:55 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:09:55 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:09:55 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:11:02 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:11:02 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:11:02 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:11:39 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:11:39 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:11:39 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:12:05 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:12:05 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:12:05 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:12:59 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:12:59 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:00 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:13:54 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:15:25 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:17:59 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:20:04 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:21:52 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:22:46 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:23:45 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 12:24:15 : INFO] - Cache for URL: http://localhost/wp/villea/contact/ has been purged, triggered by action: wp_trash_post 
+[2025-10-22 12:30:22 : INFO] - Cache for URL: http://localhost/wp/villea/my-account/ has been purged, triggered by action: wp_trash_post 
+[2025-10-22 12:39:29 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:39:53 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:39:53 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:39:53 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:40:39 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:40:39 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:40:39 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:41:11 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:41:11 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:41:12 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:41:27 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:41:27 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:41:27 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:41:37 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:41:37 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:41:37 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:42:05 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:42:05 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:42:05 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:45:35 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:45:35 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:45:35 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:47:57 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:47:57 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:47:57 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:49:02 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:49:02 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:49:02 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:49:23 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:49:23 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:49:23 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:52:14 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:52:14 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
+[2025-10-22 12:52:14 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/header-one/ has been purged, triggered by action: save_post 
