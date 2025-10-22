@@ -3,8 +3,8 @@
  * --------------------------------------------------------------------
  *
  * Template : Custom Js Template
- * Author : Themephi
- * Author URI : http://www.themephi.net/
+ * Author : Pixelaxis
+ * Author URI : http://www.pixelaxis.net/
  *
  * --------------------------------------------------------------------
  *

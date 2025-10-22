@@ -15008,3 +15008,69 @@
 [2025-10-21 08:05:58 : INFO] - Cache for URL: http://localhost/wp/villea/property/luxury-high-rise-apartment-with-city-views/ has been purged, triggered by action: save_post 
 [2025-10-21 08:05:58 : INFO] - Cache for archive page associated with post_type: properties and Title: "Luxury High-Rise Apartment with City Views" has been purged, triggered by action: save_post 
 [2025-10-21 08:05:58 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: properties and Title: "Luxury High-Rise Apartment with City Views" has been purged, triggered by action: save_post 
+[2025-10-22 05:28:56 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 05:28:56 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 05:28:56 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 05:28:56 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 05:28:56 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 05:28:56 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 05:28:56 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 05:28:56 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 05:28:56 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 05:28:56 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 05:28:56 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 05:28:56 : INFO] - Cache for URL: http://localhost/wp/villea/property/luxury-high-rise-apartment-with-city-views/ has been purged, triggered by action: save_post 
+[2025-10-22 05:28:56 : INFO] - Cache for archive page associated with post_type: properties and Title: "Luxury High-Rise Apartment with City Views" has been purged, triggered by action: save_post 
+[2025-10-22 05:28:56 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: properties and Title: "Luxury High-Rise Apartment with City Views" has been purged, triggered by action: save_post 
+[2025-10-22 05:30:04 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 05:30:04 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 05:30:04 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 05:30:04 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 05:30:04 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 05:30:04 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 05:30:04 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 05:30:04 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 05:30:04 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 05:30:04 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 05:30:04 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 05:30:04 : INFO] - Cache for URL: http://localhost/wp/villea/property/luxury-high-rise-apartment-with-city-views/ has been purged, triggered by action: save_post 
+[2025-10-22 05:30:04 : INFO] - Cache for archive page associated with post_type: properties and Title: "Luxury High-Rise Apartment with City Views" has been purged, triggered by action: save_post 
+[2025-10-22 05:30:04 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: properties and Title: "Luxury High-Rise Apartment with City Views" has been purged, triggered by action: save_post 
+[2025-10-22 05:57:58 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-10-22 06:23:19 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-10-22 11:09:09 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 11:09:09 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 11:09:09 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 11:09:09 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 11:09:09 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 11:09:09 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 11:09:09 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 11:09:09 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 11:09:09 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 11:09:09 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 11:09:09 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 11:09:09 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 11:09:09 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 11:09:10 : INFO] - Cache for URL: http://localhost/wp/villea/property/luxury-high-rise-apartment-with-city-views/ has been purged, triggered by action: save_post 
+[2025-10-22 11:09:10 : INFO] - Cache for archive page associated with post_type: properties and Title: "Luxury High-Rise Apartment with City Views" has been purged, triggered by action: save_post 
+[2025-10-22 11:09:10 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: properties and Title: "Luxury High-Rise Apartment with City Views" has been purged, triggered by action: save_post 
+[2025-10-22 11:11:32 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 11:11:32 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 11:11:32 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 11:11:32 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 11:11:32 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 11:11:32 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 11:11:32 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 11:11:32 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 11:11:32 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 11:11:32 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 11:11:32 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 11:11:32 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 11:11:32 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-22 11:11:32 : INFO] - Cache for URL: http://localhost/wp/villea/property/luxury-high-rise-apartment-with-city-views/ has been purged, triggered by action: save_post 
+[2025-10-22 11:11:32 : INFO] - Cache for archive page associated with post_type: properties and Title: "Luxury High-Rise Apartment with City Views" has been purged, triggered by action: save_post 
+[2025-10-22 11:11:32 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: properties and Title: "Luxury High-Rise Apartment with City Views" has been purged, triggered by action: save_post 
+[2025-10-22 11:15:05 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-10-22 11:15:17 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-10-22 11:15:19 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-10-22 11:15:22 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 

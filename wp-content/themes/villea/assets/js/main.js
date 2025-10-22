@@ -494,5 +494,4 @@ Box Style Start
         $(".woocommerce-MyAccount-navigation").toggleClass("woocommerce-MyAccount-navigation_active");
     });
 
-
 })(jQuery);
