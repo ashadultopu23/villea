@@ -1420,7 +1420,8 @@ class TP_Est_Property_List extends Widget_Base
                         // Decode the JSON address components
                         if (isset($address_full[0]) && !empty($address_full[0])) {
                             $decoded = json_decode($address_full[0], true);
-                            if ($decoded !== null) {
+
+                            if (is_array($decoded)) {
                                 // Get street number
                                 $street_number = '';
                                 $route = '';
@@ -1430,6 +1431,10 @@ class TP_Est_Property_List extends Widget_Base
                                 $postal_code = '';
 
                                 foreach ($decoded as $component) {
+                                    if (!isset($component['types']) || !is_array($component['types'])) {
+                                        continue;
+                                    }
+
                                     if (in_array('street_number', $component['types'])) {
                                         $street_number = $component['long_name'];
                                     }

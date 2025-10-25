@@ -487,7 +487,7 @@ class Themephi_Navigation_Menu extends Widget_Base
 				'default'      => 'tablet',
 				'options'      => [
 					'mobile' => __('Mobile (768px)', 'header-footer-elementor'),
-					'tablet' => __('Tablet (1025px)', 'header-footer-elementor'),
+					'tablet' => __('Tablet (1024px)', 'header-footer-elementor'),
 					'laptop_xl' => __('Laptop (1200px)', 'header-footer-elementor'),
 					'none'   => __('None', 'header-footer-elementor'),
 				],
@@ -1450,8 +1450,8 @@ class Themephi_Navigation_Menu extends Widget_Base
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors'          => [
-					'.tp-sticky {{WRAPPER}} .menu-area .nav-link-container .menu-button svg path' => 'fill: {{VALUE}} ;',
-					'.tp-sticky {{WRAPPER}} .menu-area .nav-link-container .menu-button i' => 'color: {{VALUE}} ;'
+					'.tp-sticky {{WRAPPER}} .menu-area .nav-link-container .menu-button svg path' => 'fill: {{VALUE}} !important;',
+					'.tp-sticky {{WRAPPER}} .menu-area .nav-link-container .menu-button i' => 'color: {{VALUE}} !important;'
 				],
 			]
 		);
@@ -1694,8 +1694,8 @@ class Themephi_Navigation_Menu extends Widget_Base
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors'          => [
-					'{{WRAPPER}} .menu-area .nav-link-container .menu-button svg path' => 'fill: {{VALUE}} ;',
-					'{{WRAPPER}} .menu-area .nav-link-container .menu-button i' => 'color: {{VALUE}} ;',
+					'{{WRAPPER}} .menu-area .nav-link-container .menu-button svg path' => 'fill: {{VALUE}} !important;',
+					'{{WRAPPER}} .menu-area .nav-link-container .menu-button i' => 'color: {{VALUE}} !important;',
 				],
 			]
 		);

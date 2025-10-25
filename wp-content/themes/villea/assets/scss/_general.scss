@@ -3000,8 +3000,11 @@ html:has(.fixed-header) .themephi-breadcrumbs {
     background-color: #fff;
     background-position: right 10px center;
 
-    @media (max-width: 767px) {
+    @media (max-width: 1200px) {
       padding: 8px !important;
+    }
+
+    @media (max-width: 767px) {
       font-size: 14px;
     }
   }

@@ -3228,9 +3228,13 @@ html:has(.fixed-header) .themephi-breadcrumbs .breadcrumbs-inner {
   background-color: #fff;
   background-position: right 10px center;
 }
-@media (max-width: 767px) {
+@media (max-width: 1200px) {
   .notranslate.gt_selector {
     padding: 8px !important;
+  }
+}
+@media (max-width: 767px) {
+  .notranslate.gt_selector {
     font-size: 14px;
   }
 }
@@ -3485,9 +3489,6 @@ html:has(.fixed-header) .themephi-breadcrumbs .breadcrumbs-inner {
   width: 100%;
   background: var(--blackColor);
   transition: transform 0.3s ease, opacity 0.3s ease;
-}
-#themephi-header .header-inner.tp-sticky .navbar ul.menu > li > a, #themephi-header .header-inner.header-active .navbar ul.menu > li > a {
-  color: var(--whiteColor);
 }
 #themephi-header .header-inner.tp-sticky .menu-button svg path,
 #themephi-header .header-inner.tp-sticky .menu-button svg rect, #themephi-header .header-inner.header-active .menu-button svg path,

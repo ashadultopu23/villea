@@ -173,7 +173,7 @@
                 var isDefaultHeader = $('body').hasClass('tps-default-header');
                 var isFlyout = $menu.hasClass('flyout');
 
-                var isMobileOrTabletOrLaptopXL = (isMobile && windowWidth <= 668) || (isTablet && windowWidth <= 1025) || (isLaptopXL && windowWidth <= 1200);
+                var isMobileOrTabletOrLaptopXL = (isMobile && windowWidth <= 668) || (isTablet && windowWidth <= 1024) || (isLaptopXL && windowWidth <= 1200);
 
                 // Mobile/Tablet View
                 if (isMobileOrTabletOrLaptopXL) {
@@ -192,7 +192,7 @@
                 }
 
                 // Default header quote toggle
-                if (isDefaultHeader && windowWidth <= 1025) {
+                if (isDefaultHeader && windowWidth <= 1024) {
                     $(".header-quote").css("display", "flex");
                     $menu.find(".menu-responsive").css("display", "none");
                 } else {
