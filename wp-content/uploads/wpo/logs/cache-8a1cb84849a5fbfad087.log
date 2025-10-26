@@ -15596,3 +15596,183 @@
 [2025-10-26 08:57:35 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-one/ has been purged, triggered by action: save_post 
 [2025-10-26 08:57:35 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-one/ has been purged, triggered by action: save_post 
 [2025-10-26 08:57:35 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-one/ has been purged, triggered by action: save_post 
+[2025-10-26 09:14:06 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-one/ has been purged, triggered by action: save_post 
+[2025-10-26 09:14:06 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-one/ has been purged, triggered by action: save_post 
+[2025-10-26 09:14:06 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-one/ has been purged, triggered by action: save_post 
+[2025-10-26 09:14:33 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-one/ has been purged, triggered by action: save_post 
+[2025-10-26 09:14:33 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-one/ has been purged, triggered by action: save_post 
+[2025-10-26 09:14:33 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-one/ has been purged, triggered by action: save_post 
+[2025-10-26 09:16:58 : INFO] - Cache for URL: http://localhost/wp/villea/?elementor_library=ppp has been purged, triggered by action: save_post 
+[2025-10-26 09:16:58 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: elementor_library and Title: "PPP" has been purged, triggered by action: save_post 
+[2025-10-26 09:16:58 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-26 09:16:58 : INFO] - Cache for URL: http://localhost/wp/villea/?elementor_library=ppp has been purged, triggered by action: save_post 
+[2025-10-26 09:16:58 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: elementor_library and Title: "PPP" has been purged, triggered by action: save_post 
+[2025-10-26 09:16:59 : INFO] - Cache for URL: http://localhost/wp/villea/?elementor_library=ppp has been purged, triggered by action: save_post 
+[2025-10-26 09:16:59 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: elementor_library and Title: "PPP" has been purged, triggered by action: save_post 
+[2025-10-26 09:16:59 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-26 09:17:15 : INFO] - Cache for URL: http://localhost/wp/villea/privacy-policy/ has been purged, triggered by action: save_post 
+[2025-10-26 09:17:15 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Privacy Policy" has been purged, triggered by action: save_post 
+[2025-10-26 09:17:15 : INFO] - Cache for URL: http://localhost/wp/villea/privacy-policy/ has been purged, triggered by action: save_post 
+[2025-10-26 09:17:15 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Privacy Policy" has been purged, triggered by action: save_post 
+[2025-10-26 09:17:16 : INFO] - Cache for URL: http://localhost/wp/villea/privacy-policy/ has been purged, triggered by action: save_post 
+[2025-10-26 09:17:16 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Privacy Policy" has been purged, triggered by action: save_post 
+[2025-10-26 09:18:58 : INFO] - Cache for URL: http://localhost/wp/villea/?elementor_library=help-support has been purged, triggered by action: save_post 
+[2025-10-26 09:18:58 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: elementor_library and Title: "help &#038; support" has been purged, triggered by action: save_post 
+[2025-10-26 09:18:58 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-26 09:18:58 : INFO] - Cache for URL: http://localhost/wp/villea/?elementor_library=help-support has been purged, triggered by action: save_post 
+[2025-10-26 09:18:58 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: elementor_library and Title: "help &#038; support" has been purged, triggered by action: save_post 
+[2025-10-26 09:18:58 : INFO] - Cache for URL: http://localhost/wp/villea/?elementor_library=help-support has been purged, triggered by action: save_post 
+[2025-10-26 09:18:58 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: elementor_library and Title: "help &#038; support" has been purged, triggered by action: save_post 
+[2025-10-26 09:18:58 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-26 09:19:11 : INFO] - Cache for URL: http://localhost/wp/villea/help-support/ has been purged, triggered by action: save_post 
+[2025-10-26 09:19:11 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Help &#038; Support" has been purged, triggered by action: save_post 
+[2025-10-26 09:19:11 : INFO] - Cache for URL: http://localhost/wp/villea/help-support/ has been purged, triggered by action: save_post 
+[2025-10-26 09:19:11 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Help &#038; Support" has been purged, triggered by action: save_post 
+[2025-10-26 09:19:11 : INFO] - Cache for URL: http://localhost/wp/villea/help-support/ has been purged, triggered by action: save_post 
+[2025-10-26 09:19:11 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Help &#038; Support" has been purged, triggered by action: save_post 
+[2025-10-26 09:28:42 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:29:22 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:31:29 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:31:29 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:31:29 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:32:38 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:32:38 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:32:39 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:37:39 : INFO] - Cache for URL: http://localhost/wp/villea/help-support/ has been purged, triggered by action: save_post 
+[2025-10-26 09:37:39 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Help &#038; Support" has been purged, triggered by action: save_post 
+[2025-10-26 09:37:39 : INFO] - Cache for URL: http://localhost/wp/villea/help-support/ has been purged, triggered by action: save_post 
+[2025-10-26 09:37:39 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Help &#038; Support" has been purged, triggered by action: save_post 
+[2025-10-26 09:37:39 : INFO] - Cache for URL: http://localhost/wp/villea/help-support/ has been purged, triggered by action: save_post 
+[2025-10-26 09:37:39 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Help &#038; Support" has been purged, triggered by action: save_post 
+[2025-10-26 09:39:33 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:39:33 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:39:33 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:42:20 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:42:20 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:42:20 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:45:04 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:45:04 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:45:04 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:47:09 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:47:09 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:47:09 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:49:14 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:49:14 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:49:14 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:50:54 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:50:54 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:50:55 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:51:27 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:51:27 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:51:27 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:52:14 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:52:14 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:52:14 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:52:53 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:52:53 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:52:53 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:59:28 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:59:28 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 09:59:28 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:01:51 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:01:51 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:01:51 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:03:31 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:03:31 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:03:31 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:04:22 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:04:22 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:04:22 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:06:05 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:06:05 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:06:05 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:07:07 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:07:07 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:07:07 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:31:25 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:31:25 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:31:25 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:34:37 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:34:37 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:34:37 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:41:16 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:41:16 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:41:16 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:41:38 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:41:38 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:41:38 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:44:40 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:44:40 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:44:40 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:46:20 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:46:20 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:46:21 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:47:30 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:47:30 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:47:30 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:47:54 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:47:54 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:47:54 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:49:01 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:49:01 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:49:01 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:49:51 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:49:51 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:49:51 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:51:09 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:51:09 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:51:09 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:51:41 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:51:41 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:51:41 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:53:11 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:53:11 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:53:11 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:54:32 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:54:32 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 10:54:32 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:08:22 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:08:22 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:08:22 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:10:26 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:10:26 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:10:26 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:16:31 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:16:31 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:16:31 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:19:13 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:19:13 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:19:13 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:28:21 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:28:21 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:28:21 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:29:55 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:29:55 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:29:55 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:30:25 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:30:25 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:30:25 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:31:03 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:31:03 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:31:04 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:32:25 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:32:25 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:32:26 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:32:49 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:32:49 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:32:50 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:33:35 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:33:35 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:33:35 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:34:22 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:34:22 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:34:22 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:35:18 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:35:18 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 11:35:19 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 12:09:41 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 12:09:41 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 12:09:41 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 12:10:28 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 12:10:28 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
+[2025-10-26 12:10:28 : INFO] - Cache for URL: http://localhost/wp/villea/elementor-hf/footer-two/ has been purged, triggered by action: save_post 
