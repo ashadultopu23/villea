@@ -2966,29 +2966,6 @@ tp-grid-figure {
 }
 
 //mailchimp
-.tp-mailchimp {
-  .mc4wp-form-fields {
-    display: flex;
-    align-items: baseline;
-
-    p {
-      margin: 0;
-    }
-  }
-
-  .mailchimp--submit {
-    position: relative;
-
-    &:after {
-      position: absolute;
-      content: "\e80f";
-      left: 107px;
-      top: 6px;
-      color: #fff;
-      font-family: "tp-icons";
-    }
-  }
-}
 
 .tp-mailchimp {
   &.yes {

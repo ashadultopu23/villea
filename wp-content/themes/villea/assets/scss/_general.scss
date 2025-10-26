@@ -2295,53 +2295,34 @@ body.logged-in .cart-icon-total-products.visible-cart {
   top: 32px;
 }
 
-.tp-mailchimp .mc4wp-form-fields {
-  display: flex;
-  align-items: baseline;
-}
+.mc4wp-form-fields {
+  .newsletter-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid var(--borderColor);
+    border-radius: 12px;
+    background: var(--whiteColor);
+    padding: 8px 12px;
 
-.tp-mailchimp .mc4wp-form-fields input {
-  margin: 0;
-}
+    .newsletter-input {
+      padding: 8px 12px;
+      border: none;
+      border-radius: unset;
+      background: var(--whiteColor);
+      margin: 0;
+    }
 
-.tp-mailchimp .mc4wp-form-fields input[type="email"] {
-  padding-right: 180px;
-}
-
-.mc4wp-form-fields p {
-  margin: 0;
-}
-
-.mc4wp-style2 .tp-mailchimp .mc4wp-form-fields {
-  display: block;
-}
-
-.mc4wp-style2 .tp-mailchimp .mc4wp-form-fields input {
-  display: block;
-  background: #171717;
-  border: 1px solid var(--borderColor);
-  box-sizing: border-box;
-  border-radius: 2px;
-  font-size: 16px;
-  transition: 0.3s;
-  line-height: 10px;
-  text-transform: capitalize;
-  font-family: var(--titleFont);
-  height: 50px;
-  padding: 20px 18px !important;
-}
-
-.mc4wp-style2 .tp-mailchimp .mc4wp-form-fields input[type="email"]:focus {
-  outline: none;
-}
-
-.mc4wp-style2 .tp-mailchimp .mc4wp-form-fields input[type="submit"] {
-  border: none;
-  font-weight: 700;
-  padding: 20px 33px 20px 33px;
-  text-transform: uppercase;
-  margin-top: 15px;
-  letter-spacing: 0.05em;
+    .newsletter-btn {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 12px;
+      background: var(--primaryColor);
+      color: var(--whiteColor);
+      cursor: pointer;
+    }
+  }
 }
 
 .footer_style1 #menu-single-menu li a {
