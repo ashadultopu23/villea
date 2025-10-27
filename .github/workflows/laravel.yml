@@ -17,6 +17,7 @@ jobs:
         server-dir: "villea/"
         exclude: |
             **/*.map
+            **/*.scss
             **/node_modules/**
             **/.git/**
             **/.github/**
