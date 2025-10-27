@@ -2582,7 +2582,7 @@ body.logged-in .cart-icon-total-products.visible-cart {
   padding: 8px 12px;
   border: none;
   border-radius: unset;
-  background: var(--whiteColor);
+  background: transparent;
   margin: 0;
 }
 .mc4wp-form-fields .newsletter-form .newsletter-btn {
@@ -2592,6 +2592,24 @@ body.logged-in .cart-icon-total-products.visible-cart {
   background: var(--primaryColor);
   color: var(--whiteColor);
   cursor: pointer;
+}
+
+.newsletter-two .mc4wp-form-fields .newsletter-form {
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+}
+.newsletter-two .mc4wp-form-fields .newsletter-form .newsletter-input {
+  color: var(--whiteColor);
+}
+.newsletter-two .mc4wp-form-fields .newsletter-form .newsletter-input::-moz-placeholder {
+  color: var(--whiteColor);
+}
+.newsletter-two .mc4wp-form-fields .newsletter-form .newsletter-input::placeholder {
+  color: var(--whiteColor);
+}
+.newsletter-two .mc4wp-form-fields .newsletter-form .newsletter-btn {
+  background: var(--secondaryColor);
 }
 
 .footer_style1 #menu-single-menu li a {

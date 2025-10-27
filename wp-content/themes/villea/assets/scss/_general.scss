@@ -2310,7 +2310,7 @@ body.logged-in .cart-icon-total-products.visible-cart {
       padding: 8px 12px;
       border: none;
       border-radius: unset;
-      background: var(--whiteColor);
+      background: transparent;
       margin: 0;
     }
 
@@ -2321,6 +2321,25 @@ body.logged-in .cart-icon-total-products.visible-cart {
       background: var(--primaryColor);
       color: var(--whiteColor);
       cursor: pointer;
+    }
+  }
+}
+
+.newsletter-two {
+  .mc4wp-form-fields {
+    .newsletter-form {
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.05);
+      .newsletter-input {
+        color: var(--whiteColor);
+        &::placeholder {
+          color: var(--whiteColor);
+        }
+      }
+      .newsletter-btn {
+        background: var(--secondaryColor);
+      }
     }
   }
 }
