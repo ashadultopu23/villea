@@ -15,11 +15,11 @@ jobs:
         username: u803680896.pixelaxis
         password: "Pixelaxis@123"
         server-dir: "villea/"
-        exclude: |
-            **/*.map
-            **/*.scss
-            **/node_modules/**
-            **/.git/**
-            **/.github/**
+        # exclude: |
+        #     **/*.map
+        #     **/*.scss
+        #     **/node_modules/**
+        #     **/.git/**
+        #     **/.github/**
         timeout: 600
         log-level: verbose
