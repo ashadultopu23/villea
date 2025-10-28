@@ -346,14 +346,14 @@ class Themephi_StepCountBox_Widget extends \Elementor\Widget_Base
 				],
 			]
 		);
-		$this->add_group_control(
-			\Elementor\Group_Control_Border::get_type(),
-			[
-				'name' => 'inner_circle_border',
-				'label' => esc_html__('Inner Circle Border', 'plugin-name'),
-				'selector' => '{{WRAPPER}} .step-circle_box .inner_circle',
-			]
-		);
+		// $this->add_group_control(
+		// 	\Elementor\Group_Control_Border::get_type(),
+		// 	[
+		// 		'name' => 'inner_circle_border',
+		// 		'label' => esc_html__('Inner Circle Border', 'plugin-name'),
+		// 		'selector' => '{{WRAPPER}} .step-circle_box .inner_circle',
+		// 	]
+		// );
 
 		$this->add_responsive_control(
 			'inner_circle_border_radius',
@@ -391,6 +391,61 @@ class Themephi_StepCountBox_Widget extends \Elementor\Widget_Base
 			[
 				'name' => 'inner_circle_box_shadow',
 				'selector' => '{{WRAPPER}} .step-circle_box .inner_circle',
+			]
+		);
+
+		$this->end_controls_section();
+
+		$this->start_controls_section(
+			'progress_bar_style',
+			[
+				'label' => esc_html__('Progress Bar', 'plugin-name'),
+				'tab'   => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->add_control(
+			'progress_bar_background_color',
+			[
+				'label' => esc_html__('Background Color', 'tp-elements'),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .step-circle_box .inner_circle .progress-bar-background' => 'stroke: {{VALUE}} !important;',
+				],
+			]
+		);
+
+		$this->add_control(
+			'progress_bar_fill_color',
+			[
+				'label' => esc_html__('Fill Color', 'tp-elements'),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .step-circle_box .inner_circle .progress-bar-fill' => 'stroke: {{VALUE}} !important;',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'progress_bar_stroke_width',
+			[
+				'label' => esc_html__('Stroke Width (px)', 'plugin-name'),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => ['px', '%'],
+				'range' => [
+					'px' => [
+						'min' => 1,
+						'max' => 100,
+						'step' => 1,
+					],
+					'%' => [
+						'min' => 1,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .step-circle_box .inner_circle circle' => 'stroke-width: {{SIZE}}{{UNIT}} !important;',
+				],
 			]
 		);
 

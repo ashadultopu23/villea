@@ -1,5 +1,11 @@
 <div class="step-circle_box">
+
     <div class="inner_circle">
+        <svg viewBox="0 0 100 100">
+            <circle class="progress-bar-background" cx="50" cy="50" r="45" />
+            <circle class="progress-bar-fill" cx="50" cy="50" r="45" />
+        </svg>
+
         <?php if (!empty($settings['label'])) :   ?>
             <p><?php echo esc_html($settings['label']) ?></p>
         <?php endif ?>
@@ -15,12 +21,18 @@
             </span>
         </h2>
     </div>
+
 </div>
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const stepsCountBox = document.querySelectorAll(".step-count-box");
         const currentStepEl = document.querySelector(".current-count-step");
+
+        // circular progress bar animation
+        const circle = document.querySelector(".progress-bar-fill");
+        const circumference = 2 * Math.PI * 45;
+        circle.style.strokeDasharray = `0 ${circumference}`;
 
         if (stepsCountBox && currentStepEl) {
             function updateStepIndicator() {
@@ -29,12 +41,16 @@
                     const rect = step.getBoundingClientRect();
                     if (rect.top <= window.innerHeight / 2) {
                         currentStep = index + 1;
+                        const progress = currentStep / <?php echo esc_js($settings['total_step']); ?>;
+                        const dashOffset = circumference * (1 - progress);
+                        circle.style.strokeDasharray = `${circumference - dashOffset} ${circumference}`;
                     }
                 });
                 currentStepEl.textContent = String(currentStep).padStart(2, "0");
             }
             window.addEventListener("scroll", updateStepIndicator);
             updateStepIndicator();
+
         }
     });
 </script>
