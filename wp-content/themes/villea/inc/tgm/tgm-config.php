@@ -101,6 +101,48 @@ function my_theme_register_required_plugins()
 			'external_url'       => '',
 			'is_callable'        => '',
 		),
+
+		array(
+			'name'               => 'Estatik',
+			'slug'               => 'estatik',
+			'required'           => true,
+		),
+		array(
+			'name'               => 'Image Hotspot - Map Image Annotations',
+			'slug'               => 'image-map-hotspots',
+			'required'           => false,
+		),
+
+		array(
+			'name'               => 'Woocommerce',
+			'slug'               => 'woocommerce',
+			'required'           => false,
+		),
+
+		array(
+			'name'               => 'WPC Smart Compare for WooCommerce',
+			'slug'               => 'woo-smart-compare',
+			'required'           => false,
+		),
+
+		array(
+			'name'               => 'WPC Smart Wishlist for WooCommerce',
+			'slug'               => 'woo-smart-wishlist',
+			'required'           => false,
+		),
+
+		array(
+			'name'               => 'WPC Smart Quick View for WooCommerce',
+			'slug'               => 'woo-smart-quick-view',
+			'required'           => false,
+		),
+
+		array(
+			'name'               => 'WP Mail SMTP',
+			'slug'               => 'wp-mail-smtp',
+			'required'           => false,
+		),
+
 	);
 
 	$config = array(
