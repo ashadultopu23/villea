@@ -237,8 +237,223 @@
   }
 }
 
-/* estatik - property single style */
 /* estatik - property list style */
+
+.es-properties {
+  @media (max-width: 575px) {
+    margin: 0 !important;
+  }
+
+  .es-properties__search {
+    margin: 0 0 24px 0;
+    .es-search {
+      form {
+        gap: 12px;
+        align-items: baseline;
+        margin: 0 !important;
+
+        @media (max-width: 991px) and (min-width: 768px) {
+          flex-wrap: wrap;
+        }
+
+        @media (max-width: 767px) {
+          justify-content: center;
+        }
+
+        .es-search__address,
+        .es-btn--saved-search,
+        .es-search-nav-wrap {
+          margin: 0 !important;
+
+          @media (min-width: 768px) {
+            flex: 1 1 auto;
+            margin: 0 !important;
+          }
+        }
+
+        .es-search__collapse-link {
+          margin: 0 !important;
+        }
+
+        .es-search__address {
+          input {
+            @media (min-width: 768px) {
+              margin-bottom: 0 !important;
+            }
+          }
+
+          @media (max-width: 991px) and (min-width: 768px) {
+            max-width: 100%;
+          }
+          @media (max-width: 575px) {
+            max-width: 100%;
+            width: 100%;
+            flex: auto !important;
+          }
+        }
+
+        ul.es-search-nav {
+          @media (min-width: 768px) {
+            display: flex;
+            flex-wrap: nowrap !important;
+            gap: 12px;
+          }
+
+          li.js-es-search-nav__single-item,
+          .js-es-search-nav__item {
+            @media (min-width: 768px) {
+              width: 100% !important;
+              border: 1px solid var(--borderColor) !important;
+              border-radius: 4px !important;
+              margin: 0 !important;
+            }
+            &:focus-within {
+              border-color: var(--primaryColor) !important;
+            }
+
+            .js-es-search-nav__label,
+            a {
+              font-size: 16px !important;
+              font-weight: 500 !important;
+              color: var(--bodyColor) !important;
+              font-family: var(--bodyFont) !important;
+            }
+            .es-icon {
+              font-size: 16px !important;
+              color: var(--bodyColor) !important;
+              margin-left: auto !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .es-listings__wrap-inner {
+    .es-listings-filter {
+      .es-title {
+        font-size: 24px !important;
+        font-weight: 600 !important;
+        color: var(--bodyColor) !important;
+        font-family: var(--titleFont) !important;
+
+        @media (max-width: 991px) {
+          font-size: 20px !important;
+        }
+        @media screen and (max-width: 767px) {
+          font-size: 18px !important;
+        }
+      }
+      .es-control--layouts {
+        .js-es-change-layout {
+          &.es-btn--active,
+          &:hover {
+            background: var(--primaryColor) !important;
+            color: var(--whiteColor) !important;
+            border-color: var(--primaryColor) !important;
+
+            .es-icon {
+              color: var(--whiteColor) !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .es-properties__list {
+    .js-es-listings {
+      display: grid !important;
+      gap: 24px !important;
+      grid-template-rows: auto !important;
+      grid-template-columns: 1fr 1fr 1fr !important;
+
+      @media (max-width: 1199px) and (min-width: 768px) {
+        grid-template-columns: 1fr 1fr !important;
+      }
+      @media (max-width: 767px) {
+        grid-template-columns: 1fr !important;
+      }
+
+      .es-listing {
+        padding: 16px !important;
+        border-radius: 12px !important;
+        background: #f4f3f1 !important;
+
+        .es-listing__title {
+          font-size: 24px !important;
+          font-weight: 600 !important;
+          color: var(--primaryColor) !important;
+          font-family: var(--titleFont) !important;
+
+          @media (max-width: 991px) {
+            font-size: 20px !important;
+          }
+          @media screen and (max-width: 767px) {
+            font-size: 18px !important;
+          }
+        }
+        .es-price {
+          font-size: 24px !important;
+          font-weight: 600 !important;
+          color: var(--secondaryColor) !important;
+          font-family: var(--titleFont) !important;
+
+          @media (max-width: 991px) {
+            font-size: 20px !important;
+          }
+          @media screen and (max-width: 767px) {
+            font-size: 18px !important;
+          }
+        }
+        .es-listings__image__link {
+          border-radius: 8px !important;
+          overflow: hidden !important;
+        }
+        .es-listing__meta {
+          li,
+          a {
+            font-size: 16px !important;
+            font-weight: 500 !important;
+            color: var(--bodyColor) !important;
+            font-family: var(--bodyFont) !important;
+
+            svg,
+            i {
+              font-size: 16px !important;
+              color: var(--secondaryColor) !important;
+              fill: var(--secondaryColor) !important;
+
+              path {
+                fill: var(--secondaryColor) !important;
+              }
+            }
+          }
+        }
+
+        .es-address {
+          font-size: 16px !important;
+          font-weight: 600 !important;
+          color: var(--bodyColor) !important;
+          font-family: var(--bodyFont) !important;
+        }
+
+        .es-listing__footer {
+          .es-listing__terms {
+            li,
+            a {
+              font-size: 16px !important;
+              font-weight: 500 !important;
+              color: var(--bodyColor) !important;
+              font-family: var(--bodyFont) !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 /* estatik - agent style */
 /* estatik - compare style */
 /* estatik - favorites style */
@@ -252,7 +467,7 @@
 /* estatik - review style */
 /* estatik - email template style */
 
-/* estatik - single style */
+/* estatik - property single style */
 .es-custom-single-wrapper {
   .js-es-single-property-layout {
     .es-gallery {
@@ -464,4 +679,8 @@
   border-radius: 12px;
   background: #f4f3f1;
   margin: 0 auto !important;
+}
+
+.es-powered {
+  display: none !important;
 }

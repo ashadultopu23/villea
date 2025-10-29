@@ -69,7 +69,7 @@
 }
 .step-circle_box .inner_circle svg .progress-bar-fill {
   fill: none;
-  stroke: deeppink;
+  stroke: var(--primaryColor);
   stroke-width: 5;
   transition: stroke-dasharray 0.3s ease;
 }
