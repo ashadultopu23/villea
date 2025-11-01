@@ -7670,7 +7670,7 @@ caption {
   top: 0;
   max-width: 465px;
   background: var(--body_bg);
-  z-index: 10;
+  z-index: 1000;
   padding: 16px;
   height: 100%;
   min-height: 100vh;
@@ -7697,6 +7697,7 @@ caption {
 .layout-full-layout-left.sidebar_flyout .post_sidebar .filter_title .cross_bar,
 .layout-full-layout-right.sidebar_flyout .post_sidebar .filter_title .cross_bar {
   background: transparent;
+  color: var(--primaryColor);
   padding: 0;
   display: flex;
   justify-content: center;

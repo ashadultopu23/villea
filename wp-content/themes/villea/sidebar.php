@@ -1,9 +1,8 @@
 <div class="col-lg-4 post_sidebar">
     <aside id="secondary" class="widget-area post-revisions z-1">
 
-        <button class="cross_bar position-absolute top-0 end-0 z-2">
-            <i class="fa-solid fa-xmark"></i>
-        </button>
+
+
         <?php
         if (class_exists('WooCommerce') && (is_shop() || is_product_category() || is_product_tag() || is_product())) {
 
@@ -14,6 +13,16 @@
             if ($shop_sidebar_layout_style === 'flyout'): ?>
                 <div class="filter_title mb-4 d-flex gap-4 align-items-center justify-content-between">
                     <h4 class="title_bar m-0"><?php echo esc_html__("Filter", "villea"); ?></h4>
+                    <button class="cross_bar">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            <?php
+            endif;
+
+            // show close button for default layout style
+            if ($shop_sidebar_layout_style === 'default'): ?>
+                <div class="position-absolute top-0 end-0 mt-3 me-3 z-2">
                     <button class="cross_bar">
                         <i class="fa-solid fa-xmark"></i>
                     </button>

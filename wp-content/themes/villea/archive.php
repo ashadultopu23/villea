@@ -99,6 +99,14 @@ if (
     ?>
 
     <div class="row layout-<?php echo esc_attr($layout) ?>">
+
+        <!-- Sidebar Left -->
+        <?php
+        if (($blog_layout == '2left')):
+            get_sidebar('single');
+        endif;
+        ?>
+
         <div class="contents-sticky  col-lg<?php echo esc_attr($col); ?> <?php echo esc_attr($layout); ?>">
             <!-- new add tab style start    -->
             <?php
@@ -145,6 +153,7 @@ if (
                     <div class="tab-pane fade <?php echo esc_attr($grid_active_content); ?>" id="grid-tab-pane" role="tabpanel" aria-labelledby="grid-tab" tabindex="0">
                         <!-- new add tab style End    -->
                         <div class="row g-4" data-masonry='{ "columnWidth": ".post-massonry-item", "percentPosition": false }'>
+
                             <?php
                             if (have_posts()) :
                                 /* Start the Loop */
@@ -302,12 +311,14 @@ if (
                 get_template_part('template-parts/content', 'none');
             }
             ?>
-
         </div>
-        <?php if ($layout != 'full-layout'):
+
+        <?php
+        if ($layout == '2right') :
             get_sidebar();
         endif;
         ?>
+
     </div>
 </div>
 </div>
