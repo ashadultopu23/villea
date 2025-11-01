@@ -6422,7 +6422,7 @@ li.comment #respond {
   transition: var(--transition);
   font-size: 16px;
   font-family: var(--titleFont);
-  font-weight: 600;
+  font-weight: 400;
   position: relative;
 }
 .themephi-sideabr .recent-post-widget .post-desc a:hover {
