@@ -55,7 +55,6 @@ function villea_set_products_per_page($cols)
 	if (isset($product_per_page)) {
 		return intval($product_per_page);
 	}
-
 	return $cols;
 }
 
@@ -120,16 +119,6 @@ function cus_woo_product_item()
 				<?php endif; ?>
 			</div>
 
-			<!-- Color Options -->
-			<!-- <div class="product_color_options">
-				<?php // foreach ($terms as $term_name) : 
-				?>
-					<button class="variant_color" style="background-color: <?php // echo esc_attr($term_name); 
-																			?> !important" title="<?php // echo esc_attr($term_name); 
-																									?>"></button>
-				<?php // endforeach; 
-				?>
-			</div> -->
 		</div>
 
 		<div class="product_info d-flex flex-column gap-1">
@@ -200,16 +189,6 @@ function cus_woo_product_item_list()
 				<?php endif; ?>
 			</div>
 
-			<!-- Color Options -->
-			<!-- <div class="product_color_options">
-				<?php // foreach ($terms as $term_name) : 
-				?>
-					<button class="variant_color" style="background-color: <?php // echo esc_attr($term_name); 
-																			?> !important" title="<?php //  echo esc_attr($term_name); 
-																									?>"></button>
-				<?php // endforeach; 
-				?>
-			</div> -->
 		</div>
 
 		<div class="product_info d-flex flex-column gap-1">
@@ -344,47 +323,6 @@ function single_product_info()
 			woocommerce_template_single_sharing();
 		}
 		?>
-
-
-		<!-- Color Options -->
-		<!-- <div class="product_color_options">
-			<label class="fs-5">
-				<?php // echo esc_html__('Color', 'villea'); 
-				?>
-			</label>
-			<?php
-			// global $product;
-			// $terms = wc_get_product_terms($product->get_id(), 'pa_color', ['fields' => 'names']);
-
-			// foreach ($terms as $term_name) :
-			?>
-				<button class="variant_color" style="background-color: <?php //echo esc_attr($term_name);  
-																		?> !important" title="<?php // echo esc_attr($term_name); 
-																								?>"></button>
-			<?php
-			//  endforeach; 
-			?>
-		</div> -->
-
-		<!-- Size Options -->
-		<!-- <div class="product_size_options">
-			<label class="fs-5">
-				<?php
-				//  echo esc_html__('Size', 'villea'); 
-				?>
-			</label>
-			<?php
-			// $size_terms = wc_get_product_terms($product->get_id(), 'pa_size', ['fields' => 'names']);
-
-			// if (!empty($size_terms)) {
-			// 	foreach ($size_terms as $size) {
-			// 		echo '<span class="size-btn me-2">' . esc_html($size) . '</span>';
-			// 	}
-			// } else {
-			// 	echo '<span class="text-muted">' . esc_html__('No sizes available', 'villea') . '</span>';
-			// }
-			?>
-		</div> -->
 
 	</div>
 
@@ -527,45 +465,6 @@ function woosc_btn_single_product()
 	</div>
 <?php
 }
-
-
-
-// // Remove WooCommerce default thumbnails
-// // remove_action('woocommerce_product_thumbnails', 'woocommerce_show_product_thumbnails', 20);
-
-// // Add custom swiper output
-// add_action('woocommerce_product_thumbnails', 'custom_woocommerce_thumbnail_slider', 20);
-// function custom_woocommerce_thumbnail_slider()
-// {
-// 	get_template_part('woocommerce/single-product/custom-thumbnails-swiper');
-// }
-
-
-// remove_action('woocommerce_product_thumbnails', 'woocommerce_show_product_thumbnails', 20);
-
-// add_action('woocommerce_product_thumbnails', 'custom_woocommerce_product_thumbnails_swiper', 20);
-// function custom_woocommerce_product_thumbnails_swiper()
-// {
-// 	global $product;
-
-// 	$attachment_ids = $product->get_gallery_image_ids();
-// 	if (empty($attachment_ids)) return;
-
-// 	echo '<div class="swiper swiper-thumbnail-slider">';
-// 	echo '<div class="swiper-wrapper">';
-
-// 	foreach ($attachment_ids as $attachment_id) {
-// 		$thumbnail_url = wp_get_attachment_image_url($attachment_id, 'woocommerce_thumbnail');
-// 		$large_url     = wp_get_attachment_image_url($attachment_id, 'woocommerce_single');
-// 		$alt           = get_post_meta($attachment_id, '_wp_attachment_image_alt', true);
-
-// 		echo '<div class="swiper-slide">';
-// 		echo '<img class="product-thumb" src="' . esc_url($thumbnail_url) . '" data-large="' . esc_url($large_url) . '" alt="' . esc_attr($alt) . '">';
-// 		echo '</div>';
-// 	}
-
-// 	echo '</div></div>';
-// }
 
 // related products slider
 function enqueue_related_products_slider_script()

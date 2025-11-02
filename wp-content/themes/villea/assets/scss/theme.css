@@ -8723,6 +8723,14 @@ form.woocommerce-product-search button {
   color: var(--whiteColor);
 }
 
+.wp-block-woocommerce-empty-cart-block .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-title {
+  margin-bottom: 0;
+}
+.wp-block-woocommerce-empty-cart-block .wc-block-grid .wc-block-grid__products .wc-block-grid__product p {
+  margin: 0;
+  padding: 0;
+}
+
 /* ---------------------------
    09. Contact Style
 ------------------------------*/

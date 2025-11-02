@@ -1855,3 +1855,19 @@ form.woocommerce-product-search {
     }
   }
 }
+
+.wp-block-woocommerce-empty-cart-block {
+  .wc-block-grid {
+    .wc-block-grid__products {
+      .wc-block-grid__product {
+        .wc-block-grid__product-title {
+          margin-bottom: 0;
+        }
+        p {
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
