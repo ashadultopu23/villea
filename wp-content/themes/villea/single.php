@@ -60,7 +60,7 @@ if (
             ?>
 
             <!-- Content -->
-            <div class="col-lg-<?php echo esc_attr($col_side); ?> <?php echo esc_attr($col_left); ?> ">
+            <div class="col-lg-<?php echo esc_attr($col_side); ?> <?php echo esc_attr($col_left); ?> <?php echo ($col_left == 'left-sidebar') ? 'order-lg-last order-first' : '' ?>">
                 <div class="blog-post-details-inner">
                     <?php
                     while (have_posts()) : the_post();

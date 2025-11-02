@@ -29,7 +29,7 @@ if ($page_layout == '2left') {
     }
     ?>
 
-    <div class="col-md-<?php echo esc_attr($col_side) . ' ' . esc_attr($col_left) ?>">
+    <div class="col-md-<?php echo esc_attr($col_side) . ' ' . esc_attr($col_left) ?> <?php echo ($col_left == 'left-sidebar') ? 'order-lg-last order-first' : '' ?>">
         <?php
         while (have_posts()) : the_post();
             get_template_part('template-parts/content', 'page');

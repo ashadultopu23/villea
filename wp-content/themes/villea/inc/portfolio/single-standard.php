@@ -41,7 +41,23 @@ if ($selected_layout == 'top_carousel_center' && !is_active_sidebar('sidebar-por
 <div class="<?php echo esc_attr($container_class); ?>">
     <div class="themephi-portfolio-details">
         <div class="row layout-<?php echo esc_attr($col_left) ?>">
-            <div class="col-lg-<?php echo esc_attr($col_side); ?> <?php echo esc_attr($col_left); ?> ">
+
+            <?php
+            if (($page_layout == '2left') && is_active_sidebar('sidebar-portfolio')) {
+            ?>
+                <div class="col-xxl-4 col-xl-4 col-lg-4">
+                    <aside id="secondary" class="widget-area">
+                        <div class="themephi-sideabr dynamic-sidebar">
+                            <?php
+                            dynamic_sidebar('sidebar-portfolio');
+                            ?>
+                        </div>
+                    </aside>
+                </div>
+            <?php
+            } ?>
+
+            <div class="col-lg-<?php echo esc_attr($col_side); ?> <?php echo esc_attr($col_left); ?> <?php echo ($col_left == 'left-sidebar') ? 'order-lg-last order-first' : '' ?>">
                 <div class="themephi-portfolio-details-inner-left <?php echo esc_attr($selected_layout); ?> ">
                     <?php while (have_posts()) : the_post();
 
@@ -154,7 +170,7 @@ if ($selected_layout == 'top_carousel_center' && !is_active_sidebar('sidebar-por
             </div>
 
             <?php
-            if (($page_layout == '2left' || $page_layout == '2right') && is_active_sidebar('sidebar-portfolio')) {
+            if (($page_layout == '2right') && is_active_sidebar('sidebar-portfolio')) {
             ?>
                 <div class="col-xxl-4 col-xl-4 col-lg-4">
                     <aside id="secondary" class="widget-area">

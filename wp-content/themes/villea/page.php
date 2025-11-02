@@ -45,14 +45,29 @@ if (
 
 <div class="<?php echo esc_attr($header_width); ?> page-section">
     <div class="row padding-<?php echo esc_attr($col_left) ?>">
-        <div class="col-lg-<?php echo esc_attr($col_side) . ' ' . esc_attr($col_left) ?>">
+
+        <!-- Sidebar Left -->
+        <?php
+        if (($page_layout == '2left')):
+            get_sidebar('page');
+        endif;
+        ?>
+
+        <div class="col-lg-<?php echo esc_attr($col_side) . ' ' . esc_attr($col_left) ?> <?php echo ($col_left == 'left-sidebar') ? 'order-lg-last order-first' : '' ?>">
             <?php
             while (have_posts()) : the_post();
                 get_template_part('template-parts/content', 'page');
             endwhile; // End of the loop.
             ?>
         </div>
-        <?php get_sidebar('page'); ?>
+
+        <!-- Sidebar Right -->
+        <?php
+        if (($page_layout == '2right')):
+            get_sidebar('page');
+        endif;
+        ?>
+
     </div>
 </div>
 

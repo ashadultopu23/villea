@@ -327,16 +327,29 @@ function villea_custom_colors()
 		} else {
 			$padding_top        = get_post_meta(get_the_ID(), 'content_top', true);
 			$padding_bottom     = get_post_meta(get_the_ID(), 'content_bottom', true);
+			$padding_top_small        = get_post_meta(get_the_ID(), 'content_top_small', true);
+			$padding_bottom_small     = get_post_meta(get_the_ID(), 'content_bottom_small', true);
 			$footer_padd_top    = get_post_meta(get_the_ID(), 'footer_padd_top', true);
 			$footer_padd_bottom = get_post_meta(get_the_ID(), 'footer_padd_bottom', true);
-			if ($padding_top != '' || $padding_bottom != '') {
+			if ($padding_top != '' || $padding_bottom != '' || $padding_top_small != '' || $padding_bottom_small != '') {
 			?>
 				<style>
 					.main-contain #content,
 					body.themephi-pages-btm-gap .main-contain #content {
-						<?php if (!empty($padding_top)) : ?>padding-top: <?php echo esc_attr($padding_top); ?>;
-						<?php endif; ?><?php if (!empty($padding_bottom)) : ?>padding-bottom: <?php echo esc_attr($padding_bottom); ?>;
-						<?php endif; ?>
+
+						/* Desktop Padding */
+						@media (min-width:992px) {
+							<?php if (!empty($padding_top)) : ?>padding-top: <?php echo esc_attr($padding_top); ?>;
+							<?php endif; ?><?php if (!empty($padding_bottom)) : ?>padding-bottom: <?php echo esc_attr($padding_bottom); ?>;
+							<?php endif; ?>
+						}
+
+						/* Responsive Padding */
+						@media (max-width: 991px) {
+							<?php if (!empty($padding_top_small)) : ?>padding-top: <?php echo esc_attr($padding_top_small); ?>;
+							<?php endif; ?><?php if (!empty($padding_bottom_small)) : ?>padding-bottom: <?php echo esc_attr($padding_bottom_small); ?>;
+							<?php endif; ?>
+						}
 					}
 				</style>
 

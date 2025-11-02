@@ -61,7 +61,7 @@ if (
                 get_sidebar('single');
             endif;
             ?>
-            <div class="col-lg-<?php echo esc_attr($col_side); ?> <?php echo esc_attr($col_left); ?> ">
+            <div class="col-lg-<?php echo esc_attr($col_side); ?> <?php echo esc_attr($col_left); ?> <?php echo ($col_left == 'left-sidebar') ? 'order-lg-last order-first' : '' ?>">
                 <div class="blog-post-details-inner service-post-details-inner mb-40">
                     <?php while (have_posts()) : the_post(); ?>
 

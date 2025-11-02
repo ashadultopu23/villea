@@ -173,7 +173,10 @@ function tp_register_header_metabox()
 					'page_bg_colors',
 					'page_bg',
 					'content_top',
-					'content_bottom'
+					'content_bottom',
+					'content_top_small',
+					'content_bottom_small',
+
 				),
 			),
 
@@ -232,7 +235,7 @@ function tp_register_header_metabox()
 	));
 
 	$cmb_demo->add_field(array(
-		'name'    => esc_html__('Content Top Padding', 'tp-framework'),
+		'name'    => esc_html__('Content Top Padding (Large)', 'tp-framework'),
 		'desc'    => esc_html__('example(120px)', 'tp-framework'),
 		'default' => esc_attr__('120px', 'tp-framework'),
 		'id'      => 'content_top',
@@ -240,10 +243,26 @@ function tp_register_header_metabox()
 	));
 
 	$cmb_demo->add_field(array(
-		'name'    => esc_html__('Content Bottom Padding', 'tp-framework'),
+		'name'    => esc_html__('Content Bottom Padding (Large)', 'tp-framework'),
 		'desc'    => esc_html__('example(80px)', 'tp-framework'),
 		'default' => esc_attr__('80px', 'tp-framework'),
 		'id'      => 'content_bottom',
+		'type'    => 'text_medium',
+	));
+
+	$cmb_demo->add_field(array(
+		'name'    => esc_html__('Content Top Padding (Small)', 'tp-framework'),
+		'desc'    => esc_html__('example(80px)', 'tp-framework'),
+		'default' => esc_attr__('80px', 'tp-framework'),
+		'id'      => 'content_top_small',
+		'type'    => 'text_medium',
+	));
+
+	$cmb_demo->add_field(array(
+		'name'    => esc_html__('Content Bottom Padding (Small)', 'tp-framework'),
+		'desc'    => esc_html__('example(60px)', 'tp-framework'),
+		'default' => esc_attr__('60px', 'tp-framework'),
+		'id'      => 'content_bottom_small',
 		'type'    => 'text_medium',
 	));
 
