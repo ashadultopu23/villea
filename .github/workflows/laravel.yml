@@ -15,3 +15,8 @@ jobs:
         username: u803680896.pixelaxis
         password: "Pixelaxis@123"
         server-dir: "villea/"
+        # This line automatically creates missing folders
+        # create-dirs: true
+
+        # Don’t delete everything each deploy
+        dangerous-clean-slate: false
