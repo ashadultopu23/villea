@@ -39,12 +39,6 @@ if (!empty($container_class)) {
 				do_action('es_single_property_section', $section, get_the_ID());
 			endforeach;
 		endif; ?>
-
-		<?php //do_action('es_after_single_property_content'); 
-		?>
-
-		<?php //do_action('es_after_single_content'); 
-		?>
 	</div>
 
 

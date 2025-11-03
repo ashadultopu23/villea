@@ -268,6 +268,49 @@ table thead tr th {
   .display-four {
     font-size: 42px !important;
   }
+
+  .display-five {
+    font-size: 36px !important;
+  }
+  .display-six {
+    font-size: 32px !important;
+  }
+
+  .fs-one,
+  h1,
+  h1 > a {
+    font-size: 32px;
+  }
+
+  .fs-two,
+  h2,
+  h2 > a {
+    font-size: 28px;
+  }
+
+  .fs-three,
+  h3,
+  h3 > a {
+    font-size: 24px;
+  }
+
+  .fs-four,
+  h4,
+  h4 > a {
+    font-size: 20px;
+  }
+
+  .fs-five,
+  h5,
+  h5 > a {
+    font-size: 18px;
+  }
+
+  .fs-six,
+  h6,
+  h6 > a {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 575px) {
@@ -292,7 +335,7 @@ table thead tr th {
   }
 
   .display-six {
-    font-size: 32px;
+    font-size: 20px;
   }
 
   .pt-120 {
@@ -306,6 +349,48 @@ table thead tr th {
 @media (max-width: 480px) {
   .display-one {
     font-size: 48px;
+  }
+  .display-two {
+    font-size: 42px;
+  }
+  .display-three {
+    font-size: 36px;
+  }
+  .display-four {
+    font-size: 28px;
+  }
+  .display-five {
+    font-size: 24px;
+  }
+  .display-six {
+    font-size: 20px;
+  }
+
+  .fs-one,
+  h1,
+  h1 > a {
+    font-size: 28px;
+  }
+
+  .fs-two,
+  h2,
+  h2 > a {
+    font-size: 24px;
+  }
+  .fs-three,
+  h3,
+  h3 > a {
+    font-size: 20px;
+  }
+  .fs-four,
+  h4,
+  h4 > a {
+    font-size: 18px;
+  }
+  .fs-five,
+  h5,
+  h5 > a {
+    font-size: 16px;
   }
 }
 

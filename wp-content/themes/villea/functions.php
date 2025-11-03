@@ -567,6 +567,12 @@ if (class_exists('estatik')) {
 				return $custom_template;
 			}
 		}
+		if (is_archive('properties')) {
+			$custom_template = get_stylesheet_directory() . '/estatik/front/property/archive.php';
+			if (file_exists($custom_template)) {
+				return $custom_template;
+			}
+		}
 		return $template;
 	});
 }

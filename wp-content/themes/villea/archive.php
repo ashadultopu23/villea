@@ -314,7 +314,7 @@ if (
         </div>
 
         <?php
-        if ($layout == '2right') :
+        if ($blog_layout == '2right') :
             get_sidebar();
         endif;
         ?>

@@ -556,11 +556,38 @@
       background: #f4f3f1;
       padding: 32px;
       margin-bottom: 24px;
+
+      @media (max-width: 991px) {
+        padding: 24px;
+      }
+      @media (max-width: 575px) {
+        padding: 12px;
+      }
+
       .es-single__basic {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 16px;
+
+        @media (max-width: 480px) {
+          flex-direction: column;
+          align-items: flex-start;
+          .es-control-wrap,
+          .es-singe__basic-inner {
+            width: 100%;
+          }
+
+          .es-control-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .es-btn--request-info {
+              margin: 0 !important;
+            }
+          }
+        }
       }
 
       .es-breadcrumbs {
@@ -634,6 +661,13 @@
     padding: 32px;
     margin-bottom: 24px;
 
+    @media (max-width: 991px) {
+      padding: 24px;
+    }
+    @media (max-width: 575px) {
+      padding: 12px;
+    }
+
     .es-property-section__title {
       font-size: 20px;
       line-height: 1.2;
@@ -661,34 +695,41 @@
   }
 }
 
-.es-request-form.es-request-form--section {
-  max-width: unset !important;
-  width: 100% !important;
-  padding: 24px !important;
-
-  .es-field {
-    margin-bottom: 0 !important;
+.es-request-form {
+  @media (max-width: 575px) {
+    padding: 8px !important;
   }
+  &.es-request-form--section {
+    max-width: unset !important;
+    width: 100% !important;
+    padding: 24px !important;
+    @media (max-width: 575px) {
+      padding: 8px !important;
+    }
+    .es-field {
+      margin-bottom: 0 !important;
+    }
 
-  .es-privacy-policy-container {
-    display: none !important;
-  }
+    .es-privacy-policy-container {
+      display: none !important;
+    }
 
-  .es-btn-wrapper.es-btn-wrapper-submit--margin {
-    margin: 0 !important;
-    .es-btn {
-      padding: 12px 24px !important;
-      border-radius: 8px !important;
-      overflow: hidden !important;
-      font-size: 16px !important;
-      height: unset !important;
-      line-height: 1 !important;
-      color: var(--whiteColor) !important;
-      background: var(--primaryColor) !important;
-      transition: all 0.3s ease 0s !important;
+    .es-btn-wrapper.es-btn-wrapper-submit--margin {
+      margin: 0 !important;
+      .es-btn {
+        padding: 12px 24px !important;
+        border-radius: 8px !important;
+        overflow: hidden !important;
+        font-size: 16px !important;
+        height: unset !important;
+        line-height: 1 !important;
+        color: var(--whiteColor) !important;
+        background: var(--primaryColor) !important;
+        transition: all 0.3s ease 0s !important;
 
-      &:hover {
-        background: var(--secondaryColor) !important;
+        &:hover {
+          background: var(--secondaryColor) !important;
+        }
       }
     }
   }
@@ -712,3 +753,66 @@
 .es-powered {
   display: none !important;
 }
+
+// taxonomies page style
+
+// .archive {
+//   .main-contain {
+//     #content {
+//       // .wrap {
+//       //   max-width: 1320px;
+//       //   margin: 0 auto;
+//       //   // padding: 0 15px;
+//       //   display: flex;
+//       //   gap: 24px;
+
+//       //   #primary.content-area {
+//       //     @media (min-width: 992px) {
+//       //       flex: 1 1 0;
+//       //       // width: 300px;
+//       //       // flex-shrink: 0;
+//       //       // padding: 0 24px;
+//       //       box-sizing: border-box;
+//       //     }
+
+//       //     // .site-main {
+//       //     //   @media (min-width: 992px) {
+//       //     //     padding: 0 24px;
+//       //     //   }
+//       //     // }
+//       //   }
+
+//       //   #secondary.sidebar-area {
+//       //     @media (min-width: 992px) {
+//       //       flex: 0 0 300px;
+//       //       // width: 300px;
+//       //       // flex-shrink: 0;
+//       //       // padding: 0 24px;
+//       //       box-sizing: border-box;
+//       //     }
+//       //   }
+//       // }
+
+//       .wrap {
+//         max-width: 1320px;
+//         margin: 0 auto;
+//         display: flex;
+//         gap: 24px;
+
+//         #primary.content-area {
+//           @media (min-width: 992px) {
+//             flex: 1 1 0;
+//             box-sizing: border-box;
+//           }
+//         }
+
+//         #secondary.sidebar-area {
+//           @media (min-width: 992px) {
+//             flex: 0 0 300px;
+//             box-sizing: border-box;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
