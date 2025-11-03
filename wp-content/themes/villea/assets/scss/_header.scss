@@ -32,10 +32,6 @@
       background: var(--blackColor);
       transition: transform 0.3s ease, opacity 0.3s ease;
 
-      // .navbar ul.menu > li > a {
-      //   color: var(--whiteColor);
-      // }
-
       .menu-button svg {
         path,
         rect {
@@ -263,11 +259,11 @@
   }
 
   .nav-link-container .menu-button {
-    padding: 12px 16px;
-
+    padding: 8px 12px;
+    font-size: 20px;
     svg {
-      height: 30px;
-      width: 30px;
+      height: 20px;
+      width: 20px;
 
       rect,
       path {

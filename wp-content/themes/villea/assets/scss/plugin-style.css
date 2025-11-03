@@ -442,6 +442,9 @@
   color: var(--bodyColor) !important;
   font-family: var(--bodyFont) !important;
 }
+.es-properties.es-properties--hfm {
+  padding: 0 12px;
+}
 @media (max-width: 1599px) and (min-width: 1200px) {
   .es-properties.es-properties--hfm .es-properties__list .js-es-listings {
     grid-template-columns: 1fr 1fr !important;

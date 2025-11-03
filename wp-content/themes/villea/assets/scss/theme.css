@@ -3730,12 +3730,13 @@ html:has(.fixed-header) .themephi-breadcrumbs .breadcrumbs-inner {
 }
 .menu-area .nav-link-container .menu-button,
 .menu-wrap-off .nav-link-container .menu-button {
-  padding: 12px 16px;
+  padding: 8px 12px;
+  font-size: 20px;
 }
 .menu-area .nav-link-container .menu-button svg,
 .menu-wrap-off .nav-link-container .menu-button svg {
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
 }
 .menu-area .nav-link-container .menu-button svg rect,
 .menu-area .nav-link-container .menu-button svg path,
