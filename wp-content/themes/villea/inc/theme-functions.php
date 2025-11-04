@@ -143,6 +143,9 @@ function villea_import_files()
         ),
       ),
 
+      // 🔽 Add your hotspot file here for reference
+      'import_hotspot_file_url'    => 'https://pixelaxis.net/villea/wp-content/themes/villea/demo-data/hotspot-data.txt',
+
       'import_preview_image_url'   => 'https://pixelaxis.net/villea/wp-content/themes/villea/screenshot.png',
       'import_notice'              => esc_html__('Caution: For importing demo data please click on "Import Demo Data" button. During demo data installation please do not refresh the page.', 'villea'),
       'preview_url'                => 'https://pixelaxis.net/villea/',
@@ -182,40 +185,3 @@ add_filter('use_widgets_block_editor', '__return_false');
 
 update_option('elementor_disable_color_schemes', 'yes');
 update_option('elementor_disable_typography_schemes', 'yes');
-
-
-
-// function enqueue_related_products_slider_script()
-// {
-//   if (function_exists('is_product') && is_product()) {
-//     global $product, $villea_option;
-
-//     // Get number of columns from theme option or default to 3
-//     $col = !empty($villea_option['single_releted_products_col']) ? $villea_option['single_releted_products_col'] : 3;
-
-//     wp_enqueue_script('swiper'); // make sure swiper is enqueued
-//     wp_add_inline_script('swiper', "
-// 			document.addEventListener('DOMContentLoaded', function() {
-// 				if(document.querySelector('.related-swiper')) {
-// 					new Swiper('.related-swiper', {
-// 						slidesPerView: {$col},
-// 						spaceBetween: 30,
-// 						navigation: {
-// 							nextEl: '.swiper-button-next',
-// 							prevEl: '.swiper-button-prev',
-// 						},
-// 						breakpoints: {
-// 							768: {
-// 								slidesPerView: 2
-// 							},
-// 							1024: {
-// 								slidesPerView: {$col}
-// 							}
-// 						}
-// 					});
-// 				}
-// 			});
-// 		");
-//   }
-// }
-// add_action('wp_enqueue_scripts', 'enqueue_related_products_slider_script');
