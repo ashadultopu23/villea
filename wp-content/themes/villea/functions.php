@@ -579,14 +579,24 @@ if (class_exists('estatik')) {
 			}
 		}
 
-		// 3️⃣ PROPERTY TAXONOMIES (category, type, label, status, etc.)
-		if (
-			is_tax('property-category') ||
-			is_tax('property-type') ||
-			is_tax('es_label') ||
-			is_tax('es_status') ||
-			is_tax('es_feature')
-		) {
+		// 3️⃣ ESTATIK TAXONOMIES (the ones from your debug list)
+		if (is_tax(array(
+			'es_location',
+			'es_category',
+			'es_type',
+			'es_rent_period',
+			'es_label',
+			'es_status',
+			'es_parking',
+			'es_roof',
+			'es_exterior_material',
+			'es_basement',
+			'es_floor_covering',
+			'es_feature',
+			'es_amenity',
+			'es_neighborhood',
+			'es_tag'
+		))) {
 			$custom_tax = get_stylesheet_directory() . '/estatik/archive.php';
 			if (file_exists($custom_tax)) {
 				return $custom_tax;

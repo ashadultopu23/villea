@@ -7,8 +7,8 @@ function villea_widgets_init()
 		'description'   => esc_html__('This is sidebar area for blog post and single post.', 'villea'),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	));
 
 
@@ -21,7 +21,7 @@ function villea_widgets_init()
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>',
 	));
-	
+
 	register_sidebar(array(
 		'name'          => esc_html__('Portfolio Sidebar', 'villea'),
 		'id'            => 'sidebar-portfolio',
@@ -39,8 +39,8 @@ function villea_widgets_init()
 			'description'   => esc_html__('This is sidebar area for woocommerces shop page.', 'villea'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
 		));
 	endif;
 }

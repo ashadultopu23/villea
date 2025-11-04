@@ -727,4 +727,35 @@
 
 .es-powered {
   display: none !important;
+}
+
+.archive .main-contain #content .es-custom-archive-wrapper .es-listings.es-listings--list > .type-properties {
+  margin-bottom: 0 !important;
+}
+@media (min-width: 992px) {
+  .archive .main-contain #content .es-custom-archive-wrapper .es-properties__list .js-es-listings:not(.es-listings--list) {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+.archive .main-contain #content .es-custom-archive-wrapper .widget {
+  position: relative;
+  transition: all 500ms ease;
+  margin: 0;
+  border-radius: var(--boxBorderRadius);
+  padding: 24px 24px 24px;
+  background-color: var(--globalColor);
+  box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.04);
+}
+.archive .main-contain #content .es-custom-archive-wrapper .widget:not(:last-child) {
+  margin-bottom: 24px;
+}
+.archive .main-contain #content .es-custom-archive-wrapper .recent-widget .recent-post-widget .show-featured {
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed var(--borderColor);
+}
+.archive .main-contain #content .es-custom-archive-wrapper .recent-widget .recent-post-widget .show-featured:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
 }/*# sourceMappingURL=plugin-style.css.map */

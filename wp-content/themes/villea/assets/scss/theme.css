@@ -6404,7 +6404,7 @@ li.comment #respond {
   background: #fff;
   padding-left: 10px;
 }
-.themephi-sideabr .widget_product_categories h2.widget-title {
+.themephi-sideabr .widget_product_categories .widget-title {
   margin-bottom: 18px;
 }
 .themephi-sideabr .widget_product_categories ul li {
@@ -6420,7 +6420,7 @@ li.comment #respond {
   padding: 8px 10px;
   display: inline-block;
 }
-.themephi-sideabr .widget_recent_entries h2.widget-title {
+.themephi-sideabr .widget_recent_entries .widget-title {
   margin-bottom: 18px;
 }
 .themephi-sideabr .widget_block ol.wp-block-latest-comments li {

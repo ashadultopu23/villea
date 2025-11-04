@@ -755,64 +755,50 @@
 }
 
 // taxonomies page style
+.archive {
+  .main-contain {
+    #content {
+      .es-custom-archive-wrapper {
+        .es-listings.es-listings--list > .type-properties {
+          margin-bottom: 0 !important;
+        }
 
-// .archive {
-//   .main-contain {
-//     #content {
-//       // .wrap {
-//       //   max-width: 1320px;
-//       //   margin: 0 auto;
-//       //   // padding: 0 15px;
-//       //   display: flex;
-//       //   gap: 24px;
+        .es-properties__list {
+          .js-es-listings:not(.es-listings--list) {
+            @media (min-width: 992px) {
+              grid-template-columns: 1fr 1fr !important;
+            }
+          }
+        }
 
-//       //   #primary.content-area {
-//       //     @media (min-width: 992px) {
-//       //       flex: 1 1 0;
-//       //       // width: 300px;
-//       //       // flex-shrink: 0;
-//       //       // padding: 0 24px;
-//       //       box-sizing: border-box;
-//       //     }
+        .widget {
+          position: relative;
+          transition: all 500ms ease;
+          margin: 0;
+          border-radius: var(--boxBorderRadius);
+          padding: 24px 24px 24px;
+          background-color: var(--globalColor);
+          box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.04);
+          &:not(:last-child) {
+            margin-bottom: 24px;
+          }
+        }
 
-//       //     // .site-main {
-//       //     //   @media (min-width: 992px) {
-//       //     //     padding: 0 24px;
-//       //     //   }
-//       //     // }
-//       //   }
-
-//       //   #secondary.sidebar-area {
-//       //     @media (min-width: 992px) {
-//       //       flex: 0 0 300px;
-//       //       // width: 300px;
-//       //       // flex-shrink: 0;
-//       //       // padding: 0 24px;
-//       //       box-sizing: border-box;
-//       //     }
-//       //   }
-//       // }
-
-//       .wrap {
-//         max-width: 1320px;
-//         margin: 0 auto;
-//         display: flex;
-//         gap: 24px;
-
-//         #primary.content-area {
-//           @media (min-width: 992px) {
-//             flex: 1 1 0;
-//             box-sizing: border-box;
-//           }
-//         }
-
-//         #secondary.sidebar-area {
-//           @media (min-width: 992px) {
-//             flex: 0 0 300px;
-//             box-sizing: border-box;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
+        .recent-widget {
+          .recent-post-widget {
+            .show-featured {
+              margin-bottom: 12px;
+              padding-bottom: 12px;
+              border-bottom: 1px dashed var(--borderColor);
+              &:last-child {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                border-bottom: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

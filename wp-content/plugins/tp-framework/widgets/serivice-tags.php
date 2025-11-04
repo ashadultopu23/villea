@@ -18,9 +18,9 @@ class tp_post_tags extends WP_Widget {
 		$title = !empty($instance['title']) ? $instance['title'] : __( 'Post Tags', 'tp-framework' );
 
 		?>
-			<div class="widget themephi-tags col-lg-12 mx-auto mb25">
+			<div class="widget themephi-tags col-lg-12 mx-auto">
 				<div id="tags" class="widget-bg p20">
-					<h2 class="widget-title"><?php echo esc_html($title); ?></h2>
+					<h4 class="widget-title"><?php echo esc_html($title); ?></h4>
 
 					<div class='themephi-tag-wrapper'>
 						<?php
