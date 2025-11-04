@@ -115,7 +115,6 @@ Heading  css
   padding: 16px 32px;
   min-width: max-content;
   font-size: 16px;
-  // line-height: 21px;
   font-weight: 700;
   background: var(--primaryColor);
   color: #fff;
@@ -908,7 +907,6 @@ Team Member
 /** Draw Vertical Line **/
 .path-vert {
   stroke-dasharray: 1000;
-  /*   stroke-dashoffset: 800; */
   animation: draw1 2s linear alternate;
 }
 

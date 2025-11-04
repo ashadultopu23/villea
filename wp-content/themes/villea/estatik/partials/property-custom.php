@@ -27,7 +27,7 @@ if (! defined('ABSPATH')) {
 
 <div class="es-single__left-slider">
     <?php $instance = es_get_shortcode_instance('property_single_gallery');
-    echo $instance->get_content(); ?>
+    echo wp_kses_post($instance->get_content()); ?>
 </div>
 
 
@@ -58,7 +58,7 @@ if (! defined('ABSPATH')) {
             ?>
 
             <?php if (es_is_request_form_active() && ! ests('is_request_form_button_disabled')) : ?>
-                <a href="#request_form" class="es-btn--request-info es-btn es-btn--primary js-es-scroll-to"><?php _e('Request info', 'es'); ?></a>
+                <a href="#request_form" class="es-btn--request-info es-btn es-btn--primary js-es-scroll-to"><?php _e('Request info', 'villea'); ?></a>
             <?php endif; ?>
         </div>
     </div>

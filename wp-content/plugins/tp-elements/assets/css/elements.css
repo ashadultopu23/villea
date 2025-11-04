@@ -764,7 +764,6 @@ Team Member
 /** Draw Vertical Line **/
 .path-vert {
   stroke-dasharray: 1000;
-  /*   stroke-dashoffset: 800; */
   animation: draw1 2s linear alternate;
 }
 

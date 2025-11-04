@@ -23,7 +23,7 @@ if (! defined('ABSPATH')) {
 do_action('woocommerce_before_account_navigation');
 ?>
 
-<nav class="woocommerce-MyAccount-navigation" aria-label="<?php esc_html_e('Account pages', 'woocommerce'); ?>">
+<nav class="woocommerce-MyAccount-navigation" aria-label="<?php esc_attr_e('Account pages', 'villea'); ?>">
 	<button type="button" class="woocommerce-MyAccount-navigation-toggle" title="Toggle account menu">
 		<i class="fas fa-times"></i>
 	</button>

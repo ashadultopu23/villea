@@ -1,4 +1,5 @@
 <?php
+
 /**
  * My Downloads - Deprecated
  *
@@ -18,35 +19,39 @@
  * @deprecated  2.6.0
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 $downloads = WC()->customer->get_downloadable_products();
 
-if ( $downloads ) : ?>
+if ($downloads) : ?>
 
-	<?php do_action( 'woocommerce_before_available_downloads' ); ?>
+	<?php do_action('woocommerce_before_available_downloads'); ?>
 
-	<h2><?php echo apply_filters( 'woocommerce_my_account_my_downloads_title', esc_html__( 'Available downloads', 'woocommerce' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></h2>
+	<h2><?php echo apply_filters('woocommerce_my_account_my_downloads_title', esc_html__('Available downloads', 'villea')); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
+		?></h2>
 
 	<ul class="woocommerce-Downloads digital-downloads">
-		<?php foreach ( $downloads as $download ) : ?>
+		<?php foreach ($downloads as $download) : ?>
 			<li>
 				<?php
-				do_action( 'woocommerce_available_download_start', $download );
 
-				if ( is_numeric( $download['downloads_remaining'] ) ) {
-					/* translators: %s product name */
-					echo apply_filters( 'woocommerce_available_download_count', '<span class="woocommerce-Count count">' . sprintf( _n( '%s download remaining', '%s downloads remaining', $download['downloads_remaining'], 'woocommerce' ), $download['downloads_remaining'] ) . '</span> ', $download ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-				}
+				$remaining = isset($download['downloads_remaining']) ? absint($download['downloads_remaining']) : 0;
 
-				echo apply_filters( 'woocommerce_available_download_link', '<a href="' . esc_url( $download['download_url'] ) . '">' . $download['download_name'] . '</a>', $download ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-
-				do_action( 'woocommerce_available_download_end', $download );
+				echo apply_filters(
+					'woocommerce_available_download_count',
+					'<span class="woocommerce-Count count">' .
+						sprintf(
+							_n('%s download remaining', '%s downloads remaining', $remaining, 'villea'),
+							number_format_i18n($remaining)
+						) .
+						'</span>',
+					$download
+				);
 				?>
 			</li>
 		<?php endforeach; ?>
 	</ul>
 
-	<?php do_action( 'woocommerce_after_available_downloads' ); ?>
+	<?php do_action('woocommerce_after_available_downloads'); ?>
 
 <?php endif; ?>

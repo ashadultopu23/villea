@@ -15978,3 +15978,4 @@
 [2025-10-28 11:58:01 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment Two" has been purged, triggered by action: save_post 
 [2025-10-28 11:58:02 : INFO] - Cache for URL: http://localhost/wp/villea/apartment-two/ has been purged, triggered by action: save_post 
 [2025-10-28 11:58:02 : INFO] - Cache for author page URL: http://localhost/wp/villea/author/villea/ associated with post_type: page and Title: "Apartment Two" has been purged, triggered by action: save_post 
+[2025-11-04 09:35:11 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 

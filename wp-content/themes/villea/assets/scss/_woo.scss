@@ -514,7 +514,6 @@
 }
 
 // Product Category
-
 .product_category_card {
   border: 1px solid var(--borderColor);
   padding: 4px 8px 4px 4px;
@@ -585,7 +584,6 @@
 }
 
 // sidebar_flyout
-
 .layout-full-layout-left.sidebar_flyout,
 .layout-full-layout-right.sidebar_flyout {
   .contents-sticky {
@@ -703,7 +701,6 @@ html:has(.flyout_sidebar_overlay) {
       position: fixed;
       top: 10px;
       left: 0;
-      // overflow: hidden;
       transition: var(--transition);
       max-width: 465px;
       background: var(--body_bg);
@@ -1669,20 +1666,7 @@ form.woocommerce-product-search {
   }
 }
 
-// importent for dark mode
-
-// To apply CSS only when dark mode is enabled
-// .woocommerce form .show-password-input::before,
-// .woocommerce-page form .show-password-input::before {
-// 	filter: brightness(10);
-// }
-
 .woocommerce-account.woocommerce-page {
-  // &.woocommerce-edit-account,
-  // &.woocommerce-dashboard,
-  // &.woocommerce-orders,
-  // &.woocommerce-downloads,
-  // &.woocommerce-edit-address,
   &.logged-in {
     .woocommerce {
       display: flex;

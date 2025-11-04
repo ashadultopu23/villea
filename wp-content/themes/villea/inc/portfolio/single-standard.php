@@ -57,7 +57,7 @@ if ($selected_layout == 'top_carousel_center' && !is_active_sidebar('sidebar-por
             <?php
             } ?>
 
-            <div class="col-lg-<?php echo esc_attr($col_side); ?> <?php echo esc_attr($col_left); ?> <?php echo ($col_left == 'left-sidebar') ? 'order-lg-last order-first' : '' ?>">
+            <div class="col-lg-<?php echo esc_attr($col_side); ?> <?php echo esc_attr($col_left); ?> <?php echo esc_attr($col_left == 'left-sidebar' ? 'order-lg-last order-first' : ''); ?>">
                 <div class="themephi-portfolio-details-inner-left <?php echo esc_attr($selected_layout); ?> ">
                     <?php while (have_posts()) : the_post();
 

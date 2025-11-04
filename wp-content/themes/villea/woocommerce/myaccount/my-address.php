@@ -24,8 +24,8 @@ if (! wc_ship_to_billing_address_only() && wc_shipping_enabled()) {
 	$get_addresses = apply_filters(
 		'woocommerce_my_account_get_addresses',
 		array(
-			'billing'  => __('Billing address', 'woocommerce'),
-			'shipping' => __('Shipping address', 'woocommerce'),
+			'billing'  => __('Billing address', 'villea'),
+			'shipping' => __('Shipping address', 'villea'),
 		),
 		$customer_id
 	);
@@ -33,7 +33,7 @@ if (! wc_ship_to_billing_address_only() && wc_shipping_enabled()) {
 	$get_addresses = apply_filters(
 		'woocommerce_my_account_get_addresses',
 		array(
-			'billing' => __('Billing address', 'woocommerce'),
+			'billing' => __('Billing address', 'villea'),
 		),
 		$customer_id
 	);
@@ -44,7 +44,7 @@ $col    = 1;
 ?>
 
 <p>
-	<?php echo apply_filters('woocommerce_my_account_my_address_description', esc_html__('The following addresses will be used on the checkout page by default.', 'woocommerce')); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
+	<?php echo apply_filters('woocommerce_my_account_my_address_description', esc_html__('The following addresses will be used on the checkout page by default.', 'villea')); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
 	?>
 </p>
 
@@ -59,14 +59,14 @@ $col    = 1;
 		$oldcol  = $oldcol * -1;
 		?>
 
-		<div class="u-column<?php echo $col < 0 ? 1 : 2; ?> woocommerce-Address">
+		<div class="u-column<?php echo esc_attr($col < 0 ? 1 : 2); ?> woocommerce-Address">
 			<header class="woocommerce-Address-title title">
 				<h2><?php echo esc_html($address_title); ?></h2>
 				<a href="<?php echo esc_url(wc_get_endpoint_url('edit-address', $name)); ?>" class="edit">
 					<?php
 					printf(
 						/* translators: %s: Address title */
-						$address ? esc_html__('Edit %s', 'woocommerce') : esc_html__('Add %s', 'woocommerce'),
+						$address ? esc_html__('Edit %s', 'villea') : esc_html__('Add %s', 'villea'),
 						esc_html($address_title)
 					);
 					?>
@@ -74,7 +74,13 @@ $col    = 1;
 			</header>
 			<address>
 				<?php
-				echo $address ? wp_kses_post($address) : esc_html_e('You have not set up this type of address yet.', 'woocommerce');
+				// echo $address ? wp_kses_post($address) : esc_html__('You have not set up this type of address yet.', 'villea');
+
+				if ($address) {
+					echo wp_kses_post($address);
+				} else {
+					echo esc_html__('You have not set up this type of address yet.', 'villea');
+				}
 
 				/**
 				 * Used to output content after core address fields.

@@ -1,5 +1,4 @@
 <?php
-// $template = get_option('template');
 get_header(); ?>
 
 
@@ -21,7 +20,7 @@ get_header(); ?>
                                 'show_page_title' => false,
                             ));
                             $shortcode->set_query($wp_query);
-                            echo $shortcode->get_content(); ?>
+                            echo wp_kses_post($shortcode->get_content()); ?>
 
                         <?php endif; ?>
                     </main>

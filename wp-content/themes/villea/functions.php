@@ -153,7 +153,7 @@ if (! function_exists('villea_setup')) :
 			$background_position = get_theme_mod('background_position_x', 'center') . ' center';
 
 			if ($background_image) {
-				$css = '<style type="text/css">';
+				$css  = '<style type="text/css">';
 				$css .= 'html body {';
 				$css .= 'background-image: url("' . esc_url($background_image) . '") !important;';
 				$css .= 'background-repeat: ' . esc_attr($background_repeat) . ' !important;';
@@ -163,7 +163,10 @@ if (! function_exists('villea_setup')) :
 				$css .= '}';
 				$css .= '</style>';
 
-				echo $css;
+				echo wp_kses(
+					$css,
+					['style' => ['type' => []]]
+				);
 			}
 		}
 		add_action('wp_head', 'villea_force_custom_background_css', 10);
