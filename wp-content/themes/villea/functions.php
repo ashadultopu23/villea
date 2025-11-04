@@ -559,20 +559,40 @@ add_action('pre_get_posts', 'tp_custom_tag_archives');
 
 
 
+
 if (class_exists('estatik')) {
 	add_filter('template_include', function ($template) {
-		if (is_singular('properties')) {
-			$custom_template = get_stylesheet_directory() . '/estatik/front/property/single.php';
-			if (file_exists($custom_template)) {
-				return $custom_template;
+
+		// 1️⃣ SINGLE PROPERTY PAGE
+		if (is_singular('properties') || is_singular('property')) {
+			$custom_single = get_stylesheet_directory() . '/estatik/single.php';
+			if (file_exists($custom_single)) {
+				return $custom_single;
 			}
 		}
-		if (is_archive('properties')) {
-			$custom_template = get_stylesheet_directory() . '/estatik/front/property/archive.php';
-			if (file_exists($custom_template)) {
-				return $custom_template;
+
+		// 2️⃣ PROPERTY ARCHIVE PAGE ( /property/ )
+		if (is_post_type_archive('properties') || is_post_type_archive('property')) {
+			$custom_archive = get_stylesheet_directory() . '/estatik/archive.php';
+			if (file_exists($custom_archive)) {
+				return $custom_archive;
 			}
 		}
+
+		// 3️⃣ PROPERTY TAXONOMIES (category, type, label, status, etc.)
+		if (
+			is_tax('property-category') ||
+			is_tax('property-type') ||
+			is_tax('es_label') ||
+			is_tax('es_status') ||
+			is_tax('es_feature')
+		) {
+			$custom_tax = get_stylesheet_directory() . '/estatik/archive.php';
+			if (file_exists($custom_tax)) {
+				return $custom_tax;
+			}
+		}
+
 		return $template;
-	});
+	}, 999); // Run late to override plugin templates
 }

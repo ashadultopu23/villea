@@ -1,4 +1,5 @@
-<?php $template = get_option('template');
+<?php 
+// $template = get_option('template');
 get_header(); ?>
 
 

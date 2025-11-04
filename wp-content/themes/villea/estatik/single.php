@@ -27,7 +27,7 @@ if (!empty($container_class)) {
 
 		<div class="js-es-single-property-layout">
 			<?php
-			get_template_part('estatik/front/property/partials/property-custom');
+			get_template_part('estatik/partials/property-custom');
 			?>
 
 
@@ -41,9 +41,11 @@ if (!empty($container_class)) {
 		endif; ?>
 	</div>
 
-
 	<?php do_action('es_after_single_wrapper', get_the_ID());
 
 
+	?>
+</div>
+<?php
 
-	get_footer();
+get_footer();
