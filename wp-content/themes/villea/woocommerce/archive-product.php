@@ -172,8 +172,10 @@ if (in_array($shop_display, ['both', 'subcategories']) && !empty($categories)) :
                                 <?php endif; ?>
                                 <?php woocommerce_result_count(); ?>
                             </div>
-                            <div class="layout_area d-flex align-center gap-3">
+                            <div class="layout_area d-flex align-items-center gap-3">
+                                
                                 <?php woocommerce_catalog_ordering(); ?>
+
                                 <div class="nav nav-tabs gap-2 gap-sm-3 flex-nowrap align-items-center layout " id="productTab" role="tablist">
                                     <button class="nav-link border-0 p-0 lh-1 <?php echo esc_attr($grid_active_btn); ?>" id="grid-tab" data-bs-toggle="tab" data-bs-target="#grid-tab-pane" type="button" role="tab" title="Grid" aria-controls="grid-tab-pane" aria-selected="true">
                                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -192,9 +194,18 @@ if (in_array($shop_display, ['both', 'subcategories']) && !empty($categories)) :
                                     </button>
                                 </div>
 
-                                <button type="button" class="btn-filter sidebar_link" data-target="#filterSidebar" aria-controls="filterSidebar" title="Filter">
-                                    <i class="fa-solid fa-filter"></i>
-                                </button>
+                                <?php
+                                // show button for default layout style
+                                if ($shop_sidebar_layout_style === 'default'):
+                                ?>
+                                    <div class="">
+                                        <button type="button" class="btn-filter sidebar_link" data-target="#filterSidebar" aria-controls="filterSidebar" title="Filter">
+                                            <i class="fa-solid fa-filter"></i>
+                                        </button>
+                                    </div>
+                                <?php
+                                endif;
+                                ?>
                             </div>
                         </div>
                     </div>

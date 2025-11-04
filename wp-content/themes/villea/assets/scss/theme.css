@@ -7288,6 +7288,9 @@ caption {
 .tp_shop_top_portion .layout_area .woocommerce-ordering {
   margin-bottom: 0;
 }
+.tp_shop_top_portion .layout_area .woocommerce-ordering select {
+  margin-bottom: 0;
+}
 .tp_shop_top_portion.shop_topbar_position_1 .tp_shop_top_portion_bar {
   flex-direction: row-reverse;
 }

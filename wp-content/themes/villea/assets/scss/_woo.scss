@@ -90,6 +90,9 @@
 
   .layout_area .woocommerce-ordering {
     margin-bottom: 0;
+    select {
+      margin-bottom: 0;
+    }
   }
 
   &.shop_topbar_position_1 {

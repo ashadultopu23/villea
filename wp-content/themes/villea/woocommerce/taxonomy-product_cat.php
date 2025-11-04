@@ -190,7 +190,7 @@ if (in_array($shop_display, ['both', 'subcategories']) && !empty($categories)) :
                                 <?php endif; ?>
                                 <?php woocommerce_result_count(); ?>
                             </div>
-                            <div class="layout_area d-flex align-center gap-3">
+                            <div class="layout_area d-flex align-items-center gap-3">
                                 <?php woocommerce_catalog_ordering(); ?>
                                 <div class="nav nav-tabs gap-2 gap-sm-3 flex-nowrap align-items-center layout " id="productTab" role="tablist">
                                     <button class="nav-link border-0 p-0 lh-1 <?php echo esc_attr($grid_active_btn); ?>" id="grid-tab" data-bs-toggle="tab" data-bs-target="#grid-tab-pane" type="button" role="tab" title="Grid" aria-controls="grid-tab-pane" aria-selected="true">
