@@ -143,8 +143,8 @@ function villea_import_files()
         ),
       ),
 
-      // 🔽 Add your hotspot file here for reference
-      'import_hotspot_file_url'    => 'https://pixelaxis.net/villea/wp-content/themes/villea/demo-data/hotspot-data.txt',
+      //  Add your hotspot file here for reference
+      'import_hotspot_file_url'    => 'https://pixelaxis.net/villea/wp-content/themes/villea/demo-data/image-map-hotspot.json',
 
       'import_preview_image_url'   => 'https://pixelaxis.net/villea/wp-content/themes/villea/screenshot.png',
       'import_notice'              => esc_html__('Caution: For importing demo data please click on "Import Demo Data" button. During demo data installation please do not refresh the page.', 'villea'),
@@ -185,3 +185,91 @@ add_filter('use_widgets_block_editor', '__return_false');
 
 update_option('elementor_disable_color_schemes', 'yes');
 update_option('elementor_disable_typography_schemes', 'yes');
+
+
+/**
+ * Import Image Map Hotspot plugin data - SAFER METHOD
+ */
+function villea_import_image_map_hotspot($file_url)
+{
+  global $wpdb;
+
+  // Download the SQL file
+  $response = wp_remote_get($file_url, array('timeout' => 30));
+
+  if (is_wp_error($response)) {
+    error_log('Image Map Hotspot import failed: ' . $response->get_error_message());
+    return false;
+  }
+
+  $sql_content = wp_remote_retrieve_body($response);
+
+  if (empty($sql_content)) {
+    return false;
+  }
+
+  // Get the table name with current prefix
+  $table_name = $wpdb->prefix . 'imh_6310_style';
+
+  // Check if table exists
+  $charset_collate = $wpdb->get_charset_collate();
+
+  $create_table_sql = "CREATE TABLE IF NOT EXISTS `{$table_name}` (
+    `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+    `name` varchar(100) DEFAULT NULL,
+    `css` longtext DEFAULT NULL,
+    PRIMARY KEY (`id`)
+  ) ENGINE=InnoDB $charset_collate;";
+
+  require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+  dbDelta($create_table_sql);
+
+  // Extract data from INSERT statement using regex
+  preg_match("/INSERT INTO.*?VALUES\s*\((.*?)\);/is", $sql_content, $matches);
+
+  if (!empty($matches[1])) {
+    // Parse the values
+    $values = $matches[1];
+
+    // Extract id, name, and css from the VALUES
+    preg_match("/'(\d+)',\s*'([^']*)',\s*'(.*?)'/s", $values, $data);
+
+    if (count($data) >= 4) {
+      $id = $data[1];
+      $name = $data[2];
+      $css = $data[3];
+
+      // Check if record already exists
+      $existing = $wpdb->get_var($wpdb->prepare(
+        "SELECT id FROM {$table_name} WHERE name = %s",
+        $name
+      ));
+
+      if ($existing) {
+        // Update existing record
+        $wpdb->update(
+          $table_name,
+          array(
+            'name' => $name,
+            'css'  => $css,
+          ),
+          array('id' => $existing),
+          array('%s', '%s'),
+          array('%d')
+        );
+      } else {
+        // Insert new record
+        $wpdb->insert(
+          $table_name,
+          array(
+            'name' => $name,
+            'css'  => $css,
+          ),
+          array('%s', '%s')
+        );
+      }
+    }
+  }
+
+  return true;
+}
