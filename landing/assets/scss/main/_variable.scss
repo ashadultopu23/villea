@@ -1,0 +1,41 @@
+// default font family
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+// default root
+:root {
+  --body-font: "Raleway", sans-serif;
+  --transition: all 0.5s ease-in-out;
+
+  /* Color styles */
+  --p1: 38, 96, 181;
+  --s1: 198, 33, 59;
+
+  --n1: 255, 255, 255;
+  --n2: 240, 240, 240;
+  --n3: 0, 0, 0;
+
+  --gradient-p1: linear-gradient(
+    90deg,
+    #5740ad 7.79%,
+    #cd53a5 72%,
+    #ff9c8d 100%
+  );
+
+  --box-shadow-p1: 0px 492px 138px 0px rgba(0, 0, 0, 0),
+    0px 315px 126px 0px rgba(0, 0, 0, 0.01),
+    0px 177px 106px 0px rgba(0, 0, 0, 0.05),
+    0px 79px 79px 0px rgba(0, 0, 0, 0.09), 0px 20px 43px 0px rgba(0, 0, 0, 0.1);
+
+  --box-shadow-p2: 0px 210px 59px 0px rgba(0, 0, 0, 0),
+    0px 135px 54px 0px rgba(0, 0, 0, 0.01),
+    0px 76px 45px 0px rgba(0, 0, 0, 0.05), 0px 34px 34px 0px rgba(0, 0, 0, 0.09),
+    0px 8px 19px 0px rgba(0, 0, 0, 0.1);
+
+  // hex color
+  --hex-p1: #ff943d;
+  --hex-s1: #2660b5;
+
+  --hex-n1: #ffffff;
+  --hex-n2: #f0f0f0;
+  --hex-n3: #000000;
+}

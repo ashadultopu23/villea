@@ -1,0 +1,280 @@
+.display-one {
+	font-size: 90px;
+}
+
+.display-two {
+	font-size: 80px;
+}
+
+.display-three {
+	font-size: 74px;
+}
+
+.display-four {
+	font-size: 60px;
+}
+
+.display-five {
+	font-size: 56px;
+}
+
+.display-six {
+	font-size: 48px;
+}
+
+.display-ex-one {
+	font-size: 400px;
+	line-height: 76%;
+}
+
+.display-ex-two {
+	font-size: 300px;
+	line-height: 76%;
+}
+
+.display-ex-three {
+	font-size: 250px;
+	line-height: 76%;
+}
+
+.fs-one,
+h1,
+h1 > a {
+	font-size: 76px;
+}
+
+.fs-two,
+h2,
+h2 > a {
+	font-size: 57px;
+}
+
+.fs-three,
+h3,
+h3 > a {
+	font-size: 43px;
+}
+
+.fs-four,
+h4,
+h4 > a {
+	font-size: 32px;
+}
+
+.fs-five,
+h5,
+h5 > a {
+	font-size: 24px;
+	line-height: 150%;
+}
+
+.fs-six,
+h6,
+h6 > a {
+	font-size: 18px;
+	line-height: 150%;
+}
+
+.fs-seven {
+	font-size: 16px;
+	line-height: 150%;
+}
+
+.fs-eight {
+	font-size: 14px;
+	line-height: 150%;
+}
+
+.fs-nine {
+	font-size: 12px;
+	line-height: 150%;
+}
+
+table thead tr th {
+	font-size: 18px;
+	line-height: 150%;
+}
+
+a, 
+p,
+button,
+span,
+label,
+li {
+	font-size: 16px;
+	line-height: 150%;
+}
+
+@media (max-width: 1199px) {
+	h1, h1>a {
+		font-size: 57px;
+	}
+	h2, h2>a {
+		font-size: 43px;
+	}
+	.preloader {
+		background-size: 30%;
+	}
+	.display-ex-one {
+		font-size: 140px;
+	}
+	.display-ex-two {
+		font-size: 250px;
+	}
+	.display-ex-three {
+		font-size: 210px;
+	}
+
+}
+
+.pt-120 {
+	padding-top: 120px;
+}
+
+.pb-120 {
+	padding-bottom: 120px;
+}
+
+@media (max-width: 991px) {
+	// Normalize
+	.display-one {
+		font-size: 72px;
+	}
+	
+	.display-two {
+		font-size: 64px;
+	}
+	
+	.display-three {
+		font-size: 56px;
+	}
+	
+	.display-four {
+		font-size: 48px;
+	}
+	
+	.display-five {
+		font-size: 42px;
+	}
+	
+	.display-six {
+		font-size: 32px;
+	}
+	
+	.display-ex-one {
+		font-size: 120px;
+	}
+	.display-ex-two {
+		font-size: 180px;
+	}
+
+	.fs-one,
+	h1,
+	h1 > a {
+		font-size: 40px;
+	}
+	
+	.fs-two,
+	h2,
+	h2 > a {
+		font-size: 32px;
+	}
+	
+	.fs-three,
+	h3,
+	h3 > a {
+		font-size: 24px;
+	}
+	
+	.fs-four,
+	h4,
+	h4 > a {
+		font-size: 20px;
+	}
+	
+	.fs-five,
+	h5,
+	h5 > a {
+		font-size: 18px;
+	}
+	
+	.fs-six,
+	h6,
+	h6 > a {
+		font-size: 16px;
+	}
+	
+	.fs-seven {
+		font-size: 14px;
+	}
+	
+	.fs-eight {
+		font-size: 12px;
+	}
+	
+	table thead tr th {
+		font-size: 15px;
+	}
+	
+	a,
+	p,
+	span,
+	button,
+	label,
+	li {
+		font-size: 14px;
+	}
+
+	.pt-120 {
+		padding-top: 60px;
+	}
+	.pb-120 {
+		padding-bottom: 60px;
+	}
+	.display-ex-three {
+		font-size: 160px;
+	}
+}
+
+@media (max-width: 575px) {
+	.display-one {
+		font-size: 56px;
+	}
+	
+	.display-two {
+		font-size: 48px;
+	}
+	
+	.display-three {
+		font-size: 42px;
+	}
+	
+	.display-four {
+		font-size: 32px;
+	}
+	
+	.display-five {
+		font-size: 24px;
+	}
+	
+	.display-six {
+		font-size: 32px;
+	}
+
+	.display-ex-one {
+		font-size: 70px;
+	}
+	.display-ex-two {
+		font-size: 160px;
+	}
+	.display-ex-three {
+		font-size: 100px;
+	}
+
+	.pt-120 {
+		padding-top: 50px;
+	}
+	.pb-120 {
+		padding-bottom: 50px;
+	}
+}
