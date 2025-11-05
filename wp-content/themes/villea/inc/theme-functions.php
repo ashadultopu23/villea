@@ -221,7 +221,7 @@ function villea_import_image_map_hotspot($file_url)
     PRIMARY KEY (`id`)
   ) ENGINE=InnoDB $charset_collate;";
 
-  require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+  get_template_part(ABSPATH . 'wp-admin/includes/upgrade.php');
   dbDelta($create_table_sql);
 
   // Extract data from INSERT statement using regex

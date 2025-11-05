@@ -59,7 +59,7 @@ function compare_enqueue_scripts()
 	wp_enqueue_script('compare-js', get_stylesheet_directory_uri() . '/assets/js/compare.js', array('jquery'), '1.0', true);
 
 	wp_localize_script('compare-js', 'myTheme', array(
-		'siteUrl' => get_site_url()
+		'siteUrl' => get_home_url(),
 	));
 }
 add_action('wp_enqueue_scripts', 'compare_enqueue_scripts');
