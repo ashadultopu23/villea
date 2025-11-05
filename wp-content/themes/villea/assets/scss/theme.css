@@ -6851,15 +6851,6 @@ article.sticky .blog-title:hover a:after {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-.search-no-results .no-results .search-form button:before {
-  font-family: "tp-icons";
-  font-size: 18px;
-  content: "\e819";
-  position: absolute;
-  right: 20px;
-  top: 15px;
-  color: var(--btnColor);
-}
 
 /* ------------------------------------
 
