@@ -107,11 +107,6 @@ function my_theme_register_required_plugins()
 			'slug'               => 'estatik',
 			'required'           => true,
 		),
-		array(
-			'name'               => 'Image Hotspot - Map Image Annotations',
-			'slug'               => 'image-map-hotspots',
-			'required'           => false,
-		),
 
 		array(
 			'name'               => 'Woocommerce',

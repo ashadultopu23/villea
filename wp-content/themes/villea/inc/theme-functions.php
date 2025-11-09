@@ -143,9 +143,6 @@ function villea_import_files()
         ),
       ),
 
-      //  Add your hotspot file here for reference
-      'import_hotspot_file_url'    => 'https://pixelaxis.net/villea/wp-content/themes/villea/demo-data/image-map-hotspot.json',
-
       'import_preview_image_url'   => 'https://pixelaxis.net/villea/wp-content/themes/villea/screenshot.png',
       'import_notice'              => esc_html__('Caution: For importing demo data please click on "Import Demo Data" button. During demo data installation please do not refresh the page.', 'villea'),
       'preview_url'                => 'https://pixelaxis.net/villea/',
