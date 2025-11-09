@@ -444,6 +444,7 @@
 }
 .es-properties.es-properties--hfm {
   padding: 0 12px;
+  width: calc(100vw - 24px) !important;
 }
 @media (max-width: 1599px) and (min-width: 1200px) {
   .es-properties.es-properties--hfm .es-properties__list .js-es-listings {
