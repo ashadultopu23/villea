@@ -263,11 +263,11 @@ if (
                                                         ?>
 
                                                         <div class="title-wrap">
-                                                            <h3 class="blog-title">
+                                                            <h4 class="blog-title">
                                                                 <a href="<?php the_permalink(); ?>">
                                                                     <?php the_title(); ?>
                                                                 </a>
-                                                            </h3>
+                                                            </h4>
                                                         </div>
 
                                                         <div class="blog-desc">

@@ -1,5 +1,5 @@
 <?php
-get_header(); 
+get_header();
 
 global $villea_option;
 $header_width_meta = get_post_meta(get_the_ID(), 'header_width_custom', true);
@@ -178,11 +178,11 @@ if (
                                                         ?>
 
                                                         <div class="title-wrap">
-                                                            <h3 class="blog-title">
+                                                            <h4 class="blog-title">
                                                                 <a href="<?php the_permalink(); ?>">
                                                                     <?php the_title(); ?>
                                                                 </a>
-                                                            </h3>
+                                                            </h4>
                                                         </div>
 
                                                         <div class="blog-desc">
@@ -253,11 +253,11 @@ if (
                                                             ?>
 
                                                             <div class="title-wrap">
-                                                                <h3 class="blog-title">
+                                                                <h4 class="blog-title">
                                                                     <a href="<?php the_permalink(); ?>">
                                                                         <?php the_title(); ?>
                                                                     </a>
-                                                                </h3>
+                                                                </h4>
                                                             </div>
 
                                                             <div class="blog-desc">
