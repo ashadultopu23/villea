@@ -1,4 +1,14 @@
 <?php
+
+/**
+ * Template Name: Single Property
+ * Template Post Type: property
+ */
+
+$partials_path = plugin_dir_path(__FILE__) . 'partials/property-custom.php';
+
+
+
 get_header();
 
 global $villea_option;
@@ -24,10 +34,11 @@ if (!empty($container_class)) {
 	<?php do_action('es_before_single_wrapper', get_the_ID()); ?>
 
 	<div class='js-es-single es-single es-single--<?php echo ests('single_layout'); ?>' data-layout="<?php echo ests('single_layout'); ?>">
-
 		<div class="js-es-single-property-layout">
 			<?php
-			get_template_part('estatik/partials/property-custom');
+			if (file_exists($partials_path)) {
+				include $partials_path;
+			}
 			?>
 
 

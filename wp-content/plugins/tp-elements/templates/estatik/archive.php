@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * The template for displaying archive pages for properties and property types
+ *
+ * @package Villea
+ */
+
 get_header(); ?>
 
 

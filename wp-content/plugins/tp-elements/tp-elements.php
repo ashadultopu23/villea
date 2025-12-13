@@ -32,15 +32,52 @@ add_filter('upload_mimes', 'hyperai_mime_types');
 
 
 
-add_filter('single_template', function ($single) {
-	global $post;
+if (class_exists('Estatik')) {
 
-	if ($post->post_type === 'tpelements_pro') {
-		$plugin_template = plugin_dir_path(__FILE__) . 'templates/single-tpelements_pro.php';
-		if (file_exists($plugin_template)) {
-			return $plugin_template;
+	add_filter('template_include', function ($template) {
+
+		$base_path = plugin_dir_path(__FILE__) . 'templates/estatik/';
+
+		// 1️⃣ SINGLE PROPERTY
+		if (is_singular(array('property', 'properties'))) {
+			$single = $base_path . 'single.php';
+			if (file_exists($single)) {
+				return $single;
+			}
 		}
-	}
 
-	return $single;
-});
+		// 2️⃣ PROPERTY ARCHIVE
+		if (is_post_type_archive(array('property', 'properties'))) {
+			$archive = $base_path . 'archive.php';
+			if (file_exists($archive)) {
+				return $archive;
+			}
+		}
+
+		// 3️⃣ ESTATIK TAXONOMIES
+		if (is_tax(array(
+			'es_location',
+			'es_category',
+			'es_type',
+			'es_rent_period',
+			'es_label',
+			'es_status',
+			'es_parking',
+			'es_roof',
+			'es_exterior_material',
+			'es_basement',
+			'es_floor_covering',
+			'es_feature',
+			'es_amenity',
+			'es_neighborhood',
+			'es_tag'
+		))) {
+			$archive = $base_path . 'archive.php';
+			if (file_exists($archive)) {
+				return $archive;
+			}
+		}
+
+		return $template;
+	}, 99); // Late enough, but safe
+}
