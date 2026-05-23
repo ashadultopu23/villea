@@ -205,9 +205,7 @@ if (! function_exists('villea_setup')) :
 	 * If you're building a theme based on villea, use a find and replace
 	 * to change 'villea' to the name of your theme in all the template files.
 	 */
-		add_action('init', function () {
-			load_theme_textdomain('villea', get_template_directory() . '/languages');
-		});
+		load_theme_textdomain('villea', get_template_directory() . '/languages');
 	}
 endif;
 add_action('after_setup_theme', 'villea_setup');
