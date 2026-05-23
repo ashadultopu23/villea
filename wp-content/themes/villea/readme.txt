@@ -28,3 +28,17 @@ GNU General Public License for more details.
 
 
 This theme bundles the following third-party resources:
+
+
+
+
+
+
+========== Change log ==========
+
+Data 23-05-2026
+version 1.0.2
+
+    - woo commerce inline enqueue issue solve.
+    - text domain issue solve.
+    - estatik plugin data render issue solve. 
