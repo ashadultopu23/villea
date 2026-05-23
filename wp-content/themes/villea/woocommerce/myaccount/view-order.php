@@ -15,7 +15,6 @@
  *
  * @see     https://woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 10.1.0
  */
 
 defined('ABSPATH') || exit;
@@ -30,7 +29,6 @@ $notes = $order->get_customer_order_notes();
 		 *
 		 * @param string $order_status The order status text.
 		 *
-		 * @since 10.1.0
 		 */
 		apply_filters(
 			'woocommerce_order_details_status',

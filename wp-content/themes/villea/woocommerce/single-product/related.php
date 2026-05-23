@@ -65,25 +65,7 @@ if ($related_products) :
 				<div class="swiper-button-next"></div>
 				<div class="swiper-button-prev"></div>
 			<?php else: ?>
-
-				<?php foreach ($related_products as $related_product) : ?>
-					<?php
-							// $post_object = get_post($related_product->get_id());
-							// setup_postdata($GLOBALS['post'] = $post_object);
-
-							// if ($slider_related_products) {
-							// 	echo '<div class="product-col">';
-							// 	wc_get_template_part('content', 'product-related');
-							// 	echo '</div>';
-							// } else {
-							// 	wc_get_template_part('content', 'product-related');
-							// }
-					?>
-				<?php endforeach; ?>
-
-				<?php
-						woocommerce_product_loop_end();
-				?>
+				<?php woocommerce_product_loop_end(); ?>
 			<?php endif; ?>
 
 		</section>
