@@ -27,7 +27,8 @@ if (! defined('ABSPATH')) {
 
 <div class="es-single__left-slider">
     <?php $instance = es_get_shortcode_instance('property_single_gallery');
-    echo wp_kses_post($instance->get_content()); ?>
+    // Estatik already prepares this markup; extra kses strips inline gallery styles.
+    echo $instance->get_content(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 </div>
 
 
