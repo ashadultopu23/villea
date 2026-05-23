@@ -73,8 +73,6 @@
 .rs-timecounter.background_style .time_circles > div {
   opacity: 1;
   visibility: visible;
-  padding: 20px;
-  padding-top: 30px;
 }
 .rs-timecounter.background_style .time_circles > div span {
   background: transparent;
@@ -83,6 +81,10 @@
 .rs-timecounter.background_style .time_circles > div h4 {
   position: relative;
   z-index: 1;
+}
+.rs-timecounter.background_style .time_circles > div {
+  padding: 20px;
+  padding-top: 30px;
 }
 .rs-timecounter.background_style .time_circles > div:after {
   content: "";

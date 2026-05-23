@@ -127,123 +127,6 @@
 }
 
 /*RS Image Hover Effect Animation*/
-.rs-image-hover-effect {
-  /* rs-image-fade-in-up
-     ----------------------------- */
-  /* rs-image-fade-in-down
-     ----------------------------- */
-  /* rs-image-fade-in-left
-     ----------------------------- */
-  /* rs-image-fade-in-right
-     ----------------------------- */
-  /* rs-image-push-*
-     ----------------------------- */
-  /* rs-image-push-up
-     ----------------------------- */
-  /* rs-image-push-down
-     ----------------------------- */
-  /* rs-image-push-left
-     ----------------------------- */
-  /* rs-image-push--right
-     ----------------------------- */
-  /* rs-image-slide-*
-     ----------------------------- */
-  /* rs-image-slide-up
-     ----------------------------- */
-  /* rs-image-slide-down
-     ----------------------------- */
-  /* rs-image-slide-left
-     ----------------------------- */
-  /* rs-image-slide-right
-     ----------------------------- */
-  /* rs-image-reveal-*
-     ----------------------------- */
-  /* rs-image-reveal-up
-     ----------------------------- */
-  /* rs-image-reveal-down
-     ----------------------------- */
-  /* rs-image-reveal-left
-     ----------------------------- */
-  /* rs-image-reveal-right
-     ----------------------------- */
-  /* rs-image-hinge-*
-     ----------------------------- */
-  /* rs-image-hinge-up
-     ----------------------------- */
-  /* rs-image-hinge-down
-     ----------------------------- */
-  /* rs-image-hinge-left
-     ----------------------------- */
-  /* rs-image-hinge-right
-     ----------------------------- */
-  /* rs-image-flip-*
-     ----------------------------- */
-  /* rs-image-flip-horiz
-     ----------------------------- */
-  /* rs-image-flip-vert
-     ----------------------------- */
-  /* rs-image-flip-diag-1
-     ----------------------------- */
-  /* rs-image-flip-diag-2
-     ----------------------------- */
-  /* rs-image-shutter-out-*
-     ----------------------------- */
-  /* rs-image-shutter-out-horiz
-     ----------------------------- */
-  /* rs-image-shutter-out-vert
-     ----------------------------- */
-  /* rs-image-shutter-out-diag-1
-     ----------------------------- */
-  /* rs-image-shutter-out-diag-2
-     ----------------------------- */
-  /* rs-image-shutter-in-*
-     ----------------------------- */
-  /* rs-image-shutter-in-horiz
-     ----------------------------- */
-  /* rs-image-shutter-in-vert
-     ----------------------------- */
-  /* rs-image-shutter-in-out-horiz
-     ----------------------------- */
-  /* rs-image-shutter-in-out-vert
-     ----------------------------- */
-  /* rs-image-shutter-in-out-diag-1
-     ----------------------------- */
-  /* rs-image-shutter-in-out-diag-2
-     ----------------------------- */
-  /* rs-image-fold*
-     ----------------------------- */
-  /* rs-image-fold-up
-     ----------------------------- */
-  /* rs-image-fold-down
-     ----------------------------- */
-  /* rs-image-fold-left
-     ----------------------------- */
-  /* rs-image-fold-right
-     ----------------------------- */
-  /* rs-image-zoom-in
-     ----------------------------- */
-  /* rs-image-zoom-out*
-     ----------------------------- */
-  /* rs-image-zoom-out
-     ----------------------------- */
-  /* rs-image-zoom-out-up
-     ----------------------------- */
-  /* rs-image-zoom-out-down
-     ----------------------------- */
-  /* rs-image-zoom-out-left
-     ----------------------------- */
-  /* rs-image-zoom-out-right
-     ----------------------------- */
-  /* rs-image-zoom-out-flip-horiz
-     ----------------------------- */
-  /* rs-image-zoom-out-flip-vert
-     ----------------------------- */
-  /* rs-image-blur
-     ----------------------------- */
-  /*Image Moving Part CSS*/
-  /*Long Image Top to Bottom CSS*/
-  /*End RS Image Hover Effect Animation*/
-}
 .rs-image-hover-effect [class^=rs-image-fade] .image-content,
 .rs-image-hover-effect [class*=" rs-image-fade"] .image-content {
   opacity: 0;
@@ -258,21 +141,45 @@
 .rs-image-hover-effect [class*=" rs-image-fade"]:hover .image-content {
   transform: translate(0, 0);
 }
+.rs-image-hover-effect {
+  /* rs-image-fade-in-up
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-fade-in-up .image-content {
   transform: translate(0, 15%);
+}
+.rs-image-hover-effect {
+  /* rs-image-fade-in-down
+     ----------------------------- */
 }
 .rs-image-hover-effect .rs-image-fade-in-down .image-content {
   transform: translate(0, -15%);
 }
+.rs-image-hover-effect {
+  /* rs-image-fade-in-left
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-fade-in-left .image-content {
   transform: translate(-15%, 0);
+}
+.rs-image-hover-effect {
+  /* rs-image-fade-in-right
+     ----------------------------- */
 }
 .rs-image-hover-effect .rs-image-fade-in-right .image-content {
   transform: translate(15%, 0);
 }
+.rs-image-hover-effect {
+  /* rs-image-push-*
+     ----------------------------- */
+}
 .rs-image-hover-effect [class^=rs-image-push-]:hover .image-content,
 .rs-image-hover-effect [class*=" rs-image-push-"]:hover .image-content {
   transform: translate(0, 0);
+}
+.rs-image-hover-effect {
+  /* rs-image-push-up
+     ----------------------------- */
 }
 .rs-image-hover-effect .rs-image-push-up .image-content {
   transform: translateY(100%);
@@ -280,11 +187,19 @@
 .rs-image-hover-effect .rs-image-push-up:hover .image-part img {
   transform: translateY(-100%);
 }
+.rs-image-hover-effect {
+  /* rs-image-push-down
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-push-down .image-content {
   transform: translateY(-100%);
 }
 .rs-image-hover-effect .rs-image-push-down:hover .image-part img {
   transform: translateY(100%);
+}
+.rs-image-hover-effect {
+  /* rs-image-push-left
+     ----------------------------- */
 }
 .rs-image-hover-effect .rs-image-push-left .image-content {
   transform: translateX(100%);
@@ -292,27 +207,55 @@
 .rs-image-hover-effect .rs-image-push-left:hover .image-part img {
   transform: translateX(-100%);
 }
+.rs-image-hover-effect {
+  /* rs-image-push--right
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-push-right .image-content {
   transform: translateX(-100%);
 }
 .rs-image-hover-effect .rs-image-push-right:hover .image-part img {
   transform: translateX(100%);
 }
+.rs-image-hover-effect {
+  /* rs-image-slide-*
+     ----------------------------- */
+}
 .rs-image-hover-effect [class^=rs-image-slide-]:hover .image-content,
 .rs-image-hover-effect [class*=" rs-image-slide-"]:hover .image-content {
   transform: translate(0, 0);
 }
+.rs-image-hover-effect {
+  /* rs-image-slide-up
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-slide-up .image-content {
   transform: translateY(100%);
+}
+.rs-image-hover-effect {
+  /* rs-image-slide-down
+     ----------------------------- */
 }
 .rs-image-hover-effect .rs-image-slide-down .image-content {
   transform: translateY(-100%);
 }
+.rs-image-hover-effect {
+  /* rs-image-slide-left
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-slide-left .image-content {
   transform: translateX(100%);
 }
+.rs-image-hover-effect {
+  /* rs-image-slide-right
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-slide-right .image-content {
   transform: translateX(-100%);
+}
+.rs-image-hover-effect {
+  /* rs-image-reveal-*
+     ----------------------------- */
 }
 .rs-image-hover-effect [class^=rs-image-reveal-]:before,
 .rs-image-hover-effect [class*=" rs-image-reveal-"]:before {
@@ -336,17 +279,37 @@
   opacity: 1;
   transition-delay: 0.21s;
 }
+.rs-image-hover-effect {
+  /* rs-image-reveal-up
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-reveal-up:before {
   transform: translateY(100%);
+}
+.rs-image-hover-effect {
+  /* rs-image-reveal-down
+     ----------------------------- */
 }
 .rs-image-hover-effect .rs-image-reveal-down:before {
   transform: translateY(-100%);
 }
+.rs-image-hover-effect {
+  /* rs-image-reveal-left
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-reveal-left:before {
   transform: translateX(100%);
 }
+.rs-image-hover-effect {
+  /* rs-image-reveal-right
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-reveal-right:before {
   transform: translateX(-100%);
+}
+.rs-image-hover-effect {
+  /* rs-image-hinge-*
+     ----------------------------- */
 }
 .rs-image-hover-effect [class^=rs-image-hinge-],
 .rs-image-hover-effect [class*=" rs-image-hinge-"] {
@@ -366,6 +329,10 @@
   opacity: 1;
   transition-delay: 0.21s;
 }
+.rs-image-hover-effect {
+  /* rs-image-hinge-up
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-hinge-up img {
   transform-origin: 50% 0%;
 }
@@ -378,6 +345,10 @@
 }
 .rs-image-hover-effect .rs-image-hinge-up:hover .image-content {
   transform: rotateX(0);
+}
+.rs-image-hover-effect {
+  /* rs-image-hinge-down
+     ----------------------------- */
 }
 .rs-image-hover-effect .rs-image-hinge-down img {
   transform-origin: 50% 100%;
@@ -393,6 +364,10 @@
 .rs-image-hover-effect .rs-image-hinge-down:hover .image-content {
   transform: rotateX(0);
 }
+.rs-image-hover-effect {
+  /* rs-image-hinge-left
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-hinge-left img {
   transform-origin: 0% 50%;
 }
@@ -406,6 +381,10 @@
 .rs-image-hover-effect .rs-image-hinge-left:hover .image-content {
   transform: rotateY(0);
 }
+.rs-image-hover-effect {
+  /* rs-image-hinge-right
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-hinge-right img {
   transform-origin: 100% 50%;
 }
@@ -418,6 +397,10 @@
 }
 .rs-image-hover-effect .rs-image-hinge-right:hover .image-content {
   transform: rotateY(0);
+}
+.rs-image-hover-effect {
+  /* rs-image-flip-*
+     ----------------------------- */
 }
 .rs-image-hover-effect [class^=rs-image-flip-],
 .rs-image-hover-effect [class*=" rs-image-flip-"] {
@@ -440,6 +423,10 @@
   opacity: 1;
   transition-delay: 0.14s;
 }
+.rs-image-hover-effect {
+  /* rs-image-flip-horiz
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-flip-horiz .image-content {
   transform: rotateX(90deg);
   transform-origin: 0% 50%;
@@ -449,6 +436,10 @@
 }
 .rs-image-hover-effect .rs-image-flip-horiz:hover .image-content {
   transform: rotateX(0deg);
+}
+.rs-image-hover-effect {
+  /* rs-image-flip-vert
+     ----------------------------- */
 }
 .rs-image-hover-effect .rs-image-flip-vert .image-content {
   transform: rotateY(90deg);
@@ -460,6 +451,10 @@
 .rs-image-hover-effect .rs-image-flip-vert:hover .image-content {
   transform: rotateY(0deg);
 }
+.rs-image-hover-effect {
+  /* rs-image-flip-diag-1
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-flip-diag-1 .image-content {
   transform: rotate3d(1, -1, 0, 100deg);
 }
@@ -469,6 +464,10 @@
 .rs-image-hover-effect .rs-image-flip-diag-1:hover .image-content {
   transform: rotate3d(0, 0, 0, 0deg);
 }
+.rs-image-hover-effect {
+  /* rs-image-flip-diag-2
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-flip-diag-2 .image-content {
   transform: rotate3d(1, 1, 0, 100deg);
 }
@@ -477,6 +476,10 @@
 }
 .rs-image-hover-effect .rs-image-flip-diag-2:hover .image-content {
   transform: rotate3d(0, 0, 0, 0deg);
+}
+.rs-image-hover-effect {
+  /* rs-image-shutter-out-*
+     ----------------------------- */
 }
 .rs-image-hover-effect [class^=rs-image-shutter-out-]:before,
 .rs-image-hover-effect [class*=" rs-image-shutter-out-"]:before {
@@ -498,6 +501,10 @@
   opacity: 1;
   transition-delay: 0.105s;
 }
+.rs-image-hover-effect {
+  /* rs-image-shutter-out-horiz
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-shutter-out-horiz:before {
   left: 50%;
   right: 50%;
@@ -508,6 +515,10 @@
   left: 0;
   right: 0;
 }
+.rs-image-hover-effect {
+  /* rs-image-shutter-out-vert
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-shutter-out-vert:before {
   top: 50%;
   bottom: 50%;
@@ -517,6 +528,10 @@
 .rs-image-hover-effect .rs-image-shutter-out-vert:hover:before {
   top: 0;
   bottom: 0;
+}
+.rs-image-hover-effect {
+  /* rs-image-shutter-out-diag-1
+     ----------------------------- */
 }
 .rs-image-hover-effect .rs-image-shutter-out-diag-1:before {
   top: 50%;
@@ -529,6 +544,10 @@
   top: -35%;
   bottom: -35%;
 }
+.rs-image-hover-effect {
+  /* rs-image-shutter-out-diag-2
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-shutter-out-diag-2:before {
   top: 50%;
   bottom: 50%;
@@ -539,6 +558,10 @@
 .rs-image-hover-effect .rs-image-shutter-out-diag-2:hover:before {
   top: -35%;
   bottom: -35%;
+}
+.rs-image-hover-effect {
+  /* rs-image-shutter-in-*
+     ----------------------------- */
 }
 .rs-image-hover-effect [class^=rs-image-shutter-in-]:after,
 .rs-image-hover-effect [class^=rs-image-shutter-in-]:before,
@@ -567,6 +590,10 @@
   opacity: 1;
   transition-delay: 0.21s;
 }
+.rs-image-hover-effect {
+  /* rs-image-shutter-in-horiz
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-shutter-in-horiz:after,
 .rs-image-hover-effect .rs-image-shutter-in-horiz:before {
   width: 0;
@@ -576,6 +603,10 @@
 .rs-image-hover-effect .rs-image-shutter-in-horiz:hover:before {
   width: 50%;
 }
+.rs-image-hover-effect {
+  /* rs-image-shutter-in-vert
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-shutter-in-vert:after,
 .rs-image-hover-effect .rs-image-shutter-in-vert:before {
   height: 0;
@@ -584,6 +615,10 @@
 .rs-image-hover-effect .rs-image-shutter-in-vert:hover:after,
 .rs-image-hover-effect .rs-image-shutter-in-vert:hover:before {
   height: 50%;
+}
+.rs-image-hover-effect {
+  /* rs-image-shutter-in-out-horiz
+     ----------------------------- */
 }
 .rs-image-hover-effect .rs-image-shutter-in-out-horiz:after,
 .rs-image-hover-effect .rs-image-shutter-in-out-horiz:before {
@@ -595,6 +630,10 @@
 .rs-image-hover-effect .rs-image-shutter-in-out-horiz:hover:before {
   width: 100%;
 }
+.rs-image-hover-effect {
+  /* rs-image-shutter-in-out-vert
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-shutter-in-out-vert:after,
 .rs-image-hover-effect .rs-image-shutter-in-out-vert:before {
   height: 0;
@@ -604,6 +643,10 @@
 .rs-image-hover-effect .rs-image-shutter-in-out-vert:hover:after,
 .rs-image-hover-effect .rs-image-shutter-in-out-vert:hover:before {
   height: 100%;
+}
+.rs-image-hover-effect {
+  /* rs-image-shutter-in-out-diag-1
+     ----------------------------- */
 }
 .rs-image-hover-effect .rs-image-shutter-in-out-diag-1:after,
 .rs-image-hover-effect .rs-image-shutter-in-out-diag-1:before {
@@ -624,6 +667,10 @@
 .rs-image-hover-effect .rs-image-shutter-in-out-diag-1:hover:before {
   transform: skew(-45deg) translateX(50%);
 }
+.rs-image-hover-effect {
+  /* rs-image-shutter-in-out-diag-2
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-shutter-in-out-diag-2:after,
 .rs-image-hover-effect .rs-image-shutter-in-out-diag-2:before {
   width: 200%;
@@ -642,6 +689,10 @@
 }
 .rs-image-hover-effect .rs-image-shutter-in-out-diag-2:hover:before {
   transform: skew(45deg) translateX(0%);
+}
+.rs-image-hover-effect {
+  /* rs-image-fold*
+     ----------------------------- */
 }
 .rs-image-hover-effect [class^=rs-image-fold],
 .rs-image-hover-effect [class*=" rs-image-fold"] {
@@ -667,6 +718,10 @@
   opacity: 1;
   transition-delay: 0.21s;
 }
+.rs-image-hover-effect {
+  /* rs-image-fold-up
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-fold-up .image-part img {
   transform-origin: 50% 0%;
 }
@@ -676,6 +731,10 @@
 }
 .rs-image-hover-effect .rs-image-fold-up:hover .image-part img {
   transform: rotateX(90deg) scale(0.6) translateY(50%);
+}
+.rs-image-hover-effect {
+  /* rs-image-fold-down
+     ----------------------------- */
 }
 .rs-image-hover-effect .rs-image-fold-down .image-part img {
   transform-origin: 50% 100%;
@@ -687,6 +746,10 @@
 .rs-image-hover-effect .rs-image-fold-down:hover .image-part img {
   transform: rotateX(-90deg) scale(0.6) translateY(-50%);
 }
+.rs-image-hover-effect {
+  /* rs-image-fold-left
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-fold-left .image-part img {
   transform-origin: 0% 50%;
 }
@@ -696,6 +759,10 @@
 }
 .rs-image-hover-effect .rs-image-fold-left:hover .image-part img {
   transform: rotateY(-90deg) scale(0.6) translateX(50%);
+}
+.rs-image-hover-effect {
+  /* rs-image-fold-right
+     ----------------------------- */
 }
 .rs-image-hover-effect .rs-image-fold-right .image-part img {
   transform-origin: 100% 50%;
@@ -707,6 +774,10 @@
 .rs-image-hover-effect .rs-image-fold-right:hover .image-part img {
   transform: rotateY(90deg) scale(0.6) translateX(-50%);
 }
+.rs-image-hover-effect {
+  /* rs-image-zoom-in
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-zoom-in .image-content {
   opacity: 0;
   transform: scale(0.5);
@@ -714,6 +785,10 @@
 .rs-image-hover-effect .rs-image-zoom-in:hover .image-content {
   transform: scale(1);
   opacity: 1;
+}
+.rs-image-hover-effect {
+  /* rs-image-zoom-out*
+     ----------------------------- */
 }
 .rs-image-hover-effect [class^=rs-image-zoom-out] .image-content,
 .rs-image-hover-effect [class*=" rs-image-zoom-out"] .image-content {
@@ -729,9 +804,17 @@
   opacity: 1;
   transition-delay: 0.35s;
 }
+.rs-image-hover-effect {
+  /* rs-image-zoom-out
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-zoom-out:hover .image-part img {
   transform: scale(0.5);
   opacity: 0;
+}
+.rs-image-hover-effect {
+  /* rs-image-zoom-out-up
+     ----------------------------- */
 }
 .rs-image-hover-effect .rs-image-zoom-out-up:hover .image-part img,
 .rs-image-hover-effect .rs-image-zoom-out-up.hover .image-part img {
@@ -749,6 +832,10 @@
     opacity: 0.5;
   }
 }
+.rs-image-hover-effect {
+  /* rs-image-zoom-out-down
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-zoom-out-down:hover .image-part img,
 .rs-image-hover-effect .rs-image-zoom-out-down.hover .image-part img {
   animation: rs-image-zoom-out-down 0.4025s linear;
@@ -764,6 +851,10 @@
     transform: scale(0.8) translateY(150%);
     opacity: 0.5;
   }
+}
+.rs-image-hover-effect {
+  /* rs-image-zoom-out-left
+     ----------------------------- */
 }
 .rs-image-hover-effect .rs-image-zoom-out-left:hover .image-part img,
 .rs-image-hover-effect .rs-image-zoom-out-left.hover .image-part img {
@@ -781,6 +872,10 @@
     opacity: 0.5;
   }
 }
+.rs-image-hover-effect {
+  /* rs-image-zoom-out-right
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-zoom-out-right:hover .image-part img,
 .rs-image-hover-effect .rs-image-zoom-out-right.hover .image-part img {
   animation: rs-image-zoom-out-right 0.4025s linear;
@@ -796,6 +891,10 @@
     transform: scale(0.8) translateX(150%);
     opacity: 0.5;
   }
+}
+.rs-image-hover-effect {
+  /* rs-image-zoom-out-flip-horiz
+     ----------------------------- */
 }
 .rs-image-hover-effect .rs-image-zoom-out-flip-horiz {
   perspective: 50em;
@@ -816,6 +915,10 @@
   opacity: 1;
   transition-delay: 0.35s;
 }
+.rs-image-hover-effect {
+  /* rs-image-zoom-out-flip-vert
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-zoom-out-flip-vert {
   perspective: 50em;
 }
@@ -835,6 +938,10 @@
   opacity: 1;
   transition-delay: 0.35s;
 }
+.rs-image-hover-effect {
+  /* rs-image-blur
+     ----------------------------- */
+}
 .rs-image-hover-effect .rs-image-blur .image-content {
   opacity: 0;
 }
@@ -846,6 +953,9 @@
 .rs-image-hover-effect .rs-image-blur:hover .image-content {
   opacity: 1;
   transition-delay: 0.21s;
+}
+.rs-image-hover-effect {
+  /*Image Moving Part CSS*/
 }
 .rs-image-hover-effect .rs-image-move-left .image-part img,
 .rs-image-hover-effect .rs-image-move-right .image-part img,
@@ -869,6 +979,9 @@
 .rs-image-hover-effect .rs-image-move-top:hover .image-part img {
   transform-origin: bottom;
 }
+.rs-image-hover-effect {
+  /*Long Image Top to Bottom CSS*/
+}
 .rs-image-hover-effect .rs-image-top-down .image-part {
   max-height: 400px;
   transition: 3s;
@@ -889,4 +1002,7 @@
 }
 .rs-image-hover-effect .rs-image-top-down:hover .image-part img {
   transform: translateY(-100%);
+}
+.rs-image-hover-effect {
+  /*End RS Image Hover Effect Animation*/
 }/*# sourceMappingURL=image-hover.css.map */

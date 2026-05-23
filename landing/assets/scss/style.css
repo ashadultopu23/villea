@@ -840,8 +840,6 @@ select {
   width: 220px;
   min-width: 220px;
   height: 220px;
-  border-radius: 50%;
-  border: 1px solid rgba(var(--p1), 1);
 }
 @media (max-width: 991px) {
   .box-style.box-third {
@@ -856,6 +854,10 @@ select {
     min-width: 150px;
     height: 150px;
   }
+}
+.box-style.box-third {
+  border-radius: 50%;
+  border: 1px solid rgba(var(--p1), 1);
 }
 .box-style.box-third::before {
   background-color: rgba(var(--n1), 1);
@@ -1890,15 +1892,17 @@ iframe {
   width: 100%;
   min-height: 450px;
   background-position: top;
-  background-size: cover;
-  transition: all 9s ease;
-  position: relative;
 }
 .prebuilt-websites .home-thumb img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.prebuilt-websites .home-thumb {
+  background-size: cover;
+  transition: all 9s ease;
+  position: relative;
 }
 .prebuilt-websites .coming-soon {
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -1918,15 +1922,17 @@ iframe {
 .home-thumb {
   width: 100%;
   background-position: top;
-  background-size: cover;
-  transition: all 9s ease;
-  position: relative;
 }
 .home-thumb img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.home-thumb {
+  background-size: cover;
+  transition: all 9s ease;
+  position: relative;
 }
 .home-thumb:hover {
   background-position: bottom;

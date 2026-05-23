@@ -403,39 +403,48 @@ function bbloomer_display_quantity_minus()
 }
 
 // Trigger update quantity script
-add_action('woocommerce_init', 'bbloomer_add_cart_quantity_plus_minus');
+add_action('wp_enqueue_scripts', 'bbloomer_add_cart_quantity_plus_minus');
+
 function bbloomer_add_cart_quantity_plus_minus()
 {
-	if (!function_exists('is_product') || !function_exists('wc_enqueue_js')) {
+
+	// Make sure WooCommerce exists
+	if (! class_exists('WooCommerce')) {
 		return;
 	}
 
-	// Debugging output
-	error_log('Function bbloomer_add_cart_quantity_plus_minus is running.');
+	$custom_js = "
+    jQuery(document).on('click', 'button.plus, button.minus', function() {
 
-	wc_enqueue_js("
-     $(document).on( 'click', 'button.plus, button.minus', function() {
-        var qty = $( this ).parent( '.quantity' ).find( '.qty' );
-        var val = parseFloat(qty.val());
-        var max = parseFloat(qty.attr( 'max' ));
-        var min = parseFloat(qty.attr( 'min' ));
-        var step = parseFloat(qty.attr( 'step' ));
+        var qty  = jQuery(this).parent('.quantity').find('.qty');
+        var val  = parseFloat(qty.val());
+        var max  = parseFloat(qty.attr('max'));
+        var min  = parseFloat(qty.attr('min'));
+        var step = parseFloat(qty.attr('step'));
 
-        if ( $( this ).is( '.plus' ) ) {
-           if ( max && ( max <= val ) ) {
-              qty.val( max ).change();
-           } else {
-              qty.val( val + step ).change();
-           }
+        if (jQuery(this).hasClass('plus')) {
+
+            if (max && (max <= val)) {
+                qty.val(max).change();
+            } else {
+                qty.val(val + step).change();
+            }
+
         } else {
-           if ( min && ( min >= val ) ) {
-              qty.val( min ).change();
-           } else if ( val > 1 ) {
-              qty.val( val - step ).change();
-           }
+
+            if (min && (min >= val)) {
+                qty.val(min).change();
+            } else if (val > 1) {
+                qty.val(val - step).change();
+            }
+
         }
-     });
-  ");
+
+    });
+    ";
+
+	// Attach inline script after WooCommerce script
+	wp_add_inline_script('wc-cart', $custom_js);
 }
 
 

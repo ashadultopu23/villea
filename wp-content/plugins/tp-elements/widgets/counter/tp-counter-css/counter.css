@@ -75,10 +75,6 @@
   transition: 0.3s;
   height: 100%;
 }
-.counter-top-area.style2 .tps-counter-list {
-  display: flex;
-  align-items: center;
-}
 .counter-top-area.style2 .tps-counter-list .counter-icon {
   position: absolute;
 }
@@ -88,6 +84,10 @@
 .counter-top-area.style2 .tps-counter-list .count-text .count-number {
   border-bottom: 1px solid #E9E9E9;
   transition: 0.3s;
+}
+.counter-top-area.style2 .tps-counter-list {
+  display: flex;
+  align-items: center;
 }
 .counter-top-area.style2:after {
   position: absolute;

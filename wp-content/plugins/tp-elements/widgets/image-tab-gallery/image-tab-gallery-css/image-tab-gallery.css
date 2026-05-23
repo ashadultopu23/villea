@@ -27,25 +27,25 @@
 }
 
 /* Container Layout Improvements */
-.gallery-feature-tab {
-  /* Enhanced Image Container */
-  /* feature Items */
-}
 .gallery-feature-tab .gallery-feature-tab-container {
   display: flex;
   gap: 5rem;
+}
+.gallery-feature-tab {
+  /* Enhanced Image Container */
 }
 .gallery-feature-tab .gallery-feature-tab-image {
   position: relative;
   border-radius: 12px;
   width: 100%;
-  /* Main Image with Smooth Transitions */
-  /* Enhanced Hover Effects for Image Container */
 }
 .gallery-feature-tab .gallery-feature-tab-image .img_border {
   position: relative;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
+}
+.gallery-feature-tab .gallery-feature-tab-image {
+  /* Main Image with Smooth Transitions */
 }
 .gallery-feature-tab .gallery-feature-tab-image .feature-tab-img {
   width: 100%;
@@ -57,13 +57,17 @@
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: opacity, transform;
 }
+.gallery-feature-tab .gallery-feature-tab-image {
+  /* Enhanced Hover Effects for Image Container */
+}
 .gallery-feature-tab .gallery-feature-tab-image:hover .img_border {
   transform: scale(1.02) rotate(-0.5deg);
 }
+.gallery-feature-tab {
+  /* feature Items */
+}
 .gallery-feature-tab .gallery-feature-tab-items {
   width: 100%;
-  /* Responsive Optimizations */
-  /* Focus States for Accessibility */
 }
 .gallery-feature-tab .gallery-feature-tab-items .gallery-feature-item {
   padding: 20px;
@@ -133,6 +137,9 @@
   will-change: color;
   transform: scale(1);
 }
+.gallery-feature-tab .gallery-feature-tab-items {
+  /* Responsive Optimizations */
+}
 @media (max-width: 768px) {
   .gallery-feature-tab .gallery-feature-tab-items .gallery-feature-item {
     padding: 15px;
@@ -164,6 +171,9 @@
   .gallery-feature-tab .gallery-feature-tab-items .gallery-feature-item .solution-index {
     font-size: 13px;
   }
+}
+.gallery-feature-tab .gallery-feature-tab-items {
+  /* Focus States for Accessibility */
 }
 .gallery-feature-tab .gallery-feature-tab-items .gallery-feature-item:focus-visible {
   outline: 2px solid #007cba;

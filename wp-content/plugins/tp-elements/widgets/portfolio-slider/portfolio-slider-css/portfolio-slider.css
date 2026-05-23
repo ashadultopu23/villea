@@ -325,8 +325,7 @@
   border-top-left-radius: 0;
   border-bottom-right-radius: 0;
   box-shadow: none;
-  -webkit-backdrop-filter: blur(0px);
-          backdrop-filter: blur(0px);
+  backdrop-filter: blur(0px);
 }
 .grid-item.layout2 .tp-portfolio-item-content.tp-portfolio-item-content-absolute .tp-portfolio-bottom-left-static {
   background: #1F1F1F;
