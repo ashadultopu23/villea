@@ -267,13 +267,14 @@ require_once get_template_directory() . '/inc/dyanamic-css.php';
 require_once get_template_directory() . '/inc/tgm/tgm-config.php';
 
 /**
- * Load Redux option config after init to avoid early translation loading.
+ * Load Redux option config after theme setup so translations are available.
  */
 function villea_load_redux_config()
 {
 	require_once get_template_directory() . '/libs/theme-option/config.php';
 }
-add_action('init', 'villea_load_redux_config', 20);
+add_action('after_setup_theme', 'villea_load_redux_config', 20);
+
 
 
 //----------------------------------------------------------------------
